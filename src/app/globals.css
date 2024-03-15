@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  /* globals.css or your CSS file */
+/* globals.css or your CSS file */
+.text-gradient {
+  background: linear-gradient(45deg, #FCF8A8 , #C98200 );
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* .text-gradient45 {
+  background: linear-gradient(45deg, #FCF8A8 , #C98200 );
+  -webkit-background-clip: text;
+  color: transparent;
+} */
+
+}
