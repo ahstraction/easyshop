@@ -3,7 +3,7 @@ import {
   Inter,
   Pacifico,
   Open_Sans,
-  Tinos,
+  Outfit,
   Plus_Jakarta_Sans,
   Montserrat,
 } from "next/font/google";
@@ -23,6 +23,10 @@ const monts = Montserrat({
 const jakrata = Plus_Jakarta_Sans({
   subsets: ["latin"],
   variable: "--font-jakrata",
+});
+const outfit = Outfit({
+  subsets: ["latin"],
+  variable: "--font-outfit",
 });
 const pacifico = Pacifico({
   subsets: ["latin"],
@@ -57,10 +61,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={` ${inter.variable} ${jakrata.variable} ${tinos.variable} ${pacifico.variable} ${opensans.variable} ${monts.variable}`}
+        className={` ${inter.variable} ${outfit.variable} ${jakrata.variable} ${tinos.variable} ${pacifico.variable} ${opensans.variable} ${monts.variable}`}
       >
         <div className=" bg-[#121212]">
-          <Navbar />
+          
           {children}
         </div>
       </body>

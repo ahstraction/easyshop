@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useState } from "react";
 
 const Navbar = () => {
@@ -10,7 +11,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="absolute z-50  px-[5%] w-full ">
+    <nav className="relative z-50  px-[5%] w-full ">
       <div className="relative max-w-screen-xl w-full flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="" className="flex items-center space-x-3 rtl:space-x-reverse">
           <Image
@@ -53,24 +54,24 @@ const Navbar = () => {
             <li>
               <a
                 href="/"
-                className="block py-2 px-2 text-[15px] font-opensans font-normal text-[#FFFFFF]"
+                className="block py-2 px-2 text-[15px] font-jakrata tracking-[2px] font-normal text-[#FFFFFF]"
                 aria-current="page"
               >
                 HOME
               </a>
             </li>
             <li>
-              <a
-                href="#"
-                className="block py-2 px-2 text-[15px] font-opensans font-normal text-[#FFFFFF]"
+              <Link
+                href="/procedure"
+                className="block py-2 px-2 text-[15px] font-jakrata tracking-[2px] font-normal text-[#FFFFFF]"
               >
                 WHO WE ARE
-              </a>
+              </Link>
             </li>
             <li>
               <a
                 href="#"
-                className="block py-2 px-2 text-[15px] font-opensans font-normal text-[#FFFFFF]"
+                className="block py-2 px-2 text-[15px] font-jakrata tracking-[2px] font-normal text-[#FFFFFF]"
               >
                 WHAT WE DO
               </a>
@@ -78,7 +79,7 @@ const Navbar = () => {
             <li>
               <a
                 href="#"
-                className="block py-2 px-2 text-[15px] font-opensans font-normal text-[#FFFFFF]"
+                className="block py-2 px-2 text-[15px] font-jakrata tracking-[2px] font-normal text-[#FFFFFF]"
               >
                 SHOP
               </a>
@@ -86,11 +87,11 @@ const Navbar = () => {
            
           </ul>
         </div>
-        <div>
+        <div className="lg:hidden">
     
               <a
                 href="#"
-                className="block py-2 px-2 text-[15px] font-opensans font-normal text-[#FFFFFF]"
+                className="block  border border-[#FFFFFF33] tracking-[2px]  py-[14px] px-[26px] rounded-[150px] text-[15px] font-jakrata font-normal text-[#FFFFFF]"
               >
                 CONTACT
               </a>

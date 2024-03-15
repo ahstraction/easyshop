@@ -15,6 +15,7 @@ const config: Config = {
         tinos: ["var(--font-tinos)"],
         monts: ["var(--font-monts)"],
         jakrata: ["var(--font-jakrata)"],
+        outfit: ["var(--font-outfit)"],
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

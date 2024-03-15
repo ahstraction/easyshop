@@ -7,30 +7,39 @@ import Moments from "./Moments";
 import Updates from "./updates";
 import Productions from "./productions";
 import Footer from "../footer/Footer";
+import Latest from "./Latest";
+import Footermain from "../Footermain/Footermain";
+import Image from "next/image";
 
 const Home = () => {
   return (
     <>
       <Hero />
-      <div className="relative">
-        <div className="absolute top-0 z-0 w-full h-[70%]">
-          <div className="relative">
-            <img
-              className="object-cover bg-cover bg-no-repeat w-full h-full opacity-50"
+
+      <div className="relative ">
+        <div className="absolute bottom-0 z-0 w-full ">
+          <div className="relative overflow-hidden">
+            <Image
+              className="object-cover bg-cover bg-no-repeat w-full  opacity-50"
               src="/imgs/home/release/featuredbg.png"
               alt="background"
+              height={1513}
+              width={1832}
             />
-            <div className="absolute z-20 inset-0 bg-gradient-to-b from-transparent to-[#121212] opacity-90"></div>
+            <div className="absolute z-20 h-full bottom-0 inset-0 bg-gradient-to-b from-transparent to-[#121212] opacity-90"></div>
           </div>
         </div>
         <AboutProducer />
-        <Featuredrelease />
+<Latest/>
+<Footermain/>
+
       </div>
-      <Shop />
+
+      {/* <Shop />
       <Moments />
       <Updates />
       <Productions />
-      <Footer />
+      <Footer /> */}
     </>
   );
 };

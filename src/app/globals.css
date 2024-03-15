@@ -16,6 +16,12 @@
   color: transparent;
 }
 
+.gradientpro{
+  background-color:#22222200 ;
+  background-image: linear-gradient(to bottom, #22222200 0%, #22222200 100%);
+
+}
+
 /* .text-gradient45 {
   background: linear-gradient(45deg, #FCF8A8 , #C98200 );
   -webkit-background-clip: text;
