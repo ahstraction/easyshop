@@ -44,7 +44,6 @@ export default function procedure() {
               height={813}
               width={1832}
             />
-            height={813}
             <Image
               className="h-full w-full absolute z-50"
               src={bg}
