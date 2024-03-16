@@ -90,7 +90,7 @@ const Navbar = () => {
         <div className="lg:hidden">
     
               <a
-                href="#"
+                href="/contact-us"
                 className="block  border border-[#FFFFFF33] tracking-[2px]  py-[14px] px-[26px] rounded-[150px] text-[15px] font-jakrata font-normal text-[#FFFFFF]"
               >
                 CONTACT
