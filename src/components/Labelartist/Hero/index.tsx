@@ -11,8 +11,8 @@ const Hero = () => {
     <>
       <Navbar />
 
-      <div className="h-screen   flex justify-center overflow-hidden ">
-        <div className="w-full h-[664px] bg-[#161616] mt-10 max-w-[1340px] relative ">
+      <div className="   flex justify-center overflow-hidden pb-32 ">
+        <div className="w-full h-[664px] bg-[#161616] mt-10  max-w-[1340px] relative ">
           <Image
             className="absolute w-full h-full z-10 opacity-15"
             src={maskimg}
