@@ -63,7 +63,7 @@ const Navbar = () => {
             <li>
               <Link
                 href="/procedure"
-                className="block py-2 px-2 text-[15px] font-jakrata tracking-[2px] font-normal text-[#FFFFFF]"
+                className="block uppercase py-2 px-2 text-[15px] font-jakrata tracking-[2px] font-normal text-[#FFFFFF]"
               >
                 Producer
               </Link>

@@ -9,7 +9,7 @@ import Navbar from "@/components/navbar/Navbar";
 import fb from "@/public/imgs/icons/fb.svg";
 import insta from "@/public/imgs/icons/insta.svg";
 import twiter from "@/public/imgs/icons/twitter.svg";
-import youtube from "@/public/imgs/icons/youtube.svg";
+// import youtube from "@/public/imgs/icons/youtube.svg";
 // import location from "@/imgs/contact/carbon_location-filled.png";
 // import mail from "@/imgs/contact/fluent_mail-16-filled.svg";
 // import bgright from "@/imgs/contact/bgright.png";
@@ -111,7 +111,7 @@ const Form = () => {
                   <h1 className="text-[60px] mob:text-center mob:text-[30px]  font-outfit  text-gradient leading-[62px] font-medium mb-7 mt-3 ">
                     Get In Touch
                   </h1>
-                  <p className="text-[18px] mob:text-[14px] mob:leading-[24px] text-[#fff]  leading-[33px] font-jakrata font-normal ">
+                  <p className="text-[18px] mob:text-[14px] mob:leading-[24px] text-[#FFFFFF]/70  leading-[33px] font-jakrata font-normal ">
                     Donec faucibus semper massa, quis congue dolor et. 
                   </p>
                   {/* locations London*/}
@@ -185,7 +185,6 @@ const Form = () => {
                     <Image src={fb} alt="" width={43} height={43} />
                     <Image src={insta} alt="" width={43} height={43} />
                     <Image src={twiter} alt="" width={43} height={43} />
-                    <Image src={youtube} alt="" width={43} height={43} />
                   </div>
                 </div>
               </div>
@@ -201,7 +200,7 @@ const Form = () => {
                     First Name
                   </label>
                   <input
-                    className="w-full  h-[25px]  outline-none border-b bg-transparent border-b-[#FFFFFF] text-[16px] text-[#FFFFFF] font-normal mb-6 "
+                    className="w-full  h-[25px]  outline-none border-b bg-transparent border-b-[#FFFFFF]/20 text-[16px] text-[#FFFFFF] font-normal mb-6 "
                     type="text"
                     value={fname}
                     onChange={(e) => {
@@ -217,7 +216,7 @@ const Form = () => {
                     Email address
                   </label>
                   <input
-                    className="w-full  h-[25px]  outline-none border-b bg-transparent border-b-[#FFFFFF] text-[16px] text-[#FFFFFF] font-normal mb-6 "
+                    className="w-full  h-[25px]  outline-none border-b bg-transparent border-b-[#FFFFFF]/20 text-[16px] text-[#FFFFFF] font-normal mb-6 "
                     type="Email address"
                     // placeholder="Email"
                     value={email}
@@ -235,7 +234,7 @@ const Form = () => {
                     Mobile number
                   </label>
                   <input
-                    className="w-full  h-[25px]  outline-none border-b bg-transparent border-b-[#FFFFFF] text-[16px] text-[#FFFFFF] font-normal mb-6 "
+                    className="w-full  h-[25px]  outline-none border-b bg-transparent border-b-[#FFFFFF]/20 text-[16px] text-[#FFFFFF] font-normal mb-6 "
                     type="number"
                     value={phone}
                     onChange={(e) => {
@@ -251,7 +250,7 @@ const Form = () => {
                     Message
                   </label>
                   <textarea
-                    className="w-full  h-[25px]  outline-none border-b bg-transparent border-b-[#FFFFFF] text-[16px] text-[#FFFFFF] font-normal mb-6 "
+                    className="w-full  h-[25px]  outline-none border-b bg-transparent border-b-[#FFFFFF]/20 text-[16px] text-[#FFFFFF] font-normal mb-6 "
                     value={message}
                     onChange={(e) => {
                       setMessage(e.target.value);
@@ -262,7 +261,7 @@ const Form = () => {
                   <button
                     type="submit"
                     // onClick={sendMail}
-                    className=" py-[15px] px-[30px] rounded-[150px] bg-[#FFFFFF] text-[#121212] text-[15px] leading-[18.9px] font-semibold font-jakrataS"
+                    className=" py-[15px] px-[30px] rounded-[150px] bg-[#FFFFFF] uppercase tracking-[1px] text-[#121212] text-[15px] leading-[18.9px] font-semibold font-jakrata"
                     disabled={loading} // Disable button if loading state is true
                   >
                     {/* {loading ? "Sending..." : "Submit"} */}
