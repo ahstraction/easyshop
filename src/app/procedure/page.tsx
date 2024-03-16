@@ -3,20 +3,20 @@ import HomePage from "@/components/home";
 import Latest from "@/components/home/Latest";
 import Productions from "@/components/home/productions";
 import AboutProducer from "@/components/Procedure/AboutProducer";
-import  Hero from "@/components/Procedure/Hero"
+import Hero from "@/components/Procedure/Hero";
 import UpdatesComing from "@/components/Procedure/UpdatesComing";
 import Image from "next/image";
-import backimg from '@/public/imgs/procedure/procedure.png'
+import backimg from "@/public/imgs/procedure/procedure.png";
+import bg from "@/public/Noise-Animation.png";
 
 export default function procedure() {
   return (
-    <main className="  ">
-
-<div className="relative ">
+    <main className="  relative">
+      <div className="relative ">
         <div className="absolute top-0 z-20 w-full ">
           <div className="relative overflow-hidden gradientpro">
             <Image
-              className="object-cover bg-cover bg-no-repeat w-full gradientpro h-[1100px]"
+              className="object-cover bg-cover bg-no-repeat w-full gradientpro h-[1250px]"
               src={backimg}
               alt="background"
               height={1049}
@@ -25,17 +25,39 @@ export default function procedure() {
           </div>
           <div className="absolute z-20 h-full bottom-[-150px] inset-0 bg-gradient-to-b from-transparent to-[#121212] "></div>
         </div>
-        
-        <Hero/>
 
-        <Productions/>
+        <Hero />
 
+        <Productions />
       </div>
-  
-   <AboutProducer/>
-   <UpdatesComing/>
-   <Latest/>
-<Footermain/>
+
+      <AboutProducer />
+      <UpdatesComing />
+
+      <div className="relative ">
+        <div className="absolute bottom-0 z-0 w-full ">
+          <div className="relative overflow-hidden">
+            <Image
+              className="object-cover bg-cover bg-no-repeat w-full max-h-[800px] opacity-20"
+              src="/imgs/home/release/featuredbg.png"
+              alt="background"
+              height={813}
+              width={1832}
+            />
+            height={813}
+            <Image
+              className="h-full w-full absolute z-50"
+              src={bg}
+              alt=""
+              height={813}
+              width={1832}
+            />
+            <div className="absolute z-20 h-full bottom-0 inset-0 bg-gradient-to-b from-transparent to-[#121212] opacity-90"></div>
+          </div>
+        </div>
+        <Latest />
+        <Footermain />
+      </div>
     </main>
   );
 }

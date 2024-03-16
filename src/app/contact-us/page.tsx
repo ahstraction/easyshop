@@ -13,10 +13,10 @@ const contactus = () => {
         <div className="absolute bottom-0 z-0 w-full ">
           <div className="relative overflow-hidden">
             <Image
-              className="object-cover bg-cover bg-no-repeat h-[800px] w-full  opacity-30"
+              className="object-cover bg-cover bg-no-repeat h-[1100px] w-full   opacity-20"
               src="/imgs/home/release/featuredbg.png"
               alt="background"
-              height={1513}
+              height={1813}
               width={1832}
             />
             <div className="absolute z-10 h-full bottom-0 inset-0 bg-gradient-to-b from-[#121212]  to-transparent opacity-90"></div>

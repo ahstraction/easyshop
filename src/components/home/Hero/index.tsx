@@ -12,39 +12,40 @@ const Hero = () => {
         <div className="absolute w-full flex justify-center top-0  z-0 h-full ">
           <img
             className=" bg-cover object-cover bg-center w-full"
-            src="/imgs/home/Mask group.png"
+            src="/imgs/home/hero_banner_image (2).png"
             alt="background"
           />
         </div>
-      
+
         {/* content */}
-        <div className=" relative pb-[0px] z-10 pl-[6%] ">
-          <h1 className="text-[#FFFFFF] uppercase text-center font-jakrata font-normal text-[20px] leading-[44px]">
+        <div className=" relative pb-[0px] z-10  ">
+          <h1 className="text-[#FFFFFF] uppercase tracking-[4px] text-center font-jakrata font-normal text-[20px] leading-[44px]">
             Welcome to
           </h1>
-          <h1 className="text-gradient  text-[70px] mob:text-[40px] mob:leading-[48px] text-center font-medium font-outfit leading-[112px]">
+          <h1 className="text-gradient  text-[70px] mob:text-[40px] mob:leading-[48px] text-center font-semibold font-outfit leading-[112px]">
             Phillie-BOP Productions
           </h1>
-          <h1 className="text-[#9A9A9A] uppercase text-center font-jakrata font-normal text-[20px] leading-[44px]">
+          <h1 className="text-[#FFFFFF]/80 uppercase tracking-[3px] text-center font-jakrata font-normal text-[20px] leading-[44px]">
             The Future Home Of Classic Music
           </h1>
 
           <div className="mt-9 flex justify-center">
-            <button className=" py-[20px] px-[40px] rounded-[150px] bg-[#FFFFFF] text-[#121212] text-[15px] leading-[18.9px] font-semibold font-jakrataS">
+            <button className=" py-[20px] px-[40px] rounded-[150px] bg-[#FFFFFF] text-[#121212] tracking-[2px] text-[15px] leading-[18.9px] font-semibold font-jakrata">
               EXPLORE MUSIC
             </button>
           </div>
         </div>
       </div>
       {/* bottom  */}
-      <div className="w-full">
-      <Image
-            className="w-full"
-            src="/imgs/home/bgbottom.png"
-            alt="background"
-            height={432}
-            width={1439}
-          />
+      <div className="w-full relative  pt-28 pb-20 z-50">
+        <Image
+          className="w-full"
+          src="/imgs/home/waves.png"
+          alt="background"
+          height={432}
+          width={1439}
+        />
+        {/* <div className="absolute  h-[100px] top-[420px] inset-0 bg-gradient-to-b from-[#121212]    to-transparent    z-50"></div> */}
       </div>
     </div>
   );
