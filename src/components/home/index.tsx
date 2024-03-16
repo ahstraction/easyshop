@@ -25,8 +25,8 @@ const Home = () => {
             <div className="absolute bottom-0 z-0 w-full ">
               <div className="relative overflow-hidden">
                 <Image
-                  className="object-cover bg-cover bg-no-repeat w-full  opacity-50"
-                  src="/imgs/home/release/featuredbg.png"
+                  className="object-cover bg-cover bg-no-repeat w-full  opacity-20"
+                  src="/imgs/home/buildings.png"
                   alt="background"
                   height={1513}
                   width={1832}

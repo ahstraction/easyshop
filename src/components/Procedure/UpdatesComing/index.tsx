@@ -9,7 +9,7 @@ import arrow from "@/public/imgs/icons/bi_arrow-up.svg";
 const UpdatesComing = () => {
   return (
     <>
-      <div className="py-20 flex justify-center  relative bg-[#1B1918]">
+      <div className="py-20 flex justify-center z-30 relative bg-[#1B1918]">
         <div className="w-full max-w-[1140px] ">
           <div className="flex mob:block w-full justify-between items-center max-w-[1140px] my-8">
             {/* left text */}
