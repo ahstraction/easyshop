@@ -21,7 +21,10 @@
   background-image: linear-gradient(to bottom, #22222200 0%, #22222200 100%);
 
 }
-
+.swiper-pagination-bullet-active {
+  background-color: #fff !important;
+  background-color: #fff;
+}
 /* .text-gradient45 {
   background: linear-gradient(45deg, #FCF8A8 , #C98200 );
   -webkit-background-clip: text;
