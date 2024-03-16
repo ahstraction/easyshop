@@ -15,7 +15,7 @@ const Navbar = () => {
       <div className="relative max-w-screen-xl w-full flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="" className="flex items-center space-x-3 rtl:space-x-reverse">
           <Image
-            src="/imgs/home/logo.png"
+            src="/imgs/home/phillibop-logo-new (1) (1).png"
             alt="Flowbite Logo"
             width={136}
             height={115}
@@ -63,9 +63,9 @@ const Navbar = () => {
             <li>
               <Link
                 href="/procedure"
-                className="block py-2 px-2 text-[15px] font-jakrata tracking-[2px] font-normal text-[#FFFFFF]"
+                className="block uppercase py-2 px-2 text-[15px] font-jakrata tracking-[2px] font-normal text-[#FFFFFF]"
               >
-                WHO WE ARE
+                Producer
               </Link>
             </li>
             <li>
@@ -84,18 +84,15 @@ const Navbar = () => {
                 SHOP
               </a>
             </li>
-           
           </ul>
         </div>
         <div className="lg:hidden">
-    
-              <a
-                href="#"
-                className="block  border border-[#FFFFFF33] tracking-[2px]  py-[14px] px-[26px] rounded-[150px] text-[15px] font-jakrata font-normal text-[#FFFFFF]"
-              >
-                CONTACT
-              </a>
-            
+          <a
+            href="/contact-us"
+            className="block  border border-[#FFFFFF33] tracking-[2px]  py-[14px] px-[26px] rounded-[150px] text-[15px] font-jakrata font-normal text-[#FFFFFF]"
+          >
+            CONTACT
+          </a>
         </div>
       </div>
     </nav>
