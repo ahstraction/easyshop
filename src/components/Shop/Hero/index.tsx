@@ -10,6 +10,7 @@ import more from "@/public/imgs/merch/more.png";
 import jene from "@/public/imgs/merch/jene.png";
 
 import Navbar from "@/components/navbar/Navbar";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -50,9 +51,11 @@ const Hero = () => {
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 </p>
                 {/* button */}
-                <button className=" py-[20px] w-full uppercase mt-5  rounded-[150px] bg-[#FFFFFF] text-[#121212] tracking-[2px] text-[15px] leading-[18.9px] font-semibold font-jakrata">
-                  Add to Cart
-                </button>
+                <Link href="product">
+                  <button className=" py-[20px] w-full uppercase mt-5  rounded-[150px] bg-[#FFFFFF] text-[#121212] tracking-[2px] text-[15px] leading-[18.9px] font-semibold font-jakrata">
+                    Add to Cart
+                  </button>
+                </Link>
               </div>
             </div>
             {/* 2nd */}
@@ -78,9 +81,11 @@ const Hero = () => {
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 </p>
                 {/* button */}
-                <button className=" py-[20px] w-full uppercase mt-5  rounded-[150px] bg-[#FFFFFF] text-[#121212] tracking-[2px] text-[15px] leading-[18.9px] font-semibold font-jakrata">
-                  Add to Cart
-                </button>
+                <Link href="product">
+                  <button className=" py-[20px] w-full uppercase mt-5  rounded-[150px] bg-[#FFFFFF] text-[#121212] tracking-[2px] text-[15px] leading-[18.9px] font-semibold font-jakrata">
+                    Add to Cart
+                  </button>
+                </Link>
               </div>
             </div>
             {/* 3rd*/}
@@ -106,9 +111,11 @@ const Hero = () => {
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 </p>
                 {/* button */}
-                <button className=" py-[20px] w-full uppercase mt-5  rounded-[150px] bg-[#FFFFFF] text-[#121212] tracking-[2px] text-[15px] leading-[18.9px] font-semibold font-jakrata">
-                  Add to Cart
-                </button>
+                <Link href="product">
+                  <button className=" py-[20px] w-full uppercase mt-5  rounded-[150px] bg-[#FFFFFF] text-[#121212] tracking-[2px] text-[15px] leading-[18.9px] font-semibold font-jakrata">
+                    Add to Cart
+                  </button>
+                </Link>
               </div>
             </div>
 
@@ -136,9 +143,11 @@ const Hero = () => {
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 </p>
                 {/* button */}
-                <button className=" py-[20px] w-full uppercase mt-5  rounded-[150px] bg-[#FFFFFF] text-[#121212] tracking-[2px] text-[15px] leading-[18.9px] font-semibold font-jakrata">
-                  Add to Cart
-                </button>
+                <Link href="product">
+                  <button className=" py-[20px] w-full uppercase mt-5  rounded-[150px] bg-[#FFFFFF] text-[#121212] tracking-[2px] text-[15px] leading-[18.9px] font-semibold font-jakrata">
+                    Add to Cart
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -170,9 +179,11 @@ const Hero = () => {
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 </p>
                 {/* button */}
-                <button className=" py-[20px] w-full uppercase mt-5  rounded-[150px] bg-[#FFFFFF] text-[#121212] tracking-[2px] text-[15px] leading-[18.9px] font-semibold font-jakrata">
-                  Add to Cart
-                </button>
+                <Link href="product">
+                  <button className=" py-[20px] w-full uppercase mt-5  rounded-[150px] bg-[#FFFFFF] text-[#121212] tracking-[2px] text-[15px] leading-[18.9px] font-semibold font-jakrata">
+                    Add to Cart
+                  </button>
+                </Link>
               </div>
             </div>
 
@@ -199,9 +210,11 @@ const Hero = () => {
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 </p>
                 {/* button */}
-                <button className=" py-[20px] w-full uppercase mt-5  rounded-[150px] bg-[#FFFFFF] text-[#121212] tracking-[2px] text-[15px] leading-[18.9px] font-semibold font-jakrata">
-                  Add to Cart
-                </button>
+                <Link href="product">
+                  <button className=" py-[20px] w-full uppercase mt-5  rounded-[150px] bg-[#FFFFFF] text-[#121212] tracking-[2px] text-[15px] leading-[18.9px] font-semibold font-jakrata">
+                    Add to Cart
+                  </button>
+                </Link>
               </div>
             </div>
             {/* seven*/}
@@ -227,9 +240,11 @@ const Hero = () => {
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 </p>
                 {/* button */}
-                <button className=" py-[20px] w-full uppercase mt-5  rounded-[150px] bg-[#FFFFFF] text-[#121212] tracking-[2px] text-[15px] leading-[18.9px] font-semibold font-jakrata">
-                  Add to Cart
-                </button>
+                <Link href="product">
+                  <button className=" py-[20px] w-full uppercase mt-5  rounded-[150px] bg-[#FFFFFF] text-[#121212] tracking-[2px] text-[15px] leading-[18.9px] font-semibold font-jakrata">
+                    Add to Cart
+                  </button>
+                </Link>
               </div>
             </div>
 
@@ -256,9 +271,11 @@ const Hero = () => {
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 </p>
                 {/* button */}
-                <button className=" py-[20px] w-full uppercase mt-5  rounded-[150px] bg-[#FFFFFF] text-[#121212] tracking-[2px] text-[15px] leading-[18.9px] font-semibold font-jakrata">
-                  Add to Cart
-                </button>
+                <Link href="product">
+                  <button className=" py-[20px] w-full uppercase mt-5  rounded-[150px] bg-[#FFFFFF] text-[#121212] tracking-[2px] text-[15px] leading-[18.9px] font-semibold font-jakrata">
+                    Add to Cart
+                  </button>
+                </Link>
               </div>
             </div>
           </div>

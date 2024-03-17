@@ -100,6 +100,15 @@ const Navbar = () => {
                 shop
               </a>
             </li>
+            {/* <li>
+              <a
+                href="/cart"
+                className="block uppercase py-2 px-2 text-[15px] font-jakrata tracking-[2px] font-normal text-[#FFFFFF]"
+              >
+                cart
+              </a>
+            </li> */}
+
             <li>
               <a
                 href="/video"
