@@ -86,10 +86,10 @@ const Navbar = () => {
             </li>
             <li>
               <a
-                href="#"
-                className="block py-2 px-2 text-[15px] font-jakrata tracking-[2px] font-normal text-[#FFFFFF]"
+                href="/merch"
+                className="block uppercase py-2 px-2 text-[15px] font-jakrata tracking-[2px] font-normal text-[#FFFFFF]"
               >
-                SHOP
+                Merch
               </a>
             </li>
           </ul>

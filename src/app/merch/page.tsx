@@ -1,44 +1,38 @@
 import Footermain from "@/components/Footermain/Footermain";
-import HomePage from "@/components/home";
+import Hero from "@/components/Merch/Hero";
 import Latest from "@/components/home/Latest";
-import Productions from "@/components/home/productions";
-import AboutProducer from "@/components/Procedure/AboutProducer";
-import Hero from "@/components/Procedure/Hero";
-import UpdatesComing from "@/components/Procedure/UpdatesComing";
 import Image from "next/image";
-import backimg from "@/public/imgs/procedure/procedure.png";
+import React from "react";
 import bg from "@/public/Noise-Animation.png";
+import Shop from "@/components/LabelRelease/Shop";
+import AddtoCart from "@/components/Merch/AddtoCart";
+import backimg from "@/public/imgs/procedure/procedure.png";
 
-export default function procedure() {
+const Merch = () => {
   return (
-    <main className="  relative">
-      <div className="relative ">
+    <>
+      <div className="relative bg-[#121212] z-20 ">
         <div className="absolute top-0 z-30 w-full ">
           <div className="relative overflow-hidden gradientpro">
             <Image
-              className="object-cover absolute z-30 bg-cover bg-no-repeat w-full gradientpro h-[1250px]"
+              className="object-cover bg-cover bg-no-repeat w-full gradientpro h-[1250px]"
               src={backimg}
               alt="background"
               height={1049}
               width={1832}
             />
           </div>
-          <div className="absolute z-30 h-full bottom-[-150px] inset-0 bg-gradient-to-b from-transparent to-[#121212] "></div>
+          <div className="absolute z-20 h-full bottom-[-150px] inset-0 bg-gradient-to-b from-transparent to-[#121212] "></div>
         </div>
-
         <Hero />
-
-        <Productions />
+        <AddtoCart />
       </div>
-
-      <AboutProducer />
-      <UpdatesComing />
 
       <div className="relative ">
         <div className="absolute bottom-0 z-0 w-full ">
           <div className="relative overflow-hidden">
             <Image
-              className="object-cover bg-cover bg-no-repeat w-full h-full opacity-20"
+              className="object-cover bg-cover bg-no-repeat w-full h-[1200px] opacity-10"
               src="/imgs/home/buildings.png"
               alt="background"
               height={813}
@@ -54,9 +48,12 @@ export default function procedure() {
             <div className="absolute z-20 h-full bottom-0 inset-0 bg-gradient-to-b from-transparent to-[#121212] opacity-90"></div>
           </div>
         </div>
+
         <Latest />
         <Footermain />
       </div>
-    </main>
+    </>
   );
-}
+};
+
+export default Merch;
