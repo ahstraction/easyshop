@@ -2,10 +2,11 @@ import React from "react";
 import Image from "next/image";
 
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
+import Link from "next/link";
 
 const Productions = () => {
   return (
-    <div className=" 2xl:container-fluid flex items-center justify-center bg-transparent pb-14  mx-auto overflow-x-hidden relative gradientpro">
+    <div className="  2xl:container-fluid flex items-center justify-center bg-transparent pb-14  mx-auto overflow-x-hidden relative gradientpro">
       <div className="my-16 relative max-w-[1140px] w-full">
         <div className=" flex mob:block items-start justify-between w-full  relative z-20 mob:px-5  ">
           {/* left */}
@@ -15,9 +16,11 @@ const Productions = () => {
                 Welcome to <br /> Phillie-BOP <br /> Productions
               </h2>
               <div className="mt-12 mob:flex mob:justify-center">
-                <button className=" py-[20px] px-[40px] uppercase rounded-[150px] bg-[#FFFFFF] text-[#121212] tracking-[2px] text-[15px] leading-[18.9px] font-semibold font-jakrata">
-                  Get STarted Today
-                </button>
+                <Link href="/shop">
+                  <button className=" py-[20px] px-[40px] uppercase rounded-[150px] bg-[#FFFFFF] text-[#121212] tracking-[2px] text-[15px] leading-[18.9px] font-semibold font-jakrata">
+                    Get STarted Today
+                  </button>
+                </Link>
               </div>
               {/* <div className="mt-9">
                 <Button text="Learn More" />

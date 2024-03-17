@@ -5,7 +5,7 @@ const Latest = () => {
   return (
     <>
       <div className="flex justify-center items-center mt-16">
-        <div className="flex relative z-50 justify-center mob:px-5 items-center w-full border border-[#FFFFFF1A] max-w-[1340px] min-h-[492px] bg-[#161616CC]/80">
+        <div className="flex relative z-50 justify-center mob:px-5 items-center w-full border-gradeint max-w-[1340px] min-h-[492px] bg-[#161616CC]/80">
           <div className="  justify-center  max-w-[1141px] w-full">
             <div className="flex mob:block w-full justify-between items-end max-w-[1141.5px] my-8">
               {/* left text */}

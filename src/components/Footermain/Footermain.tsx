@@ -4,6 +4,7 @@ import logo from "@/public/imgs/home/logoimg.png";
 import fb from "@/public/imgs/icons/fbfooter.svg";
 import insta from "@/public/imgs/icons/instafooter.svg";
 import twiter from "@/public/imgs/icons/twiterfooter.svg";
+import Link from "next/link";
 // import youtube from "@/public/imgs/icons/Group 5.png"
 
 const Footermain = () => {
@@ -16,27 +17,36 @@ const Footermain = () => {
           </div>
           <div className="">
             <div className="flex mob:justify-center gap-[11.94px] mob:my-2 justify-end mb-6">
-              <Image
-                className="cursor-pointer"
-                src={fb}
-                alt=""
-                width={37}
-                height={37}
-              />
-              <Image
-                className="cursor-pointer"
-                src={insta}
-                alt=""
-                width={37}
-                height={37}
-              />
-              <Image
-                className="cursor-pointer"
-                src={twiter}
-                alt=""
-                width={37}
-                height={37}
-              />
+              <Link href="https://www.facebook.com/philliebopproductions">
+                <Image
+                  className="cursor-pointer"
+                  src={fb}
+                  alt=""
+                  width={37}
+                  height={37}
+                />
+              </Link>
+
+              <Link href="https://www.instagram.com/philliebopproductions/">
+                <Image
+                  className="cursor-pointer"
+                  src={insta}
+                  alt=""
+                  width={37}
+                  height={37}
+                />
+              </Link>
+
+              <Link href="https://twitter.com/PhillieBOP">
+                <Image
+                  className="cursor-pointer"
+                  src={twiter}
+                  alt=""
+                  width={37}
+                  height={37}
+                />
+              </Link>
+
               {/* <Image
                 className="cursor-pointer"
                 src={youtube}
