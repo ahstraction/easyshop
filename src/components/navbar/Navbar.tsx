@@ -70,18 +70,26 @@ const Navbar = () => {
             </li>
             <li>
               <a
-                href="#"
-                className="block py-2 px-2 text-[15px] font-jakrata tracking-[2px] font-normal text-[#FFFFFF]"
+                href="/label-artist"
+                className="block uppercase py-2 px-2 text-[15px] font-jakrata tracking-[2px] font-normal text-[#FFFFFF]"
               >
-                WHAT WE DO
+                label artist
               </a>
             </li>
             <li>
               <a
-                href="#"
-                className="block py-2 px-2 text-[15px] font-jakrata tracking-[2px] font-normal text-[#FFFFFF]"
+                href="/label-release"
+                className="block uppercase py-2 px-2 text-[15px] font-jakrata tracking-[2px] font-normal text-[#FFFFFF]"
               >
-                SHOP
+                label release
+              </a>
+            </li>
+            <li>
+              <a
+                href="/merch"
+                className="block uppercase py-2 px-2 text-[15px] font-jakrata tracking-[2px] font-normal text-[#FFFFFF]"
+              >
+                Merch
               </a>
             </li>
           </ul>
