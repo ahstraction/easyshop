@@ -94,6 +94,14 @@ const Navbar = () => {
             </li>
             <li>
               <a
+                href="/shop"
+                className="block uppercase py-2 px-2 text-[15px] font-jakrata tracking-[2px] font-normal text-[#FFFFFF]"
+              >
+                shop
+              </a>
+            </li>
+            <li>
+              <a
                 href="/video"
                 className="block uppercase py-2 px-2 text-[15px] font-jakrata tracking-[2px] font-normal text-[#FFFFFF]"
               >
