@@ -31,4 +31,8 @@
   color: transparent;
 } */
 
+.paymentbg{
+  background: linear-gradient(to bottom, #051A76 100%, #0C0C09 100%);
+}
+
 }
