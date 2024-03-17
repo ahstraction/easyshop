@@ -92,6 +92,14 @@ const Navbar = () => {
                 Merch
               </a>
             </li>
+            <li>
+              <a
+                href="/video"
+                className="block uppercase py-2 px-2 text-[15px] font-jakrata tracking-[2px] font-normal text-[#FFFFFF]"
+              >
+                video
+              </a>
+            </li>
           </ul>
         </div>
         <div className="lg:hidden">
