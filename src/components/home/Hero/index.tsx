@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Button from "@/components/ui/Button";
 import Navbar from "@/components/navbar/Navbar";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -30,17 +31,19 @@ const Hero = () => {
           </h1>
 
           <div className="mt-9 flex justify-center">
-            <button className=" py-[20px] px-[40px] rounded-[150px] bg-[#FFFFFF] text-[#121212] tracking-[2px] text-[15px] leading-[18.9px] font-semibold font-jakrata">
-              EXPLORE MUSIC
-            </button>
+            <Link href="/merch">
+              <button className=" py-[20px] px-[40px] rounded-[150px] bg-[#FFFFFF] text-[#121212] tracking-[2px] text-[15px] leading-[18.9px] font-semibold font-jakrata">
+                EXPLORE MUSIC
+              </button>
+            </Link>
           </div>
         </div>
       </div>
       {/* bottom  */}
-      <div className="w-full relative  pt-28 pb-20 z-50">
+      <div className="w-full relative  pt-28  z-50">
         <Image
           className="w-full"
-          src="/imgs/home/waves.png"
+          src="/imgs/home/sahi-waves.png"
           alt="background"
           height={432}
           width={1439}

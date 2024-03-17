@@ -13,14 +13,17 @@ const Navbar = () => {
   return (
     <nav className="relative z-50  px-[5%] w-full ">
       <div className="relative max-w-screen-xl w-full flex flex-wrap items-center justify-between mx-auto p-4">
-        <a href="" className="flex items-center space-x-3 rtl:space-x-reverse">
+        <Link
+          href="/"
+          className="flex items-center space-x-3 rtl:space-x-reverse"
+        >
           <Image
             src="/imgs/home/phillibop-logo-new (1) (1).png"
             alt="Flowbite Logo"
             width={136}
             height={115}
           />
-        </a>
+        </Link>
         <button
           onClick={toggleMenu}
           type="button"

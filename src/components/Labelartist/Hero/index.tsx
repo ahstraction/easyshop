@@ -1,12 +1,18 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import maskimg from "@/public/imgs/labelartist/mask.png";
+import banner from "@/public/imgs/labelartist/artist-banner.png";
 import bgright from "@/public/imgs/labelartist/artistright1.png";
 import arrow from "@/public/imgs/labelartist/arrow-up.png";
 import Navbar from "@/components/navbar/Navbar";
 
 const Hero = () => {
+  const [showFullBio, setShowFullBio] = useState(false);
+
+  const toggleBio = () => {
+    setShowFullBio(!showFullBio);
+  };
   return (
     <>
       <Navbar />
@@ -14,43 +20,83 @@ const Hero = () => {
       <div className="   flex justify-center overflow-hidden pb-32 ">
         <div className="w-full h-[664px] bg-[#161616] mt-10  max-w-[1340px] relative ">
           <Image
-            className="absolute w-full h-full z-10 opacity-15"
-            src={maskimg}
+            className="absolute w-full h-full z-10 "
+            src={banner}
             alt=""
             width={1440}
             height={686}
           />
-          <Image
+          {/* <Image
             className="absolute z-30 h-full w-full opacity-70"
             src={bgright}
             alt=""
             width={1240}
             height={760}
-          />
+          /> */}
 
           {/* content */}
-          <div className="py-12 pl-20">
+          <div className="py-12 pl-20 relative z-50">
             <h1 className="text-[20px] uppercase text-[#fff]/70 tracking-[3px] font-jakrata font-normal leading-[25.2px] ">
               Label Artist
             </h1>
-            <h2 className="text-[50px] font-medium font-outfit text-gradient leading-[60px] mt-[300px]">
-              Imari
-            </h2>
-            <p className="text-[14px] max-w-[643px] text-[#FFFFFF] font-jakrata font-normal leading-[32px] my-6">
-              <span className="max-w-[643px]">
-                Born and raised in Hampton, Virginia, Jashonda “Imari” Dutch,
-                has always had a love for music. Singing from as early as two
-                years old, her love and passion for singing has never wavered.
-                She could always be found in a choir at church or school.
-              </span>
-            </p>
-            <Link
-              className="font-bold flex gap-1 font-jakrata text-gradient leading-[21.42px] tracking-[2px] uppercase"
-              href="#"
-            >
-              Read IMARI's bio
-              <Image src={arrow} alt="" width={16.97} height={16.97} />
-            </Link>
+            <div className="flex items-end h-[560px]">
+              <div className="">
+                <h2 className="text-[50px] font-medium font-outfit text-gradient leading-[60px] ">
+                  Imari
+                </h2>
+
+                <p className="text-[14px] max-w-[643px] text-[#FFFFFF] font-jakrata font-normal leading-[32px] my-6">
+                  {showFullBio ? (
+                    <>
+                      <span className="max-w-[643px]">
+                        Born and raised in Hampton, Virginia, Jashonda “Imari”
+                        Dutch, has always had a love for music. Singing from as
+                        early as two years old, her love and passion for singing
+                        has never wavered. She could always be found in a choir
+                        at church or school.
+                      </span>
+                      <br />
+                      <span className="max-w-[643px]">
+                        Imari developed an appreciation for many genres such as
+                        gospel, classical, jazz, and R&B. Through her vocal
+                        gift, she received a full scholarship at the illustrious
+                        Elizabeth City State University and was a member of the
+                        University Choir where she was classically trained as a
+                        Music Performance major. During her college years, she
+                        had the opportunity to open for Debra Killings and
+                        Le'Andria Johnson alongside her fellow choir mates.
+                        Additionally, she had the opportunity to perform the
+                        infamous 'I Know I've Been Changed' in front of a former
+                        Moses Hogan singer where he named her "Lungs of Steel."
+                      </span>
+                      <br />
+                      <span className="max-w-[643px]">
+                        This vocal powerhouse has traveled to many places with
+                        her voice and enjoys telling stories and bringing out
+                        emotions through her singing as a form of
+                        interpretation.
+                      </span>
+                    </>
+                  ) : (
+                    <span className="max-w-[643px]">
+                      Born and raised in Hampton, Virginia, Jashonda “Imari”
+                      Dutch, has always had a love for music. Singing from as
+                      early as two years old, her love and passion for singing
+                      has never wavered. She could always be found in a choir at
+                      church or school. <br /> <br />
+                    </span>
+                  )}
+                </p>
+                <Link
+                  onClick={toggleBio}
+                  className="font-bold flex gap-1 font-jakrata text-gradient leading-[21.42px] tracking-[2px] uppercase"
+                  href="#"
+                >
+                  Read IMARI's bio
+                  <Image src={arrow} alt="" width={16.97} height={16.97} />
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -17,7 +17,7 @@ const Commingsoon = () => {
             height={417}
           />
           <Image
-            className="absolute z-20"
+            className="absolute h-[417px] z-20"
             src={bgovrlay}
             alt=""
             width={1140}
@@ -25,7 +25,7 @@ const Commingsoon = () => {
           />
           <div className=" relative z-30">
             <Image className="" src={logo} alt="" width={200} height={171} />
-            <h2 className="text-[20px] mt-20 uppercase text-center w-full text-gradient leading-[25.2px] font-medium font-jakrata ">
+            <h2 className="text-[20px] mt-20 uppercase text-center w-full text-gradient leading-[25.2px] font-medium font-outfit ">
               Coming Soon
             </h2>
           </div>

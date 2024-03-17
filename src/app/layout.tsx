@@ -63,10 +63,7 @@ export default function RootLayout({
       <body
         className={` ${inter.variable} ${outfit.variable} ${jakrata.variable} ${tinos.variable} ${pacifico.variable} ${opensans.variable} ${monts.variable}`}
       >
-        <div className=" bg-[#121212]">
-          
-          {children}
-        </div>
+        <div className=" bg-[#21201E]">{children}</div>
       </body>
     </html>
   );

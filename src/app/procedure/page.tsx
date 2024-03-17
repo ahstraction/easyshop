@@ -11,12 +11,12 @@ import bg from "@/public/Noise-Animation.png";
 
 export default function procedure() {
   return (
-    <main className="  relative">
-      <div className="relative ">
-        <div className="absolute top-0 z-30 w-full ">
-          <div className="relative overflow-hidden gradientpro">
+    <main className="  ">
+      <div className=" ">
+        <div className="absolute top-0 z-10 w-full ">
+          <div className=" overflow-hidden gradientpro">
             <Image
-              className="object-cover absolute z-30 bg-cover bg-no-repeat w-full gradientpro h-[1250px]"
+              className="object-cover absolute z-10 bg-cover bg-no-repeat w-full gradientpro h-[1250px] opacity-60"
               src={backimg}
               alt="background"
               height={1049}

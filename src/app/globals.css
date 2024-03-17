@@ -15,15 +15,23 @@
   -webkit-background-clip: text;
   color: transparent;
 }
+.border-gradeint{
+ 
+  border: 1px solid transparent;
+  border-image: linear-gradient(360deg, #FCF8A8, #C98200) 1;
+}
 
 .gradientpro{
-  background-color:#22222200 ;
-  background-image: linear-gradient(to bottom, #22222200 0%, #22222200 100%);
-
+  /* background-color: #27262621;
+  background-image: linear-gradient(to bottom, #312f2f00 0%, #211f1f 60%); */
+  background-color: #27262600;
+  background-image: linear-gradient(to bottom, #0000002b 0%, #353131 60%);
 }
 .swiper-pagination-bullet-active {
   background-color: #fff !important;
   background-color: #fff;
+}
+
 }
 /* .text-gradient45 {
   background: linear-gradient(45deg, #FCF8A8 , #C98200 );
@@ -35,4 +43,3 @@
   background: linear-gradient(to bottom, #051A76 100%, #0C0C09 100%);
 }
 
-}

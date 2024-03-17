@@ -7,7 +7,7 @@ import bg from "@/public/imgs/procedure/procedure.png";
 
 const Hero = () => {
   return (
-    <div className=" relative z-20">
+    <div className="  z-20">
       <Navbar />
       <div className=" min-h-[500px]  flex items-end mob:items-center justify-center ">
         {/* bg image */}
