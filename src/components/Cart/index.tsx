@@ -7,6 +7,7 @@ import Navbar from "../navbar/Navbar";
 import medalimg from "@/public/imgs/icons/medaltick.svg";
 import plus from "@/public/imgs/icons/ic_round-plus.svg";
 import minus from "@/public/imgs/icons/tabler_minus.svg";
+import Link from "next/link";
 
 const Cart = () => {
   return (
@@ -197,10 +198,11 @@ const Cart = () => {
               </div>
 
               {/* button */}
-              <button className="w-full uppercase my-10  h-[59px] rounded-[150px] bg-[#FFFFFF] text-[#121212] tracking-[2px] text-[15px] leading-[18.9px] font-semibold font-jakrata">
-                Checkout
-              </button>
-
+              <Link href="/checkout">
+                <button className="w-full uppercase my-10  h-[59px] rounded-[150px] bg-[#FFFFFF] text-[#121212] tracking-[2px] text-[15px] leading-[18.9px] font-semibold font-jakrata">
+                  Checkout
+                </button>
+              </Link>
               <div className="flex justify-center gap-3 items-center ">
                 <Image src={medalimg} alt="" width={20.22} height={23.22} />{" "}
                 <h1 className="uppercase text-[15px] text-[#fff] font-jakrata font-bold leading-[21.42px] tracking-[3px]">
