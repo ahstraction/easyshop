@@ -6,12 +6,13 @@ import Latest from "@/components/home/Latest";
 import Image from "next/image";
 import bg from "@/public/Noise-Animation.png";
 import Shop from "@/components/LabelRelease/Shop";
+import Slider2 from "@/components/Labelartist/Slider2";
 
 const labelrelease = () => {
   return (
     <>
       <Hero />
-      <ReleaseSlider />
+      <Slider2 heading="OUR FEATURED RELEASES" />
       <Shop />
       <div className="relative ">
         <div className="absolute bottom-0 z-0 w-full ">

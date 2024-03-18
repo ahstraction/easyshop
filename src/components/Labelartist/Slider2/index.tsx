@@ -1,3 +1,4 @@
+// @ts-nocheck
 "use client";
 
 import React from "react";
@@ -14,25 +15,48 @@ import {
   Autoplay,
   Mousewheel,
 } from "swiper/modules";
-
+import { useRouter } from "next/navigation";
 import Image from "next/image";
-import slideimg2 from "@/public/imgs/labelartist/slide2.png";
-import slideimg3 from "@/public/imgs/labelartist/Rectangle 2144.png";
-import slideimg4 from "@/public/imgs/labelartist/Rectangle 2146.png";
-import more from "@/public/imgs/labelartist/c.png";
-import made from "@/public/imgs/labelartist/e.png";
-import f from "@/public/imgs/labelartist/f.png";
+import slideimg2 from "@/public/imgs/labelartist/sweetmelody (1).png";
+import slideimg3 from "@/public/imgs/labelartist/jene (1).png";
+import slideimg4 from "@/public/imgs/labelartist/worthy (1).png";
+import more from "@/public/imgs/labelartist/more (1).png";
+import made from "@/public/imgs/labelartist/made (1).png";
+import f from "@/public/imgs/labelartist/esp (1).png";
+import breath from "@/public/imgs/labelartist/breatheagain.png";
 import arrow from "@/public/imgs/icons/majesticons_arrow-up.svg";
 
-const Slider2 = () => {
+interface SliderHeading {
+  heading?: string;
+
+}
+
+const Slider2 = ({heading}: SliderHeading) => {
+
+  const router = useRouter();
+
+
+  // Function to handle click event
+  const handleClick = (id: any) => {
+    // Redirect to the dynamic route page with the selected ID
+    router.push(`/products/${id}`);
+    console.log(id, "id");
+  };
+
+
+
   return (
     <div className=" pb-[140px] mob:w-full mt-20 mob:max-w-full max-w-[1440px] m-auto px-[50px] mob:px-[0px] relative z-50 ">
       <h1 className="text-[#FFFFFF] tracking-[3px] uppercase text-center mb-20 text-[20px] font-jakrata font-normal leading-[25.2px] ">
-        Featured Releases
+        {heading}
       </h1>
 
       <Swiper
         className="portfolioSlider"
+       
+        style={{
+          "--swiper-pagination-color": "#C98200",
+        }}
         loop={true}
         modules={[
           Navigation,
@@ -61,7 +85,7 @@ const Slider2 = () => {
             height={580}
           /> */}
 
-          <div className="">
+          <div  className="">
             <Image
               className="mb-6 h-[480px] w-[480px]"
               src={slideimg2}
@@ -69,7 +93,7 @@ const Slider2 = () => {
               width={480}
               height={480}
             />
-            <div className="flex justify-between items-center">
+            <div onClick={() => handleClick(5)} className="flex cursor-pointer justify-between items-center">
               <div className="">
                 <h1 className="text-[#FFFFFF] text-[30px] font-outfit font-medium">
                   Sweetest of Melody
@@ -83,6 +107,7 @@ const Slider2 = () => {
             </div>
           </div>
         </SwiperSlide>
+
         <SwiperSlide className="mob:px-[20px] mb-16">
           {/* <Image
             className="mb-20"
@@ -100,7 +125,7 @@ const Slider2 = () => {
               width={480}
               height={480}
             />
-            <div className="flex justify-between items-center">
+            <div onClick={() => handleClick(6)} className="flex cursor-pointer justify-between items-center">
               <div className="">
                 <h1 className="text-[#FFFFFF] text-[30px] font-outfit font-medium">
                   Je Ne Sais Quoi
@@ -114,6 +139,7 @@ const Slider2 = () => {
             </div>
           </div>
         </SwiperSlide>
+
         <SwiperSlide className="mob:px-[20px] mb-16">
           {/* <Image
             className="mb-20"
@@ -131,7 +157,7 @@ const Slider2 = () => {
               width={480}
               height={480}
             />
-            <div className="flex justify-between items-center">
+            <div onClick={() => handleClick(3)} className="flex cursor-pointer justify-between items-center">
               <div className="">
                 <h1 className="text-[#FFFFFF] text-[30px] font-outfit font-medium">
                   Worthy
@@ -163,7 +189,7 @@ const Slider2 = () => {
               width={480}
               height={480}
             />
-            <div className="flex justify-between items-center">
+            <div onClick={() => handleClick(4)} className="flex cursor-pointer justify-between items-center">
               <div className="">
                 <h1 className="text-[#FFFFFF] text-[30px] font-outfit font-medium">
                   More than Enough
@@ -195,13 +221,44 @@ const Slider2 = () => {
               width={480}
               height={480}
             />
-            <div className="flex justify-between items-center">
+            <div onClick={() => handleClick(2)}  className="flex cursor-pointer justify-between items-center">
               <div className="">
                 <h1 className="text-[#FFFFFF] text-[30px] font-outfit font-medium">
-                  made
+                  Made
                 </h1>
                 <p className="text-gradient text-[20px] leading-[25.2px] tracking-[3px] font-jakrata font-medium">
                   2020
+                </p>
+              </div>
+              {/* img arrow */}
+              <Image className="" src={arrow} alt="" width={40} height={40} />
+            </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide className="mob:px-[20px] mb-16">
+          {/* <Image
+            className="mb-20"
+            src={slideimg}
+            alt=""
+            width={1320}
+            height={580}
+          /> */}
+
+          <div className="">
+            <Image
+              className="mb-6 h-[480px] w-[480px]"
+              src={breath}
+              alt=""
+              width={480}
+              height={480}
+            />
+            <div onClick={() => handleClick(9)} className="flex cursor-pointer justify-between items-center">
+              <div className="">
+                <h1 className="text-[#FFFFFF] text-[30px] font-outfit font-medium">
+                Imari
+                </h1>
+                <p className="text-gradient text-[20px] leading-[25.2px] tracking-[3px] font-jakrata font-medium">
+                  2024
                 </p>
               </div>
               {/* img arrow */}
@@ -226,7 +283,7 @@ const Slider2 = () => {
               width={480}
               height={480}
             />
-            <div className="flex justify-between items-center">
+            <div onClick={() => handleClick(9)} className="flex cursor-pointer justify-between items-center">
               <div className="">
                 <h1 className="text-[#FFFFFF] text-[30px] font-outfit font-medium">
                   E.S.P.

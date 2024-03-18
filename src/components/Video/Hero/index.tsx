@@ -128,33 +128,7 @@ const Hero = () => {
                 {/* 2nd */}
                 <div className="">
                   <div className="relative flex justify-center items-center">
-                    <Image
-                      className="mb-6 "
-                      src={img2}
-                      alt=""
-                      width={352}
-                      height={266}
-                    />
-                    <Image
-                      className="absolute z-20"
-                      src={playbutton}
-                      alt=""
-                      width={90}
-                      height={90}
-                    />
-                  </div>
-                  <div className="  max-w-[354px]">
-                    <p className="text-gradient text-center text-[15px] leading-[25.2px] uppercase tracking-[3px] font-jakrata font-normal">
-                    21 August 2020
-                    </p>
-                    <h1 className="text-[#FFFFFF] text-center text-[30px] leading-[30px] font-outfit font-medium mt-3 mb-3">
-                    Bennie Pearce and Rina Chanel interview with Doris Hall-James
-                    </h1>
-
-                    {/* text */}
-                    <p className="text-[14px] text-center text-[#fff] font-jakrata font-bold leading-[26px] my-2">
-                      (PhillieBOP Productions)
-                    </p>
+                  
                     {/* button */}
                     {/* <button className=" py-[20px] w-full uppercase mt-3  rounded-[150px] bg-[#FFFFFF] text-[#121212] tracking-[2px] text-[15px] leading-[18.9px] font-semibold font-jakrata">
                       Watch Now

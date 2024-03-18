@@ -22,12 +22,12 @@ const labelartist = () => {
         <Hero />
         <Commingsoon />
         <LabelSlider />
-        <Slider2 />
+        <Slider2 heading="Featured Releases" />
         <div className="relative ">
           <div className="absolute bottom-0 z-0 w-full ">
             <div className="relative overflow-hidden h-full">
               <Image
-                className="object-cover bg-cover bg-no-repeat w-full h-full opacity-10"
+                className="object-cover bg-cover bg-no-repeat w-full  h-[1780px] opacity-10"
                 src="/imgs/home/buildings.png"
                 alt="background"
                 height={813}

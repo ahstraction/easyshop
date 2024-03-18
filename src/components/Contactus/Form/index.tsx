@@ -9,6 +9,7 @@ import Navbar from "@/components/navbar/Navbar";
 import fb from "@/public/imgs/icons/fb.svg";
 import insta from "@/public/imgs/icons/insta.svg";
 import twiter from "@/public/imgs/icons/twitter.svg";
+import Link from "next/link";
 // import youtube from "@/public/imgs/icons/youtube.svg";
 // import location from "@/imgs/contact/carbon_location-filled.png";
 // import mail from "@/imgs/contact/fluent_mail-16-filled.svg";
@@ -16,7 +17,6 @@ import twiter from "@/public/imgs/icons/twitter.svg";
 
 const Form = () => {
   const [fname, setFname] = useState("");
-  const [lname, setLname] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
@@ -33,59 +33,59 @@ const Form = () => {
     e: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ) => {
     e.preventDefault();
-    console.log("clicked");
-    // if (!fname || !lname || !email || !phone || !message) {
-    //   alert("Please fill in all fields");
-    //   return;
-    // }
+    console.log("clicked",fname);
+    if (!fname  || !email || !phone || !message) {
+      alert("Please fill in all fields");
+      return;
+    }
 
-    // if (!validateEmail(email)) {
-    //   setEmailError("Please enter a valid email address");
-    //   return;
-    // }
+    if (!validateEmail(email)) {
+      setEmailError("Please enter a valid email address");
+      return;
+    }
 
     setLoading(true);
 
-    // try {
-    //   const response = await fetch("/api/sendEmail", {
-    //     method: "POST",
-    //     headers: {
-    //       "content-type": "application/json",
-    //     },
-    //     body: JSON.stringify({
-    //       fname,
-    //       lname,
-    //       email,
-    //       phone,
-    //       message,
-    //     }),
-    //   });
+    try {
+      const response = await fetch("/api/sendEmail", {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify({
+          fname,
+          
+          email,
+          phone,
+          message,
+        }),
+      });
 
-    //   const data = await response.json();
+      const data = await response.json();
 
-    //   if (response.ok) {
-    //     // If response is successful
-    //     setSuccessMessage("Email Sent Successfully!");
-    //     // alert("Email sent successfully!");
-    //     console.log(data); // You can log data if needed
+      if (response.ok) {
+        // If response is successful
+        setSuccessMessage("Email Sent Successfully!");
+        // alert("Email sent successfully!");
+        console.log(data); // You can log data if needed
 
-    //     // Reset input fields
-    //     setFname("");
-    //     setLname("");
-    //     setEmail("");
-    //     setPhone("");
-    //     setMessage("");
-    //   } else {
-    //     // If response is not successful
-    //     throw new Error(data.message || "Failed to send email");
-    //   }
-    // } catch (error) {
+        // Reset input fields
+        setFname("");
+       
+        setEmail("");
+        setPhone("");
+        setMessage("");
+      } else {
+        // If response is not successful
+        throw new Error(data.message || "Failed to send email");
+      }
+    } catch (error) {
 
-    //   console.error("Error sending email:", error);
-    //   alert("Failed to send email. Please try again later.");
-    // } finally {
-    //   setLoading(false);
-    // }
+      console.error("Error sending email:", error);
+      alert("Failed to send email. Please try again later.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -156,7 +156,13 @@ const Form = () => {
                         Phone Number
                       </h1>
 
-                      <h1 className="text-[16px] mob:text-[14px] mob:leading-[24px] text-[#fff] font-jakrata leading-[33px] font-normal ">
+                      <h1
+                        onClick={(
+                          event: React.MouseEvent<HTMLButtonElement>
+                        ) => {
+                          window.location.href = "tel: +949-981-2225";
+                        }}
+                      className="text-[16px] mob:text-[14px] cursor-pointer mob:leading-[24px] text-[#fff] font-jakrata leading-[33px] font-normal ">
                         949-981-2225
                       </h1>
                     </div>
@@ -173,7 +179,14 @@ const Form = () => {
                         Email Address
                       </h1>
 
-                      <h1 className="text-[16px] mob:text-[14px] mob:leading-[24px] text-[#fff] font-jakrata leading-[33px] font-normal ">
+                      <h1
+                      
+                      onClick={(
+                        event: React.MouseEvent<HTMLAnchorElement>
+                      ) => {
+                        window.location.href = "mailto:Bop@philliebopmusic.com";
+                      }}
+                      className="text-[16px] mob:text-[14px] cursor-pointer mob:leading-[24px] text-[#fff] font-jakrata leading-[33px] font-normal ">
                         Bop@philliebopmusic.com
                       </h1>
                     </div>
@@ -182,9 +195,21 @@ const Form = () => {
                   {/* social icons */}
                   <div className="flex w-full xl:justify-center gap-[20px] mt-16 ">
                     {/* facebook */}
+
+                    <Link href="https://www.facebook.com/philliebopproductions">
                     <Image src={fb} alt="" width={43} height={43} />
-                    <Image src={insta} alt="" width={43} height={43} />
-                    <Image src={twiter} alt="" width={43} height={43} />
+
+              </Link>
+
+              <Link href="https://www.instagram.com/philliebopproductions/">
+              <Image src={insta} alt="" width={43} height={43} />
+              </Link>
+                    
+
+              <Link href="https://twitter.com/PhillieBOP">
+              <Image src={twiter} alt="" width={43} height={43} />
+              </Link>
+                   
                   </div>
                 </div>
               </div>
@@ -260,12 +285,12 @@ const Form = () => {
 
                   <button
                     type="submit"
-                    // onClick={sendMail}
+                    onClick={sendMail}
                     className=" py-[15px] px-[30px] rounded-[150px] bg-[#FFFFFF] uppercase tracking-[1px] text-[#121212] text-[15px] leading-[18.9px] font-semibold font-jakrata"
                     disabled={loading} // Disable button if loading state is true
                   >
-                    {/* {loading ? "Sending..." : "Submit"} */}
-                    Submit
+                    {loading ? "Sending..." : "Submit"}
+                    {/* Submit */}
                   </button>
                   {successMessage && (
                     <h1 className="text-[24px] font-bold text-green-500 leading-7 text-center pt-4">

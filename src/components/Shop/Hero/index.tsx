@@ -11,7 +11,7 @@ import useShoppingCart from "@/hooks/useShoppingCart";
 const Hero = () => {
   const router = useRouter();
 
-  const { cartQuantity, increaseCartQuantity } = useShoppingCart();
+  const { cartQuantity, increaseCartQuantity,  } = useShoppingCart();
 
   // Function to handle click event
   const handleClick = (id: any) => {
