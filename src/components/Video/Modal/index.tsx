@@ -1,7 +1,11 @@
 "use client"
 import { Dialog, Transition } from '@headlessui/react'
+import Image from 'next/image';
 import { Fragment, useState } from 'react'
 import ReactPlayer from 'react-player';
+
+import img2 from "@/public/imgs/video/Rectangle 27.png";
+import playbutton from "@/public/imgs/video/playbutton.png";
 
 export default function Modal() {
   let [isOpen, setIsOpen] = useState(false)
@@ -16,9 +20,38 @@ export default function Modal() {
 
   return (
     <>
-      <div className="relative z-50 cursor-pointer inset-0 flex items-center justify-center">
-       
-        <button  onClick={openModal} className=" py-[20px] w-full uppercase mt-3  rounded-[150px] bg-[#FFFFFF] text-[#121212] tracking-[2px] text-[15px] leading-[18.9px] font-semibold font-jakrata">
+      <div onClick={openModal} className="relative z-50 cursor-pointer inset-0 flex items-center justify-center">
+                  <Image
+                  onClick={openModal} 
+                      className="mb-6 "
+                      src={img2}
+                      alt=""
+                      width={352}
+                      height={266}
+                    />
+
+                    <Image
+                      className="absolute z-20"
+                      src={playbutton}
+                      alt=""
+                      width={90}
+                      height={90}
+                    />
+                  </div>
+                  <div onClick={openModal}  className="  max-w-[354px] cursor-pointer">
+                    <p className="text-gradient text-center text-[15px] leading-[25.2px] uppercase tracking-[3px] font-jakrata font-normal">
+                    21 August 2020
+                    </p>
+                    <h1 className="text-[#FFFFFF] text-center text-[30px] leading-[30px] font-outfit font-medium mt-3 mb-3">
+                    Bennie Pearce and Rina Chanel interview with Doris Hall-James
+                    </h1>
+
+                    {/* text */}
+                    <p className="text-[14px] text-center text-[#fff] font-jakrata font-bold leading-[26px] my-2">
+                      (PhillieBOP Productions)
+                    </p>
+
+        <button   className=" py-[20px] w-full uppercase mt-3  rounded-[150px] bg-[#FFFFFF] text-[#121212] tracking-[2px] text-[15px] leading-[18.9px] font-semibold font-jakrata">
                       Watch Now
     </button>
       </div>

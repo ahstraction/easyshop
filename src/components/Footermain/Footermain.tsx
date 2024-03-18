@@ -10,7 +10,7 @@ import Link from "next/link";
 const Footermain = () => {
   return (
     <>
-      <div className="flex justify-center py-16 relative z-20">
+      <div className="flex justify-center py-16 relative z-50">
         <div className="img flex mob:block w-full justify-between items-end max-w-[1140px] mob:px-5">
           <div className="mob:flex mob:justify-center">
             <Image className="" src={logo} alt="" width={161} height={136} />
