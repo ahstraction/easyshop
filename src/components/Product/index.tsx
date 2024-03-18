@@ -9,19 +9,21 @@ import Link from "next/link";
 
 
 interface ProductData {
-  productname: string;
-  price: string;
+  productname?: string;
+  price?: string;
   // location: string;
-  imagePath: string;
+  imagePath?: string;
+  date?: string;
+  description?: string;
 }
 
-const Product = ({productname, price, imagePath }: ProductData) => {
+const Product = ({productname, price, imagePath, description, date }: ProductData) => {
 
   
   return (
     <>
       <Navbar />
-      <div className="flex mob:block items-end justify-center gap-20 my-32 pb-8">
+      <div className="flex mob:block items-start justify-center gap-20 my-32 pb-8">
         {/* left */}
       
         {imagePath && (
@@ -38,14 +40,12 @@ const Product = ({productname, price, imagePath }: ProductData) => {
           <h2 className="text-[23px] text-gradient leading-[28.98px] font-bold font-jakrata">
         {price}
           </h2>
-          {/* <p className="text-[14px] text-[#fff] leading-[32px] font-normal font-jakrata max-w-[518px] mt-8 mb-6">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
-            turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus
-            nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum
-            tellus elit sed risus. Maecenas eget condimentum velit, sit amet
-            feugiat lectus. Class aptent taciti sociosqu ad litora torquent per
-            conubia nostra, per inceptos .
-          </p> */}
+          <h2 className="text-[23px] text-gradient leading-[28.98px] font-bold font-jakrata">
+        {date}
+          </h2>
+          <p className="text-[14px] text-[#fff] leading-[32px] font-normal font-jakrata max-w-[518px] mt-8 mb-6">
+          {description}
+          </p>
           {/* buttons */}
           <div className="flex items-center gap-10">
             <div className="flex justify-between items-center min-w-[144px] rounded-[150px] w-[184px] h-[59px] bg-[#333331]">

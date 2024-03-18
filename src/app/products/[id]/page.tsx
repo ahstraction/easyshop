@@ -19,6 +19,7 @@ import cap from "@/public/imgs/merch/Rectangle 26 (6).png";
 import mask from "@/public/imgs/merch/Rectangle 26 (4).png";
 
 
+
 interface ProductData {
     productname: string;
     price: string;
@@ -82,10 +83,11 @@ interface ProductData {
     },
 
 
+
   };
 
   // Retrieve heading and description based on the received ID
-  const { productname, price, imagePath } =
+  const { productname, price, imagePath,date,description  } =
   productData[id] || {};
 
 
@@ -107,7 +109,7 @@ interface ProductData {
           </div>
         </div>
         <div className="relative z-30">
-          <Product productname={productname} price={price} imagePath={imagePath} />
+          <Product productname={productname} price={price} imagePath={imagePath} date={date} description={description} />
           <Latest />
           <Footermain />
         </div>
