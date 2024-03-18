@@ -64,7 +64,7 @@ interface ProductData {
           </div>
         </div>
         <div className="relative z-30">
-          <ProductDetail productname={currentProduct?.title} price={currentProduct?.price} imagePath={currentProduct?.img}  />
+          <ProductDetail productname={currentProduct?.title} price={currentProduct?.price} imagePath={currentProduct?.img} productId={id}  />
           <Latest />
           <Footermain />
         </div>

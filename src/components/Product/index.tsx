@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../navbar/Navbar";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 import product from "@/public/cap1.png";
 import plus from "@/public/imgs/icons/ic_round-plus.svg";
@@ -15,10 +16,15 @@ interface ProductData {
   imagePath?: string;
   date?: string;
   description?: string;
+  productId:string | number;
+
 }
 
-const Product = ({productname, price, imagePath, description, date }: ProductData) => {
+const Product = ({productname, price, imagePath, description, date , productId}: ProductData) => {
+  const [showValidationMessage, setShowValidationMessage] = useState(false);
 
+  const router = useRouter();
+  
   const {
     cartProducts,
     getItemQuantity,
@@ -27,11 +33,27 @@ const Product = ({productname, price, imagePath, description, date }: ProductDat
     removeFromCart,
     cartProductsTotalPrice,
   } = useShoppingCart();
-  
+  console.log(productId,"productId")
+
+
+  const onAddToCart = async (id: string | number) => {
+    const quantity = getItemQuantity(id);
+
+    if (quantity === 0) {
+      setShowValidationMessage(true); 
+    } else {
+     
+      // await increaseCartQuantity(id);
+      router.push(`/cart`);
+    }
+  };
+
+
   return (
     <>
       <Navbar />
-      <div className="flex mob:block items-start justify-center gap-20 my-32 pb-8">
+    <div className="flex justify-center">
+    <div className="flex mob:block items-start w-full justify-center max-w-[1240px] gap-20 my-32 pb-8">
         {/* left */}
       
         {imagePath && (
@@ -45,8 +67,8 @@ const Product = ({productname, price, imagePath, description, date }: ProductDat
           </h1>
 
           {/* price */}
-          <h2 className="text-[23px] text-gradient leading-[28.98px] font-bold font-jakrata">
-        {price}
+          <h2 className="text-[30px] mt-3 text-gradient leading-[28.98px] font-bold font-jakrata">
+        ${price}
           </h2>
           <h2 className="text-[23px] text-gradient leading-[28.98px] font-bold font-jakrata">
         {date}
@@ -57,24 +79,28 @@ const Product = ({productname, price, imagePath, description, date }: ProductDat
           {/* buttons */}
           <div className="flex items-center gap-10">
             <div className="flex justify-between items-center min-w-[144px] rounded-[150px] w-[184px] h-[59px] bg-[#333331]">
-              <button className=" px-4">
+              <button onClick={() => decreaseCartQuantity(Number(productId))} className=" px-4">
                 <Image src={minus} alt="" width={24} height={24} />{" "}
               </button>
               <p className="text-[#fff] text-[16px] font-normal font-jakrata">
-                1
+                {getItemQuantity(Number(productId))}
               </p>
-              <button className=" px-4">
+              <button     onClick={() => increaseCartQuantity(Number(productId))} className=" px-4">
                 <Image src={plus} alt="" width={24} height={24} />{" "}
               </button>
             </div>
-            <Link className="w-full" href="/cart">
-              <button className=" w-[270px] uppercase my-10  h-[59px] rounded-[150px] bg-[#FFFFFF] text-[#121212] tracking-[2px] text-[15px] leading-[18.9px] font-semibold font-jakrata">
+            {/* <Link className="w-full" href="/cart"> */}
+              <button onClick={() => onAddToCart(Number(productId))} className=" w-[270px] uppercase my-10  h-[59px] rounded-[150px] bg-[#FFFFFF] text-[#121212] tracking-[2px] text-[15px] leading-[18.9px] font-semibold font-jakrata">
                 Add to Cart
               </button>
-            </Link>
+            {/* </Link> */}
           </div>
+
+          {showValidationMessage && <p className="text-gradient text-[16px] font-jakrata font-medium">Please add quantity before adding to cart.</p>}
+    
         </div>
       </div>
+    </div>
     </>
   );
 };
