@@ -1,3 +1,7 @@
+
+
+"use client";
+import { useRouter } from "next/navigation";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -11,8 +15,20 @@ import mainvid from "@/public/imgs/video/mainvid.png";
 import arrow from "@/public/imgs/labelartist/arrow-up.png";
 
 import Navbar from "@/components/navbar/Navbar";
+import Modal from "../Modal";
 
 const Hero = () => {
+
+
+  const router = useRouter();
+
+  // Function to handle click event
+  const handleClick = (id: any) => {
+    // Redirect to the dynamic route page with the selected ID
+    router.push(`/products/${id}`);
+    console.log(id, "id");
+  };
+
   return (
     <>
       <div className="relative   pb-20  z-40">
@@ -24,7 +40,7 @@ const Hero = () => {
           <div className="max-w-[1140px]">
             {/* main video */}
             <div className="   flex justify-center overflow-hidden  ">
-              <div className="w-full h-[613px] bg-[#161616] mt-10  max-w-[1340px] relative ">
+              <div onClick={() => handleClick(6)} className="w-full h-[613px] cursor-pointer bg-[#161616] mt-10  max-w-[1340px] relative ">
                 <Image
                   className="absolute z-10 h-full w-full"
                   src={mainvid}
@@ -73,7 +89,7 @@ const Hero = () => {
             <div className="flex justify-center w-full">
               <div className="flex mob:block justify-center gap-[45px] relative z-50 w-full max-w-[1180px]">
                 {/* 1st */}
-                <div className="">
+                <div onClick={() => handleClick(2)} className="cursor-pointer">
                   <div className="relative flex justify-center items-center">
                     <Image
                       className="mb-6 "
@@ -129,25 +145,29 @@ const Hero = () => {
                   </div>
                   <div className="  max-w-[354px]">
                     <p className="text-gradient text-center text-[15px] leading-[25.2px] uppercase tracking-[3px] font-jakrata font-normal">
-                      16 November 2020
+                    21 August 2020
                     </p>
                     <h1 className="text-[#FFFFFF] text-center text-[30px] leading-[30px] font-outfit font-medium mt-3 mb-3">
-                      Rina Chanel Made
+                    Bennie Pearce and Rina Chanel interview with Doris Hall-James
                     </h1>
 
                     {/* text */}
                     <p className="text-[14px] text-center text-[#fff] font-jakrata font-bold leading-[26px] my-2">
-                      (Official Video)
+                      (PhillieBOP Productions)
                     </p>
                     {/* button */}
-                    <button className=" py-[20px] w-full uppercase mt-3  rounded-[150px] bg-[#FFFFFF] text-[#121212] tracking-[2px] text-[15px] leading-[18.9px] font-semibold font-jakrata">
-                      Explore Music
-                    </button>
+                    {/* <button className=" py-[20px] w-full uppercase mt-3  rounded-[150px] bg-[#FFFFFF] text-[#121212] tracking-[2px] text-[15px] leading-[18.9px] font-semibold font-jakrata">
+                      Watch Now
+                    </button> */}
+
+                    <div className="relative z-50">
+                    <Modal/>
+                    </div>
                   </div>
                 </div>
 
                 {/* 3rd*/}
-                <div className="">
+                <div onClick={() => handleClick(4)} className="cursor-pointer">
                   <div className="relative flex justify-center items-center">
                     <Image
                       className="mb-6 "
@@ -166,15 +186,15 @@ const Hero = () => {
                   </div>
                   <div className="  max-w-[354px]">
                     <p className="text-gradient text-center text-[15px] leading-[25.2px] uppercase tracking-[3px] font-jakrata font-normal">
-                      16 November 2020
+                    11 June 2021
                     </p>
                     <h1 className="text-[#FFFFFF] text-center text-[30px] leading-[30px] font-outfit font-medium mt-3 mb-3">
-                      Rina Chanel Made
+                    More Than Enough
                     </h1>
 
                     {/* text */}
                     <p className="text-[14px] text-center text-[#fff] font-jakrata font-bold leading-[26px] my-2">
-                      (Official Video)
+                      (Rina Chanel (Lyric Video))
                     </p>
                     {/* button */}
                     <button className=" py-[20px] w-full uppercase mt-3  rounded-[150px] bg-[#FFFFFF] text-[#121212] tracking-[2px] text-[15px] leading-[18.9px] font-semibold font-jakrata">
