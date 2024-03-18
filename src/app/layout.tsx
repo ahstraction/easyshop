@@ -16,6 +16,9 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 //   variable: "--font-tinos",
 //   weight: "400",
 // });
+
+import Providers from "@/providers";
+
 const monts = Montserrat({
   subsets: ["latin"],
   variable: "--font-monts",
@@ -63,7 +66,9 @@ export default function RootLayout({
       <body
         className={` ${inter.variable} ${outfit.variable} ${jakrata.variable} ${tinos.variable} ${pacifico.variable} ${opensans.variable} ${monts.variable}`}
       >
-        <div className=" bg-[#21201E]">{children}</div>
+        <Providers>
+          <div className=" bg-[#21201E]">{children}</div>
+        </Providers>
       </body>
     </html>
   );
