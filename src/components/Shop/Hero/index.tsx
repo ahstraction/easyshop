@@ -44,8 +44,8 @@ const Hero = () => {
               <div className="max-w-[270px]" key={product.id}>
                 <Image
                   id="1"
-                  onClick={() => handleClick(1)}
-                  className="mb-6 cursor-pointer"
+                  onClick={() => handleClick(product.id)}
+                  className="mb-6 cursor-pointer max-h-[222px]"
                   src={product.img}
                   alt=""
                   width={352}
@@ -55,14 +55,14 @@ const Hero = () => {
                   <div className="flex justify-between ">
                     <h1
                       id="1"
-                      onClick={() => handleClick(1)}
+                      onClick={() => handleClick(product.id)}
                       className="text-[#FFFFFF] cursor-pointer text-[21px] leading-[30px] font-outfit font-medium mb-3"
                     >
                       {product.title}
                     </h1>
                     <p
                       id="1"
-                      onClick={() => handleClick(1)}
+                      onClick={() => handleClick(product.id)}
                       className="text-gradient cursor-pointer text-[20px] leading-[25.2px] tracking-[3px] font-jakrata font-medium"
                     >
                       ${product.price}
@@ -93,8 +93,8 @@ const Hero = () => {
             {products.slice(4, 8).map((product) => (
               <div className="max-w-[270px]" key={product.id}>
                 <Image
-                  className="mb-6 cursor-pointer"
-                  onClick={() => handleClick(5)}
+                  className="mb-6 cursor-pointer max-h-[222px]"
+                  onClick={() => handleClick(product.id)}
                   src={product.img}
                   alt=""
                   width={352}
@@ -103,13 +103,13 @@ const Hero = () => {
                 <div className="  max-w-[354px]">
                   <div className="flex justify-between ">
                     <h1
-                      onClick={() => handleClick(5)}
+                      onClick={() => handleClick(product.id)}
                       className="text-[#FFFFFF] cursor-pointer text-[21px] leading-[30px] font-outfit font-medium mb-3"
                     >
                       {product.title}
                     </h1>
                     <p
-                      onClick={() => handleClick(5)}
+                      onClick={() => handleClick(product.id)}
                       className="text-gradient cursor-pointer text-[20px] leading-[25.2px] tracking-[3px] font-jakrata font-medium"
                     >
                       ${product.price}

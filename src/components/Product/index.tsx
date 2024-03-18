@@ -6,7 +6,7 @@ import product from "@/public/cap1.png";
 import plus from "@/public/imgs/icons/ic_round-plus.svg";
 import minus from "@/public/imgs/icons/tabler_minus.svg";
 import Link from "next/link";
-
+import useShoppingCart from "@/hooks/useShoppingCart";
 
 interface ProductData {
   productname?: string;
@@ -19,6 +19,14 @@ interface ProductData {
 
 const Product = ({productname, price, imagePath, description, date }: ProductData) => {
 
+  const {
+    cartProducts,
+    getItemQuantity,
+    increaseCartQuantity,
+    decreaseCartQuantity,
+    removeFromCart,
+    cartProductsTotalPrice,
+  } = useShoppingCart();
   
   return (
     <>

@@ -36,7 +36,7 @@ export const products: Product[] = [
     title: "More Than Enough",
     price: 7,
     subHeading: "",
-    img: img4,
+    img:more ,
   },
   {
     id: 5,
@@ -64,6 +64,6 @@ export const products: Product[] = [
     title: "Mask",
     price: 1.5,
     subHeading: "",
-    img: more,
+    img: img4,
   },
 ];

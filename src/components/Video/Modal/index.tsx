@@ -4,7 +4,7 @@ import { Fragment, useState } from 'react'
 import ReactPlayer from 'react-player';
 
 export default function Modal() {
-  let [isOpen, setIsOpen] = useState(true)
+  let [isOpen, setIsOpen] = useState(false)
 
   function closeModal() {
     setIsOpen(false)
@@ -55,9 +55,9 @@ export default function Modal() {
                   >
                     Payment successful
                   </Dialog.Title> */}
-                  <div className="w-full h-[400px]">
+                  <div className="w-full max-h-[450px]">
       <ReactPlayer
-        url="/productionvideo.mp4"
+        url="/watchnow.mp4"
         width="100%"
         height="100%"
         controls
