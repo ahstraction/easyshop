@@ -19,33 +19,33 @@ const Form = () => {
     <>
       <Navbar />
 
-      <div className="relative flex justify-center  items-center py-20">
+      <div className="relative flex justify-center  items-center py-20 bg-[#21201E]  z-10 mob:px-5">
         <div className="max-w-[1340px] w-full ">
           <div className="flex w-full justify-end mb-8">
-            <h1 className="text-gradient w-[1290px]  text-[60px] font-outfit font-medium leading-[80px]">
+            <h1 className="text-gradient w-[1290px]  text-[60px] mob:text-[40px] font-outfit font-medium leading-[80px]">
               Checkout
             </h1>
           </div>
           <div className="flex mob:block justify-end  gap-16">
             {/* left */}
             <div className="max-w-[669px] w-full">
-              <h1 className="text-[#FFFFFF] text-[17px] font-bold font-jakrata tracking-[3px]">
+              {/* <h1 className="text-[#FFFFFF] text-[17px] font-bold font-jakrata tracking-[3px] mb-5">
                 EXPRESS CHECKOUT
-              </h1>
+              </h1> */}
 
-              <div className="flex items-center gap-5 my-8">
+              {/* <div className="flex items-center gap-5 my-8">
                 <button>
                   <Image src={shopbtn} alt="" width={328} height={48} />
                 </button>
                 <button>
                   <Image src={paybtn} alt="" width={328} height={55} />
                 </button>
-              </div>
-              <div className=" max-w-[1140px]  w-full">
+              </div> */}
+              {/* <div className=" max-w-[1140px]  w-full">
                 <hr className="h-px  bg-[#FFFFFF33]/20 border-0 dark:bg-[#FFFFFF33]"></hr>
-              </div>
+              </div> */}
 
-              <div className="flex justify-between items-end mt-10 mb-8">
+              {/* <div className="flex justify-between items-end mt-10 mb-8">
                 <h1 className="text-[#FFFFFF] text-[17px] font-bold font-jakrata tracking-[3px]">
                   Contact
                 </h1>
@@ -61,14 +61,56 @@ const Form = () => {
                     Log in
                   </Link>
                 </div>
+              </div> */}
+
+     {/* names */}
+     <div className="flex mob:block items-end gap-7">
+                <div className="w-full">
+                  <label
+                    htmlFor="First Name"
+                    className="text-[16px] text-[#FFFFFF] leading-[20.16px] font-normal font-jakrata"
+                  >
+                    First Name*
+                  </label>
+                  <input
+                    className="w-full  h-[29px]  outline-none border-b bg-transparent border-b-[#FFFFFF]/20 text-[16px] text-[#FFFFFF] font-normal mb-6 "
+                    type="text"
+                  />
+                </div>
+
+                <div className="w-full">
+                  <label
+                    htmlFor="Last Name"
+                    className="text-[16px] text-[#FFFFFF] leading-[20.16px] font-normal font-jakrata"
+                  >
+                    Last Name*
+                  </label>
+                  <input
+                    className="w-full  h-[29px]  outline-none border-b bg-transparent border-b-[#FFFFFF]/20 text-[16px] text-[#FFFFFF] font-normal mb-6 "
+                    type="text"
+                  />
+                </div>
               </div>
+
+ {/* company name */}
+ <label
+                htmlFor="Email Address"
+                className="text-[16px] text-[#FFFFFF] leading-[20.16px] font-normal font-jakrata"
+              >
+              Company Name (Opional)
+              </label>
+              <input
+                className="w-full  h-[29px]  outline-none border-b bg-transparent border-b-[#FFFFFF]/20 text-[16px] text-[#FFFFFF] font-normal mb-6 "
+                type="text"
+              />
+
 
               {/* inputes */}
               <label
                 htmlFor="Email Address"
                 className="text-[16px] text-[#FFFFFF] leading-[20.16px] font-normal font-jakrata"
               >
-                Email Address
+                Email Address*
               </label>
               <input
                 className="w-full  h-[29px]  outline-none border-b bg-transparent border-b-[#FFFFFF]/20 text-[16px] text-[#FFFFFF] font-normal mb-6 "
@@ -78,7 +120,7 @@ const Form = () => {
               {/* <p className="text-[16px] text-[#FFFFFF] leading-[20.16px] font-normal font-jakrata">
                 Email me with news and offers
               </p> */}
-              <div className="flex items-center mb-4">
+              {/* <div className="flex items-center mb-4">
                 <input
                   id="default-checkbox"
                   type="checkbox"
@@ -91,11 +133,11 @@ const Form = () => {
                 >
                   Email me with news and offers
                 </label>
-              </div>
+              </div> */}
 
-              <h1 className="text-[#FFFFFF] uppercase text-[17px] font-bold font-jakrata tracking-[3px] mt-12 mb-8">
+              {/* <h1 className="text-[#FFFFFF] uppercase text-[17px] font-bold font-jakrata tracking-[3px] mt-12 mb-8">
                 Delivery
-              </h1>
+              </h1> */}
 
               {/* countery */}
               <label
@@ -109,41 +151,13 @@ const Form = () => {
                 type="text"
               />
 
-              {/* names */}
-              <div className="flex items-end gap-7">
-                <div className="w-full">
-                  <label
-                    htmlFor="First Name"
-                    className="text-[16px] text-[#FFFFFF] leading-[20.16px] font-normal font-jakrata"
-                  >
-                    First Name
-                  </label>
-                  <input
-                    className="w-full  h-[29px]  outline-none border-b bg-transparent border-b-[#FFFFFF]/20 text-[16px] text-[#FFFFFF] font-normal mb-6 "
-                    type="text"
-                  />
-                </div>
-
-                <div className="w-full">
-                  <label
-                    htmlFor="Last Name"
-                    className="text-[16px] text-[#FFFFFF] leading-[20.16px] font-normal font-jakrata"
-                  >
-                    Last Name
-                  </label>
-                  <input
-                    className="w-full  h-[29px]  outline-none border-b bg-transparent border-b-[#FFFFFF]/20 text-[16px] text-[#FFFFFF] font-normal mb-6 "
-                    type="text"
-                  />
-                </div>
-              </div>
-
+         
               {/* Address */}
               <label
                 htmlFor="Address"
                 className="text-[16px] text-[#FFFFFF] leading-[20.16px] font-normal font-jakrata"
               >
-                Address
+                Address*
               </label>
               <input
                 className="w-full  h-[29px]  outline-none border-b bg-transparent border-b-[#FFFFFF]/20 text-[16px] text-[#FFFFFF] font-normal mb-6 "
@@ -151,13 +165,13 @@ const Form = () => {
               />
 
               {/* state */}
-              <div className="flex items-end gap-7">
+              <div className="flex mob:block items-end gap-7">
                 <div className="w-full">
                   <label
                     htmlFor="City"
                     className="text-[16px] text-[#FFFFFF] leading-[20.16px] font-normal font-jakrata"
                   >
-                    City
+                    City*
                   </label>
                   <input
                     className="w-full  h-[29px]  outline-none border-b bg-transparent border-b-[#FFFFFF]/20 text-[16px] text-[#FFFFFF] font-normal mb-6 "
@@ -170,7 +184,7 @@ const Form = () => {
                     htmlFor="State"
                     className="text-[16px] text-[#FFFFFF] leading-[20.16px] font-normal font-jakrata"
                   >
-                    State
+                    State*
                   </label>
                   <input
                     className="w-full  h-[29px]  outline-none border-b bg-transparent border-b-[#FFFFFF]/20 text-[16px] text-[#FFFFFF] font-normal mb-6 "
@@ -183,7 +197,7 @@ const Form = () => {
                     htmlFor="Zip Code"
                     className="text-[16px] text-[#FFFFFF] leading-[20.16px] font-normal font-jakrata"
                   >
-                    Zip Code
+                    Zip Code*
                   </label>
                   <input
                     className="w-full  h-[29px]  outline-none border-b bg-transparent border-b-[#FFFFFF]/20 text-[16px] text-[#FFFFFF] font-normal mb-6 "
@@ -197,7 +211,7 @@ const Form = () => {
                 htmlFor="Phone Number"
                 className="text-[16px] text-[#FFFFFF] leading-[20.16px] font-normal font-jakrata"
               >
-                Phone Number
+                Phone Number*
               </label>
               <input
                 className="w-full  h-[29px]  outline-none border-b bg-transparent border-b-[#FFFFFF]/20 text-[16px] text-[#FFFFFF] font-normal mb-6 "
@@ -207,7 +221,7 @@ const Form = () => {
               {/* <p className="text-[16px] text-[#FFFFFF] leading-[20.16px] font-normal font-jakrata">
                 Text me with news and offers
               </p> */}
-              <div className="flex items-center mb-4">
+              {/* <div className="flex items-center mb-4">
                 <input
                   id="default-checkbox"
                   type="checkbox"
@@ -220,11 +234,11 @@ const Form = () => {
                 >
                   Text me with news and offers
                 </label>
-              </div>
+              </div> */}
 
               {/* Shipping method */}
               <h1 className="text-[#FFFFFF] uppercase text-[17px] font-bold font-jakrata tracking-[3px] mt-12 mb-8">
-                Shipping method
+             Additional Information
               </h1>
               <label
                 className="text-[16px] text-[#FFFFFF] leading-[20.16px] font-normal font-jakrata"
@@ -256,7 +270,7 @@ const Form = () => {
                   placeholder="Card number"
                 />
 
-                <div className="flex items-center gap-7">
+                <div className="flex mob:block items-center gap-7">
                   <input
                     className="w-full py-3 outline-none border-b bg-transparent border-b-[#FFFFFF]/20 text-[16px] text-[#FFFFFF] font-normal mb-6 "
                     type="text"
@@ -294,7 +308,7 @@ const Form = () => {
               </div>
 
               {/* button */}
-              <button className="w-full uppercase my-14  h-[59px] rounded-[150px] bg-[#FFFFFF] text-[#121212] tracking-[2px] text-[15px] leading-[18.9px] font-semibold font-jakrata">
+              <button className="w-full uppercase my-14  h-[59px] rounded-[150px] mob:h-[49px] bg-[#FFFFFF] text-[#121212] tracking-[2px] text-[15px] leading-[18.9px] font-semibold font-jakrata">
                 PAy Now
               </button>
             </div>

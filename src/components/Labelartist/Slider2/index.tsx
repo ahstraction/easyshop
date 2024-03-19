@@ -46,8 +46,8 @@ const Slider2 = ({heading}: SliderHeading) => {
 
 
   return (
-    <div className=" pb-[140px] mob:w-full mt-20 mob:max-w-full max-w-[1440px] m-auto px-[50px] mob:px-[0px] relative z-50 ">
-      <h1 className="text-[#FFFFFF] tracking-[3px] uppercase text-center mb-20 text-[20px] font-jakrata font-normal leading-[25.2px] ">
+    <div className=" pb-[140px] mob:pb-[90px] mob:w-full mt-20 mob:max-w-full max-w-[1440px] m-auto px-[50px] mob:px-[0px] relative z-50 ">
+      <h1 className="text-[#FFFFFF] tracking-[3px] uppercase text-center mb-20 mob:mb-10 text-[20px] font-jakrata font-normal leading-[25.2px] ">
         {heading}
       </h1>
 
@@ -67,13 +67,21 @@ const Slider2 = ({heading}: SliderHeading) => {
           Mousewheel,
         ]}
         spaceBetween={20}
-        slidesPerView={3}
+        slidesPerView={1}
         // navigation
         // direction="vertical"
         // onSwiper={(swiper) => console.log(swiper)}
         // onSlideChange={() => console.log("slide change")}
         pagination={{ clickable: true }}
+        breakpoints={{
+          768: {
+            slidesPerView: 1,
+          },
 
+          1300: {
+            slidesPerView: 3,
+          },
+        }}
         // mousewheel={{ invert: true }}
       >
         <SwiperSlide className="mob:px-[20px] mb-16 ">

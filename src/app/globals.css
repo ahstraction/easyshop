@@ -27,6 +27,15 @@
   background-color: #27262600;
   background-image: linear-gradient(to bottom, #0000002b 0%, #353131 60%);
 }
+
+@media only screen and (max-width: 700px) {
+  .gradientpro{
+    /* background-color: #27262621;
+    background-image: linear-gradient(to bottom, #312f2f00 0%, #211f1f 60%); */
+    background-color: #21201E;
+    background-image: linear-gradient(to bottom, #21201E 0%, #21201E 60%);
+  }
+}
 .swiper-pagination-bullet-active {
   background-color: #fff !important;
   background-color: #fff;
