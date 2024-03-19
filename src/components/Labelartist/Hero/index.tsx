@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import banner from "@/public/imgs/labelartist/artist-banner.png";
+import bannermob from "@/public/imgs/labelartist/imarimobile.png";
 import bgright from "@/public/imgs/labelartist/artistright1.png";
 import arrow from "@/public/imgs/labelartist/arrow-up.png";
 import Navbar from "@/components/navbar/Navbar";
@@ -18,9 +19,9 @@ const Hero = () => {
       <Navbar />
 
       <div className="   flex justify-center overflow-hidden pb-32 ">
-        <div className="w-full h-[664px] bg-[#161616] mt-10  max-w-[1340px] relative ">
+        <div className="w-full h-[664px] mob:h-full bg-[#161616] mt-10  max-w-[1340px] relative  ">
           <Image
-            className="absolute w-full h-full z-10 "
+            className="absolute w-full h-full z-10 mob:hidden"
             src={banner}
             alt=""
             width={1440}
@@ -35,17 +36,25 @@ const Hero = () => {
           /> */}
 
           {/* content */}
-          <div className="py-12 pl-20 relative z-50">
-            <h1 className="text-[20px] uppercase text-[#fff]/70 tracking-[3px] font-jakrata font-normal leading-[25.2px] ">
+          <div className="py-12 pl-20 mob:pl-5 mob:pr-5 relative z-50">
+
+          <Image
+            className="w-full h-full z-10 mob:block hidden mb-5"
+            src={bannermob}
+            alt=""
+            width={1440}
+            height={686}
+          />
+            <h1 className="text-[20px] uppercase mob:text-center text-[#fff]/70 tracking-[3px] font-jakrata font-normal leading-[25.2px] ">
               Label Artist
             </h1>
-            <div className="flex items-end h-[560px]">
+            <div className="flex items-end h-[560px] mob:h-full">
               <div className="">
-                <h2 className="text-[50px] font-medium font-outfit text-gradient leading-[60px] ">
+                <h2 className="text-[50px] mob:text-center font-medium font-outfit text-gradient leading-[60px] ">
                   Imari
                 </h2>
 
-                <p className="text-[14px] max-w-[643px] text-[#FFFFFF] font-jakrata font-normal leading-[32px] my-6">
+                <p className="text-[14px] mob:text-center max-w-[643px] text-[#FFFFFF] font-jakrata font-normal leading-[32px] my-6">
                   {showFullBio ? (
                     <>
                       <span className="max-w-[643px]">
@@ -89,7 +98,7 @@ const Hero = () => {
                 </p>
                 <Link
                   onClick={toggleBio}
-                  className="font-bold flex gap-1 font-jakrata text-gradient leading-[21.42px] tracking-[2px] uppercase"
+                  className="font-bold flex gap-1 mob:flex mob:justify-center font-jakrata text-gradient leading-[21.42px] tracking-[2px] uppercase"
                   href="#"
                 >
                   Read IMARI's bio

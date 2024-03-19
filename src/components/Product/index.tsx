@@ -53,12 +53,12 @@ const Product = ({productname, price, imagePath, description, date , productId}:
     <>
       <Navbar />
     <div className="flex justify-center">
-    <div className="flex mob:block items-start w-full justify-center max-w-[1240px] gap-20 my-32 pb-8">
+    <div className="flex mob:block items-start w-full justify-center max-w-[1240px] gap-20 my-32 pb-8 mob:px-5">
         {/* left */}
       
         {imagePath && (
            
-              <Image src={imagePath} alt="" width={527} height={464} />
+              <Image className="mob:w-full" src={imagePath} alt="" width={527} height={464} />
             )}
         {/* right */}
         <div className="">
@@ -77,8 +77,8 @@ const Product = ({productname, price, imagePath, description, date , productId}:
           {description}
           </p>
           {/* buttons */}
-          <div className="flex items-center gap-10">
-            <div className="flex justify-between items-center min-w-[144px] rounded-[150px] w-[184px] h-[59px] bg-[#333331]">
+          <div className="flex mob:block items-center gap-10">
+            <div className="flex justify-between items-center min-w-[144px] rounded-[150px] w-[184px] mob:w-full  h-[59px] bg-[#333331]">
               <button onClick={() => decreaseCartQuantity(Number(productId))} className=" px-4">
                 <Image src={minus} alt="" width={24} height={24} />{" "}
               </button>
@@ -90,7 +90,7 @@ const Product = ({productname, price, imagePath, description, date , productId}:
               </button>
             </div>
             {/* <Link className="w-full" href="/cart"> */}
-              <button onClick={() => onAddToCart(Number(productId))} className=" w-[270px] uppercase my-10  h-[59px] rounded-[150px] bg-[#FFFFFF] text-[#121212] tracking-[2px] text-[15px] leading-[18.9px] font-semibold font-jakrata">
+              <button onClick={() => onAddToCart(Number(productId))} className=" w-[270px]  mob:w-full uppercase my-10  h-[59px] rounded-[150px] bg-[#FFFFFF] text-[#121212] tracking-[2px] text-[15px] leading-[18.9px] font-semibold font-jakrata">
                 Add to Cart
               </button>
             {/* </Link> */}

@@ -12,7 +12,7 @@ const Merch = () => {
   return (
     <>
       <div className="relative bg-[#121212] z-20 ">
-        <div className="absolute top-0 z-30 w-full ">
+        <div className="absolute top-0 z-10 w-full ">
           <div className="relative overflow-hidden gradientpro">
             <Image
               className="object-cover bg-cover bg-no-repeat w-full gradientpro h-[1250px]"
@@ -22,7 +22,7 @@ const Merch = () => {
               width={1832}
             />
           </div>
-          <div className="absolute z-20 h-full bottom-[-150px] inset-0 bg-gradient-to-b from-transparent to-[#121212] "></div>
+          <div className="absolute z-10 h-full bottom-[-150px] inset-0 bg-gradient-to-b from-transparent to-[#121212] "></div>
         </div>
         <Hero />
         <AddtoCart />

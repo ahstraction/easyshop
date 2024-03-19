@@ -112,21 +112,21 @@ const Form = () => {
                   <h1 className="text-[60px] mob:text-center mob:text-[30px]  font-outfit  text-gradient leading-[62px] font-medium mb-7 mt-3 ">
                     Get In Touch
                   </h1>
-                  <p className="text-[18px] mob:text-[14px] mob:leading-[24px] text-[#FFFFFF]/70  leading-[33px] font-jakrata font-normal ">
+                  {/* <p className="text-[18px] mob:text-[14px] mob:leading-[24px] text-[#FFFFFF]/70  leading-[33px] font-jakrata font-normal ">
                     Donec faucibus semper massa, quis congue dolor et. 
-                  </p>
+                  </p> */}
                   {/* locations London*/}
-                  <div className="flex gap-3 mt-16">
+                  <div className="flex mob:justify-center gap-3 mt-16">
                     {/* <div className="img">
                       <Image src={location} alt="" width={80} height={80} />
                     </div> */}
 
                     <div className="">
-                      <h1 className="text-[18px] mob:text-[q6px] text-gradient leading-[26px] font-semibold font-jakrata mb-2 ">
+                      <h1 className="text-[18px] mob:text-center mob:text-[q6px] text-gradient leading-[26px] font-semibold font-jakrata mb-2 ">
                         Location
                       </h1>
 
-                      <h1 className="text-[16px] mob:text-[14px] mob:leading-[24px] text-[#fff] font-jakrata leading-[33px] font-normal ">
+                      <h1 className="text-[16px] mob:text-center mob:text-[14px] mob:leading-[24px] text-[#fff] font-jakrata leading-[33px] font-normal ">
                         7401 Wiles Rd, Coral Springs FL, 33067
                       </h1>
                       {/* <h1
@@ -147,13 +147,13 @@ const Form = () => {
                   </div>
 
                   {/* dc*/}
-                  <div className="flex gap-3 mt-9">
+                  <div className="flex mob:justify-center gap-3 mt-9">
                     {/* <div className="img">
                       <Image src={location} alt="" width={80} height={80} />
                     </div> */}
 
                     <div className="">
-                      <h1 className="text-[18px] mob:text-[q6px] text-gradient leading-[26px] font-semibold font-jakrata mb-2 ">
+                      <h1 className="text-[18px] mob:text-center mob:text-[q6px] text-gradient leading-[26px] font-semibold font-jakrata mb-2 ">
                         Phone Number
                       </h1>
 
@@ -163,20 +163,20 @@ const Form = () => {
                         ) => {
                           window.location.href = "tel: +949-981-2225";
                         }}
-                      className="text-[16px] mob:text-[14px] cursor-pointer mob:leading-[24px] text-[#fff] font-jakrata leading-[33px] font-normal ">
+                      className="text-[16px] mob:text-center mob:text-[14px] cursor-pointer mob:leading-[24px] text-[#fff] font-jakrata leading-[33px] font-normal ">
                         949-981-2225
                       </h1>
                     </div>
                   </div>
 
                   {/* locations usa*/}
-                  <div className="flex gap-3 mt-8">
+                  <div className="flex mob:justify-center gap-3 mt-8">
                     {/* <div className="img">
                       <Image src={location} alt="" width={80} height={80} />
                     </div> */}
 
                     <div className="">
-                      <h1 className="text-[18px] mob:text-[q6px] text-gradient leading-[26px] font-semibold font-jakrata mb-2 ">
+                      <h1 className="text-[18px] mob:text-center mob:text-[q6px] text-gradient leading-[26px] font-semibold font-jakrata mb-2 ">
                         Email Address
                       </h1>
 
@@ -187,7 +187,7 @@ const Form = () => {
                       ) => {
                         window.location.href = "mailto:Bop@philliebopmusic.com";
                       }}
-                      className="text-[16px] mob:text-[14px] cursor-pointer mob:leading-[24px] text-[#fff] font-jakrata leading-[33px] font-normal ">
+                      className="text-[16px] mob:text-center mob:text-[14px] cursor-pointer mob:leading-[24px] text-[#fff] font-jakrata leading-[33px] font-normal ">
                         Bop@philliebopmusic.com
                       </h1>
                     </div>
@@ -218,7 +218,7 @@ const Form = () => {
               {/* right */}
 
               <div className="xl:flex xl:justify-center">
-                <div className=" justify-center w-full xl:mt-10 max-w-[530px] px-16 py-20 bg-[#131211]  max-h-[564px] xl:max-h-full">
+                <div className=" justify-center w-full xl:mt-10 max-w-[530px] px-16 mob:px-8 py-20 bg-[#131211]  max-h-[564px] xl:max-h-full">
                   <label
                     htmlFor="First Name"
                     className="text-[16px] text-[#FFFFFF] leading-[20.16px] font-normal font-jakrata"

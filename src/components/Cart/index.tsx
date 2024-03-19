@@ -27,7 +27,7 @@ const Cart = () => {
     <>
       <Navbar />
 
-      <div className="relative flex justify-center  items-center py-20">
+      <div className="relative flex justify-center  items-center py-20 mob:px-5">
         <div className="max-w-[1340px] w-full ">
           <div className="flex w-full justify-end mb-8">
             <h1 className="text-gradient w-[1260px]  text-[60px] font-outfit font-medium leading-[80px]">
@@ -39,10 +39,10 @@ const Cart = () => {
             <div className="max-w-[662px] w-full">
               {cartProducts.map((product) => (
                 <Fragment key={product.id}>
-                  <div className="flex justify-between items-center w-full ">
+                  <div className="flex mob:block justify-between items-center w-full ">
                     {/* item */}
                     <div className="flex gap-8 items-center">
-                      <Image src={product.img} alt="" width={96} height={90} />
+                      <Image className="mob:w-[140px]" src={product.img} alt="" width={96} height={90} />
                       <div className="">
                         {/* name */}
                         <h1 className="text-[26px] text-[#FFFFFF] mb-2 font-medium font-outfit leading-[32.76px]">
@@ -55,7 +55,7 @@ const Cart = () => {
                       </div>
                     </div>
                     {/* actions */}
-                    <div className="flex gap-8">
+                    <div className="flex gap-8 mob:mt-5">
                       {/* buttons */}
                       <div className="flex justify-between items-center min-w-[144px] h-[53px] bg-[#333331]">
                         <button
@@ -92,7 +92,7 @@ const Cart = () => {
             </div>
 
             {/* right */}
-            <div className="bg-[#131211] min-w-[522px] p-10">
+            <div className="bg-[#131211] w-[522px] mob:w-full p-10">
               <h1 className="uppercase text-[17px] text-[#fff] font-jakrata font-bold leading-[21.42px] tracking-[3px]">
                 Summary
               </h1>

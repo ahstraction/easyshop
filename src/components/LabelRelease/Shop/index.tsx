@@ -6,7 +6,7 @@ import arrow from "@/public/imgs/icons/majesticons_arrow-up.svg";
 const Shop = () => {
   return (
     <>
-      <div className="py-20 relative z-50 bg-[#121212]">
+      <div className="py-20 relative z-50 bg-[#121212] mob:mb-10">
         <h1 className="text-[#FFFFFF] tracking-[3px] uppercase text-center mb-10 text-[20px] font-jakrata font-normal leading-[25.2px] ">
           shop
         </h1>
