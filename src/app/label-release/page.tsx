@@ -7,13 +7,15 @@ import Image from "next/image";
 import bg from "@/public/Noise-Animation.png";
 import Shop from "@/components/LabelRelease/Shop";
 import Slider2 from "@/components/Labelartist/Slider2";
+import PhysicalProductSlider from "@/components/LabelRelease/PhysicalProductSlider";
 
 const labelrelease = () => {
   return (
     <>
       <Hero />
       <Slider2 heading="OUR FEATURED RELEASES" />
-      <Shop />
+      {/* <Shop /> */}
+      <PhysicalProductSlider/>
       <div className="relative ">
         <div className="absolute bottom-0 z-0 w-full ">
           <div className="relative overflow-hidden">
