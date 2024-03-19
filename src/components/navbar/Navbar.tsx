@@ -174,7 +174,7 @@ const Navbar = () => {
                     </svg>
                   </button>
                 </div>
-                <div className="relative z-[999]  bg-[#21201E]/90">
+                <div className="relative z -[999] bg-[#21201E]/90">
                   <Drawer isOpen={isOpen} onClose={onClose}>
                     <div className="flex items-center h-full w-full  bg-[#21201E]/90">
                       <ul className="font-medium  w-full  mob:left-0 mob:w-full z-50 flex flex-col py-4 md:p-0 mt-4 gap-[0px]  rtl:space-x-reverse md:mt-0 ">
