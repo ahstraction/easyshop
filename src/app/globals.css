@@ -2,31 +2,63 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
   /* globals.css or your CSS file */
-/* globals.css or your CSS file */
-.text-gradient {
-  background: linear-gradient(45deg, #FCF8A8 , #C98200 );
-  -webkit-background-clip: text;
-  color: transparent;
-}
-.border-gradeint{
- 
-  border: 1px solid transparent;
-  border-image: linear-gradient(360deg, #FCF8A8, #C98200) 1;
-}
+  /* globals.css or your CSS file */
+  .text-gradient {
+    background: linear-gradient(45deg, #fcf8a8, #c98200);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  .border-gradeint {
+    border: 1px solid transparent;
+    border-image: linear-gradient(360deg, #fcf8a8, #c98200) 1;
+  }
 
-.gradientpro{
-  /* background-color: #27262621;
+    /* Stripe Styling */
+  .StripeElement.StripeElement--empty,
+  .StripeElement.StripeElement--focus,
+  .StripeElement.StripeElement--invalid,
+  .StripeElement.StripeElement--complete {
+    background: white !important;
+    border-radius: 5px;
+    padding: 16px;
+    margin-bottom: 12px;
+    /* border: 2px solid black; */
+    border-radius: 24px;
+    font-size: 16px !important;
+    color: white;
+  }
+
+  .StripeElement.StripeElement--focus,
+  .StripeElement.StripeElement--complete {
+    border-color: black;
+    font-size: 16px !important;
+  }
+
+  .StripeElement.StripeElement--invalid {
+    border-color: red;
+    box-shadow: 0 0 0 0.5px red;
+    font-size: 16px !important;
+  }
+
+  .gradientpro {
+    /* background-color: #27262621;
   background-image: linear-gradient(to bottom, #312f2f00 0%, #211f1f 60%); */
-  background-color: #27262600;
-  background-image: linear-gradient(to bottom, #0000002b 0%, #353131 60%);
-}
+
+    background-color: #27262600;
+    background-image: linear-gradient(to bottom, #0000002b 0%, #353131 60%);
+  }
+  .swiper-pagination-bullet-active {
+    background-color: #fff !important;
+    background-color: #fff;
+  }
+
+
+
 
 @media only screen and (max-width: 700px) {
   .gradientpro{
@@ -41,6 +73,18 @@
   background-color: #fff;
 }
 
+
+  .expiryStripe {
+    /* margin-right: 10px; */
+    flex: 1;
+  }
+
+  .cvcStripe {
+    flex: 1;
+  }
+
+
+  /*? Stripe Styling */
 }
 /* .text-gradient45 {
   background: linear-gradient(45deg, #FCF8A8 , #C98200 );
@@ -48,7 +92,6 @@
   color: transparent;
 } */
 
-.paymentbg{
-  background: linear-gradient(to bottom, #051A76 100%, #0C0C09 100%);
+.paymentbg {
+  background: linear-gradient(to bottom, #051a76 100%, #0c0c09 100%);
 }
-

@@ -1,6 +1,9 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { Elements } from "@stripe/react-stripe-js";
+import { loadStripe } from "@stripe/stripe-js";
 
 import cap from "@/public/imgs/cart/cap.png";
 import Navbar from "@/components/navbar/Navbar";
@@ -13,6 +16,12 @@ import credit from "@/public/imgs/icons/creditcart.svg";
 import shopbtn from "@/public/imgs/checkout/shopbtn.png";
 import paybtn from "@/public/imgs/checkout/pay.png";
 import remove from "@/public/imgs/checkout/Remove.png";
+
+import StripeForm from "./Stripe";
+
+const stripePromise = loadStripe(
+  process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY as string
+);
 
 const Form = () => {
   return (
@@ -255,6 +264,7 @@ const Form = () => {
               <h1 className="text-[#FFFFFF] uppercase text-[17px] font-bold font-jakrata tracking-[3px] mt-12 mb-8">
                 Payment
               </h1>
+
               <div className="w-full h-[59px] paymentbg flex gap-3 items-center px-4">
                 <Image src={credit} alt="" width={18} height={18} />
                 <p className="text-[14px] text-[#FFFFFF] leading-[20.16px] font-normal font-jakrata">
@@ -263,8 +273,14 @@ const Form = () => {
               </div>
 
               {/* card detail */}
+
+              <Elements stripe={stripePromise}>
+                <StripeForm />
+              </Elements>
+
+              {/* card detail */}
               <div className="bg-[#13121180]/50 px-4 py-4">
-                <input
+                {/* <input
                   className="w-full py-3 outline-none border-b bg-transparent border-b-[#FFFFFF]/20 text-[16px] text-[#FFFFFF] font-normal mb-6 "
                   type="text"
                   placeholder="Card number"
@@ -281,36 +297,18 @@ const Form = () => {
                     type="text"
                     placeholder="Security code"
                   />
-                </div>
+                </div> */}
 
-                <input
-                  className="w-full py-3 outline-none border-b bg-transparent border-b-[#FFFFFF]/20 text-[16px] text-[#FFFFFF] font-normal mb-6 "
-                  type="text"
-                  placeholder="Name on card"
-                />
+         
                 {/* <p className="text-[16px] text-[#FFFFFF]/80 leading-[20.16px] font-normal font-jakrata pb-6">
                   Use shipping address as billing address
                 </p> */}
-                <div className="flex items-center mb-4">
-                  <input
-                    id="default-checkbox"
-                    type="checkbox"
-                    value=""
-                    className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-                  />
-                  <label
-                    htmlFor="default-checkbox"
-                    className="text-[16px] ml-4 text-[#FFFFFF] leading-[20.16px] font-normal font-jakrata"
-                  >
-                    Use shipping address as billing address
-                  </label>
-                </div>
+            
               </div>
 
-              {/* button */}
-              <button className="w-full uppercase my-14  h-[59px] rounded-[150px] mob:h-[49px] bg-[#FFFFFF] text-[#121212] tracking-[2px] text-[15px] leading-[18.9px] font-semibold font-jakrata">
-                PAy Now
-              </button>
+
+           
+
             </div>
 
             {/* right */}

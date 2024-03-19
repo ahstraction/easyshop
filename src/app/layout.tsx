@@ -11,6 +11,8 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/navbar/Navbar";
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 // const tinos = Tinos({
 //   subsets: ["latin"],
 //   variable: "--font-tinos",
@@ -67,7 +69,10 @@ export default function RootLayout({
         className={` ${inter.variable} ${outfit.variable} ${jakrata.variable} ${tinos.variable} ${pacifico.variable} ${opensans.variable} ${monts.variable}`}
       >
         <Providers>
-          <div className=" bg-[#21201E]">{children}</div>
+          <div className=" bg-[#21201E]">
+            {children}
+            <ToastContainer position="top-center" />
+          </div>
         </Providers>
       </body>
     </html>
