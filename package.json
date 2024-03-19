@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@headlessui/react": "^1.7.18",
+    "@stripe/react-stripe-js": "^2.6.2",
+    "@stripe/stripe-js": "^3.0.10",
     "jotai": "^2.7.1",
     "next": "14.1.0",
     "nodemailer": "^6.9.12",
@@ -17,7 +19,9 @@
     "react-dom": "^18",
     "react-icons": "^5.0.1",
     "react-player": "^2.15.1",
+    "react-toastify": "^10.0.5",
     "sharp": "^0.33.2",
+    "stripe": "^14.21.0",
     "swiper": "^11.0.7"
   },
   "devDependencies": {
