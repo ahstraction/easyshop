@@ -27,9 +27,9 @@ const Hero = () => {
 
   return (
     <>
-      <div className="relative z-40">
+      <div className="relative z-20">
         <Navbar />
-        <h1 className="text-center text-gradient text-[70px] font-medium leading-[80px] font-outfit mt-[100px] ">
+        <h1 className="text-center text-gradient text-[70px] mob:leading-[50px] mob:text-[40px] font-medium leading-[80px] font-outfit mt-[100px] ">
           Our Shop
         </h1>
         <p className="text-[#fff] text-[14px] font-normal font-jakrata text-center mt-5 ">
@@ -37,15 +37,15 @@ const Hero = () => {
           music, etc.)
         </p>
       </div>
-      <div className="pt-20  bg-[#121212] pb-[120px]">
+      <div className="pt-20  bg-[#121212] pb-[120px] mob:pb-20 mob:mb-20">
         <div className="flex justify-center w-full">
-          <div className="flex mob:block justify-center gap-[45px] relative z-50 w-full max-w-[1200px]">
+          <div className="flex mob:block justify-center gap-[45px] relative z-10 w-full max-w-[1200px]">
             {products.slice(0, 4).map((product) => (
-              <div className="max-w-[270px]" key={product.id}>
+              <div className="max-w-[270px] mob:max-w-full  mob:px-5 mob:pb-5" key={product.id}>
                 <Image
                   id="1"
                   onClick={() => handleClick(product.id)}
-                  className="mb-6 cursor-pointer max-h-[222px]"
+                  className="mb-6 cursor-pointer max-h-[222px] mob:max-h-full"
                   src={product.img}
                   alt=""
                   width={352}
@@ -88,12 +88,12 @@ const Hero = () => {
         </div>
 
         {/* row2 */}
-        <div className="flex justify-center w-full mt-[45px] relative z-50">
+        <div className="flex justify-center w-full mt-[45px] relative z-10">
           <div className="flex mob:block justify-center gap-[45px] w-full max-w-[1180px]">
             {products.slice(4, 8).map((product) => (
-              <div className="max-w-[270px]" key={product.id}>
+              <div className="max-w-[270px]  mob:max-w-full  mob:px-5 mob:pb-5" key={product.id}>
                 <Image
-                  className="mb-6 cursor-pointer max-h-[222px]"
+                  className="mb-6 cursor-pointer max-h-[222px] mob:max-h-full"
                   onClick={() => handleClick(product.id)}
                   src={product.img}
                   alt=""

@@ -7,17 +7,17 @@ import logo from "@/public/imgs/home/phillibop-logo-new (1) (1).png";
 const Commingsoon = () => {
   return (
     <>
-      <div className="flex justify-center">
+      <div className="flex justify-center relative">
         <div className="max-w-[1140px] w-full min-h-[417px] flex justify-center items-center">
           <Image
-            className="absolute opacity-50"
+            className="absolute opacity-50  mob:h-full"
             src={bg}
             alt=""
             width={1140}
             height={417}
           />
           <Image
-            className="absolute h-[417px] z-20"
+            className="absolute h-[417px] mob:h-full z-20"
             src={bgovrlay}
             alt=""
             width={1140}
