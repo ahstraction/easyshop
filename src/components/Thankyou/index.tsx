@@ -1,20 +1,36 @@
+// @ts-nocheck
 "use client"
 import React from 'react'
 import downloadbtn from "@/public/download button.png"
 import Image from 'next/image'
 import Navbar from '../navbar/Navbar'
+import useShoppingCart from "@/hooks/useShoppingCart";
 
 const Thankyou = () => {
-
+  const {
+    cartProducts,
+    // getItemQuantity,
+    // increaseCartQuantity,
+    // decreaseCartQuantity,
+    // removeFromCart,
+    // cartProductsTotalPrice,
+  } = useShoppingCart();
    
+  // console.log(cartProducts,"cartProducts")
+
+  const firstObjectSongLink = cartProducts.length > 0 ? `${cartProducts[0]?.songlink}` : null;
+
+
+  console.log(firstObjectSongLink, "First object song link");
+
   const handleDownload = () => {
    // URL to the video file
-   const videoUrl = '/';
+   const videoUrl = firstObjectSongLink;
 
    // Create a temporary link element
    const link = document.createElement('a');
    link.href = videoUrl;
-   link.download = 'video.mp4'; 
+   link.download = 'video.mp3'; 
    link.click();
  };
   return (
@@ -34,10 +50,15 @@ const Thankyou = () => {
 
     {/*download button */}
 <div className="flex mob:justify-center">
-<button >
-<Image className='max-w-[204px] max-h-[194px] ' src={downloadbtn} alt="" width={204} height={194} />
-    
-    </button> 
+  {/* onClick={handleDownload} */}
+
+  {firstObjectSongLink && ( // Check if videoUrl is not empty
+      <button >
+      <Image onClick={handleDownload} className='max-w-[204px] max-h-[194px] ' src={downloadbtn} alt="" width={204} height={194} />
+          
+          </button> 
+      )}
+
 </div>
      </div>
 

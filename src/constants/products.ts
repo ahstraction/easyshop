@@ -18,6 +18,7 @@ export const products: Product[] = [
     price: 1.50,
     subHeading: "",
     img: img1,
+    songlink:"/videos/ESP (3).mp3",
   },
   {
     id: 2,
@@ -25,6 +26,8 @@ export const products: Product[] = [
     price: 1.50,
     subHeading: "",
     img: img2,
+    songlink:"/videos/Made (1).mp3",
+
   },
   {
     id: 3,
@@ -32,6 +35,8 @@ export const products: Product[] = [
     price: 1.50,
     subHeading: "",
     img: img3,
+    songlink:"/videos/Worthy (2).mp3",
+
   },
   {
     id: 4,
@@ -39,6 +44,8 @@ export const products: Product[] = [
     price: 1.50,
     subHeading: "",
     img:more ,
+    songlink:"/videos/Rina-Chanel-More-Than-Enough (1).mp3",
+
   },
   {
     id: 5,
@@ -46,6 +53,8 @@ export const products: Product[] = [
     price: 1.50,
     subHeading: "",
     img: img5,
+    songlink:"Sweetest-of-Melody (1).mp3",
+
   },
   {
     id: 6,
@@ -53,6 +62,8 @@ export const products: Product[] = [
     price: 1.50,
     subHeading: "",
     img: jene,
+    songlink:"/videos/Je-Ne-Sais-Quoi (2).mp3",
+
   },
   {
     id: 7,
@@ -60,6 +71,8 @@ export const products: Product[] = [
     price: 20.00,
     subHeading: "",
     img: img6,
+    songlink:"",
+
   },
   {
     id: 8,
@@ -67,6 +80,8 @@ export const products: Product[] = [
     price: 8.00,
     subHeading: "",
     img: img4,
+    songlink:"",
+
   },
   {
     id: 9,
@@ -74,6 +89,8 @@ export const products: Product[] = [
     price: 1.50,
     subHeading: "",
     img: imari,
+    songlink:"/videos/Breathe Again - Imari.mp3",
+
   },
   {
     id: 10,
@@ -81,6 +98,8 @@ export const products: Product[] = [
     price: 2.00,
     subHeading: "",
     img: worthycd,
+    songlink:"",
+
   },
   {
     id: 11,
@@ -88,5 +107,7 @@ export const products: Product[] = [
     price: 2.00,
     subHeading: "",
     img: sweetcd,
+    songlink:"",
+
   },
 ];

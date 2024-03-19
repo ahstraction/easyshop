@@ -1,9 +1,10 @@
 import React, { FormEvent } from "react";
-
+import { useRouter } from "next/navigation";
 import CreditCardInput from "./CreditCardInput";
 import useStripePayment from "./useStripePayment";
 
 const index = () => {
+  const router = useRouter();
   const { onStripeSubmit } = useStripePayment();
 
   const onSubmit = async (e: FormEvent) => {
@@ -13,6 +14,7 @@ const index = () => {
 
     if (res?.success) {
       console.log("payment success");
+      router.push('/thank-you');
     }
   };
 
