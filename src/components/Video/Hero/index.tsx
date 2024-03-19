@@ -9,9 +9,10 @@ import Link from "next/link";
 import img1 from "@/public/imgs/video/Rectangle 26 (7).png";
 import img2 from "@/public/imgs/video/Rectangle 27.png";
 import img3 from "@/public/imgs/video/Rectangle 28.png";
+import jene from "@/public/imgs/video/jenasis.png";
 import playbutton from "@/public/imgs/video/playbutton.png";
 import maskimg from "@/public/imgs/labelartist/mask.png";
-import mainvid from "@/public/imgs/video/mainvid.png";
+import mainvid from "@/public/imgs/video/imaribanner.png";
 import arrow from "@/public/imgs/labelartist/arrow-up.png";
 
 import Navbar from "@/components/navbar/Navbar";
@@ -40,7 +41,7 @@ const Hero = () => {
           <div className="max-w-[1140px]">
             {/* main video */}
             <div className="   flex justify-center overflow-hidden  ">
-              <div onClick={() => handleClick(6)} className="w-full h-[613px] cursor-pointer bg-[#161616] mt-10  max-w-[1340px] relative ">
+              <div onClick={() => handleClick(9)} className="w-full h-[613px] cursor-pointer bg-[#161616] mt-10  max-w-[1340px] relative ">
                 <Image
                   className="absolute z-10 h-full w-full"
                   src={mainvid}
@@ -54,14 +55,14 @@ const Hero = () => {
                   <div className="flex justify-between items-center w-full">
                     <div className="">
                       <h2 className="text-[17px] tracking-[3px] font-bold font-jakrata text-gradient leading-[21.42px] ">
-                        18 March 2023
+                        22 March 2024
                       </h2>
                       <h1 className="text-[40px] mt-2 text-[#fff] tracking-[2px] font-outfit font-medium leading-[50.4px] ">
-                        Je Ne Sais Quoi
+                       Imari
                       </h1>
 
                       <p className="text-[18px]  text-[#FFFFFF] font-jakrata font-bold leading-[22.68px] my-6">
-                        PhillieBOP Productions
+                      Bennie Pearce for Phillie-BOP Productions
                       </p>
                     </div>
 
@@ -111,7 +112,7 @@ const Hero = () => {
                       16 November 2020
                     </p>
                     <h1 className="text-[#FFFFFF] text-center text-[30px] leading-[30px] font-outfit font-medium mt-3 mb-3">
-                      Rina Chanel Made
+                      Rina Chanel <br /> Made
                     </h1>
 
                     {/* text */}
@@ -176,6 +177,46 @@ const Hero = () => {
                     </button>
                   </div>
                 </div>
+
+
+                {/* 4th*/}
+                <div onClick={() => handleClick(6)} className="cursor-pointer">
+                  <div className="relative flex justify-center items-center">
+                    <Image
+                      className="mb-6 "
+                      src={jene}
+                      alt=""
+                      width={352}
+                      height={266}
+                    />
+                    <Image
+                      className="absolute z-20"
+                      src={playbutton}
+                      alt=""
+                      width={90}
+                      height={90}
+                    />
+                  </div>
+                  <div className="  max-w-[354px]">
+                    <p className="text-gradient text-center text-[15px] leading-[25.2px] uppercase tracking-[3px] font-jakrata font-normal">
+                    11 June 2021
+                    </p>
+                    <h1 className="text-[#FFFFFF] text-center text-[30px] leading-[30px] font-outfit font-medium mt-3 mb-3">
+                    Je Ne Sais <br /> Quoi
+                    </h1>
+
+                    {/* text */}
+                    <p className="text-[14px] text-center text-[#fff] font-jakrata font-bold leading-[26px] my-2">
+                      (Rina Chanel (Lyric Video))
+                    </p>
+                    {/* button */}
+                    <button className=" py-[20px] w-full uppercase mt-3  rounded-[150px] bg-[#FFFFFF] text-[#121212] tracking-[2px] text-[15px] leading-[18.9px] font-semibold font-jakrata">
+                      Explore Music
+                    </button>
+                  </div>
+                </div>
+
+
               </div>
             </div>
           </div>

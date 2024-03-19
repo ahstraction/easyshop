@@ -1,5 +1,7 @@
 "use client";
 import React, { useState } from "react";
+import { useRouter } from "next/navigation";
+
 import Link from "next/link";
 import Image from "next/image";
 import banner from "@/public/imgs/labelartist/artist-banner.png";
@@ -9,11 +11,22 @@ import arrow from "@/public/imgs/labelartist/arrow-up.png";
 import Navbar from "@/components/navbar/Navbar";
 
 const Hero = () => {
+
+  const router = useRouter();
+
   const [showFullBio, setShowFullBio] = useState(false);
 
   const toggleBio = () => {
     setShowFullBio(!showFullBio);
   };
+
+  const handleClick = (id: any) => {
+    // Redirect to the dynamic route page with the selected ID
+    router.push(`/products/${id}`);
+    console.log(id, "id");
+  };
+
+
   return (
     <>
       <Navbar />
@@ -45,12 +58,12 @@ const Hero = () => {
             width={1440}
             height={686}
           />
-            <h1 className="text-[20px] uppercase mob:text-center text-[#fff]/70 tracking-[3px] font-jakrata font-normal leading-[25.2px] ">
+            <h1 className="text-[20px] uppercase mob:text-center text-[#fff] tracking-[3px] font-jakrata font-normal leading-[25.2px] ">
               Label Artist
             </h1>
             <div className="flex items-end h-[560px] mob:h-full">
               <div className="">
-                <h2 className="text-[50px] mob:text-center font-medium font-outfit text-gradient leading-[60px] ">
+                <h2 onClick={() => handleClick(9)} className="text-[50px] cursor-pointer mob:text-center font-medium font-outfit imarigradient leading-[60px] ">
                   Imari
                 </h2>
 
@@ -101,7 +114,7 @@ const Hero = () => {
                   className="font-bold flex gap-1 mob:flex mob:justify-center font-jakrata text-gradient leading-[21.42px] tracking-[2px] uppercase"
                   href="#"
                 >
-                  Read IMARI's bio
+                 IMARI's bio
                   <Image src={arrow} alt="" width={16.97} height={16.97} />
                 </Link>
               </div>

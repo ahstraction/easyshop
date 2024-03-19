@@ -24,7 +24,8 @@ const LabelSlider = () => {
     <div className=" pb-[5px] mob:w-full mt-28 mob:max-w-full w-full max-w-[1320px] m-auto px-[50px] mob:px-[0px] relative z-50 ">
       <Swiper
         style={{
-          "--swiper-pagination-color": "#C98200",
+          "--swiper-pagination-color": "#fff",
+          "--swiper-pagination-bullet-inactive-color": "#999999",
         }}
         className="portfolioSlider"
         loop={true}

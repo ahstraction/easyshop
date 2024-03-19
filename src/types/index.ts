@@ -3,5 +3,6 @@ export type Product = {
   title: string;
   subHeading: string;
   img: any;
-  price:number
+  price:number;
+  songlink:string
 };

@@ -78,7 +78,8 @@ const AboutProducer = () => {
                     create a new level of quality in a music with no genre
                     confines. Bennie is a member of the American Society of
                     Composers and Publishers (ASCAP). He is an independent
-                    publisher under Phillie-BOP Music.
+                    publisher under Phillie-BOP Music. <br /> <br />
+                    In 2020, Phillie-BOP Productions launched its first international release, “Worthy,” a debut hit single with independent singer/songwriter Rina Chanel.  Follow-on hits included “More Than Enough,” “Made,” “Sweetest of Melody,” “E.S.P.” and “Je Ne Sais Quoi,” all #1 on various digital radio platform charts, as well as Top 10 and Top 20 categories.
                   </span>
 
 
@@ -86,14 +87,7 @@ const AboutProducer = () => {
   
 {showFullBio ? (
                     <>
-                      <span className="">
-                        Born and raised in Hampton, Virginia, Jashonda “Imari”
-                        Dutch, has always had a love for music. Singing from as
-                        early as two years old, her love and passion for singing
-                        has never wavered. She could always be found in a choir
-                        at church or school.
-                      </span>
-                      <br />
+                    
                       <span className="">
                       Bennie O. Pearce (BOP) is a musician/producer/songwriter,
                     and founder of Phillie-BOP Productions. The Philadelphia,
@@ -116,16 +110,11 @@ const AboutProducer = () => {
                     create a new level of quality in a music with no genre
                     confines. Bennie is a member of the American Society of
                     Composers and Publishers (ASCAP). He is an independent
-                    publisher under Phillie-BOP Music.
+                    publisher under Phillie-BOP Music. <br /> <br />
+                    In 2020, Phillie-BOP Productions launched its first international release, “Worthy,” a debut hit single with independent singer/songwriter Rina Chanel.  Follow-on hits included “More Than Enough,” “Made,” “Sweetest of Melody,” “E.S.P.” and “Je Ne Sais Quoi,” all #1 on various digital radio platform charts, as well as Top 10 and Top 20 categories.
 
                       </span>
-                      <br />
-                      <span className="">
-                        This vocal powerhouse has traveled to many places with
-                        her voice and enjoys telling stories and bringing out
-                        emotions through her singing as a form of
-                        interpretation.
-                      </span>
+                   
                     </>
                   ) : (
                     <span className="">

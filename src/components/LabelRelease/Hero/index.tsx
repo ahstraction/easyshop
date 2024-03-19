@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import maskimg from "@/public/imgs/labelartist/mask.png";
-import bgright from "@/public/imgs/labelrelease/bgrightrelease.png";
+import bgright from "@/public/imgs/labelrelease/imarii.png";
 import bgrightshade from "@/public/imgs/labelrelease/shade.png";
 import bannermob from "@/public/imgs/labelartist/imarimobile.png";
 
@@ -14,7 +14,7 @@ const Hero = () => {
     <>
       <Navbar />
 
-      <div className="   flex justify-center overflow-hidden pb-32 mob:pb-0 ">
+      <div className="   flex justify-center overflow-hidden pb-16 mob:pb-0 ">
         <div className="w-full h-[664px] mob:h-full bg-[#252322] mt-10  max-w-[1340px] relative ">
           {/* <Image
             className="absolute w-full h-full z-10 opacity-15"
@@ -51,44 +51,52 @@ const Hero = () => {
             <h1 className="text-[20px] uppercase  text-[#fff]/70 tracking-[3px] font-jakrata font-normal leading-[25.2px] ">
               Label Release
             </h1>
-            <h2 className="text-[50px] mob:text-[30px] font-medium font-outfit text-gradient leading-[60px] mt-[150px] mob:mt-[15px] mb-6">
-              Je Ne Sais Quoi (2023)
+            <h2 className="text-[50px] mob:text-[30px] font-medium font-outfit imarigradient leading-[60px] mt-[100px] mob:mt-[15px] mb-6">
+            Imari's Breathe Again
             </h2>
             <p className="text-[14px] max-w-[643px] text-[#FFFFFF] font-jakrata font-bold leading-[32px] my-[2px]">
               Written by:
               <span className="font-normal ml-1">
-                Syrina White and Bennie Pearce
+              Jashonda Imari Dutch and Bennie Pearce
               </span>
             </p>
             <p className="text-[14px] max-w-[643px] text-[#FFFFFF] font-jakrata font-bold leading-[32px] my-[2px]">
               All music written, arranged, performed and recorded by:
               <span className="font-normal ml-1">
-                Bennie Pearce for PhillieBOP Productions
+              Bennie Pearce for PhillieBOP Music (ASCAP)
               </span>
             </p>
             <p className="text-[14px] max-w-[643px] text-[#FFFFFF] font-jakrata font-bold leading-[32px] my-[2px]">
               Produced by:
               <span className="font-normal ml-1">
-                Bennie Pearce for PhillieBOP Productions
+              Bennie Pearce for Phillie-BOP Productions
               </span>
             </p>
             <p className="text-[14px] max-w-[643px] text-[#FFFFFF] font-jakrata font-bold leading-[32px] my-[2px]">
               Lyrics:
-              <span className="font-normal ml-1">Syrina White</span>
+              <span className="font-normal ml-1">Jashonda Imari Dutch</span>
             </p>
             <p className="text-[14px] max-w-[643px] text-[#FFFFFF] font-jakrata font-bold leading-[32px] my-[2px]">
-              Lead and Background Vocals:
-              <span className="font-normal ml-1">Rina Chanel</span>
+            Lead and Background Vocals and arrangements: 
+              <span className="font-normal ml-1">Jashonda Imari Dutch</span>
             </p>
             <p className="text-[14px] max-w-[643px] text-[#FFFFFF] font-jakrata font-bold leading-[32px] my-[2px]">
-              Mixed by:
+            Bass Guitar: 
               <span className="font-normal ml-1">
-                Craig White for SoundDoctor Productions
+              Bennie Pearce
               </span>
             </p>
             <p className="text-[14px] max-w-[643px] text-[#FFFFFF] font-jakrata font-bold leading-[32px] my-[2px]">
-              Mastered by:
-              <span className="font-normal ml-1">Peter Humphreys</span>
+            Keyboards: 
+              <span className="font-normal ml-1">Bennie Pearce</span>
+            </p>
+            <p className="text-[14px] max-w-[643px] text-[#FFFFFF] font-jakrata font-bold leading-[32px] my-[2px]">
+            Mixed by: 
+              <span className="font-normal ml-1">Craig White for Sound Doctor Productions</span>
+            </p>
+            <p className="text-[14px] max-w-[643px] text-[#FFFFFF] font-jakrata font-bold leading-[32px] my-[2px]">
+            Mastering by:  
+              <span className="font-normal ml-1">Peter Humphreys for Masterwork Recording, Inc.</span>
             </p>
             <p className="text-[14px] max-w-[643px] text-[#FFFFFF] font-jakrata font-bold leading-[32px] my-[2px]">
               <span className="font-normal ">
