@@ -55,7 +55,8 @@ const Slider2 = ({heading}: SliderHeading) => {
         className="portfolioSlider"
        
         style={{
-          "--swiper-pagination-color": "#C98200",
+          "--swiper-pagination-color": "#fff",
+          "--swiper-pagination-bullet-inactive-color": "#999999",
         }}
         loop={true}
         modules={[
@@ -68,6 +69,10 @@ const Slider2 = ({heading}: SliderHeading) => {
         ]}
         spaceBetween={20}
         slidesPerView={1}
+        autoplay={{
+          delay: 1500,
+          disableOnInteraction: false,
+        }}
         // navigation
         // direction="vertical"
         // onSwiper={(swiper) => console.log(swiper)}
@@ -95,7 +100,8 @@ const Slider2 = ({heading}: SliderHeading) => {
 
           <div  className="">
             <Image
-              className="mb-6 h-[480px] w-[480px]"
+            onClick={() => handleClick(5)}
+              className="mb-6 cursor-pointer"
               src={slideimg2}
               alt=""
               width={480}
@@ -127,7 +133,8 @@ const Slider2 = ({heading}: SliderHeading) => {
 
           <div className="">
             <Image
-              className="mb-6 h-[480px] w-[480px]"
+            onClick={() => handleClick(6)}
+              className="mb-6 cursor-pointer"
               src={slideimg3}
               alt=""
               width={480}
@@ -159,7 +166,8 @@ const Slider2 = ({heading}: SliderHeading) => {
 
           <div className="">
             <Image
-              className="mb-6 h-[480px] w-[480px]"
+            onClick={() => handleClick(3)}
+              className="mb-6 cursor-pointer"
               src={slideimg4}
               alt=""
               width={480}
@@ -191,7 +199,8 @@ const Slider2 = ({heading}: SliderHeading) => {
 
           <div className="">
             <Image
-              className="mb-6 h-[480px] w-[480px]"
+            onClick={() => handleClick(4)}
+              className="mb-6 cursor-pointer"
               src={more}
               alt=""
               width={480}
@@ -223,7 +232,8 @@ const Slider2 = ({heading}: SliderHeading) => {
 
           <div className="">
             <Image
-              className="mb-6 h-[480px] w-[480px]"
+            onClick={() => handleClick(2)}
+              className="mb-6 cursor-pointer"
               src={made}
               alt=""
               width={480}
@@ -254,7 +264,8 @@ const Slider2 = ({heading}: SliderHeading) => {
 
           <div className="">
             <Image
-              className="mb-6 h-[480px] w-[480px]"
+            onClick={() => handleClick(9)}
+              className="mb-6 cursor-pointer "
               src={breath}
               alt=""
               width={480}
@@ -285,13 +296,14 @@ const Slider2 = ({heading}: SliderHeading) => {
 
           <div className="">
             <Image
-              className="mb-6 h-[480px] w-[480px]"
+            onClick={() => handleClick(1)}
+              className="mb-6 cursor-pointer"
               src={f}
               alt=""
               width={480}
               height={480}
             />
-            <div onClick={() => handleClick(9)} className="flex cursor-pointer justify-between items-center">
+            <div onClick={() => handleClick(1)} className="flex cursor-pointer justify-between items-center">
               <div className="">
                 <h1 className="text-[#FFFFFF] text-[30px] font-outfit font-medium">
                   E.S.P.

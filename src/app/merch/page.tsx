@@ -8,7 +8,9 @@ import Shop from "@/components/LabelRelease/Shop";
 import AddtoCart from "@/components/Merch/AddtoCart";
 import backimg from "@/public/imgs/procedure/procedure.png";
 
+
 const Merch = () => {
+
   return (
     <>
       <div className="relative bg-[#121212] z-20 ">

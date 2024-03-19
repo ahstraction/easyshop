@@ -32,13 +32,13 @@ export async function POST(request: NextRequest) {
 
     // Email options for sending thank you email to the user
     const mailOptionToUser = {
-      from: "PHILLIE-BOP MUSIC <developer@innovativemojo.com >",
+      from: "PHILLIE BOP MUSIC <developer@innovativemojo.com >",
       to: email,
       subject: "Thank You for Subscribing",
       html: `
         <p>Thank you for subscribing. </p>
-        <p>Best regards,</p>
-        <p>EEE Corp,</p>
+        <p>Best Regards,</p>
+        <p>PHILLIE BOP MUSIC</p>
       `,
     };
 

@@ -127,7 +127,7 @@ const Form = () => {
                       </h1>
 
                       <h1 className="text-[16px] mob:text-center mob:text-[14px] mob:leading-[24px] text-[#fff] font-jakrata leading-[33px] font-normal ">
-                        7401 Wiles Rd, Coral Springs FL, 33067
+                      P.O. Box 317, Annandale, VA 22003
                       </h1>
                       {/* <h1
                         
@@ -146,7 +146,7 @@ const Form = () => {
                     </div>
                   </div>
 
-                  {/* dc*/}
+                  {/* number*/}
                   <div className="flex mob:justify-center gap-3 mt-9">
                     {/* <div className="img">
                       <Image src={location} alt="" width={80} height={80} />
@@ -161,10 +161,10 @@ const Form = () => {
                         onClick={(
                           event: React.MouseEvent<HTMLButtonElement>
                         ) => {
-                          window.location.href = "tel: +949-981-2225";
+                          window.location.href = "tel: +703.618.8777";
                         }}
                       className="text-[16px] mob:text-center mob:text-[14px] cursor-pointer mob:leading-[24px] text-[#fff] font-jakrata leading-[33px] font-normal ">
-                        949-981-2225
+                      703.618.8777
                       </h1>
                     </div>
                   </div>
@@ -185,10 +185,10 @@ const Form = () => {
                       onClick={(
                         event: React.MouseEvent<HTMLAnchorElement>
                       ) => {
-                        window.location.href = "mailto:Bop@philliebopmusic.com";
+                        window.location.href = "mailto:bop@philliebopmusic.com";
                       }}
                       className="text-[16px] mob:text-center mob:text-[14px] cursor-pointer mob:leading-[24px] text-[#fff] font-jakrata leading-[33px] font-normal ">
-                        Bop@philliebopmusic.com
+                       bop@philliebopmusic.com
                       </h1>
                     </div>
                   </div>

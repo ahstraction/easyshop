@@ -34,7 +34,7 @@ const Cart = () => {
               Your Cart
             </h1>
           </div>
-          <div className="flex mob:block justify-end items-center gap-16">
+          <div className="flex mob:block justify-end  gap-16">
             {/* left */}
             <div className="max-w-[662px] w-full">
               {cartProducts.map((product) => (

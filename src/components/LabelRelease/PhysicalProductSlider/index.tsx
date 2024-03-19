@@ -1,55 +1,115 @@
-"use client"
-import Image from "next/image";
+// @ts-nocheck
+
+
+"use client";
+
 import React from "react";
-import img1 from "@/public/imgs/merch/Rectangle 26 (1).png";
-import img2 from "@/public/imgs/merch/Rectangle 26 (2).png";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+import {
+  Navigation,
+  Pagination,
+  Scrollbar,
+  A11y,
+  Autoplay,
+  Mousewheel,
+} from "swiper/modules";
+import { useRouter } from "next/navigation";
+import Image from "next/image";
 import img3 from "@/public/imgs/merch/cdworthy1.png";
 import img4 from "@/public/imgs/merch/Rectangle 26 (4).png";
 import img5 from "@/public/imgs/merch/cdsweet1.png";
 import img6 from "@/public/imgs/merch/Rectangle 26 (6).png";
+import breath from "@/public/imgs/labelartist/breatheagain.png";
 import arrow from "@/public/imgs/icons/majesticons_arrow-up.svg";
 
-import { useRouter } from "next/navigation";
 
-import { products } from "@/constants/products";
 import useShoppingCart from "@/hooks/useShoppingCart";
 
-const AddtoCart = () => {
+interface SliderHeading {
+  heading?: string;
 
-  const router = useRouter();
+}
 
-  const { cartQuantity, increaseCartQuantity,  } = useShoppingCart();
+const PhysicalProductSlider = ({heading}: SliderHeading) => {
+    const router = useRouter();
 
-  // Function to handle click event
-  const handleClick = (id: any) => {
-    // Redirect to the dynamic route page with the selected ID
-    router.push(`/products/${id}`);
-    console.log(id, "id");
-  };
-
-  const onAddToCart = (id: string | number) => {
-    increaseCartQuantity(id);
-    router.push(`cart`);
-  };
+    const { cartQuantity, increaseCartQuantity,  } = useShoppingCart();
+  
+    // Function to handle click event
+    const handleClick = (id: any) => {
+      // Redirect to the dynamic route page with the selected ID
+      router.push(`/products/${id}`);
+      console.log(id, "id");
+    };
+  
+    const onAddToCart = (id: string | number) => {
+      increaseCartQuantity(id);
+      router.push(`cart`);
+    };
+  
 
   return (
-    <>
-      <div className="pt-20 mob:pt-12  bg-[#121212] pb-[120px] mob:pb-10 mob:mb-10 mob:px-5">
-        <div className="flex justify-center w-full">
-          <div className="flex mob:block justify-center gap-[45px] relative z-20 w-full max-w-[1280px]">
-     
-           
-            {/* 3rd*/}
-            <div className=" mob:mb-5">
+   <div className="bg-[#21201E] relative z-10">
+     <div className=" pb-[140px] mob:pb-[90px] mob:w-full mt-20 mob:max-w-full max-w-[1440px] m-auto px-[50px] mob:px-[0px] relative z-50 ">
+     <h1 className="text-[#FFFFFF] tracking-[3px] uppercase text-center mb-10 text-[20px] font-jakrata font-normal leading-[25.2px] ">
+          shop
+        </h1>
+
+      <Swiper
+        className="portfolioSlider"
+       
+        style={{
+          "--swiper-pagination-color": "#fff",
+          "--swiper-pagination-bullet-inactive-color": "#999999",
+        }}
+        loop={true}
+        modules={[
+          Navigation,
+          Pagination,
+          Scrollbar,
+          A11y,
+          Autoplay,
+          Mousewheel,
+        ]}
+        spaceBetween={20}
+        slidesPerView={1}
+        autoplay={{
+          delay: 1500,
+          disableOnInteraction: false,
+        }}
+        // navigation
+        // direction="vertical"
+        // onSwiper={(swiper) => console.log(swiper)}
+        // onSlideChange={() => console.log("slide change")}
+        pagination={{ clickable: true }}
+        breakpoints={{
+          768: {
+            slidesPerView: 1,
+          },
+
+          1300: {
+            slidesPerView: 3,
+          },
+        }}
+        // mousewheel={{ invert: true }}
+      >
+        <SwiperSlide className="mob:px-[20px] mb-16 px-5 ">
+         
+
+<div className=" mob:mb-5">
               <Image
                onClick={() => handleClick(10)}
-                className="mb-6 w-[484px] mob:w-full cursor-pointer"
+                className="mb-6 w-full cursor-pointer"
                 src={img3}
                 alt=""
                 width={352}
                 height={266}
               />
-              <div className="  w-[484px] mob:w-full">
+              <div className="  mob:w-full">
                 <div   onClick={() => handleClick(10)} className="flex justify-between cursor-pointer">
                   <h1 className="text-[#FFFFFF] text-[24px] leading-[30px] font-outfit font-medium mb-3">
                     Worthy
@@ -66,18 +126,19 @@ const AddtoCart = () => {
                 </button>
               </div>
             </div>
+        </SwiperSlide>
 
-                 {/* four */}
-                 <div className="mob:mb-5">
+        <SwiperSlide className="mob:px-[20px] mb-16 px-5">
+        <div className="mob:mb-5">
               <Image
               onClick={() => handleClick(8)}
-                className="mb-6 w-[484px] mob:w-full cursor-pointer"
+                className="mb-6 w-full cursor-pointer"
                 src={img4}
                 alt=""
                 width={352}
                 height={266}
               />
-              <div className="  w-[484px] mob:w-full">
+              <div className="  mob:w-full">
                 <div onClick={() => handleClick(8)} className="flex justify-between cursor-pointer">
                   <h1 className="text-[#FFFFFF] text-[24px] leading-[30px] font-outfit font-medium mb-3">
                     Mask
@@ -94,23 +155,19 @@ const AddtoCart = () => {
                 </button>
               </div>
             </div>
-          
-          </div>
-        </div>
-        {/* row2 */}
-        <div className="flex justify-center w-full mt-[45px] relative z-30">
-          <div className="flex mob:block justify-center gap-[45px] w-full max-w-[1180px]">
-         {/* five */}
-         <div className="mob:mb-5">
+        </SwiperSlide>
+
+        <SwiperSlide className="mob:px-[20px] mb-16 px-5">
+        <div className="mob:mb-5">
               <Image
                 onClick={() => handleClick(11)}
-                className="mb-6 w-[484px] mob:w-full cursor-pointer"
+                className="mb-6 w-full cursor-pointer"
                 src={img5}
                 alt=""
                 width={352}
                 height={266}
               />
-              <div className="  w-[484px] mob:w-full">
+              <div className="  mob:w-full">
                 <div   onClick={() => handleClick(11)} className="flex justify-between cursor-pointer">
                   <h1 className="text-[#FFFFFF] text-[24px] leading-[30px] font-outfit font-medium mb-3">
                     Sweetest of Melody
@@ -127,17 +184,19 @@ const AddtoCart = () => {
                 </button>
               </div>
             </div>
-            {/* six*/}
-            <div className="mob:mb-5">
+        </SwiperSlide>
+
+        <SwiperSlide className="mob:px-[20px] mb-16 px-5">
+        <div className="mob:mb-5">
               <Image
               onClick={() => handleClick(7)}
-                className="mb-6 w-[484px] mob:w-full cursor-pointer"
+                className="mb-6 w-full cursor-pointer"
                 src={img6}
                 alt=""
                 width={352}
                 height={266}
               />
-              <div className="  w-[484px] mob:w-full">
+              <div className="   mob:w-full">
                 <div onClick={() => handleClick(7)} className="flex justify-between cursor-pointer">
                   <h1 className="text-[#FFFFFF] text-[24px] leading-[30px] font-outfit font-medium mb-3">
                     Cap
@@ -154,11 +213,15 @@ const AddtoCart = () => {
                 </button>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </>
+        </SwiperSlide>
+
+       
+
+       
+      </Swiper>
+    </div>
+   </div>
   );
 };
 
-export default AddtoCart;
+export default PhysicalProductSlider;

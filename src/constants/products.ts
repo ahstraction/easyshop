@@ -7,6 +7,8 @@ import img6 from "@/public/imgs/merch/Rectangle 26 (6).png";
 import more from "@/public/imgs/merch/more.png";
 import jene from "@/public/imgs/merch/jene.png";
 import imari from "@/public/imgs/labelartist/breatheagain.png"
+import sweetcd from "@/public/imgs/merch/cdsweet1.png";
+import worthycd  from "@/public/imgs/merch/cdworthy1.png";
 import { Product } from "@/types";
 
 export const products: Product[] = [
@@ -72,5 +74,19 @@ export const products: Product[] = [
     price: 1.50,
     subHeading: "",
     img: imari,
+  },
+  {
+    id: 10,
+    title: "Worthy",
+    price: 2.00,
+    subHeading: "",
+    img: worthycd,
+  },
+  {
+    id: 11,
+    title: "Sweetest of Melody",
+    price: 2.00,
+    subHeading: "",
+    img: sweetcd,
   },
 ];
