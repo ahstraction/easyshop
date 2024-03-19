@@ -186,7 +186,7 @@ const Navbar = () => {
                           HOME
                           </li>
                         </Link>
-                        <hr className="h-px  bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr>
+                        <hr className="h-px opacity-[0.4] bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr>
 
                         <Link
                           href="/procedure"
@@ -196,7 +196,7 @@ const Navbar = () => {
                           Producer
                           </li>
                         </Link>
-                        <hr className="h-px  bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr>
+                        <hr className="h-px opacity-[0.4] bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr>
 
                         <Link
                           href="/label-artist"
@@ -206,7 +206,7 @@ const Navbar = () => {
                           label artist
                           </li>
                         </Link>
-                        <hr className="h-px  bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr>
+                        <hr className="h-px opacity-[0.4] bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr>
 
                         <Link
                           href="/label-release"
@@ -216,7 +216,7 @@ const Navbar = () => {
                           label release
                           </li>
                         </Link>
-                        <hr className="h-px my- bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr>
+                        <hr className="h-px opacity-[0.4] bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr>
 
                         <Link
                           href="/merch"
@@ -226,7 +226,7 @@ const Navbar = () => {
                           merch
                           </li>
                         </Link>
-                        <hr className="h-px  bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr>
+                        <hr className="h-px opacity-[0.4] bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr>
 
                         <Link
                           href="/shop"
@@ -236,7 +236,7 @@ const Navbar = () => {
                           shop
                           </li>
                         </Link>
-                        <hr className="h-px  bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr>
+                        <hr className="h-px opacity-[0.4] bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr>
                         <Link
                           href="/video"
                           className="block  text-[16px] font-jakrata  font-normal leading-7 text-[#FFFFFF]"
@@ -245,7 +245,7 @@ const Navbar = () => {
                           video
                           </li>
                         </Link>
-                        <hr className="h-px  bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr>
+                        <hr className="h-px opacity-[0.4] bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr>
 
                         <Link
                           href="/contact-us"
@@ -255,7 +255,7 @@ const Navbar = () => {
                           CONTACT
                           </li>
                         </Link>
-                        <hr className="h-px  bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr>
+                        <hr className="h-px opacity-[0.4] bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr>
                       </ul>
                     </div>
                   </Drawer>
