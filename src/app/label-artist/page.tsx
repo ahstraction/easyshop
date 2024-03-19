@@ -14,7 +14,7 @@ const labelartist = () => {
     <>
       <div className="relative">
         <Image
-          className="h-full w-full absolute z-50"
+          className="h-full w-full absolute z-10"
           src={bg}
           alt=""
           height={813}
@@ -42,7 +42,7 @@ const labelartist = () => {
                 width={1832}
               />
               <Image
-                className="h-full w-full absolute z-50"
+                className="h-full w-full absolute z-10"
                 src={bg}
                 alt=""
                 height={813}

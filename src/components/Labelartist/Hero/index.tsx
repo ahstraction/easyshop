@@ -36,7 +36,7 @@ const Hero = () => {
           /> */}
 
           {/* content */}
-          <div className="py-12 pl-20 mob:pl-5 mob:pr-5 relative z-50">
+          <div className="py-12 pl-20 mob:pl-5 mob:pr-5 relative z-10">
 
           <Image
             className="w-full h-full z-10 mob:block hidden mb-5"
