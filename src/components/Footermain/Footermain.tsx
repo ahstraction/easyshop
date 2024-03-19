@@ -15,7 +15,7 @@ const Footermain = () => {
           <div className="mob:flex mob:justify-center">
             <Image className="" src={logo} alt="" width={161} height={136} />
           </div>
-          <div className="">
+          <div className="mob:pt-5">
             <div className="flex mob:justify-center gap-[11.94px] mob:my-2 justify-end mb-6">
               <Link href="https://www.facebook.com/philliebopproductions">
                 <Image
@@ -56,7 +56,7 @@ const Footermain = () => {
               /> */}
             </div>
 
-            <p className="text-[16px] font-jakrata font-normal text-[#ACACAC] mob:text-center">
+            <p className="text-[16px] font-jakrata font-normal mob:pt-5 text-[#ACACAC] mob:text-center">
               ©2024 by PhillieBOP Entertainment/Productions LLC.
             </p>
           </div>
