@@ -33,7 +33,7 @@ const Product = ({productname, price, imagePath, description, date , productId}:
     removeFromCart,
     cartProductsTotalPrice,
   } = useShoppingCart();
-  console.log(productId,"productId")
+  // console.log(productId,"productId")
 
 
   const onAddToCart = async (id: string | number) => {

@@ -100,14 +100,14 @@ const Slider2 = ({heading}: SliderHeading) => {
 
           <div  className="">
             <Image
-            onClick={() => handleClick(5)}
+            onClick={() => handleClick("sweetestmelody")}
               className="mb-6 cursor-pointer"
               src={slideimg2}
               alt=""
               width={480}
               height={480}
             />
-            <div onClick={() => handleClick(5)} className="flex cursor-pointer justify-between items-center">
+            <div onClick={() => handleClick("sweetestmelody")} className="flex cursor-pointer justify-between items-center">
               <div className="">
                 <h1 className="text-[#FFFFFF] text-[30px] font-outfit font-medium">
                   Sweetest of Melody
@@ -133,14 +133,14 @@ const Slider2 = ({heading}: SliderHeading) => {
 
           <div className="">
             <Image
-            onClick={() => handleClick(6)}
+            onClick={() => handleClick("jeneSais")}
               className="mb-6 cursor-pointer"
               src={slideimg3}
               alt=""
               width={480}
               height={480}
             />
-            <div onClick={() => handleClick(6)} className="flex cursor-pointer justify-between items-center">
+            <div onClick={() => handleClick("jeneSais")} className="flex cursor-pointer justify-between items-center">
               <div className="">
                 <h1 className="text-[#FFFFFF] text-[30px] font-outfit font-medium">
                   Je Ne Sais Quoi
@@ -166,14 +166,14 @@ const Slider2 = ({heading}: SliderHeading) => {
 
           <div className="">
             <Image
-            onClick={() => handleClick(3)}
+            onClick={() => handleClick("worthy")}
               className="mb-6 cursor-pointer"
               src={slideimg4}
               alt=""
               width={480}
               height={480}
             />
-            <div onClick={() => handleClick(3)} className="flex cursor-pointer justify-between items-center">
+            <div onClick={() => handleClick("worthy")} className="flex cursor-pointer justify-between items-center">
               <div className="">
                 <h1 className="text-[#FFFFFF] text-[30px] font-outfit font-medium">
                   Worthy
@@ -199,14 +199,14 @@ const Slider2 = ({heading}: SliderHeading) => {
 
           <div className="">
             <Image
-            onClick={() => handleClick(4)}
+            onClick={() => handleClick("more")}
               className="mb-6 cursor-pointer"
               src={more}
               alt=""
               width={480}
               height={480}
             />
-            <div onClick={() => handleClick(4)} className="flex cursor-pointer justify-between items-center">
+            <div onClick={() => handleClick("more")} className="flex cursor-pointer justify-between items-center">
               <div className="">
                 <h1 className="text-[#FFFFFF] text-[30px] font-outfit font-medium">
                   More than Enough
@@ -232,14 +232,14 @@ const Slider2 = ({heading}: SliderHeading) => {
 
           <div className="">
             <Image
-            onClick={() => handleClick(2)}
+            onClick={() => handleClick("made")}
               className="mb-6 cursor-pointer"
               src={made}
               alt=""
               width={480}
               height={480}
             />
-            <div onClick={() => handleClick(2)}  className="flex cursor-pointer justify-between items-center">
+            <div onClick={() => handleClick("made")}  className="flex cursor-pointer justify-between items-center">
               <div className="">
                 <h1 className="text-[#FFFFFF] text-[30px] font-outfit font-medium">
                   Made
@@ -264,14 +264,14 @@ const Slider2 = ({heading}: SliderHeading) => {
 
           <div className="">
             <Image
-            onClick={() => handleClick(9)}
+            onClick={() => handleClick("imari")}
               className="mb-6 cursor-pointer "
               src={breath}
               alt=""
               width={480}
               height={480}
             />
-            <div onClick={() => handleClick(9)} className="flex cursor-pointer justify-between items-center">
+            <div onClick={() => handleClick("imari")} className="flex cursor-pointer justify-between items-center">
               <div className="">
                 <h1 className="text-[#FFFFFF] text-[30px] font-outfit font-medium">
                 Imari
@@ -296,14 +296,14 @@ const Slider2 = ({heading}: SliderHeading) => {
 
           <div className="">
             <Image
-            onClick={() => handleClick(1)}
+            onClick={() => handleClick("E.S.P")}
               className="mb-6 cursor-pointer"
               src={f}
               alt=""
               width={480}
               height={480}
             />
-            <div onClick={() => handleClick(1)} className="flex cursor-pointer justify-between items-center">
+            <div onClick={() => handleClick("E.S.P")} className="flex cursor-pointer justify-between items-center">
               <div className="">
                 <h1 className="text-[#FFFFFF] text-[30px] font-outfit font-medium">
                   E.S.P.
@@ -318,52 +318,7 @@ const Slider2 = ({heading}: SliderHeading) => {
           </div>
         </SwiperSlide>
 
-        {/* <SwiperSlide className="mob:px-[20px] mb-16">
-          <Image
-            className="mb-20"
-            src={slideimg}
-            alt=""
-            width={1320}
-            height={580}
-          />
-        </SwiperSlide>
 
-        <SwiperSlide className="mob:px-[20px] mb-16">
-          <Image
-            className="mb-20"
-            src={slideimg}
-            alt=""
-            width={1320}
-            height={580}
-          />
-        </SwiperSlide>
-        <SwiperSlide className="mob:px-[20px] mb-16">
-          <Image
-            className="mb-20"
-            src={slideimg}
-            alt=""
-            width={1320}
-            height={580}
-          />
-        </SwiperSlide>
-        <SwiperSlide className="mob:px-[20px] mb-16">
-          <Image
-            className="mb-20"
-            src={slideimg}
-            alt=""
-            width={1320}
-            height={580}
-          />
-        </SwiperSlide>
-        <SwiperSlide className="mob:px-[20px] mb-16">
-          <Image
-            className="mb-20"
-            src={slideimg}
-            alt=""
-            width={1320}
-            height={580}
-          />
-        </SwiperSlide> */}
       </Swiper>
     </div>
   );

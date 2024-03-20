@@ -41,7 +41,7 @@ const Hero = () => {
           <div className="max-w-[1140px]">
             {/* main video */}
             <div className="   flex justify-center overflow-hidden  ">
-              <div onClick={() => handleClick(9)} className="w-full h-[613px] cursor-pointer bg-[#161616] mt-10  max-w-[1340px] relative ">
+              <div onClick={() => handleClick("imari")} className="w-full h-[613px] cursor-pointer bg-[#161616] mt-10  max-w-[1340px] relative ">
                 <Image
                   className="absolute z-10 h-full w-full"
                   src={mainvid}
@@ -90,7 +90,7 @@ const Hero = () => {
             <div className="flex justify-center w-full">
               <div className="flex mob:block justify-center gap-[45px] relative z-50 w-full max-w-[1180px]">
                 {/* 1st */}
-                <div onClick={() => handleClick(2)} className="cursor-pointer">
+                <div onClick={() => handleClick("made")} className="cursor-pointer">
                   <div className="relative flex justify-center items-center">
                     <Image
                       className="mb-6 "
@@ -142,7 +142,7 @@ const Hero = () => {
                 </div>
 
                 {/* 3rd*/}
-                <div onClick={() => handleClick(4)} className="cursor-pointer">
+                <div onClick={() => handleClick("more")} className="cursor-pointer">
                   <div className="relative flex justify-center items-center">
                     <Image
                       className="mb-6 "
@@ -180,7 +180,7 @@ const Hero = () => {
 
 
                 {/* 4th*/}
-                <div onClick={() => handleClick(6)} className="cursor-pointer">
+                <div onClick={() => handleClick("jeneSais")} className="cursor-pointer">
                   <div className="relative flex justify-center items-center">
                     <Image
                       className="mb-6 "

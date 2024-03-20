@@ -41,10 +41,10 @@ const Hero = () => {
         <div className="flex justify-center w-full">
           <div className="flex mob:block justify-center gap-[45px] relative z-10 w-full max-w-[1200px]">
             {products.slice(0, 4).map((product) => (
-              <div className="max-w-[270px] mob:max-w-full  mob:px-5 mob:pb-5" key={product.id}>
+              <div className="max-w-[270px] mob:max-w-full  mob:px-5 mob:pb-5" key={product.slug}>
                 <Image
                   id="1"
-                  onClick={() => handleClick(product.id)}
+                  onClick={() => handleClick(product.slug)}
                   className="mb-6 cursor-pointer max-h-[222px] mob:max-h-full"
                   src={product.img}
                   alt=""
@@ -55,14 +55,14 @@ const Hero = () => {
                   <div className="flex justify-between ">
                     <h1
                       id="1"
-                      onClick={() => handleClick(product.id)}
+                      onClick={() => handleClick(product.slug)}
                       className="text-[#FFFFFF] cursor-pointer text-[21px] leading-[30px] font-outfit font-medium mb-3"
                     >
                       {product.title}
                     </h1>
                     <p
                       id="1"
-                      onClick={() => handleClick(product.id)}
+                      onClick={() => handleClick(product.slug)}
                       className="text-gradient cursor-pointer text-[20px] leading-[25.2px] tracking-[3px] font-jakrata font-medium"
                     >
                       ${product.price}
@@ -91,10 +91,10 @@ const Hero = () => {
         <div className="flex justify-center w-full mt-[45px] relative z-10">
           <div className="flex mob:block justify-center gap-[45px] w-full max-w-[1180px]">
             {products.slice(4, 8).map((product) => (
-              <div className="max-w-[270px]  mob:max-w-full  mob:px-5 mob:pb-5" key={product.id}>
+              <div className="max-w-[270px]  mob:max-w-full  mob:px-5 mob:pb-5" key={product.slug}>
                 <Image
                   className="mb-6 cursor-pointer max-h-[222px] mob:max-h-full"
-                  onClick={() => handleClick(product.id)}
+                  onClick={() => handleClick(product.slug)}
                   src={product.img}
                   alt=""
                   width={352}
@@ -103,13 +103,13 @@ const Hero = () => {
                 <div className="  max-w-[354px]">
                   <div className="flex justify-between ">
                     <h1
-                      onClick={() => handleClick(product.id)}
+                      onClick={() => handleClick(product.slug)}
                       className="text-[#FFFFFF] cursor-pointer text-[21px] leading-[30px] font-outfit font-medium mb-3"
                     >
                       {product.title}
                     </h1>
                     <p
-                      onClick={() => handleClick(product.id)}
+                      onClick={() => handleClick(product.slug)}
                       className="text-gradient cursor-pointer text-[20px] leading-[25.2px] tracking-[3px] font-jakrata font-medium"
                     >
                       ${product.price}
@@ -139,7 +139,7 @@ const Hero = () => {
               <div className="max-w-[270px]  mob:max-w-full  mob:px-5 mob:pb-5" >
                 <Image
                   className="mb-6 cursor-pointer max-h-[222px] mob:max-h-full"
-                  onClick={() => handleClick(9)}
+                  onClick={() => handleClick("imari")}
                   src={imari}
                   alt=""
                   width={352}
@@ -148,13 +148,13 @@ const Hero = () => {
                 <div className="  max-w-[354px]">
                   <div className="flex justify-between ">
                     <h1
-                      onClick={() => handleClick(9)}
+                      onClick={() => handleClick("imari")}
                       className="text-[#FFFFFF] cursor-pointer text-[21px] leading-[30px] font-outfit font-medium mb-3"
                     >
                      Imari
                     </h1>
                     <p
-                      onClick={() => handleClick(9)}
+                      onClick={() => handleClick("imari")}
                       className="text-gradient cursor-pointer text-[20px] leading-[25.2px] tracking-[3px] font-jakrata font-medium"
                     >
                       $1.50

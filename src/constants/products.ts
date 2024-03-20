@@ -15,6 +15,7 @@ export const products: Product[] = [
   {
     id: 1,
     title: "E.S.P",
+    slug: "E.S.P",
     price: 1.50,
     subHeading: "",
     img: img1,
@@ -23,6 +24,7 @@ export const products: Product[] = [
   {
     id: 2,
     title: "Made",
+    slug: "made",
     price: 1.50,
     subHeading: "",
     img: img2,
@@ -32,6 +34,7 @@ export const products: Product[] = [
   {
     id: 3,
     title: "Worthy",
+    slug: "worthy",
     price: 1.50,
     subHeading: "",
     img: img3,
@@ -41,6 +44,7 @@ export const products: Product[] = [
   {
     id: 4,
     title: "More Than Enough",
+    slug: "more",
     price: 1.50,
     subHeading: "",
     img:more ,
@@ -50,6 +54,7 @@ export const products: Product[] = [
   {
     id: 5,
     title: "Sweetest of Melody",
+    slug: "sweetestmelody",
     price: 1.50,
     subHeading: "",
     img: img5,
@@ -61,6 +66,7 @@ export const products: Product[] = [
     title: "Je Ne Sais Quoi” by Rina Chanel – Dir. by 7LOX"  ,
     price: 1.50,
     subHeading: "",
+    slug: "jeneSais",
     img: jene,
     songlink:"/videos/Je-Ne-Sais-Quoi (2).mp3",
 
@@ -69,6 +75,7 @@ export const products: Product[] = [
     id: 7,
     title: "Cap",
     price: 20.00,
+    slug: "cap",
     subHeading: "",
     img: img6,
     songlink:"",
@@ -77,6 +84,7 @@ export const products: Product[] = [
   {
     id: 8,
     title: "Mask",
+    slug: "mask",
     price: 8.00,
     subHeading: "",
     img: img4,
@@ -87,6 +95,7 @@ export const products: Product[] = [
     id: 9,
     title: "Imari",
     price: 1.50,
+    slug: "imari",
     subHeading: "",
     img: imari,
     songlink:"/videos/Breathe Again - Imari.mp3",
@@ -96,6 +105,7 @@ export const products: Product[] = [
     id: 10,
     title: "Worthy",
     price: 2.00,
+    slug: "worthyCD",
     subHeading: "",
     img: worthycd,
     songlink:"",
@@ -105,6 +115,7 @@ export const products: Product[] = [
     id: 11,
     title: "Sweetest of Melody",
     price: 2.00,
+    slug: "sweetestofmelodyCD",
     subHeading: "",
     img: sweetcd,
     songlink:"",

@@ -26,11 +26,12 @@ interface ProductData {
     price: string;
     // location: string;
     imagePath: string;
+    slug:string
   }
   
   interface ProductDescriptionProps {
     params: {
-      id: string;
+      slug: string;
     };
   }
 
@@ -39,12 +40,14 @@ interface ProductData {
         params
       }: ProductDescriptionProps) => {
 
-        const {id} = params
+        const {slug, } = params
 
 
-  const currentProduct = productsData.find((product) => product.id === Number(id));
+  const currentProduct = productsData.find((product) => product.slug === slug );
 
-  
+  // console.log(slug,"slugid")
+  // console.log(currentProduct?.id,"idid")
+  // console.log(currentProduct,"currentProduct")
 
 
   return (
@@ -64,7 +67,7 @@ interface ProductData {
           </div>
         </div>
         <div className="relative z-30">
-          <ProductDetail productname={currentProduct?.title} price={currentProduct?.price} imagePath={currentProduct?.img} productId={id}  />
+          <ProductDetail productname={currentProduct?.title} price={currentProduct?.price} imagePath={currentProduct?.img} slug={slug} productId={currentProduct?.id}   />
           <Latest />
           <Footermain />
         </div>

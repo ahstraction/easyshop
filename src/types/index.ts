@@ -4,5 +4,6 @@ export type Product = {
   subHeading: string;
   img: any;
   price:number;
-  songlink:string
+  songlink:string;
+  slug:string
 };
