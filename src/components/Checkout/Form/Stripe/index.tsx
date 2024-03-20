@@ -17,7 +17,7 @@ const index: React.FC<StripeFormProps> = ({ handleSubmit }) => {
     const res = await onStripeSubmit();
 
     if (res?.success) {
-      // handleSubmit(e);
+      handleSubmit(e);
       console.log("payment success");
       router.push('/thank-you');
     }
@@ -28,7 +28,7 @@ const index: React.FC<StripeFormProps> = ({ handleSubmit }) => {
       <form onSubmit={(e) => onSubmit(e)}>
         <CreditCardInput />
         <input
-          className="w-full py-3 outline-none border-b bg-transparent border-b-[#FFFFFF]/20 text-[16px] text-[#FFFFFF] font-normal mb-6 "
+          className="w-full py-3 outline-none border-b bg-transparent placeholder-[#fff] pl-[14px] border-b-[#FFFFFF]/20 text-[16px] text-[#FFFFFF] font-normal mb-6 "
           type="text"
           placeholder="Name on card"
         />
@@ -38,7 +38,7 @@ const index: React.FC<StripeFormProps> = ({ handleSubmit }) => {
             id="default-checkbox"
             type="checkbox"
             value=""
-            className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+            className="w-4 h-4 text-blue-600 bg-gray-100  border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
           />
           <label
             htmlFor="default-checkbox"
