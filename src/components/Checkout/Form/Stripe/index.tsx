@@ -1,18 +1,44 @@
-import React, { FormEvent } from "react";
+import React, { FormEvent, useState } from "react";
 import { useRouter } from "next/navigation";
 import CreditCardInput from "./CreditCardInput";
 import useStripePayment from "./useStripePayment";
 
 interface StripeFormProps {
   handleSubmit: (event: FormEvent<HTMLFormElement>) => Promise<void>; // Updated signature
+  formData: FormData;
 }
 
-const index: React.FC<StripeFormProps> = ({ handleSubmit }) => {
+interface FormData {
+  firstName: string;
+  lastName: string;
+  companyName: string;
+  email: string;
+  country: string;
+  address: string;
+  city: string;
+  state: string;
+  zipCode: string;
+  number: string;
+  additionalInfo: string;
+}
+
+const index: React.FC<StripeFormProps> = ({ handleSubmit, formData }) => {
+
+  const [loading, setLoading] = useState(false);
   const router = useRouter();
   const { onStripeSubmit } = useStripePayment();
 
   const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    // Exclude additionalInfo from validation check
+    const { additionalInfo, country,companyName, ...formDataWithoutAdditionalInfo } = formData;
+    const allFieldsFilled = Object.values(formDataWithoutAdditionalInfo).every(value => value.trim() !== '');
+
+    if (!allFieldsFilled) {
+      alert("Please fill all required fields.");
+      return;
+    }
 
     const res = await onStripeSubmit();
 
@@ -51,10 +77,13 @@ const index: React.FC<StripeFormProps> = ({ handleSubmit }) => {
         {/* button */}
         <button
           type="submit"
+          disabled={loading}
           className="w-full uppercase my-14  h-[59px] rounded-[150px] bg-[#FFFFFF] text-[#121212] tracking-[2px] text-[15px] leading-[18.9px] font-semibold font-jakrata"
         >
-          PAy Now
+        {loading ? "Submitting..." : "Pay Now"}
         </button>
+
+      
       </form>
     </div>
   );
