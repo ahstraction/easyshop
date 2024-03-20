@@ -8,6 +8,8 @@ import Navbar from "@/components/navbar/Navbar";
 import { products } from "@/constants/products";
 import useShoppingCart from "@/hooks/useShoppingCart";
 import imari from "@/public/imgs/labelrelease/imarii.png"
+import cdworthy from "@/public/imgs/merch/cdworthy1.png";
+import cdsweet from "@/public/imgs/merch/cdsweet1.png";
 
 const Hero = () => {
   const router = useRouter();
@@ -41,10 +43,10 @@ const Hero = () => {
         <div className="flex justify-center w-full">
           <div className="flex mob:block justify-center gap-[45px] relative z-10 w-full max-w-[1200px]">
             {products.slice(0, 4).map((product) => (
-              <div className="max-w-[270px] mob:max-w-full  mob:px-5 mob:pb-5" key={product.id}>
+              <div className="max-w-[270px] mob:max-w-full  mob:px-5 mob:pb-5" key={product.slug}>
                 <Image
                   id="1"
-                  onClick={() => handleClick(product.id)}
+                  onClick={() => handleClick(product.slug)}
                   className="mb-6 cursor-pointer max-h-[222px] mob:max-h-full"
                   src={product.img}
                   alt=""
@@ -52,17 +54,17 @@ const Hero = () => {
                   height={266}
                 />
                 <div className="  max-w-[354px]">
-                  <div className="flex justify-between ">
+                  <div className="flex justify-between  ">
                     <h1
                       id="1"
-                      onClick={() => handleClick(product.id)}
+                      onClick={() => handleClick(product.slug)}
                       className="text-[#FFFFFF] cursor-pointer text-[21px] leading-[30px] font-outfit font-medium mb-3"
                     >
                       {product.title}
                     </h1>
                     <p
                       id="1"
-                      onClick={() => handleClick(product.id)}
+                      onClick={() => handleClick(product.slug)}
                       className="text-gradient cursor-pointer text-[20px] leading-[25.2px] tracking-[3px] font-jakrata font-medium"
                     >
                       ${product.price}
@@ -91,10 +93,10 @@ const Hero = () => {
         <div className="flex justify-center w-full mt-[45px] relative z-10">
           <div className="flex mob:block justify-center gap-[45px] w-full max-w-[1180px]">
             {products.slice(4, 8).map((product) => (
-              <div className="max-w-[270px]  mob:max-w-full  mob:px-5 mob:pb-5" key={product.id}>
+              <div className="max-w-[270px]  mob:max-w-full  mob:px-5 mob:pb-5" key={product.slug}>
                 <Image
                   className="mb-6 cursor-pointer max-h-[222px] mob:max-h-full"
-                  onClick={() => handleClick(product.id)}
+                  onClick={() => handleClick(product.slug)}
                   src={product.img}
                   alt=""
                   width={352}
@@ -103,13 +105,19 @@ const Hero = () => {
                 <div className="  max-w-[354px]">
                   <div className="flex justify-between ">
                     <h1
-                      onClick={() => handleClick(product.id)}
-                      className="text-[#FFFFFF] cursor-pointer text-[21px] leading-[30px] font-outfit font-medium mb-3"
+                      onClick={() => handleClick(product.slug)}
+                      className="text-[#FFFFFF] cursor-pointer text-[21px] leading-[30px] font-outfit font-medium mb-3 overflow-hidden"
+  style={{
+    maxWidth: '15ch',
+    textOverflow: 'ellipsis',
+    whiteSpace: 'nowrap',
+    display: 'inline-block',
+  }}
                     >
                       {product.title}
                     </h1>
                     <p
-                      onClick={() => handleClick(product.id)}
+                      onClick={() => handleClick(product.slug)}
                       className="text-gradient cursor-pointer text-[20px] leading-[25.2px] tracking-[3px] font-jakrata font-medium"
                     >
                       ${product.price}
@@ -139,7 +147,7 @@ const Hero = () => {
               <div className="max-w-[270px]  mob:max-w-full  mob:px-5 mob:pb-5" >
                 <Image
                   className="mb-6 cursor-pointer max-h-[222px] mob:max-h-full"
-                  onClick={() => handleClick(9)}
+                  onClick={() => handleClick("imari")}
                   src={imari}
                   alt=""
                   width={352}
@@ -148,13 +156,13 @@ const Hero = () => {
                 <div className="  max-w-[354px]">
                   <div className="flex justify-between ">
                     <h1
-                      onClick={() => handleClick(9)}
+                      onClick={() => handleClick("imari")}
                       className="text-[#FFFFFF] cursor-pointer text-[21px] leading-[30px] font-outfit font-medium mb-3"
                     >
                      Imari
                     </h1>
                     <p
-                      onClick={() => handleClick(9)}
+                      onClick={() => handleClick("imari")}
                       className="text-gradient cursor-pointer text-[20px] leading-[25.2px] tracking-[3px] font-jakrata font-medium"
                     >
                       $1.50
@@ -175,6 +183,90 @@ const Hero = () => {
                   {/* </Link> */}
                 </div>
               </div>
+
+{/* 10 */}
+
+<div className="max-w-[270px]  mob:max-w-full  mob:px-5 mob:pb-5" >
+                <Image
+                  className="mb-6 cursor-pointer max-h-[222px] mob:max-h-full"
+                  onClick={() => handleClick("worthyCD")}
+                  src={cdworthy}
+                  alt=""
+                  width={352}
+                  height={266}
+                />
+                <div className="  max-w-[354px]">
+                  <div className="flex justify-between ">
+                    <h1
+                      onClick={() => handleClick("worthyCD")}
+                      className="text-[#FFFFFF] cursor-pointer text-[21px] leading-[30px] font-outfit font-medium mb-3"
+                    >
+                 Worthy
+                    </h1>
+                    <p
+                      onClick={() => handleClick("worthyCD")}
+                      className="text-gradient cursor-pointer text-[20px] leading-[25.2px] tracking-[3px] font-jakrata font-medium"
+                    >
+                      $1.50
+                    </p>
+                  </div>
+                  {/* text */}
+                  {/* <p className="text-[16px] text-[#fff] font-jakrat font-normal leading-[26px]">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p> */}
+                  {/* button */}
+                  {/* <Link href="/cart"> */}
+                  <button
+                    className=" py-[20px] w-full uppercase mt-5  rounded-[150px] bg-[#FFFFFF] text-[#121212] tracking-[2px] text-[15px] leading-[18.9px] font-semibold font-jakrata"
+                    onClick={() => onAddToCart(10)}
+                  >
+                    Add to Cart
+                  </button>
+                  {/* </Link> */}
+                </div>
+              </div>
+{/* 11 */}
+
+<div className="max-w-[270px]  mob:max-w-full  mob:px-5 mob:pb-5" >
+                <Image
+                  className="mb-6 cursor-pointer max-h-[222px] mob:max-h-full"
+                  onClick={() => handleClick("sweetestofmelodyCD")}
+                  src={cdsweet}
+                  alt=""
+                  width={352}
+                  height={266}
+                />
+                <div className="  max-w-[354px]">
+                  <div className="flex justify-between ">
+                    <h1
+                      onClick={() => handleClick("sweetestofmelodyCD")}
+                      className="text-[#FFFFFF] cursor-pointer text-[21px] leading-[30px] font-outfit font-medium mb-3"
+                    >
+                 Sweetest of Melody
+                    </h1>
+                    <p
+                      onClick={() => handleClick("sweetestofmelodyCD")}
+                      className="text-gradient cursor-pointer text-[20px] leading-[25.2px] tracking-[3px] font-jakrata font-medium"
+                    >
+                      $1.50
+                    </p>
+                  </div>
+                  {/* text */}
+                  {/* <p className="text-[16px] text-[#fff] font-jakrat font-normal leading-[26px]">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p> */}
+                  {/* button */}
+                  {/* <Link href="/cart"> */}
+                  <button
+                    className=" py-[20px] w-full uppercase mt-5  rounded-[150px] bg-[#FFFFFF] text-[#121212] tracking-[2px] text-[15px] leading-[18.9px] font-semibold font-jakrata"
+                    onClick={() => onAddToCart(11)}
+                  >
+                    Add to Cart
+                  </button>
+                  {/* </Link> */}
+                </div>
+              </div>
+
           </div>
         </div>
       </div>

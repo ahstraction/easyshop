@@ -63,7 +63,7 @@ const Hero = () => {
             </h1>
             <div className="flex items-end h-[560px] mob:h-full">
               <div className="">
-                <h2 onClick={() => handleClick(9)} className="text-[50px] cursor-pointer mob:text-center font-medium font-outfit imarigradient leading-[60px] ">
+                <h2 onClick={() => handleClick("imari")} className="text-[50px] cursor-pointer mob:text-center font-medium font-outfit imarigradient leading-[60px] ">
                   Imari
                 </h2>
 

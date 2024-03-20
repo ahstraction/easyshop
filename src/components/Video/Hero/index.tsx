@@ -14,6 +14,7 @@ import playbutton from "@/public/imgs/video/playbutton.png";
 import maskimg from "@/public/imgs/labelartist/mask.png";
 import mainvid from "@/public/imgs/video/imaribanner.png";
 import arrow from "@/public/imgs/labelartist/arrow-up.png";
+import imari from "@/public/imgs/labelrelease/imarii.png"
 
 import Navbar from "@/components/navbar/Navbar";
 import Modal from "../Modal";
@@ -32,48 +33,57 @@ const Hero = () => {
 
   return (
     <>
-      <div className="relative   pb-20  z-40">
+      <div className="relative   pb-20 mob:pb-10 mob:mb-10 z-40">
         <Navbar />
         <h1 className="text-center mb-8 text-gradient text-[70px] font-medium leading-[80px] font-outfit mt-[100px] ">
           Video
         </h1>
-        <div className="flex justify-center">
+        <div className="flex justify-center mob:px-5">
           <div className="max-w-[1140px]">
             {/* main video */}
             <div className="   flex justify-center overflow-hidden  ">
-              <div onClick={() => handleClick(9)} className="w-full h-[613px] cursor-pointer bg-[#161616] mt-10  max-w-[1340px] relative ">
+              <div onClick={() => handleClick("imari")} className="w-full h-[613px] mob:h-full cursor-pointer bg-[#161616] mt-10  max-w-[1340px] relative ">
                 <Image
-                  className="absolute z-10 h-full w-full"
+                  className="absolute z-10 h-full w-full mob:hidden"
                   src={mainvid}
+                  alt=""
+                  width={1240}
+                  height={760}
+                />
+                <Image
+                  className="  w-full mob:block hidden"
+                  src={imari}
                   alt=""
                   width={1240}
                   height={760}
                 />
 
                 {/* content */}
-                <div className="flex py-12 px-20 h-full w-full relative z-20 items-end ">
-                  <div className="flex justify-between items-center w-full">
+                <div className="flex py-12 px-20 mob:pb-0 mob:px-5 h-full w-full relative z-20 items-end ">
+                  <div className="flex mob:block justify-between items-center w-full">
                     <div className="">
-                      <h2 className="text-[17px] tracking-[3px] font-bold font-jakrata text-gradient leading-[21.42px] ">
+                      <h2 className="text-[17px] mob:text-center tracking-[3px] font-bold font-jakrata text-gradient leading-[21.42px] ">
                         22 March 2024
                       </h2>
-                      <h1 className="text-[40px] mt-2 text-[#fff] tracking-[2px] font-outfit font-medium leading-[50.4px] ">
+                      <h1 className="text-[40px] mob:text-center mt-2 text-[#fff] tracking-[2px] font-outfit font-medium leading-[50.4px] ">
                        Imari
                       </h1>
 
-                      <p className="text-[18px]  text-[#FFFFFF] font-jakrata font-bold leading-[22.68px] my-6">
+                      <p className="text-[18px] mob:text-center text-[#FFFFFF] font-jakrata font-bold leading-[22.68px] my-6">
                       Bennie Pearce for Phillie-BOP Productions
                       </p>
                     </div>
 
                     {/* button */}
-                    <Image
+                 <div className="mob:flex mob:justify-center">
+                 <Image
                       className="h-[90px] w-[90px]"
                       src={playbutton}
                       alt=""
                       width={90}
                       height={90}
                     />
+                 </div>
                   </div>
                 </div>
               </div>
@@ -90,7 +100,7 @@ const Hero = () => {
             <div className="flex justify-center w-full">
               <div className="flex mob:block justify-center gap-[45px] relative z-50 w-full max-w-[1180px]">
                 {/* 1st */}
-                <div onClick={() => handleClick(2)} className="cursor-pointer">
+                <div onClick={() => handleClick("made")} className="cursor-pointer mob:mb-5">
                   <div className="relative flex justify-center items-center">
                     <Image
                       className="mb-6 "
@@ -127,8 +137,8 @@ const Hero = () => {
                 </div>
 
                 {/* 2nd */}
-                <div className="">
-                  <div className="relative flex justify-center items-center">
+                <div className="mob:mb-5">
+                  <div className="relative flex justify-center items-center ">
                   
                     {/* button */}
                     {/* <button className=" py-[20px] w-full uppercase mt-3  rounded-[150px] bg-[#FFFFFF] text-[#121212] tracking-[2px] text-[15px] leading-[18.9px] font-semibold font-jakrata">
@@ -142,7 +152,7 @@ const Hero = () => {
                 </div>
 
                 {/* 3rd*/}
-                <div onClick={() => handleClick(4)} className="cursor-pointer">
+                <div onClick={() => handleClick("more")} className="cursor-pointer mob:mb-5">
                   <div className="relative flex justify-center items-center">
                     <Image
                       className="mb-6 "
@@ -180,7 +190,7 @@ const Hero = () => {
 
 
                 {/* 4th*/}
-                <div onClick={() => handleClick(6)} className="cursor-pointer">
+                <div onClick={() => handleClick("jeneSais")} className="cursor-pointer mob:mb-5">
                   <div className="relative flex justify-center items-center">
                     <Image
                       className="mb-6 "

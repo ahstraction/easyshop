@@ -1,10 +1,10 @@
 "use client";
-import React from "react";
+import React, { ChangeEvent, FormEvent, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
-
+import axios from "axios";
 import cap from "@/public/imgs/cart/cap.png";
 import Navbar from "@/components/navbar/Navbar";
 
@@ -16,6 +16,7 @@ import credit from "@/public/imgs/icons/creditcart.svg";
 import shopbtn from "@/public/imgs/checkout/shopbtn.png";
 import paybtn from "@/public/imgs/checkout/pay.png";
 import remove from "@/public/imgs/checkout/Remove.png";
+import { orderDataKeys } from "@/constants/orderdetail";
 
 import StripeForm from "./Stripe";
 
@@ -23,7 +24,55 @@ const stripePromise = loadStripe(
   process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY as string
 );
 
+interface IndexSignature {
+  [key: string | number]: any;
+}
+
+
 const Form = () => {
+
+
+    // form values
+    const [formData, setFormData] = useState<IndexSignature>(orderDataKeys);
+    const [loading, setLoading] = useState<boolean>(false);
+
+    // console.log("formData", formData);
+  
+    const handleInputChange = (
+      e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+    ) => {
+      const { name, value } = e.target;
+      setFormData((prevState) => ({
+        ...prevState,
+        [name]: value,
+      }));
+    };
+  
+
+    const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+
+  
+  console.log(formData,"formData")
+ 
+      try {
+        const res = await axios.post("/api/order", formData);
+        const data = res?.data;
+  
+  
+        if (data) {
+          // alert("Proposal sent successfully!");
+        } else {
+          throw new Error(data.message || "Failed to send email");
+        }
+      } catch (error) {
+        // console.error("Error sending email:", error);
+        // alert("Failed to send email. Please try again later.");
+      } finally {
+        setLoading(false); 
+      }
+    };
+
+
   return (
     <>
       <Navbar />
@@ -37,53 +86,27 @@ const Form = () => {
           </div>
           <div className="flex mob:block justify-end  gap-16">
             {/* left */}
-            <div className="max-w-[669px] w-full">
-              {/* <h1 className="text-[#FFFFFF] text-[17px] font-bold font-jakrata tracking-[3px] mb-5">
-                EXPRESS CHECKOUT
-              </h1> */}
+            <div 
+            // onSubmit={(e: React.FormEvent<HTMLFormElement>) => handleSubmit(e)}
+            className="max-w-[669px] w-full">
+              
 
-              {/* <div className="flex items-center gap-5 my-8">
-                <button>
-                  <Image src={shopbtn} alt="" width={328} height={48} />
-                </button>
-                <button>
-                  <Image src={paybtn} alt="" width={328} height={55} />
-                </button>
-              </div> */}
-              {/* <div className=" max-w-[1140px]  w-full">
-                <hr className="h-px  bg-[#FFFFFF33]/20 border-0 dark:bg-[#FFFFFF33]"></hr>
-              </div> */}
-
-              {/* <div className="flex justify-between items-end mt-10 mb-8">
-                <h1 className="text-[#FFFFFF] text-[17px] font-bold font-jakrata tracking-[3px]">
-                  Contact
-                </h1>
-
-                <div className="flex items-center ">
-                  <p className="text-[14px] text-[#fff] font-jakrata font-normal">
-                    Have an account?
-                  </p>{" "}
-                  <Link
-                    className="text-[14px] ml-1 text-gradient font-jakrata font-normal"
-                    href=""
-                  >
-                    Log in
-                  </Link>
-                </div>
-              </div> */}
-
-     {/* names */}
-     <div className="flex mob:block items-end gap-7">
-                <div className="w-full">
-                  <label
+                  {/* names */}
+                   <div className="flex mob:block items-end gap-7">
+                   <div className="w-full">
+                   <label
                     htmlFor="First Name"
                     className="text-[16px] text-[#FFFFFF] leading-[20.16px] font-normal font-jakrata"
-                  >
+                   >
                     First Name*
                   </label>
                   <input
-                    className="w-full  h-[29px]  outline-none border-b bg-transparent border-b-[#FFFFFF]/20 text-[16px] text-[#FFFFFF] font-normal mb-6 "
+                  name="firstName"
+                  value={formData.firstName}
+                  onChange={handleInputChange}
+                    className="w-full  h-[29px]  outline-none border-b bg-transparent border-b-[#FFFFFF]/20 text-[16px] text-[#FFFFFF] font-normal mb-6 required "
                     type="text"
+                    required
                   />
                 </div>
 
@@ -95,8 +118,12 @@ const Form = () => {
                     Last Name*
                   </label>
                   <input
+                    name="lastName"
+                    value={formData.lastName}
+                    onChange={handleInputChange}
                     className="w-full  h-[29px]  outline-none border-b bg-transparent border-b-[#FFFFFF]/20 text-[16px] text-[#FFFFFF] font-normal mb-6 "
                     type="text"
+                    required
                   />
                 </div>
               </div>
@@ -109,6 +136,9 @@ const Form = () => {
               Company Name (Opional)
               </label>
               <input
+               name="companyName"
+               value={formData.companyName}
+               onChange={handleInputChange}
                 className="w-full  h-[29px]  outline-none border-b bg-transparent border-b-[#FFFFFF]/20 text-[16px] text-[#FFFFFF] font-normal mb-6 "
                 type="text"
               />
@@ -122,31 +152,15 @@ const Form = () => {
                 Email Address*
               </label>
               <input
+               name="email"
+               value={formData.email}
+               onChange={handleInputChange}
                 className="w-full  h-[29px]  outline-none border-b bg-transparent border-b-[#FFFFFF]/20 text-[16px] text-[#FFFFFF] font-normal mb-6 "
-                type="text"
+                type="email"
+                required
               />
 
-              {/* <p className="text-[16px] text-[#FFFFFF] leading-[20.16px] font-normal font-jakrata">
-                Email me with news and offers
-              </p> */}
-              {/* <div className="flex items-center mb-4">
-                <input
-                  id="default-checkbox"
-                  type="checkbox"
-                  value=""
-                  className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-                />
-                <label
-                  htmlFor="default-checkbox"
-                  className="text-[16px] ml-4 text-[#FFFFFF] leading-[20.16px] font-normal font-jakrata"
-                >
-                  Email me with news and offers
-                </label>
-              </div> */}
-
-              {/* <h1 className="text-[#FFFFFF] uppercase text-[17px] font-bold font-jakrata tracking-[3px] mt-12 mb-8">
-                Delivery
-              </h1> */}
+             
 
               {/* countery */}
               <label
@@ -156,8 +170,12 @@ const Form = () => {
                 Country/Region
               </label>
               <input
+                name="country"
+                value={formData.country}
+                onChange={handleInputChange}
                 className="w-full  h-[29px]  outline-none border-b bg-transparent border-b-[#FFFFFF]/20 text-[16px] text-[#FFFFFF] font-normal mb-6 "
                 type="text"
+                
               />
 
          
@@ -169,8 +187,12 @@ const Form = () => {
                 Address*
               </label>
               <input
+                name="address"
+                value={formData.address}
+                onChange={handleInputChange}
                 className="w-full  h-[29px]  outline-none border-b bg-transparent border-b-[#FFFFFF]/20 text-[16px] text-[#FFFFFF] font-normal mb-6 "
                 type="text"
+                required
               />
 
               {/* state */}
@@ -183,8 +205,13 @@ const Form = () => {
                     City*
                   </label>
                   <input
+                   name="city"
+                   value={formData.city}
+                   onChange={handleInputChange}
                     className="w-full  h-[29px]  outline-none border-b bg-transparent border-b-[#FFFFFF]/20 text-[16px] text-[#FFFFFF] font-normal mb-6 "
                     type="text"
+                    required
+                    
                   />
                 </div>
 
@@ -196,8 +223,12 @@ const Form = () => {
                     State*
                   </label>
                   <input
+                   name="state"
+                   value={formData.state}
+                   onChange={handleInputChange}
                     className="w-full  h-[29px]  outline-none border-b bg-transparent border-b-[#FFFFFF]/20 text-[16px] text-[#FFFFFF] font-normal mb-6 "
                     type="text"
+                    required
                   />
                 </div>
 
@@ -209,8 +240,12 @@ const Form = () => {
                     Zip Code*
                   </label>
                   <input
+                    name="zipCode"
+                    value={formData.zipCode}
+                    onChange={handleInputChange}
                     className="w-full  h-[29px]  outline-none border-b bg-transparent border-b-[#FFFFFF]/20 text-[16px] text-[#FFFFFF] font-normal mb-6 "
-                    type="text"
+                    type="number"
+                    required
                   />
                 </div>
               </div>
@@ -223,27 +258,14 @@ const Form = () => {
                 Phone Number*
               </label>
               <input
+               name="number"
+               value={formData.number}
+               onChange={handleInputChange}
                 className="w-full  h-[29px]  outline-none border-b bg-transparent border-b-[#FFFFFF]/20 text-[16px] text-[#FFFFFF] font-normal mb-6 "
-                type="text"
+                type="number"
+                required
               />
 
-              {/* <p className="text-[16px] text-[#FFFFFF] leading-[20.16px] font-normal font-jakrata">
-                Text me with news and offers
-              </p> */}
-              {/* <div className="flex items-center mb-4">
-                <input
-                  id="default-checkbox"
-                  type="checkbox"
-                  value=""
-                  className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-                />
-                <label
-                  htmlFor="default-checkbox"
-                  className="text-[16px] ml-4 text-[#FFFFFF] leading-[20.16px] font-normal font-jakrata"
-                >
-                  Text me with news and offers
-                </label>
-              </div> */}
 
               {/* Shipping method */}
               <h1 className="text-[#FFFFFF] uppercase text-[17px] font-bold font-jakrata tracking-[3px] mt-12 mb-8">
@@ -256,6 +278,9 @@ const Form = () => {
                 Enter your shipping address to view available shipping methods
               </label>
               <input
+                name="additionalInfo"
+                value={formData.additionalInfo}
+                onChange={handleInputChange}
                 className="w-full  h-[29px]  outline-none border-b bg-transparent border-b-[#FFFFFF]/20 text-[16px] text-[#FFFFFF] font-normal mb-6 "
                 type="text"
               />
@@ -271,11 +296,10 @@ const Form = () => {
                   Credit card
                 </p>
               </div>
-
               {/* card detail */}
 
               <Elements stripe={stripePromise}>
-                <StripeForm />
+                <StripeForm handleSubmit={handleSubmit} />
               </Elements>
 
               {/* card detail */}
