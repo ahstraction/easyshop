@@ -33,7 +33,7 @@ const Product = ({productname, price, imagePath, description, date , productId}:
     removeFromCart,
     cartProductsTotalPrice,
   } = useShoppingCart();
-  console.log(productId,"productId")
+  // console.log(productId,"productId")
 
 
   const onAddToCart = async (id: string | number) => {
@@ -62,12 +62,12 @@ const Product = ({productname, price, imagePath, description, date , productId}:
             )}
         {/* right */}
         <div className="">
-          <h1 className="text-[#fff] text-[50px] font-medium font-outfit">
+          <h1 className="text-[#fff] text-[50px] mob:text-[30px] mob:mt-2 font-medium font-outfit">
            {productname}
           </h1>
 
           {/* price */}
-          <h2 className="text-[30px] mt-3 text-gradient leading-[28.98px] font-bold font-jakrata">
+          <h2 className="text-[30px] mob:text-[22px] mt-3 text-gradient leading-[28.98px] font-bold font-jakrata">
         ${price}
           </h2>
           <h2 className="text-[23px] text-gradient leading-[28.98px] font-bold font-jakrata">

@@ -3,16 +3,21 @@ import { useRouter } from "next/navigation";
 import CreditCardInput from "./CreditCardInput";
 import useStripePayment from "./useStripePayment";
 
-const index = () => {
+interface StripeFormProps {
+  handleSubmit: (event: FormEvent<HTMLFormElement>) => Promise<void>; // Updated signature
+}
+
+const index: React.FC<StripeFormProps> = ({ handleSubmit }) => {
   const router = useRouter();
   const { onStripeSubmit } = useStripePayment();
 
-  const onSubmit = async (e: FormEvent) => {
+  const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     const res = await onStripeSubmit();
 
     if (res?.success) {
+      // handleSubmit(e);
       console.log("payment success");
       router.push('/thank-you');
     }
@@ -20,7 +25,7 @@ const index = () => {
 
   return (
     <div>
-      <form onSubmit={onSubmit}>
+      <form onSubmit={(e) => onSubmit(e)}>
         <CreditCardInput />
         <input
           className="w-full py-3 outline-none border-b bg-transparent border-b-[#FFFFFF]/20 text-[16px] text-[#FFFFFF] font-normal mb-6 "

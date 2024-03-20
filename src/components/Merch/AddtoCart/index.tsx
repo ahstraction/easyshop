@@ -42,7 +42,7 @@ const AddtoCart = () => {
             {/* 3rd*/}
             <div className=" mob:mb-5">
               <Image
-               onClick={() => handleClick(10)}
+               onClick={() => handleClick("worthyCD")}
                 className="mb-6 w-[484px] mob:w-full cursor-pointer"
                 src={img3}
                 alt=""
@@ -50,7 +50,7 @@ const AddtoCart = () => {
                 height={266}
               />
               <div className="  w-[484px] mob:w-full">
-                <div   onClick={() => handleClick(10)} className="flex justify-between cursor-pointer">
+                <div   onClick={() => handleClick("worthyCD")} className="flex justify-between cursor-pointer">
                   <h1 className="text-[#FFFFFF] text-[24px] leading-[30px] font-outfit font-medium mb-3">
                     Worthy
                   </h1>
@@ -70,7 +70,7 @@ const AddtoCart = () => {
                  {/* four */}
                  <div className="mob:mb-5">
               <Image
-              onClick={() => handleClick(8)}
+              onClick={() => handleClick("mask")}
                 className="mb-6 w-[484px] mob:w-full cursor-pointer"
                 src={img4}
                 alt=""
@@ -78,7 +78,7 @@ const AddtoCart = () => {
                 height={266}
               />
               <div className="  w-[484px] mob:w-full">
-                <div onClick={() => handleClick(8)} className="flex justify-between cursor-pointer">
+                <div onClick={() => handleClick("mask")} className="flex justify-between cursor-pointer">
                   <h1 className="text-[#FFFFFF] text-[24px] leading-[30px] font-outfit font-medium mb-3">
                     Mask
                   </h1>
@@ -103,7 +103,7 @@ const AddtoCart = () => {
          {/* five */}
          <div className="mob:mb-5">
               <Image
-                onClick={() => handleClick(11)}
+                onClick={() => handleClick("sweetestofmelodyCD")}
                 className="mb-6 w-[484px] mob:w-full cursor-pointer"
                 src={img5}
                 alt=""
@@ -111,7 +111,7 @@ const AddtoCart = () => {
                 height={266}
               />
               <div className="  w-[484px] mob:w-full">
-                <div   onClick={() => handleClick(11)} className="flex justify-between cursor-pointer">
+                <div   onClick={() => handleClick("sweetestofmelodyCD")} className="flex justify-between cursor-pointer">
                   <h1 className="text-[#FFFFFF] text-[24px] leading-[30px] font-outfit font-medium mb-3">
                     Sweetest of Melody
                   </h1>
@@ -130,7 +130,7 @@ const AddtoCart = () => {
             {/* six*/}
             <div className="mob:mb-5">
               <Image
-              onClick={() => handleClick(7)}
+              onClick={() => handleClick("cap")}
                 className="mb-6 w-[484px] mob:w-full cursor-pointer"
                 src={img6}
                 alt=""
@@ -138,7 +138,7 @@ const AddtoCart = () => {
                 height={266}
               />
               <div className="  w-[484px] mob:w-full">
-                <div onClick={() => handleClick(7)} className="flex justify-between cursor-pointer">
+                <div onClick={() => handleClick("cap")} className="flex justify-between cursor-pointer">
                   <h1 className="text-[#FFFFFF] text-[24px] leading-[30px] font-outfit font-medium mb-3">
                     Cap
                   </h1>
