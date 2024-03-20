@@ -58,7 +58,7 @@ export const products: Product[] = [
     price: 1.50,
     subHeading: "",
     img: img5,
-    songlink:"Sweetest-of-Melody (1).mp3",
+    songlink:"/videos/Sweetest-of-Melody (1).mp3",
 
   },
   {
