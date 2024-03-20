@@ -207,7 +207,7 @@ const Hero = () => {
                       onClick={() => handleClick("worthyCD")}
                       className="text-gradient cursor-pointer text-[20px] leading-[25.2px] tracking-[3px] font-jakrata font-medium"
                     >
-                      $1.50
+                      $2.00
                     </p>
                   </div>
                   {/* text */}
@@ -248,7 +248,7 @@ const Hero = () => {
                       onClick={() => handleClick("sweetestofmelodyCD")}
                       className="text-gradient cursor-pointer text-[20px] leading-[25.2px] tracking-[3px] font-jakrata font-medium"
                     >
-                      $1.50
+                      $2.00
                     </p>
                   </div>
                   {/* text */}

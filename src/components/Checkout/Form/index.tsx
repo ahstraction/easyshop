@@ -17,6 +17,8 @@ import shopbtn from "@/public/imgs/checkout/shopbtn.png";
 import paybtn from "@/public/imgs/checkout/pay.png";
 import remove from "@/public/imgs/checkout/Remove.png";
 import { orderDataKeys } from "@/constants/orderdetail";
+import useShoppingCart from "@/hooks/useShoppingCart";
+
 
 import StripeForm from "./Stripe";
 
@@ -30,7 +32,9 @@ interface IndexSignature {
 
 
 const Form = () => {
-
+  const {
+    cartProducts,
+  } = useShoppingCart();
 
     // form values
     const [formData, setFormData] = useState<IndexSignature>(orderDataKeys);
@@ -71,6 +75,36 @@ const Form = () => {
         setLoading(false); 
       }
     };
+
+
+
+  //   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+  //     e.preventDefault();
+  //     setLoading(true);
+  
+  //     const itemsData = cartProducts.map((product) => ({
+  //       name: product.title,
+  //       price: product.price,
+  //     }));
+  
+  //     setFormData({ ...formData, items: itemsData });
+  // console.log(formData,"formDataformData")
+  //     try {
+  //       const res = await axios.post("/api/order", formData);
+  //       const data = res?.data;
+  
+  //       if (data) {
+  //         // Handle success
+  //       } else {
+  //         throw new Error(data.message || "Failed to send order");
+  //       }
+  //     } catch (error) {
+  //       // Handle error
+  //     } finally {
+  //       setLoading(false);
+  //     }
+  //   };
+
 
 
   return (
