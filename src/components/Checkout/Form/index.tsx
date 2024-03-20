@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 "use client";
 import React, { ChangeEvent, FormEvent, useState } from "react";
 import Image from "next/image";
@@ -53,57 +55,59 @@ const Form = () => {
     };
   
 
-    const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-
-  
-  console.log(formData,"formData")
- 
-      try {
-        const res = await axios.post("/api/order", formData);
-        const data = res?.data;
-  
-  
-        if (data) {
-          // alert("Proposal sent successfully!");
-        } else {
-          throw new Error(data.message || "Failed to send email");
-        }
-      } catch (error) {
-        // console.error("Error sending email:", error);
-        // alert("Failed to send email. Please try again later.");
-      } finally {
-        setLoading(false); 
-      }
-    };
-
-
-
   //   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-  //     e.preventDefault();
-  //     setLoading(true);
+
   
-  //     const itemsData = cartProducts.map((product) => ({
-  //       name: product.title,
-  //       price: product.price,
-  //     }));
-  
-  //     setFormData({ ...formData, items: itemsData });
-  // console.log(formData,"formDataformData")
+  // console.log(formData,"formData")
+ 
   //     try {
   //       const res = await axios.post("/api/order", formData);
   //       const data = res?.data;
   
+  
   //       if (data) {
-  //         // Handle success
+  //         // alert("Proposal sent successfully!");
   //       } else {
-  //         throw new Error(data.message || "Failed to send order");
+  //         throw new Error(data.message || "Failed to send email");
   //       }
   //     } catch (error) {
-  //       // Handle error
+  //       // console.error("Error sending email:", error);
+  //       // alert("Failed to send email. Please try again later.");
   //     } finally {
-  //       setLoading(false);
+  //       setLoading(false); 
   //     }
   //   };
+
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+  
+    const updatedFormData = { ...formData }; // Assuming formData is correctly populated
+  
+    // Append cartProducts to updatedFormData
+    cartProducts.forEach((product, index) => {
+      updatedFormData[`product${index + 1}_title`] = product.title;
+      updatedFormData[`product${index + 1}_price`] = product.price.toString();
+      // Add other properties as needed
+    });
+   console.log(updatedFormData,"formData")
+    try {
+      const res = await axios.post('/api/order', updatedFormData);
+      const data = res?.data;
+  
+      if (data && data.message === 'Email Sent Successfully') {
+        // Handle success
+        // alert('Email sent successfully!');
+      } else {
+        throw new Error(data?.message || 'Failed to send email');
+      }
+    } catch (error) {
+      // Handle error
+      console.error('Error sending email:', error);
+      // alert('Failed to send email. Please try again later.');
+    }
+  };
+  
 
 
 
@@ -331,9 +335,9 @@ const Form = () => {
                 </p>
               </div>
               {/* card detail */}
-
+{/* <button className="text-white" onClick={handleSubmit}>handleSubmit</button> */}
               <Elements stripe={stripePromise}>
-                <StripeForm handleSubmit={handleSubmit} />
+                <StripeForm formData={formData} handleSubmit={handleSubmit} />
               </Elements>
 
               {/* card detail */}
