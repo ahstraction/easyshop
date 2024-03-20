@@ -52,7 +52,7 @@ const Hero = () => {
                   height={266}
                 />
                 <div className="  max-w-[354px]">
-                  <div className="flex justify-between ">
+                  <div className="flex justify-between  ">
                     <h1
                       id="1"
                       onClick={() => handleClick(product.slug)}
@@ -104,7 +104,13 @@ const Hero = () => {
                   <div className="flex justify-between ">
                     <h1
                       onClick={() => handleClick(product.slug)}
-                      className="text-[#FFFFFF] cursor-pointer text-[21px] leading-[30px] font-outfit font-medium mb-3"
+                      className="text-[#FFFFFF] cursor-pointer text-[21px] leading-[30px] font-outfit font-medium mb-3 overflow-hidden"
+  style={{
+    maxWidth: '15ch',
+    textOverflow: 'ellipsis',
+    whiteSpace: 'nowrap',
+    display: 'inline-block',
+  }}
                     >
                       {product.title}
                     </h1>
