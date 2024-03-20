@@ -13,8 +13,12 @@ const CreditCardInput = () => {
         fontSize: "16px",
         "::placeholder": {
           fontSize: "14px",
+        padding: "30px",
+        height:"40px"
+
         },
         color: "#fff",
+        height:"100px"
       },
       invalid: {
         color: "#fa755a",
