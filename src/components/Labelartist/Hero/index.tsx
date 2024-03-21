@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
-
+import { FaApple  , FaSpotify } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
 import banner from "@/public/imgs/labelartist/artist-banner.png";
@@ -67,7 +67,7 @@ const Hero = () => {
                   Imari
                 </h2>
 
-                <p className="text-[14px] mob:text-center max-w-[643px] text-[#FFFFFF] font-jakrata font-normal leading-[32px] my-6">
+                <p className="text-[14px] mob:text-center max-w-[643px] text-[#FFFFFF] font-jakrata font-normal leading-[32px] mt-6 mb-2">
                   {showFullBio ? (
                     <>
                       <span className="max-w-[643px]">
@@ -111,12 +111,19 @@ const Hero = () => {
                 </p>
                 <Link
                   onClick={toggleBio}
-                  className="font-bold flex gap-1 mob:flex mob:justify-center font-jakrata text-gradient leading-[21.42px] tracking-[2px] uppercase"
-                  href="#"
+                  className={`font-bold flex gap-1 mob:flex mob:justify-center font-jakrata text-gradient leading-[21.42px] tracking-[2px] uppercase ${showFullBio ? 'hidden' : ''}`}  href="#"
                 >
                  IMARI's bio
                   <Image src={arrow} alt="" width={16.97} height={16.97} />
                 </Link>
+                <div className="flex items-end gap-4 relative z-50 mt-4">
+                  <Link target="_blank" href="https://music.apple.com/album/1734140259?i=1734140260">
+                  <FaApple className="text-white text-[25px]" />
+                  </Link>
+                  <Link target="_blank" href="https://open.spotify.com/track/7ybLhO296Nk9H6Bmhfwr25">
+                  <FaSpotify  className="text-white text-[23px]" />
+                  </Link>
+                  </div>
               </div>
             </div>
           </div>

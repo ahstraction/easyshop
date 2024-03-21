@@ -38,14 +38,14 @@ export default function procedure() {
         <div className="absolute bottom-0 z-0 w-full ">
           <div className="relative overflow-hidden">
             <Image
-              className="object-cover bg-cover bg-no-repeat w-full h-full opacity-20"
+              className="object-cover bg-cover bg-no-repeat w-full h-[1000px] opacity-20"
               src="/imgs/home/buildings.png"
               alt="background"
               height={813}
               width={1832}
             />
             <Image
-              className="h-full w-full absolute z-50"
+              className="h-[50%]  w-full absolute z-50"
               src={bg}
               alt=""
               height={813}

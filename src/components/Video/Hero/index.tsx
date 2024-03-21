@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { FaApple  , FaSpotify } from "react-icons/fa";
 
 import img1 from "@/public/imgs/video/Rectangle 26 (7).png";
 import img2 from "@/public/imgs/video/Rectangle 27.png";
@@ -42,8 +43,9 @@ const Hero = () => {
           <div className="max-w-[1140px]">
             {/* main video */}
             <div className="   flex justify-center overflow-hidden  ">
-              <div onClick={() => handleClick("imari")} className="w-full h-[613px] mob:h-full cursor-pointer bg-[#161616] mt-10  max-w-[1340px] relative ">
+              <div  className="w-full h-[613px] mob:h-full  bg-[#161616] mt-10  max-w-[1340px] relative ">
                 <Image
+                onClick={() => handleClick("imari")}
                   className="absolute z-10 h-full w-full mob:hidden"
                   src={mainvid}
                   alt=""
@@ -51,6 +53,7 @@ const Hero = () => {
                   height={760}
                 />
                 <Image
+                onClick={() => handleClick("imari")}
                   className="  w-full mob:block hidden"
                   src={imari}
                   alt=""
@@ -65,18 +68,26 @@ const Hero = () => {
                       <h2 className="text-[17px] mob:text-center tracking-[3px] font-bold font-jakrata text-gradient leading-[21.42px] ">
                         22 March 2024
                       </h2>
-                      <h1 className="text-[40px] mob:text-center mt-2 text-[#fff] tracking-[2px] font-outfit font-medium leading-[50.4px] ">
+                      <h1 onClick={() => handleClick("imari")} className="text-[40px] cursor-pointer mob:text-center mt-2 text-[#fff] tracking-[2px] font-outfit font-medium leading-[50.4px] ">
                        Imari
                       </h1>
-
+                      <div className="flex items-end gap-4 relative  mt-2">
+                  <Link target="_blank" href="https://music.apple.com/album/1734140259?i=1734140260">
+                  <FaApple className="text-white text-[25px]" />
+                  </Link>
+                  <Link target="_blank" href="https://open.spotify.com/track/7ybLhO296Nk9H6Bmhfwr25">
+                  <FaSpotify  className="text-white text-[23px]" />
+                  </Link>
+                  </div>
                       <p className="text-[18px] mob:text-center text-[#FFFFFF] font-jakrata font-bold leading-[22.68px] my-6">
                       Bennie Pearce for Phillie-BOP Productions
                       </p>
                     </div>
 
                     {/* button */}
-                 <div className="mob:flex mob:justify-center">
+                 <div className="mob:flex cursor-pointer mob:justify-center">
                  <Image
+                 onClick={() => handleClick("imari")}
                       className="h-[90px] w-[90px]"
                       src={playbutton}
                       alt=""

@@ -19,7 +19,7 @@ const AboutProducer = () => {
 
   return (
     <>
-      <div className=" 2xl:container-fluid flex min-h-[986px] mob:min-h-[740px]  items-center justify-center  mx-auto overflow-hidden relative ">
+      <div className=" 2xl:container-fluid flex min-h-[1086px] mob:min-h-[740px] z-50 items-center justify-center  mx-auto overflow-hidden relative ">
         <Image
           src={bg}
           className="absolute inset-0 object-cover w-full h-full"
@@ -80,7 +80,8 @@ const AboutProducer = () => {
                   a new level of quality in a music with no genre confines.
                   Bennie is a member of the American Society of Composers and
                   Publishers (ASCAP). He is an independent publisher under
-                  Phillie-BOP Music.
+                  Phillie-BOP Music. <br /> <br />
+                  In 2020, Phillie-BOP Productions launched its first international release, “Worthy” a debut hit single with independent singer/songwriter Rina Chanel. Follow-on hits included “More Than Enough,” “Made,” “Sweetest of Melody,” “E.S.P.” and “Je Ne Sais Quoi,” all #1 on various digital radio platform charts, as well as Top 10 and Top 20 categories.
             </span>
 
 
@@ -114,7 +115,8 @@ const AboutProducer = () => {
                   Bennie is a member of the American Society of Composers and
                   Publishers (ASCAP). He is an independent publisher under
                   Phillie-BOP Music.
-             
+             <br /> <br />
+             In 2020, Phillie-BOP Productions launched its first international release, “Worthy” a debut hit single with independent singer/songwriter Rina Chanel. Follow-on hits included “More Than Enough,” “Made,” “Sweetest of Melody,” “E.S.P.” and “Je Ne Sais Quoi,” all #1 on various digital radio platform charts, as well as Top 10 and Top 20 categories.
   
                         </span>
                       
