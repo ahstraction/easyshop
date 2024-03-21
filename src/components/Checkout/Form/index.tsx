@@ -103,23 +103,16 @@ const Form = () => {
       const data = res?.data;
   
       if (data && data.message === 'Email Sent Successfully') {
-        // Handle success
-        // alert('Email sent successfully!');
+    
       } else {
         throw new Error(data?.message || 'Failed to send email');
       }
     } catch (error) {
-      // Handle error
       console.error('Error sending email:', error);
-      // alert('Failed to send email. Please try again later.');
     }
   };
   
-  const [productQuantities, setProductQuantities] = useState({});
-
-  const handleQuantityChange = (productId, quantity) => {
-    setProductQuantities({ ...productQuantities, [productId]: quantity });
-  };
+  
 
 
 
@@ -492,6 +485,16 @@ const Form = () => {
                 </p>
               </div>
 
+
+      {/* total */}
+      <div className="flex justify-between items-center mt-3 ml-[2px]">
+                <h2 className=" text-[16px] text-[#fff] font-jakrata font-normal leading-[21.42px] ">
+                  Total
+                </h2>
+                <p className=" text-[16px] text-[#fff] font-jakrata font-normal leading-[21.42px] ">
+                ${cartProductsTotalPrice || 0}
+                </p>
+              </div>
               <div className="py-8 max-w-[1140px]  w-full">
                 <hr className="h-px  bg-[#FFFFFF33]/20 border-0 dark:bg-[#FFFFFF33]"></hr>
               </div>
