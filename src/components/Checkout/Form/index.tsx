@@ -411,14 +411,32 @@ const Form = () => {
                   <p className=" text-[22px] text-right text-[#fff] font-jakrata font-medium leading-[21.42px] ">
                   ${product.price * getItemQuantity(product.id)}
                   </p>
-                  <div className="bg-[#FFFFFF] my-3 rounded-[3px] h-[32px] w-[83px] flex items-center p-3 justify-between">
-                    <p className=" text-[16px] text-right text-[#A0A0A0] font-jakrata font-normal leading-[21.42px] ">
+                  <div className="bg-[#FFFFFF] my-3 rounded-[3px] h-[32px] flex items-center p-3 justify-between">
+                    <p className=" text-[16px] text-right pr-2 text-[#A0A0A0] font-jakrata font-normal leading-[21.42px] ">
                       Qty
                     </p>
+                  <div className="flex items-center">
+                      {/* decrease quantity */}
+                      <button
+                          className=" px-2 mb-[2px] font-medium text-[25px]"
+                          onClick={() => decreaseCartQuantity(product.id)}
+                        >
+                         -
+                        </button>
+
+                        {/*  quantity */}
                     <p className=" text-[16px] text-right text-[#5B5B5B] font-jakrata font-normal leading-[21.42px] ">
                  {getItemQuantity(product.id)}
                
                     </p>
+{/* increase quantity */}
+                    <button
+                          className=" pl-2 font-medium text-[25px] mb-[2px]"
+                          onClick={() => increaseCartQuantity(product.id)}
+                        >
+                         +
+                        </button>
+                  </div>
                   </div>
                   <div onClick={() => removeFromCart(product.id)} className="flex justify-end cursor-pointer">
                     <Image src={remove} alt="" width={63} height={24} />
