@@ -1,8 +1,10 @@
 import { NextResponse, NextRequest } from "next/server";
 import nodemailer from "nodemailer";
+
 interface Product {
   title: string;
   price: number;
+  quantity: number;
 }
 
 export async function POST(request: NextRequest) {
@@ -20,15 +22,46 @@ export async function POST(request: NextRequest) {
       },
     });
 
-    const productListHTML = Object.keys(formdata).filter(key => key.startsWith('product')).map(key => {
-      const value = key.includes('_price') ? `$${formdata[key]}` : formdata[key];
-      return `<li>${key}: ${value}</li>`;
-    }).join('');
+
+    const grandTotal = formdata.cartValues.reduce((total: any, product: any) => total + (product.price * product.quantity), 0);
+
+
+    const productListHTML = `
+    <style>
+  .product-row td {
+    padding-right: 10px;
+  }
+</style>
+<table>
+  <tr>
+    <td>Title</td>
+    <td>Price</td>
+    <td>Quantity</td>
+  </tr>
+  ${formdata.cartValues.map((product: Product) => {
+    const totalPrice = product.price * product.quantity; // Calculate total price for each product
+ 
+    return `
+    <tr class="product-row">
+        <td>${product.title}:</td>
+        <td>$${totalPrice} |</td>
+        <td>${product.quantity} |</td>
+      </tr>
+    `;
+  }).join('')}
+  <tr>
+  <td colspan="2"><strong>Grand Total:</strong></td>
+  <td><strong>$${grandTotal}</strong></td>
+</tr>
+</table>
+`;
+    
 
 
     const mailOptionToYou = {
       from: formdata.email,
       to: "developer@innovativemojo.com,projectlead@innovativemojo.com,Bop@phillibopmusic.com",
+      // to: "developer@innovativemojo.com",
       subject: " order",
       html: `
         <h3>New Contact Form Submission</h3>
