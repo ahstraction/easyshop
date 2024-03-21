@@ -5,6 +5,7 @@ import maskimg from "@/public/imgs/labelartist/mask.png";
 import bgright from "@/public/imgs/labelrelease/imarii.png";
 import bgrightshade from "@/public/imgs/labelrelease/shade.png";
 import bannermob from "@/public/imgs/labelartist/imarimobile.png";
+import { FaApple  , FaSpotify } from "react-icons/fa";
 
 import arrow from "@/public/imgs/labelartist/arrow-up.png";
 import Navbar from "@/components/navbar/Navbar";
@@ -51,9 +52,17 @@ const Hero = () => {
             <h1 className="text-[20px] uppercase  text-[#fff]/70 tracking-[3px] font-jakrata font-normal leading-[25.2px] ">
               Label Release
             </h1>
-            <h2 className="text-[50px] mob:text-[30px] font-medium font-outfit imarigradient leading-[60px] mt-[100px] mob:mt-[15px] mb-6">
+            <h2 className="text-[50px] mob:text-[30px] font-medium font-outfit imarigradient leading-[60px] mt-[100px] mob:mt-[15px] mt-6">
             Imari's Breathe Again
             </h2>
+            <div className="flex items-end gap-4 relative  mt-2 mb-4">
+                  <Link target="_blank" href="https://music.apple.com/album/1734140259?i=1734140260">
+                  <FaApple className="text-white text-[25px]" />
+                  </Link>
+                  <Link target="_blank" href="https://open.spotify.com/track/7ybLhO296Nk9H6Bmhfwr25">
+                  <FaSpotify  className="text-white text-[23px]" />
+                  </Link>
+                  </div>
             <p className="text-[14px] max-w-[643px] text-[#FFFFFF] font-jakrata font-bold leading-[32px] my-[2px]">
               Written by:
               <span className="font-normal ml-1">
@@ -98,11 +107,18 @@ const Hero = () => {
             Mastering by:  
               <span className="font-normal ml-1">Peter Humphreys for Masterwork Recording, Inc.</span>
             </p>
-            <p className="text-[14px] max-w-[643px] text-[#FFFFFF] font-jakrata font-bold leading-[32px] my-[2px]">
+            <Link
+            href="/label-artist"
+                  className={`font-bold flex gap-1 mob:flex mob:justify-center font-jakrata text-gradient leading-[21.42px] tracking-[2px] uppercase mt-2`}  
+                >
+                 IMARI's bio
+                  <Image src={arrow} alt="" width={16.97} height={16.97} />
+                </Link>
+            {/* <p className="text-[14px] max-w-[643px] text-[#FFFFFF] font-jakrata font-bold leading-[32px] my-[2px]">
               <span className="font-normal ">
                 Mastered at Masterwork Recording Inc., Philadelphia, PA.
               </span>
-            </p>
+            </p> */}
           </div>
         </div>
       </div>

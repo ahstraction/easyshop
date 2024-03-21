@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Navbar from "../navbar/Navbar";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import { FaApple  , FaSpotify } from "react-icons/fa";
 
 import product from "@/public/cap1.png";
 import plus from "@/public/imgs/icons/ic_round-plus.svg";
@@ -65,7 +66,16 @@ const Product = ({productname, price, imagePath, description, date , productId}:
           <h1 className="text-[#fff] text-[50px] mob:text-[30px] mob:mt-2 font-medium font-outfit">
            {productname}
           </h1>
-
+          {productname === 'Imari' ? (
+  <div className="flex items-end gap-4 relative z-50 mt-2 mb-4">
+    <Link target="_blank" href="https://music.apple.com/album/1734140259?i=1734140260">
+      <FaApple className="text-white text-[28px]" />
+    </Link>
+    <Link target="_blank" href="https://open.spotify.com/track/7ybLhO296Nk9H6Bmhfwr25">
+      <FaSpotify className="text-white text-[26px]" />
+    </Link>
+  </div>
+) : null}
           {/* price */}
           <h2 className="text-[30px] mob:text-[22px] mt-3 text-gradient leading-[28.98px] font-bold font-jakrata">
         ${price}

@@ -2,6 +2,8 @@
 "use client";
 
 import React from "react";
+import { FaApple  , FaSpotify } from "react-icons/fa";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -25,6 +27,7 @@ import made from "@/public/imgs/labelartist/made (1).png";
 import f from "@/public/imgs/labelartist/esp (1).png";
 import breath from "@/public/imgs/labelartist/breatheagain.png";
 import arrow from "@/public/imgs/icons/majesticons_arrow-up.svg";
+import Link from "next/link";
 
 interface SliderHeading {
   heading?: string;
@@ -276,12 +279,24 @@ const Slider2 = ({heading}: SliderHeading) => {
                 <h1 className="text-[#FFFFFF] text-[30px] font-outfit font-medium">
                 Imari
                 </h1>
+                <div className="flex items-end gap-4 relative z-50 mb-2">
+                  <Link target="_blank" href="https://music.apple.com/album/1734140259?i=1734140260">
+                  <FaApple className="text-white text-[22px]" />
+                  </Link>
+                  <Link target="_blank" href="https://open.spotify.com/track/7ybLhO296Nk9H6Bmhfwr25">
+                  <FaSpotify  className="text-white text-[20px]" />
+                  </Link>
+                  </div>
                 <p className="text-gradient text-[20px] leading-[25.2px] tracking-[3px] font-jakrata font-medium">
                   2024
                 </p>
+                
               </div>
               {/* img arrow */}
-              <Image className="" src={arrow} alt="" width={40} height={40} />
+           <div className="">
+           <Image className="" src={arrow} alt="" width={40} height={40} />
+            
+           </div>
             </div>
           </div>
         </SwiperSlide>

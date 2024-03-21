@@ -40,69 +40,22 @@ const Hero = () => {
         </p>
       </div>
       <div className="pt-20  bg-[#121212] pb-[120px] mob:pb-20 mob:mb-20">
-        <div className="flex justify-center w-full">
-          <div className="flex mob:block justify-center gap-[45px] relative z-10 w-full max-w-[1200px]">
-            {products.slice(0, 4).map((product) => (
-              <div className="max-w-[270px] mob:max-w-full  mob:px-5 mob:pb-5" key={product.slug}>
-                <Image
-                  id="1"
-                  onClick={() => handleClick(product.slug)}
-                  className="mb-6 cursor-pointer max-h-[222px] mob:max-h-full"
-                  src={product.img}
-                  alt=""
-                  width={352}
-                  height={266}
-                />
-                <div className="  max-w-[354px]">
-                  <div className="flex justify-between  ">
-                    <h1
-                      id="1"
-                      onClick={() => handleClick(product.slug)}
-                      className="text-[#FFFFFF] cursor-pointer text-[21px] leading-[30px] font-outfit font-medium mb-3"
-                    >
-                      {product.title}
-                    </h1>
-                    <p
-                      id="1"
-                      onClick={() => handleClick(product.slug)}
-                      className="text-gradient cursor-pointer text-[20px] leading-[25.2px] tracking-[3px] font-jakrata font-medium"
-                    >
-                      ${product.price}
-                    </p>
-                  </div>
-                  {/* text */}
-                  {/* <p className="text-[16px] text-[#fff] font-jakrat font-normal leading-[26px]">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p> */}
-                  {/* button */}
-                  {/* <Link href="/cart"> */}
-                  <button
-                    className=" py-[20px] w-full uppercase mt-5  rounded-[150px] bg-[#FFFFFF] text-[#121212] tracking-[2px] text-[15px] leading-[18.9px] font-semibold font-jakrata"
-                    onClick={() => onAddToCart(product.id)}
-                  >
-                    Add to Cart
-                  </button>
-                  {/* </Link> */}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+      
 
         {/* row2 */}
         <div className="flex justify-center w-full mt-[45px] relative z-10">
-          <div className="flex mob:block justify-center gap-[45px] w-full max-w-[1180px]">
-            {products.slice(4, 8).map((product) => (
-              <div className="max-w-[270px]  mob:max-w-full  mob:px-5 mob:pb-5" key={product.slug}>
+          <div className="flex mob:block justify-center gap-[45px]  w-full max-w-[1280px]">
+            {products.slice(6, 8).map((product) => (
+              <div className="  mob:max-w-full  mob:px-5 mob:pb-5" key={product.slug}>
                 <Image
-                  className="mb-6 cursor-pointer max-h-[222px] mob:max-h-full"
+                  className="mb-6 cursor-pointer w-[484px] mob:w-full mob:max-h-full"
                   onClick={() => handleClick(product.slug)}
                   src={product.img}
                   alt=""
                   width={352}
                   height={266}
                 />
-                <div className="  max-w-[354px]">
+                <div className="  w-[484px] mob:w-full">
                   <div className="flex justify-between ">
                     <h1
                       onClick={() => handleClick(product.slug)}
@@ -143,59 +96,20 @@ const Hero = () => {
         </div>
         {/* row3 */}
         <div className="flex justify-center w-full mt-[45px] relative z-10">
-          <div className="flex mob:block justify-start gap-[45px] w-full max-w-[1180px]">
-              <div className="max-w-[270px]  mob:max-w-full  mob:px-5 mob:pb-5" >
-                <Image
-                  className="mb-6 cursor-pointer max-h-[222px] mob:max-h-full"
-                  onClick={() => handleClick("imari")}
-                  src={imari}
-                  alt=""
-                  width={352}
-                  height={266}
-                />
-                <div className="  max-w-[354px]">
-                  <div className="flex justify-between ">
-                    <h1
-                      onClick={() => handleClick("imari")}
-                      className="text-[#FFFFFF] cursor-pointer text-[21px] leading-[30px] font-outfit font-medium mb-3"
-                    >
-                     Imari
-                    </h1>
-                    <p
-                      onClick={() => handleClick("imari")}
-                      className="text-gradient cursor-pointer text-[20px] leading-[25.2px] tracking-[3px] font-jakrata font-medium"
-                    >
-                      $1.50
-                    </p>
-                  </div>
-                  {/* text */}
-                  {/* <p className="text-[16px] text-[#fff] font-jakrat font-normal leading-[26px]">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p> */}
-                  {/* button */}
-                  {/* <Link href="/cart"> */}
-                  <button
-                    className=" py-[20px] w-full uppercase mt-5  rounded-[150px] bg-[#FFFFFF] text-[#121212] tracking-[2px] text-[15px] leading-[18.9px] font-semibold font-jakrata"
-                    onClick={() => onAddToCart(9)}
-                  >
-                    Add to Cart
-                  </button>
-                  {/* </Link> */}
-                </div>
-              </div>
+          <div className="flex mob:block justify-center gap-[45px] w-full max-w-[1180px]">
 
 {/* 10 */}
 
-<div className="max-w-[270px]  mob:max-w-full  mob:px-5 mob:pb-5" >
+<div className="  mob:max-w-full  mob:px-5 mob:pb-5" >
                 <Image
-                  className="mb-6 cursor-pointer max-h-[222px] mob:max-h-full"
+                  className="mb-6 cursor-pointer w-[484px] mob:w-full mob:max-h-full"
                   onClick={() => handleClick("worthyCD")}
                   src={cdworthy}
                   alt=""
                   width={352}
                   height={266}
                 />
-                <div className="  max-w-[354px]">
+                <div className=" w-[484px] mob:w-full">
                   <div className="flex justify-between ">
                     <h1
                       onClick={() => handleClick("worthyCD")}
@@ -227,16 +141,16 @@ const Hero = () => {
               </div>
 {/* 11 */}
 
-<div className="max-w-[270px]  mob:max-w-full  mob:px-5 mob:pb-5" >
+<div className="  mob:max-w-full  mob:px-5 mob:pb-5" >
                 <Image
-                  className="mb-6 cursor-pointer max-h-[222px] mob:max-h-full"
+                  className="mb-6 cursor-pointer w-[484px] mob:w-full mob:max-h-full"
                   onClick={() => handleClick("sweetestofmelodyCD")}
                   src={cdsweet}
                   alt=""
                   width={352}
                   height={266}
                 />
-                <div className="  max-w-[354px]">
+                <div className="  w-[484px] mob:w-full">
                   <div className="flex justify-between ">
                     <h1
                       onClick={() => handleClick("sweetestofmelodyCD")}
