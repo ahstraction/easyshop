@@ -1,7 +1,8 @@
 // @ts-nocheck
 
 "use client";
-import React, { ChangeEvent, FormEvent, useState } from "react";
+import React, { ChangeEvent, FormEvent, useState,Fragment } from "react";
+
 import Image from "next/image";
 import Link from "next/link";
 import { Elements } from "@stripe/react-stripe-js";
@@ -36,7 +37,13 @@ interface IndexSignature {
 const Form = () => {
   const {
     cartProducts,
+    getItemQuantity,
+    increaseCartQuantity,
+    decreaseCartQuantity,
+    removeFromCart,
+    cartProductsTotalPrice,
   } = useShoppingCart();
+
 
     // form values
     const [formData, setFormData] = useState<IndexSignature>(orderDataKeys);
@@ -108,6 +115,11 @@ const Form = () => {
     }
   };
   
+  const [productQuantities, setProductQuantities] = useState({});
+
+  const handleQuantityChange = (productId, quantity) => {
+    setProductQuantities({ ...productQuantities, [productId]: quantity });
+  };
 
 
 
@@ -122,7 +134,7 @@ const Form = () => {
               Checkout
             </h1>
           </div>
-          <div className="flex mob:block justify-end  gap-16">
+          <div className="flex mob:block justify-end items-start gap-16">
             {/* left */}
             <div 
             // onSubmit={(e: React.FormEvent<HTMLFormElement>) => handleSubmit(e)}
@@ -374,56 +386,62 @@ const Form = () => {
             </div>
 
             {/* right */}
-            <div className="bg-[#131211] w-full max-w-[537px] max-h-[522px] p-10">
+            <div className="bg-[#131211] w-full max-w-[537px]  p-10">
               <h1 className="uppercase text-[17px] text-[#fff] font-jakrata font-bold leading-[21.42px] tracking-[3px]">
                 Summary
               </h1>
 
               {/* subtotal */}
-              <div className="flex justify-between mt-12">
+              {cartProducts.map((product) => (
+                <Fragment key={product.id}>
+            <div className="flex justify-between mt-12">
                 <div className="flex  gap-5">
                   <Image
                     className="h-[72px]"
-                    src={cap}
+                    src={product.img}
                     alt=""
                     width={82}
                     height={72}
                   />
                   <h2 className=" text-[18px] text-[#fff] font-jakrata font-medium leading-[21.42px] mt-1">
-                    cap
+                  {product.title}
                   </h2>
                 </div>
                 <div className="">
                   <p className=" text-[22px] text-right text-[#fff] font-jakrata font-medium leading-[21.42px] ">
-                    $99
+                  ${product.price * getItemQuantity(product.id)}
                   </p>
                   <div className="bg-[#FFFFFF] my-3 rounded-[3px] h-[32px] w-[83px] flex items-center p-3 justify-between">
                     <p className=" text-[16px] text-right text-[#A0A0A0] font-jakrata font-normal leading-[21.42px] ">
                       Qty
                     </p>
                     <p className=" text-[16px] text-right text-[#5B5B5B] font-jakrata font-normal leading-[21.42px] ">
-                      1
+                 {getItemQuantity(product.id)}
+               
                     </p>
                   </div>
-                  <div className="flex justify-end">
+                  <div onClick={() => removeFromCart(product.id)} className="flex justify-end cursor-pointer">
                     <Image src={remove} alt="" width={63} height={24} />
                   </div>{" "}
                 </div>
               </div>
 
+                </Fragment>
+              ))}
+              
               <div className="flex justify-between gap-4 mt-7">
                 <div className=" items-center  w-full">
-                  <h2 className=" text-[16px] text-[#fff] font-jakrata font-normal leading-[21.42px] ">
+                  {/* <h2 className=" text-[16px] text-[#fff] font-jakrata font-normal leading-[21.42px] ">
                     Tax
-                  </h2>
+                  </h2> */}
                   <div className="pt-4 max-w-[1140px]  w-full">
                     <hr className="h-px  bg-[#FFFFFF33]/20 border-0 dark:bg-[#FFFFFF33]"></hr>
                   </div>
                 </div>
                 {/* button */}
-                <button className="w-[101px] h-[43px] uppercase  bg-[#FFFFFF] text-[#121212] tracking-[2px] text-[15px] leading-[18.9px] font-semibold font-jakrata">
+                {/* <button className="w-[101px] h-[43px] uppercase  bg-[#FFFFFF] text-[#121212] tracking-[2px] text-[15px] leading-[18.9px] font-semibold font-jakrata">
                   Apply
-                </button>
+                </button> */}
               </div>
 
               {/* Subtotal */}
@@ -432,19 +450,19 @@ const Form = () => {
                   Subtotal
                 </h2>
                 <p className=" text-[16px] text-[#fff] font-jakrata font-normal leading-[21.42px] ">
-                  $8.00
+                ${cartProductsTotalPrice || 0}
                 </p>
               </div>
 
               {/* Tax */}
-              <div className="flex justify-between items-center mt-3">
+              {/* <div className="flex justify-between items-center mt-3">
                 <h2 className=" text-[16px] text-[#fff] font-jakrata font-normal leading-[21.42px] ">
                   Tax
                 </h2>
                 <p className=" text-[16px] text-[#fff] font-jakrata font-normal leading-[21.42px] ">
                   $0.00
                 </p>
-              </div>
+              </div> */}
 
               {/* shipping */}
               <div className="flex justify-between items-center mt-3">
@@ -452,7 +470,7 @@ const Form = () => {
                   Shipping
                 </h2>
                 <p className=" text-[16px] text-[#fff] font-jakrata font-normal leading-[21.42px] ">
-                  $5.24
+                 Free
                 </p>
               </div>
 
