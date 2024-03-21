@@ -92,11 +92,20 @@ const Form = () => {
     const updatedFormData = { ...formData }; // Assuming formData is correctly populated
   
     // Append cartProducts to updatedFormData
-    cartProducts.forEach((product, index) => {
-      updatedFormData[`product${index + 1}_title`] = product.title;
-      updatedFormData[`product${index + 1}_price`] = product.price.toString();
-      // Add other properties as needed
-    });
+  //   cartProducts.forEach((product, index) => {
+  //     const quantity = getItemQuantity(product.id); 
+  //     const totalPrice = product.price * quantity; 
+  //     updatedFormData[`product${index + 1}_title`] = product.title;
+  //     updatedFormData[`product${index + 1}_price`] = `${totalPrice}`; 
+  //     updatedFormData[`product${index + 1}_quantity`] = quantity.toString(); 
+      
+  // });
+  updatedFormData['cartValues'] = cartProducts.map(product => ({
+    title: product.title,
+    price: product.price,
+    quantity: getItemQuantity(product.id), // Assuming getItemQuantity takes product ID as argument
+}));
+    
    console.log(updatedFormData,"formData")
     try {
       const res = await axios.post('/api/order', updatedFormData);
