@@ -6,14 +6,14 @@ import commas from "@/public/imgs/icons/comas.svg"
 
 const OurClient = () => {
   return (
-    <div className='px-5 pt-8 pb-8'>
-      <h1 className='text-[30px] font-outfit font-medium text-gradient leading-[40px] text-center'>What our clients say</h1>
-<div className="flex justify-center my-6">
+    <div className='px-5 pt-8 pb-8 bg-[#1B1918] relative z-40'>
+      {/* <h1 className='text-[30px] font-outfit font-medium text-gradient leading-[40px] text-center'>What our clients say</h1> */}
+{/* <div className="flex justify-center my-6">
     
 <Image src={commas} alt="" width={30}  height={30}/>
 
 
-</div>
+</div> */}
 
 <p className='text-[16px] font-outfit font-normal text-[#FFFFFF] leading-[25px] text-center mb-6'>
 If you feel like you have the gift, and you want to find out; make yourself available and the world will let you know.
