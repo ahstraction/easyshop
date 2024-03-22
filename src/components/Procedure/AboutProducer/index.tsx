@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 
 import bg from "@/public/imgs/procedure/bgpro.png";
-import bgright from "@/public/imgs/procedure/Mask group (1).png";
+import bgright from "@/public/imgs/home/release.png";
 import mob from "@/public/imgs/procedure/mobile.png";
 import buttonimg from "@/public/imgs/procedure/button.png";
 
@@ -29,19 +29,13 @@ const AboutProducer = () => {
         />
         {/* <div className="absolute z-20 h-full bottom-0 inset-0 bg-gradient-to-b from-transparent to-[#21201E] opacity-90"></div> */}
         <div className="h-full flex items-center justify-center min-h-[986px] mob:min-h-[740px] relative max-w-[1290px] w-full">
-          <Image
-            src={bgright}
-            className=" absolute mob:hidden right-[-130px]"
-            alt=""
-            width={802}
-            height={1046}
-          />
-          <div className=" flex mob:block items-end gap-[210px] relative z-20 mob:px-5 ">
-            <div className="flex  justify-end tab:justify-center items-center">
-              <div className=" relative w-full max-w-[674px] px-[2%]">
+         
+          <div className=" flex mob:block items-center justify-center gap-[70px] relative z-20 mob:px-5 ">
+            <div className="flex w-full justify-start tab:justify-center items-center">
+              <div className=" relative w-full max-w-[804px] px-[2%]">
        <div className="flex justify-center ">
        <Image
-            src={mob}
+            src={bgright}
             className=" hidden mob:block w-[100%] mb-6 mt-2 "
             alt=""
             width={802}
@@ -156,14 +150,14 @@ const AboutProducer = () => {
                 </div> */}
               </div>
             </div>
-            <div className="flex justify-start  tab:justify-center items-center mob:hidden ">
-              <Image
-                src={buttonimg}
-                className=" "
-                alt=""
-                width={294}
-                height={194}
-              />
+            <div className="flex justify-start w-full tab:justify-center items-center mob:hidden ">
+            <Image
+            src={bgright}
+            className=" w-full mob:hidden right-[-130px]"
+            alt=""
+            width={802}
+            height={1046}
+          />
             </div>
           </div>
         </div>

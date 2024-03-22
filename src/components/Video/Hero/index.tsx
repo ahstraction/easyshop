@@ -141,7 +141,7 @@ const Hero = () => {
                       (Official Video)
                     </p>
                     {/* button */}
-                    <button className=" py-[20px] w-full mob:mt-[12px] mt-[72px]  uppercase   rounded-[150px] bg-[#FFFFFF] text-[#121212] tracking-[2px] text-[15px] leading-[18.9px] font-semibold font-jakrata">
+                    <button className=" py-[20px] w-full mob:mt-[12px] mt-[73px]  uppercase   rounded-[150px] bg-[#FFFFFF] text-[#121212] tracking-[2px] text-[15px] leading-[18.9px] font-semibold font-jakrata">
                       Explore Music
                     </button>
                   </div>
@@ -193,7 +193,7 @@ const Hero = () => {
                       (Rina Chanel (Lyric Video))
                     </p>
                     {/* button */}
-                    <button className=" py-[20px] mt-[72px] mob:mt-3 w-full uppercase  rounded-[150px] bg-[#FFFFFF] text-[#121212] tracking-[2px] text-[15px] leading-[18.9px] font-semibold font-jakrata">
+                    <button className=" py-[20px] mt-[73px] mob:mt-3 w-full uppercase  rounded-[150px] bg-[#FFFFFF] text-[#121212] tracking-[2px] text-[15px] leading-[18.9px] font-semibold font-jakrata">
                       Explore Music
                     </button>
                   </div>
@@ -231,7 +231,7 @@ const Hero = () => {
                       (Rina Chanel (Lyric Video))
                     </p>
                     {/* button */}
-                    <button className=" py-[20px] mt-[72px] mob:mt-3 w-full uppercase   rounded-[150px] bg-[#FFFFFF] text-[#121212] tracking-[2px] text-[15px] leading-[18.9px] font-semibold font-jakrata">
+                    <button className=" py-[20px] mt-[67px] mob:mt-3 w-full uppercase   rounded-[150px] bg-[#FFFFFF] text-[#121212] tracking-[2px] text-[15px] leading-[18.9px] font-semibold font-jakrata">
                       Explore Music
                     </button>
                   </div>

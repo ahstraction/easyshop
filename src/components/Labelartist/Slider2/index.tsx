@@ -92,6 +92,141 @@ const Slider2 = ({heading}: SliderHeading) => {
         }}
         // mousewheel={{ invert: true }}
       >
+
+<SwiperSlide className="mob:px-[20px] mb-16">
+          {/* <Image
+            className="mb-20"
+            src={slideimg}
+            alt=""
+            width={1320}
+            height={580}
+          /> */}
+
+          <div className="">
+            <Image
+            onClick={() => handleClick("worthy")}
+              className="mb-6 cursor-pointer"
+              src={slideimg4}
+              alt=""
+              width={480}
+              height={480}
+            />
+            <div onClick={() => handleClick("worthy")} className="flex cursor-pointer justify-between items-center">
+              <div className="">
+                <h1 className="text-[#FFFFFF] text-[30px] font-outfit font-medium">
+                  Worthy
+                </h1>
+                <p className="text-gradient text-[20px] leading-[25.2px] tracking-[3px] font-jakrata font-medium">
+                  2000
+                </p>
+              </div>
+              {/* img arrow */}
+              <Image className="" src={arrow} alt="" width={40} height={40} />
+            </div>
+          </div>
+        </SwiperSlide>
+
+
+        <SwiperSlide className="mob:px-[20px] mb-16">
+          {/* <Image
+            className="mb-20"
+            src={slideimg}
+            alt=""
+            width={1320}
+            height={580}
+          /> */}
+
+          <div className="">
+            <Image
+            onClick={() => handleClick("made")}
+              className="mb-6 cursor-pointer"
+              src={made}
+              alt=""
+              width={480}
+              height={480}
+            />
+            <div onClick={() => handleClick("made")}  className="flex cursor-pointer justify-between items-center">
+              <div className="">
+                <h1 className="text-[#FFFFFF] text-[30px] font-outfit font-medium">
+                  Made
+                </h1>
+                <p className="text-gradient text-[20px] leading-[25.2px] tracking-[3px] font-jakrata font-medium">
+                  2020
+                </p>
+              </div>
+              {/* img arrow */}
+              <Image className="" src={arrow} alt="" width={40} height={40} />
+            </div>
+          </div>
+        </SwiperSlide>
+
+
+        <SwiperSlide className="mob:px-[20px] mb-16">
+          {/* <Image
+            className="mb-20"
+            src={slideimg}
+            alt=""
+            width={1320}
+            height={580}
+          /> */}
+
+          <div className="">
+            <Image
+            onClick={() => handleClick("more")}
+              className="mb-6 cursor-pointer"
+              src={more}
+              alt=""
+              width={480}
+              height={480}
+            />
+            <div onClick={() => handleClick("more")} className="flex cursor-pointer justify-between items-center">
+              <div className="">
+                <h1 className="text-[#FFFFFF] text-[30px] font-outfit font-medium">
+                  More than Enough
+                </h1>
+                <p className="text-gradient text-[20px] leading-[25.2px] tracking-[3px] font-jakrata font-medium">
+                  2021
+                </p>
+              </div>
+              {/* img arrow */}
+              <Image className="" src={arrow} alt="" width={40} height={40} />
+            </div>
+          </div>
+        </SwiperSlide>
+
+        <SwiperSlide className="mob:px-[20px] mb-16">
+          {/* <Image
+            className="mb-20"
+            src={slideimg}
+            alt=""
+            width={1320}
+            height={580}
+          /> */}
+
+          <div className="">
+            <Image
+            onClick={() => handleClick("E.S.P")}
+              className="mb-6 cursor-pointer"
+              src={f}
+              alt=""
+              width={480}
+              height={480}
+            />
+            <div onClick={() => handleClick("E.S.P")} className="flex cursor-pointer justify-between items-center">
+              <div className="">
+                <h1 className="text-[#FFFFFF] text-[30px] font-outfit font-medium">
+                  E.S.P.
+                </h1>
+                <p className="text-gradient text-[20px] leading-[25.2px] tracking-[3px] font-jakrata font-medium">
+                  2022
+                </p>
+              </div>
+              {/* img arrow */}
+              <Image className="" src={arrow} alt="" width={40} height={40} />
+            </div>
+          </div>
+        </SwiperSlide>
+
         <SwiperSlide className="mob:px-[20px] mb-16 ">
           {/* <Image
             className="mb-20"
@@ -158,104 +293,11 @@ const Slider2 = ({heading}: SliderHeading) => {
           </div>
         </SwiperSlide>
 
-        <SwiperSlide className="mob:px-[20px] mb-16">
-          {/* <Image
-            className="mb-20"
-            src={slideimg}
-            alt=""
-            width={1320}
-            height={580}
-          /> */}
+        
 
-          <div className="">
-            <Image
-            onClick={() => handleClick("worthy")}
-              className="mb-6 cursor-pointer"
-              src={slideimg4}
-              alt=""
-              width={480}
-              height={480}
-            />
-            <div onClick={() => handleClick("worthy")} className="flex cursor-pointer justify-between items-center">
-              <div className="">
-                <h1 className="text-[#FFFFFF] text-[30px] font-outfit font-medium">
-                  Worthy
-                </h1>
-                <p className="text-gradient text-[20px] leading-[25.2px] tracking-[3px] font-jakrata font-medium">
-                  2000
-                </p>
-              </div>
-              {/* img arrow */}
-              <Image className="" src={arrow} alt="" width={40} height={40} />
-            </div>
-          </div>
-        </SwiperSlide>
+       
 
-        <SwiperSlide className="mob:px-[20px] mb-16">
-          {/* <Image
-            className="mb-20"
-            src={slideimg}
-            alt=""
-            width={1320}
-            height={580}
-          /> */}
-
-          <div className="">
-            <Image
-            onClick={() => handleClick("more")}
-              className="mb-6 cursor-pointer"
-              src={more}
-              alt=""
-              width={480}
-              height={480}
-            />
-            <div onClick={() => handleClick("more")} className="flex cursor-pointer justify-between items-center">
-              <div className="">
-                <h1 className="text-[#FFFFFF] text-[30px] font-outfit font-medium">
-                  More than Enough
-                </h1>
-                <p className="text-gradient text-[20px] leading-[25.2px] tracking-[3px] font-jakrata font-medium">
-                  2021
-                </p>
-              </div>
-              {/* img arrow */}
-              <Image className="" src={arrow} alt="" width={40} height={40} />
-            </div>
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide className="mob:px-[20px] mb-16">
-          {/* <Image
-            className="mb-20"
-            src={slideimg}
-            alt=""
-            width={1320}
-            height={580}
-          /> */}
-
-          <div className="">
-            <Image
-            onClick={() => handleClick("made")}
-              className="mb-6 cursor-pointer"
-              src={made}
-              alt=""
-              width={480}
-              height={480}
-            />
-            <div onClick={() => handleClick("made")}  className="flex cursor-pointer justify-between items-center">
-              <div className="">
-                <h1 className="text-[#FFFFFF] text-[30px] font-outfit font-medium">
-                  Made
-                </h1>
-                <p className="text-gradient text-[20px] leading-[25.2px] tracking-[3px] font-jakrata font-medium">
-                  2020
-                </p>
-              </div>
-              {/* img arrow */}
-              <Image className="" src={arrow} alt="" width={40} height={40} />
-            </div>
-          </div>
-        </SwiperSlide>
+       
         <SwiperSlide className="mob:px-[20px] mb-16">
           {/* <Image
             className="mb-20"
@@ -300,38 +342,7 @@ const Slider2 = ({heading}: SliderHeading) => {
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide className="mob:px-[20px] mb-16">
-          {/* <Image
-            className="mb-20"
-            src={slideimg}
-            alt=""
-            width={1320}
-            height={580}
-          /> */}
-
-          <div className="">
-            <Image
-            onClick={() => handleClick("E.S.P")}
-              className="mb-6 cursor-pointer"
-              src={f}
-              alt=""
-              width={480}
-              height={480}
-            />
-            <div onClick={() => handleClick("E.S.P")} className="flex cursor-pointer justify-between items-center">
-              <div className="">
-                <h1 className="text-[#FFFFFF] text-[30px] font-outfit font-medium">
-                  E.S.P.
-                </h1>
-                <p className="text-gradient text-[20px] leading-[25.2px] tracking-[3px] font-jakrata font-medium">
-                  2022
-                </p>
-              </div>
-              {/* img arrow */}
-              <Image className="" src={arrow} alt="" width={40} height={40} />
-            </div>
-          </div>
-        </SwiperSlide>
+      
 
 
       </Swiper>
