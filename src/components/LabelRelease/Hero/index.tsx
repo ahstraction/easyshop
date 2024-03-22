@@ -108,7 +108,7 @@ const Hero = () => {
               <span className="font-normal ml-1">Peter Humphreys for Masterwork Recording, Inc.</span>
             </p>
             <Link
-            href="/label-artist"
+            href="/label-artists"
                   className={`font-bold flex gap-1 mob:flex mob:justify-center font-jakrata text-gradient leading-[21.42px] tracking-[2px] uppercase mt-2`}  
                 >
                  IMARI's bio

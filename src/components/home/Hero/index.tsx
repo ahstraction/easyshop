@@ -13,7 +13,7 @@ const Hero = () => {
         <div className="absolute w-full flex justify-center top-0  z-0 h-full ">
           <img
             className=" bg-cover object-cover bg-center w-full"
-            src="/imgs/home/hero_banner_image (2).png"
+            src="/imgs/home/new-one-image.png"
             alt="background"
           />
         </div>
