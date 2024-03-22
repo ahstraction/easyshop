@@ -37,7 +37,7 @@ const AboutProducer = () => {
               <div className="mob:block hidden">
             <div className="flex justify-center tab:justify-center mob:pb-6  items-center">
                 <Image
-                  src="/imgs/home/logoimg.png"
+                  src="/imgs/home/home-page.png"
                   className=" my-4 w-[50%]"
                   alt=""
                   width={483}
@@ -97,7 +97,7 @@ const AboutProducer = () => {
               </div>
               <div className="flex justify-center tab:justify-center mob:pt-6 mob:hidden items-center">
                 <Image
-                  src="/imgs/home/logoimg.png"
+                  src="/imgs/home/home-page.png"
                   className=" my-4"
                   alt=""
                   width={483}
