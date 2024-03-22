@@ -36,7 +36,7 @@ const AboutProducer = () => {
           />
           <div className=" flex mob:block items-end gap-[210px] relative z-20 mob:px-5 ">
             <div className="flex  justify-end tab:justify-center items-center">
-              <div className=" relative w-full max-w-[674px] px-[2%]">
+              <div className=" relative w-full max-w-[674px] px-[2%] py-16">
                 <div className="flex justify-center ">
                   <Image
                     src={mob}

@@ -19,7 +19,7 @@ const Hero = () => {
         </div>
 
         {/* content */}
-        <div className=" relative pb-[0px] z-10  ">
+        <div className=" relative pb-[0px] z-10 mob:mt-[100px] ">
           <h1 className="text-[#FFFFFF] hidden uppercase tracking-[4px] text-center font-jakrata font-normal text-[20px] leading-[44px]">
             Welcome to
           </h1>

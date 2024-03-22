@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
-import { FaApple  , FaSpotify } from "react-icons/fa";
+import { FaApple, FaSpotify } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
 import banner from "@/public/imgs/labelartist/artist-banner.png";
@@ -11,7 +11,6 @@ import arrow from "@/public/imgs/labelartist/arrow-up.png";
 import Navbar from "@/components/navbar/Navbar";
 
 const Hero = () => {
-
   const router = useRouter();
 
   const [showFullBio, setShowFullBio] = useState(false);
@@ -25,7 +24,6 @@ const Hero = () => {
     router.push(`/products/${id}`);
     console.log(id, "id");
   };
-
 
   return (
     <>
@@ -50,20 +48,22 @@ const Hero = () => {
 
           {/* content */}
           <div className="py-12 pl-20 mob:pl-5 mob:pr-5 relative z-10">
-
-          <Image
-            className="w-full h-full z-10 mob:block hidden mb-5"
-            src={bannermob}
-            alt=""
-            width={1440}
-            height={686}
-          />
+            <Image
+              className="w-full h-full z-10 mob:block hidden mb-5"
+              src={bannermob}
+              alt=""
+              width={1440}
+              height={686}
+            />
             <h1 className="text-[20px] uppercase mob:text-center text-[#fff] tracking-[3px] font-jakrata font-normal leading-[25.2px] ">
               Label Artists
             </h1>
             <div className="flex items-end h-[560px] mob:h-full">
               <div className="">
-                <h2 onClick={() => handleClick("imari")} className="text-[50px] cursor-pointer mob:text-center font-medium font-outfit imarigradient leading-[60px] ">
+                <h2
+                  onClick={() => handleClick("imari")}
+                  className="text-[50px] cursor-pointer mob:text-center font-medium font-outfit imarigradient leading-[60px] "
+                >
                   Imari
                 </h2>
 
@@ -109,21 +109,30 @@ const Hero = () => {
                     </span>
                   )}
                 </p>
-                <Link
+                <button
                   onClick={toggleBio}
-                  className={`font-bold flex gap-1 mob:flex mob:justify-center font-jakrata text-gradient leading-[21.42px] tracking-[2px] uppercase ${showFullBio ? 'hidden' : ''}`}  href="#"
+                  className={`font-bold flex gap-1 mob:flex mob:justify-center font-jakrata text-gradient leading-[21.42px] tracking-[2px] uppercase ${
+                    showFullBio ? "hidden" : ""
+                  }`}
                 >
-                 IMARI's bio
+                  IMARI's bio
                   <Image src={arrow} alt="" width={16.97} height={16.97} />
-                </Link>
+                </button>
+
                 <div className="flex items-end mob:justify-center gap-4 relative z-50 mt-4">
-                  <Link target="_blank" href="https://music.apple.com/album/1734140259?i=1734140260">
-                  <FaApple className="text-white text-[25px]" />
+                  <Link
+                    target="_blank"
+                    href="https://music.apple.com/album/1734140259?i=1734140260"
+                  >
+                    <FaApple className="text-white text-[25px]" />
                   </Link>
-                  <Link target="_blank" href="https://open.spotify.com/track/7ybLhO296Nk9H6Bmhfwr25">
-                  <FaSpotify  className="text-white text-[23px]" />
+                  <Link
+                    target="_blank"
+                    href="https://open.spotify.com/track/7ybLhO296Nk9H6Bmhfwr25"
+                  >
+                    <FaSpotify className="text-white text-[23px]" />
                   </Link>
-                  </div>
+                </div>
               </div>
             </div>
           </div>

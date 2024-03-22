@@ -20,12 +20,6 @@ const Jene = () => {
     setShowFullBio(!showFullBio);
   };
 
-  const handleClick = (id: any) => {
-    // Redirect to the dynamic route page with the selected ID
-    router.push(`/products/${id}`);
-    console.log(id, "id");
-  };
-
   return (
     <>
       <div className="   flex justify-center overflow-hidden pt-20 ">
@@ -59,10 +53,7 @@ const Jene = () => {
             </h1> */}
             <div className="flex items-end mob:items-start justify-end h-[560px] pr-5 mob:pr-0 mob:h-full">
               <div className="max-w-[510px]">
-                <h2
-                  onClick={() => handleClick("imari")}
-                  className="text-[50px] cursor-pointer mob:text-center font-medium font-outfit imarigradient leading-[60px] "
-                >
+                <h2 className="text-[50px] cursor-pointer mob:text-center font-medium font-outfit imarigradient leading-[60px] ">
                   Rina Chanel
                 </h2>
 
@@ -106,16 +97,15 @@ const Jene = () => {
                     </span>
                   )}
                 </p>
-                <Link
+                <button
                   onClick={toggleBio}
                   className={`font-bold flex gap-1 mob:flex mob:justify-center font-jakrata text-gradient leading-[21.42px] tracking-[2px] uppercase ${
                     showFullBio ? "hidden" : ""
                   }`}
-                  href="#"
                 >
                   Rina’s Bio
                   <Image src={arrow} alt="" width={16.97} height={16.97} />
-                </Link>
+                </button>
                 {/* <div className="flex items-end mob:justify-center gap-4 relative z-50 mt-4">
                   <Link
                     target="_blank"
