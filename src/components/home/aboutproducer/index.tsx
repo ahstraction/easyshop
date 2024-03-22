@@ -51,7 +51,7 @@ const AboutProducer = () => {
                 <div className=" relative w-full max-w-[674px] px-[2%]">
                   
                   <h2 className="text-gradient mob:text-center text-left font-outfit font-bold text-[50px] mob:text-[30px] leading-[64.2px] mob:leading-[40px] mb-8 mob:mb-4">
-                  Phillie-BOP Productions Vision
+                  Phillie-BOP <br /> Productions Vision
                   </h2>
                   <p className="text-[#FFFFFF] mob:text-center font-bold font-jakrata mob:text-[14px]  text-[16px] leading-[30px]">
                   <span className="mob:hidden">

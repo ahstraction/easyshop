@@ -78,7 +78,7 @@ const Product = ({productname, price, imagePath, description, date , productId}:
 ) : null}
           {/* price */}
           <h2 className="text-[30px] mob:text-[22px] mt-3 text-gradient leading-[28.98px] font-bold font-jakrata">
-        ${price}
+        ${price}.00
           </h2>
           <h2 className="text-[23px] text-gradient leading-[28.98px] font-bold font-jakrata">
         {date}

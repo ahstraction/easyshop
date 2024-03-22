@@ -57,7 +57,8 @@ const Footermain = () => {
             </div>
 
             <p className="text-[16px] font-jakrata font-normal mob:pt-5 text-[#ACACAC] mob:text-center">
-              ©2024 by PhillieBOP Entertainment/Productions LLC.
+            ©2024 by Phillie-BOP Productions, LLC.
+
             </p>
           </div>
         </div>

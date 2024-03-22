@@ -93,10 +93,10 @@ const Navbar = () => {
             </li>
             <li>
               <a
-                href="/label-artist"
+                href="/label-artists"
                 className="block uppercase py-2 px-2 text-[15px] font-jakrata tracking-[2px] font-normal text-[#FFFFFF]"
               >
-                label artist
+                label artists
               </a>
             </li>
             <li>
@@ -199,11 +199,11 @@ const Navbar = () => {
                         <hr className="h-px opacity-[0.4] bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr>
 
                         <Link
-                          href="/label-artist"
+                          href="/label-artists"
                           className="block  text-[16px] font-jakrata  font-normal leading-7 text-[#FFFFFF] uppercase"
                         >
                           <li className="flex justify-center py-[15px] list-items">
-                          label artist
+                          label artists
                           </li>
                         </Link>
                         <hr className="h-px opacity-[0.4] bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr>

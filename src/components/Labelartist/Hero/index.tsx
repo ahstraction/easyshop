@@ -59,7 +59,7 @@ const Hero = () => {
             height={686}
           />
             <h1 className="text-[20px] uppercase mob:text-center text-[#fff] tracking-[3px] font-jakrata font-normal leading-[25.2px] ">
-              Label Artist
+              Label Artists
             </h1>
             <div className="flex items-end h-[560px] mob:h-full">
               <div className="">

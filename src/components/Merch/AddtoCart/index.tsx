@@ -143,7 +143,7 @@ const AddtoCart = () => {
                     Cap
                   </h1>
                   <p className="text-gradient text-[20px] leading-[25.2px] tracking-[3px] font-jakrata font-medium">
-                    $20.0
+                    $20.00
                   </p>
                 </div>
                 {/* text */}
