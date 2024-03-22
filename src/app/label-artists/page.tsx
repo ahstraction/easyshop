@@ -8,6 +8,7 @@ import Commingsoon from "@/components/Labelartist/Commingsoon";
 import LabelSlider from "@/components/Labelartist/LabelSlider";
 import Slider2 from "@/components/Labelartist/Slider2";
 import OurClient from "@/components/Labelartist/Mobilesection/OurClient";
+import Jene from "@/components/Labelartist/Jene";
 
 const labelartist = () => {
   return (
@@ -22,13 +23,15 @@ const labelartist = () => {
         />
         <Hero />
         <Commingsoon />
-      <div className="mob:hidden">
-      <LabelSlider />
-      </div>
+        <Jene />
 
-<div className="hidden mob:block">
-  <OurClient/>
-</div>
+        <div className="mob:hidden">
+          <LabelSlider />
+        </div>
+
+        <div className="hidden mob:block">
+          <OurClient />
+        </div>
 
         <Slider2 heading="Featured Releases" />
         <div className="relative ">

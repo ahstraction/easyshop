@@ -1,10 +1,9 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 import Image from "next/image";
 import Button from "@/components/ui/Button";
 
 const AboutProducer = () => {
-
   const [showFullBio, setShowFullBio] = useState(false);
 
   const toggleBio = () => {
@@ -33,63 +32,105 @@ const AboutProducer = () => {
           <div className=""></div>
           <div className="my-16 relative max-w-[1340px] w-full">
             <div className=" flex mob:block items-center justify-between relative z-20 mob:px-5 ">
-             {/* for mob */}
+              {/* for mob */}
               <div className="mob:block hidden">
-            <div className="flex justify-center tab:justify-center mob:pb-6  items-center">
-                <Image
-                  src="/imgs/home/home-page.png"
-                  className=" my-4 w-[50%]"
-                  alt=""
-                  width={483}
-                  height={412}
-                />
+                <div className="flex justify-center tab:justify-center mob:pb-6  items-center">
+                  <Image
+                    src="/imgs/home/logoimg.png"
+                    className=" my-4 w-[50%]"
+                    alt=""
+                    width={483}
+                    height={412}
+                  />
+                </div>
               </div>
-              </div>
-              
+
               {/* desktop */}
-             <div className="flex  justify-end tab:justify-center items-center">
+              <div className="flex  justify-end tab:justify-center items-center">
                 <div className=" relative w-full max-w-[674px] px-[2%]">
-                  
                   <h2 className="text-gradient mob:text-center text-left font-outfit font-bold text-[50px] mob:text-[30px] leading-[64.2px] mob:leading-[40px] mb-8 mob:mb-4">
-                  Phillie-BOP <br /> Productions Vision
+                    Phillie-BOP <br /> Productions Vision
                   </h2>
                   <p className="text-[#FFFFFF] mob:text-center font-bold font-jakrata mob:text-[14px]  text-[16px] leading-[30px]">
-                  <span className="mob:hidden">
-                  Welcome to Phillie-BOP Productions!  We are committed to providing a creative home for indie artists, focusing on songwriting, recording, producing, and distributing quality music. Phillie-BOP Productions was founded in 2010, the original idea of the label was to build a new sleek, and sophisticated type of music, providing that urban adult contemporary, smooth R&amp; B/Soul vibe based on elements of classic music of the past, able to fit the elegant adult socials and quiet evenings to unwind. <br /> <br />
-                  We firmly believe that tracks released on the Phillie-BOP Productions label will be greatly appreciated by lovers of classic music, providing lush melodies, elegant lyrics, and velvet vocals. Listeners will be treated to top-notch quality tracks, that could be playable in multiple genres. So, they will always be ready to drop in almost any kind of set. Phillie-BOP Productions is committed to developing new music and artists with a reputation for consistent excellence. <br /> <br />
-                  Phillie-BOP Productions operates from Annandale, Virginia, located in the Washington, D.C. area.  
-                   </span>
-
-
-<span className="hidden mob:block">
-  
-{showFullBio ? (
-                    <>
-                    
-                      <span className="">
-                      Welcome to Phillie-BOP Productions!  We are committed to providing a creative home for indie artists, focusing on songwriting, recording, producing, and distributing quality music. Phillie-BOP Productions was founded in 2010, the original idea of the label was to build a new sleek, and sophisticated type of music, providing that urban adult contemporary, smooth R&amp; B/Soul vibe based on elements of classic music of the past, able to fit the elegant adult socials and quiet evenings to unwind. <br /> <br />
-                  We firmly believe that tracks released on the Phillie-BOP Productions label will be greatly appreciated by lovers of classic music, providing lush melodies, elegant lyrics, and velvet vocals. Listeners will be treated to top-notch quality tracks, that could be playable in multiple genres. So, they will always be ready to drop in almost any kind of set. Phillie-BOP Productions is committed to developing new music and artists with a reputation for consistent excellence. <br /> <br />
-                  Phillie-BOP Productions operates from Annandale, Virginia, located in the Washington, D.C. area.  
-                   </span>
-
-                     
-                   
-                    </>
-                  ) : (
-                    <span className="">
-                         Welcome to Phillie-BOP Productions!  We are committed to providing a creative home for indie artists, focusing on songwriting, recording, producing, and distributing quality music. Phillie-BOP Productions was founded in 2010, the original idea of the label was to build a new sleek, and sophisticated type of music, providing that urban adult contemporary, smooth R&amp; B/Soul vibe based on elements of classic music of the past, able to fit the elegant adult socials and quiet evenings to unwind.
+                    <span className="mob:hidden">
+                      Welcome to Phillie-BOP Productions! We are committed to
+                      providing a creative home for indie artists, focusing on
+                      songwriting, recording, producing, and distributing
+                      quality music. Phillie-BOP Productions was founded in
+                      2010, the original idea of the label was to build a new
+                      sleek, and sophisticated type of music, providing that
+                      urban adult contemporary, smooth R&amp; B/Soul vibe based
+                      on elements of classic music of the past, able to fit the
+                      elegant adult socials and quiet evenings to unwind. <br />{" "}
+                      <br />
+                      We firmly believe that tracks released on the Phillie-BOP
+                      Productions label will be greatly appreciated by lovers of
+                      classic music, providing lush melodies, elegant lyrics,
+                      and velvet vocals. Listeners will be treated to top-notch
+                      quality tracks, that could be playable in multiple genres.
+                      So, they will always be ready to drop in almost any kind
+                      of set. Phillie-BOP Productions is committed to developing
+                      new music and artists with a reputation for consistent
+                      excellence. <br /> <br />
+                      Phillie-BOP Productions operates from Annandale, Virginia,
+                      located in the Washington, D.C. area.
                     </span>
-                  )}
-</span>
-                    
+
+                    <span className="hidden mob:block">
+                      {showFullBio ? (
+                        <>
+                          <span className="">
+                            Welcome to Phillie-BOP Productions! We are committed
+                            to providing a creative home for indie artists,
+                            focusing on songwriting, recording, producing, and
+                            distributing quality music. Phillie-BOP Productions
+                            was founded in 2010, the original idea of the label
+                            was to build a new sleek, and sophisticated type of
+                            music, providing that urban adult contemporary,
+                            smooth R&amp; B/Soul vibe based on elements of
+                            classic music of the past, able to fit the elegant
+                            adult socials and quiet evenings to unwind. <br />{" "}
+                            <br />
+                            We firmly believe that tracks released on the
+                            Phillie-BOP Productions label will be greatly
+                            appreciated by lovers of classic music, providing
+                            lush melodies, elegant lyrics, and velvet vocals.
+                            Listeners will be treated to top-notch quality
+                            tracks, that could be playable in multiple genres.
+                            So, they will always be ready to drop in almost any
+                            kind of set. Phillie-BOP Productions is committed to
+                            developing new music and artists with a reputation
+                            for consistent excellence. <br /> <br />
+                            Phillie-BOP Productions operates from Annandale,
+                            Virginia, located in the Washington, D.C. area.
+                          </span>
+                        </>
+                      ) : (
+                        <span className="">
+                          Welcome to Phillie-BOP Productions! We are committed
+                          to providing a creative home for indie artists,
+                          focusing on songwriting, recording, producing, and
+                          distributing quality music. Phillie-BOP Productions
+                          was founded in 2010, the original idea of the label
+                          was to build a new sleek, and sophisticated type of
+                          music, providing that urban adult contemporary, smooth
+                          R&amp; B/Soul vibe based on elements of classic music
+                          of the past, able to fit the elegant adult socials and
+                          quiet evenings to unwind.
+                        </span>
+                      )}
+                    </span>
                   </p>
-<div className="hidden mob:block">
-<div className="flex justify-center mt-4 ">
-<button onClick={toggleBio} className="font-bold flex gap-1 font-jakrata text-gradient leading-[21.42px] tracking-[2px] uppercase">
-      {showFullBio ? 'See less' : 'See more'}
-    </button>
-</div>
-</div>
+                  <div className="hidden mob:block">
+                    <div className="flex justify-center mt-4 ">
+                      <button
+                        onClick={toggleBio}
+                        className="font-bold flex gap-1 font-jakrata text-gradient leading-[21.42px] tracking-[2px] uppercase"
+                      >
+                        {showFullBio ? "See less" : "See more"}
+                      </button>
+                    </div>
+                  </div>
                   {/* <div className="mt-9">
                   <Button text="Learn More" />
                 </div> */}
@@ -97,7 +138,7 @@ const AboutProducer = () => {
               </div>
               <div className="flex justify-center tab:justify-center mob:pt-6 mob:hidden items-center">
                 <Image
-                  src="/imgs/home/home-page.png"
+                  src="/imgs/home/logoimg.png"
                   className=" my-4"
                   alt=""
                   width={483}

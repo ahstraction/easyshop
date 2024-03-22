@@ -20,7 +20,7 @@ const Hero = () => {
 
         {/* content */}
         <div className=" relative pb-[0px] z-10  ">
-          <h1 className="text-[#FFFFFF] uppercase tracking-[4px] text-center font-jakrata font-normal text-[20px] leading-[44px]">
+          <h1 className="text-[#FFFFFF] hidden uppercase tracking-[4px] text-center font-jakrata font-normal text-[20px] leading-[44px]">
             Welcome to
           </h1>
           <h1 className="text-gradient  mob:py-4 text-[70px] mob:text-[40px] mob:leading-[44px] text-center font-semibold font-outfit leading-[112px]">
@@ -31,7 +31,7 @@ const Hero = () => {
           </h1>
 
           <div className="mt-9 flex justify-center">
-            <Link href="/merch">
+            <Link href="/shop">
               <button className=" py-[20px] px-[40px] mob:px-[30px] mob:py-[15px] rounded-[150px] bg-[#FFFFFF] text-[#121212] tracking-[2px] text-[15px] leading-[18.9px] font-semibold font-jakrata">
                 EXPLORE MUSIC
               </button>
