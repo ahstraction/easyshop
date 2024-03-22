@@ -116,7 +116,7 @@ const Hero = () => {
                  IMARI's bio
                   <Image src={arrow} alt="" width={16.97} height={16.97} />
                 </Link>
-                <div className="flex items-end gap-4 relative z-50 mt-4">
+                <div className="flex items-end mob:justify-center gap-4 relative z-50 mt-4">
                   <Link target="_blank" href="https://music.apple.com/album/1734140259?i=1734140260">
                   <FaApple className="text-white text-[25px]" />
                   </Link>

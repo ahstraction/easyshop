@@ -48,7 +48,7 @@ const Hero = () => {
         {/* row2 */}
         <div className="flex justify-center w-full mt-[45px] relative z-10">
           <div className="flex mob:block justify-center gap-[45px]  w-full max-w-[1280px]">
-          <div className="mob:mb-5">
+          <div className="mob:mb-5 mob:px-5">
               <Image
               onClick={() => handleClick("mask")}
                 className="mb-6 w-[484px] mob:w-full cursor-pointer"
@@ -76,7 +76,7 @@ const Hero = () => {
             </div>
 
             {/* cap */}
-            <div className="mob:mb-5">
+            <div className=" mob:px-5">
               <Image
               onClick={() => handleClick("cap")}
                 className="mb-6 w-[484px] mob:w-full cursor-pointer"
