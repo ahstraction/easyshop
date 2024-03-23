@@ -29,7 +29,7 @@ const Hero = () => {
     <>
       <Navbar />
 
-      <div className="   flex justify-center overflow-hidden pb-32 ">
+      <div className="   flex justify-center overflow-hidden pb-32 mob:pb-0 ">
         <div className="w-full h-[664px] mob:h-full bg-[#161616] mt-10  max-w-[1340px] relative  ">
           <Image
             className="absolute w-full h-full z-10 mob:hidden"

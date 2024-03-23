@@ -22,8 +22,8 @@ const Jene = () => {
 
   return (
     <>
-      <div className="   flex justify-center overflow-hidden pt-20 ">
-        <div className="w-full h-[664px] mob:h-full bg-[#161616] mt-10  max-w-[1340px] relative flex justify-end ">
+      <div className="   flex justify-center overflow-hidden pt-20 mob:pt-0 ">
+        <div className="w-full h-[664px] mob:h-full bg-[#161616] mt-10  mob:mt-0 max-w-[1340px] relative flex justify-end ">
           <Image
             className="  h-full w-full absolute  z-10 mob:hidden"
             src={banner}

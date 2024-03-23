@@ -1,4 +1,3 @@
-
 // @ts-nocheck
 "use client";
 import React from "react";
@@ -23,7 +22,7 @@ import Image from "next/image";
 
 const LabelSlider = () => {
   return (
-    <div className=" mob:w-full mt-28 mob:max-w-full w-full max-w-[1320px] m-auto px-[50px] mob:px-[0px] relative z-50 pb-20">
+    <div className=" mob:w-full  mob:max-w-full w-full max-w-[1320px] m-auto px-[50px] mob:px-[0px] relative z-50 ">
       <Swiper
         style={{
           "--swiper-pagination-color": "#fff",
@@ -49,36 +48,37 @@ const LabelSlider = () => {
 
         // mousewheel={{ invert: true }}
       >
-    
         <SwiperSlide className="mob:px-[20px]">
-       <div className="w-[1320px] h-[580px] bg-[#1B1918] relative flex justify-center items-center">
-       <Image
-            className="absolute right-[90px] top-0"
-            src={shape1}
-            alt=""
-            width={115}
-            height={115}
-          />
-       <Image
-            className="absolute left-[0px] bottom-0"
-            src={shape2}
-            alt=""
-            width={115}
-            height={115}
-          />
+          <div className="w-[1320px] h-[580px] bg-[#1B1918] relative flex justify-center items-center">
+            <Image
+              className="absolute right-[90px] top-0"
+              src={shape1}
+              alt=""
+              width={115}
+              height={115}
+            />
+            <Image
+              className="absolute left-[0px] bottom-0"
+              src={shape2}
+              alt=""
+              width={115}
+              height={115}
+            />
 
-<div className="">
+            <div className="">
+              <h1 className="text-[30px] font-normal font-outfit text-[#fff] leading-[50px] text-center ">
+                If you feel like you have the gift, and you want to find out;
+                make <br /> yourself available and the world will let you know.
+              </h1>
 
-<h1 className="text-[30px] font-normal font-outfit text-[#fff] leading-[50px] text-center ">If you feel like you have the gift, and you want to find out; make <br /> yourself available and the world will let you know.</h1>
-
-<p className="flex text-[18px] font-normal leading-[22.68px] tracking-[1px] text-center text-[#fff] justify-center mt-4"> <span>Bill Withers</span> <span className="ml-1 text-[#fff]/70">(ASCAP Expo 2015)</span></p>
-</div>
-
-       </div>
-
+              <p className="flex text-[18px] font-normal leading-[22.68px] tracking-[1px] text-center text-[#fff] justify-center mt-4">
+                {" "}
+                <span>Bill Withers</span>{" "}
+                <span className="ml-1 text-[#fff]/70">(ASCAP Expo 2015)</span>
+              </p>
+            </div>
+          </div>
         </SwiperSlide>
-
-      
       </Swiper>
     </div>
   );

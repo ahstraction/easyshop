@@ -22,8 +22,7 @@ const labelartist = () => {
           width={1832}
         />
         <Hero />
-        <Commingsoon />
-        <Jene />
+        {/* <Commingsoon /> */}
 
         <div className="mob:hidden">
           <LabelSlider />
@@ -33,7 +32,10 @@ const labelartist = () => {
           <OurClient />
         </div>
 
+        <Jene />
+
         <Slider2 heading="Featured Releases" />
+
         <div className="relative ">
           <div className="absolute bottom-0 z-0 w-full ">
             <div className="relative overflow-hidden h-full">
