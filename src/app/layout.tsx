@@ -54,8 +54,8 @@ const tinos = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Pillie_Bop Productions",
-  description: "Pillie_Bop Productions",
+  title: "Phillie-BOP Productions, LLC",
+  description: "Phillie-BOP Productions, LLC",
 };
 
 export default function RootLayout({
