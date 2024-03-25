@@ -22,9 +22,10 @@ export async function POST(request: NextRequest) {
       },
     });
 
-
-    const grandTotal = formdata.cartValues.reduce((total: any, product: any) => total + (product.price * product.quantity), 0);
-
+    const grandTotal = formdata.cartValues.reduce(
+      (total: any, product: any) => total + product.price * product.quantity,
+      0
+    );
 
     const productListHTML = `
     <style>
@@ -38,29 +39,29 @@ export async function POST(request: NextRequest) {
     <td>Price</td>
     <td>Quantity</td>
   </tr>
-  ${formdata.cartValues.map((product: Product) => {
-    const totalPrice = product.price * product.quantity; // Calculate total price for each product
- 
-    return `
+  ${formdata.cartValues
+    .map((product: Product) => {
+      const totalPrice = product.price * product.quantity; // Calculate total price for each product
+
+      return `
     <tr class="product-row">
         <td>${product.title}:</td>
         <td>$${totalPrice} |</td>
         <td>${product.quantity} |</td>
       </tr>
     `;
-  }).join('')}
+    })
+    .join("")}
   <tr>
   <td colspan="2"><strong>Grand Total:</strong></td>
   <td><strong>$${grandTotal}</strong></td>
 </tr>
 </table>
 `;
-    
-
 
     const mailOptionToYou = {
       from: formdata.email,
-      to: "developer@innovativemojo.com,projectlead@innovativemojo.com,Bop@phillibopmusic.com",
+      to: "developer@innovativemojo.com,projectlead@innovativemojo.com,bop@philliebopmusic.com",
       // to: "developer@innovativemojo.com",
       subject: " order",
       html: `
@@ -85,7 +86,7 @@ export async function POST(request: NextRequest) {
     const mailOptionToUser = {
       from: "PHILLIE BOP MUSIC <developer@innovativemojo.com>",
 
-      to:formdata.email,
+      to: formdata.email,
       subject: "Your order is placed",
       html: `
         <h3>Dear ${formdata.firstName} ${formdata.lastName},</h3>

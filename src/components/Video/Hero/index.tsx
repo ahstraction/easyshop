@@ -43,9 +43,9 @@ const Hero = () => {
           <div className="max-w-[1140px]">
             {/* main video */}
             <div className="   flex justify-center overflow-hidden  ">
-              <div  className="w-full h-[613px] mob:h-full  bg-[#161616] mt-10  max-w-[1340px] relative ">
+              <div className="w-full h-[613px] mob:h-full  bg-[#161616] mt-10  max-w-[1340px] relative ">
                 <Image
-                onClick={() => handleClick("imari")}
+                  onClick={() => handleClick("imari")}
                   className="absolute z-10 h-full w-full mob:hidden"
                   src={mainvid}
                   alt=""
@@ -53,7 +53,7 @@ const Hero = () => {
                   height={760}
                 />
                 <Image
-                onClick={() => handleClick("imari")}
+                  onClick={() => handleClick("imari")}
                   className="  w-full mob:block hidden"
                   src={imari}
                   alt=""
@@ -68,33 +68,42 @@ const Hero = () => {
                       <h2 className="text-[17px] mob:text-center tracking-[3px] font-bold font-jakrata text-gradient leading-[21.42px] ">
                         22 March 2024
                       </h2>
-                      <h1 onClick={() => handleClick("imari")} className="text-[40px] cursor-pointer mob:text-center mt-2 text-[#fff] tracking-[2px] font-outfit font-medium leading-[50.4px] ">
-                       Imari
+                      <h1
+                        onClick={() => handleClick("imari")}
+                        className="text-[40px] cursor-pointer mob:text-center mt-2 text-[#fff] tracking-[2px] font-outfit font-medium leading-[50.4px] "
+                      >
+                        Imari
                       </h1>
                       <div className="flex items-end gap-4 relative  mt-2">
-                  <Link target="_blank" href="https://music.apple.com/album/1734140259?i=1734140260">
-                  <FaApple className="text-white text-[25px]" />
-                  </Link>
-                  <Link target="_blank" href="https://open.spotify.com/track/7ybLhO296Nk9H6Bmhfwr25">
-                  <FaSpotify  className="text-white text-[23px]" />
-                  </Link>
-                  </div>
+                        <Link
+                          target="_blank"
+                          href="https://music.apple.com/album/1734140259?i=1734140260"
+                        >
+                          <FaApple className="text-white text-[25px]" />
+                        </Link>
+                        <Link
+                          target="_blank"
+                          href="https://open.spotify.com/track/7ybLhO296Nk9H6Bmhfwr25"
+                        >
+                          <FaSpotify className="text-white text-[23px]" />
+                        </Link>
+                      </div>
                       <p className="text-[18px] mob:text-center text-[#FFFFFF] font-jakrata font-bold leading-[22.68px] my-6">
-                      Bennie Pearce for Phillie-BOP Productions
+                        Bennie Pearce for Phillie-BOP Productions
                       </p>
                     </div>
 
                     {/* button */}
-                 <div className="mob:flex cursor-pointer mob:justify-center">
-                 <Image
-                 onClick={() => handleClick("imari")}
-                      className="h-[90px] w-[90px]"
-                      src={playbutton}
-                      alt=""
-                      width={90}
-                      height={90}
-                    />
-                 </div>
+                    <div className="mob:flex cursor-pointer mob:justify-center">
+                      <Image
+                        onClick={() => handleClick("imari")}
+                        className="h-[90px] w-[90px]"
+                        src={playbutton}
+                        alt=""
+                        width={90}
+                        height={90}
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -111,7 +120,10 @@ const Hero = () => {
             <div className="flex justify-center w-full">
               <div className="flex mob:block justify-center gap-[45px] relative z-50 w-full max-w-[1180px]">
                 {/* 1st */}
-                <div onClick={() => handleClick("made")} className="cursor-pointer mob:mb-5">
+                <div
+                  onClick={() => handleClick("made")}
+                  className="cursor-pointer mob:mb-5"
+                >
                   <div className="relative flex justify-center items-center">
                     <Image
                       className="mb-6 "
@@ -150,20 +162,22 @@ const Hero = () => {
                 {/* 2nd */}
                 <div className="mob:mb-5">
                   <div className="relative flex justify-center items-center ">
-                  
                     {/* button */}
                     {/* <button className=" py-[20px] w-full uppercase mt-3  rounded-[150px] bg-[#FFFFFF] text-[#121212] tracking-[2px] text-[15px] leading-[18.9px] font-semibold font-jakrata">
                       Watch Now
                     </button> */}
 
                     <div className="relative z-50">
-                    <Modal/>
+                      <Modal />
                     </div>
                   </div>
                 </div>
 
                 {/* 3rd*/}
-                <div onClick={() => handleClick("more")} className="cursor-pointer mob:mb-5">
+                <div
+                  onClick={() => handleClick("more")}
+                  className="cursor-pointer mob:mb-5"
+                >
                   <div className="relative flex justify-center items-center">
                     <Image
                       className="mb-6 "
@@ -182,10 +196,10 @@ const Hero = () => {
                   </div>
                   <div className="  max-w-[354px]">
                     <p className="text-gradient text-center text-[15px] leading-[25.2px] uppercase tracking-[3px] font-jakrata font-normal">
-                    11 June 2021
+                      11 June 2021
                     </p>
                     <h1 className="text-[#FFFFFF] text-center text-[30px] leading-[30px] font-outfit font-medium mt-3 mb-3">
-                    More Than Enough
+                      More Than Enough
                     </h1>
 
                     {/* text */}
@@ -199,9 +213,11 @@ const Hero = () => {
                   </div>
                 </div>
 
-
                 {/* 4th*/}
-                <div onClick={() => handleClick("jeneSais")} className="cursor-pointer mob:mb-5">
+                <div
+                  onClick={() => handleClick("jeneSais")}
+                  className="cursor-pointer mob:mb-5"
+                >
                   <div className="relative flex justify-center items-center">
                     <Image
                       className="mb-6 "
@@ -220,10 +236,10 @@ const Hero = () => {
                   </div>
                   <div className="  max-w-[354px]">
                     <p className="text-gradient text-center text-[15px] leading-[25.2px] uppercase tracking-[3px] font-jakrata font-normal">
-                    11 June 2021
+                      18 March 2023
                     </p>
                     <h1 className="text-[#FFFFFF] text-center text-[30px] leading-[30px] font-outfit font-medium mt-3 mb-3">
-                    Je Ne Sais <br /> Quoi
+                      Je Ne Sais <br /> Quoi
                     </h1>
 
                     {/* text */}
@@ -236,8 +252,6 @@ const Hero = () => {
                     </button>
                   </div>
                 </div>
-
-
               </div>
             </div>
           </div>

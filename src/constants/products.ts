@@ -59,7 +59,7 @@ export const products: Product[] = [
   },
   {
     id: 6,
-    title: "Je Ne Sais Quoi” by Rina Chanel – Dir. by 7LOX",
+    title: "Je Ne Sais Quoi",
     price: 1.5,
     subHeading: "",
     slug: "jeneSais",
@@ -112,3 +112,17 @@ export const products: Product[] = [
     songlink: "",
   },
 ];
+
+export const productsPriceMap: { [key: string]: string } = {
+  sweetestofmelodyCD: "2.00",
+  worthyCD: "2.00",
+  imari: "1.50",
+  mask: "8.00",
+  cap: "20.00",
+  jeneSais: "1.50",
+  sweetestmelody: "1.50",
+  more: "1.50",
+  worthy: "1.50",
+  made: "1.50",
+  "E.S.P": "1.50",
+};

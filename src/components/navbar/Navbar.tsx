@@ -69,7 +69,9 @@ const Navbar = () => {
           </svg>
         </button>
         <div
-          className={`${isOpen ? "block" : "hidden"} w-full md:block md:w-auto xl:hidden`}
+          className={`${
+            isOpen ? "block" : "hidden"
+          } w-full md:block md:w-auto xl:hidden`}
           id="navbar-default"
         >
           {/* Your menu options */}
@@ -104,7 +106,7 @@ const Navbar = () => {
                 href="/label-release"
                 className="block uppercase py-2 px-2 text-[15px] font-jakrata tracking-[2px] font-normal text-[#FFFFFF]"
               >
-                label release
+                Label Releases
               </a>
             </li>
             <li>
@@ -140,136 +142,142 @@ const Navbar = () => {
                 video
               </a>
             </li>
+
+            <li>
+              <a
+                href="/contact-us"
+                className="block uppercase py-2 px-2 text-[15px] font-jakrata tracking-[2px] font-normal text-[#FFFFFF]"
+              >
+                Contact
+              </a>
+            </li>
           </ul>
         </div>
 
- {/* tab */}
- <div className="hidden xl:block  ">
-                <div
-                  className="relative cursor-pointer flex "
-                  onClick={onOpen}
-                >
-                  <button
-                    // onClick={toggleMenu}
-                    type="button"
-                    className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm border border-[#fff]/90 bg-[#fff] text-[#00297A] rounded-lg  "
-                    aria-controls="navbar-default"
-                    aria-expanded={isOpen ? "true" : "false"}
+        {/* tab */}
+        <div className="hidden xl:block  ">
+          <div className="relative cursor-pointer flex " onClick={onOpen}>
+            <button
+              // onClick={toggleMenu}
+              type="button"
+              className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm border border-[#fff]/90 bg-[#fff] text-[#00297A] rounded-lg  "
+              aria-controls="navbar-default"
+              aria-expanded={isOpen ? "true" : "false"}
+            >
+              <span className="sr-only">Open main menu</span>
+              <svg
+                className="w-5 h-5"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 17 14"
+              >
+                <path
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M1 1h15M1 7h15M1 13h15"
+                />
+              </svg>
+            </button>
+          </div>
+          <div className="relative z -[999] bg-[#21201E]/90">
+            <Drawer isOpen={isOpen} onClose={onClose}>
+              <div className="flex items-center h-full w-full  bg-[#21201E]/90">
+                <ul className="font-medium  w-full  mob:left-0 mob:w-full z-50 flex flex-col py-4 md:p-0 mt-4 gap-[0px]  rtl:space-x-reverse md:mt-0 ">
+                  <Link
+                    href="/"
+                    className="block  text-[16px] font-jakrata  font-normal leading-7 text-[#FFFFFF] uppercase"
                   >
-                    <span className="sr-only">Open main menu</span>
-                    <svg
-                      className="w-5 h-5"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 17 14"
-                    >
-                      <path
-                        stroke="currentColor"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M1 1h15M1 7h15M1 13h15"
-                      />
-                    </svg>
-                  </button>
-                </div>
-                <div className="relative z -[999] bg-[#21201E]/90">
-                  <Drawer isOpen={isOpen} onClose={onClose}>
-                    <div className="flex items-center h-full w-full  bg-[#21201E]/90">
-                      <ul className="font-medium  w-full  mob:left-0 mob:w-full z-50 flex flex-col py-4 md:p-0 mt-4 gap-[0px]  rtl:space-x-reverse md:mt-0 ">
-                        <Link
-                          href="/"
-                          className="block  text-[16px] font-jakrata  font-normal leading-7 text-[#FFFFFF] uppercase"
-                        >
-                          <li className="flex justify-center py-[15px] list-items">
-                          HOME
-                          </li>
-                        </Link>
-                        <hr className="h-px opacity-[0.4] bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr>
+                    <li className="flex justify-center py-[15px] list-items">
+                      HOME
+                    </li>
+                  </Link>
+                  <hr className="h-px opacity-[0.4] bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr>
 
-                        <Link
-                          href="/procedure"
-                          className="block uppercase text-[16px] font-jakrata  font-normalleading-7 text-[#FFFFFF]"
-                        >
-                          <li className="flex justify-center py-[15px] list-items">
-                          Producer
-                          </li>
-                        </Link>
-                        <hr className="h-px opacity-[0.4] bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr>
+                  <Link
+                    href="/procedure"
+                    className="block uppercase text-[16px] font-jakrata  font-normalleading-7 text-[#FFFFFF]"
+                  >
+                    <li className="flex justify-center py-[15px] list-items">
+                      Producer
+                    </li>
+                  </Link>
+                  <hr className="h-px opacity-[0.4] bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr>
 
-                        <Link
-                          href="/label-artists"
-                          className="block  text-[16px] font-jakrata  font-normal leading-7 text-[#FFFFFF] uppercase"
-                        >
-                          <li className="flex justify-center py-[15px] list-items">
-                          label artists
-                          </li>
-                        </Link>
-                        <hr className="h-px opacity-[0.4] bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr>
+                  <Link
+                    href="/label-artists"
+                    className="block  text-[16px] font-jakrata  font-normal leading-7 text-[#FFFFFF] uppercase"
+                  >
+                    <li className="flex justify-center py-[15px] list-items">
+                      label artists
+                    </li>
+                  </Link>
+                  <hr className="h-px opacity-[0.4] bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr>
 
-                        <Link
-                          href="/label-release"
-                          className="block text-[16px] font-jakrata  font-normalleading-7 text-[#FFFFFF]"
-                        >
-                          <li className="flex justify-center py-[15px] list-items uppercase">
-                          label release
-                          </li>
-                        </Link>
-                        <hr className="h-px opacity-[0.4] bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr>
+                  <Link
+                    href="/label-release"
+                    className="block text-[16px] font-jakrata  font-normalleading-7 text-[#FFFFFF]"
+                  >
+                    <li className="flex justify-center py-[15px] list-items uppercase">
+                      Label Releases
+                    </li>
+                  </Link>
+                  <hr className="h-px opacity-[0.4] bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr>
 
-                        <Link
-                          href="/merch"
-                          className="block  text-[16px] font-jakrata  font-normal leading-7 uppercase text-[#FFFFFF]"
-                        >
-                          <li className="flex justify-center py-[15px] list-items">
-                          merch
-                          </li>
-                        </Link>
-                        <hr className="h-px opacity-[0.4] bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr>
+                  <Link
+                    href="/merch"
+                    className="block  text-[16px] font-jakrata  font-normal leading-7 uppercase text-[#FFFFFF]"
+                  >
+                    <li className="flex justify-center py-[15px] list-items">
+                      merch
+                    </li>
+                  </Link>
+                  <hr className="h-px opacity-[0.4] bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr>
 
-                        <Link
-                          href="/shop"
-                          className="block  text-[16px] font-jakrata  font-normal leading-7 text-[#FFFFFF]"
-                        >
-                          <li className="flex justify-center py-[15px] list-items uppercase">
-                          shop
-                          </li>
-                        </Link>
-                        <hr className="h-px opacity-[0.4] bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr>
-                        <Link
-                          href="/video"
-                          className="block  text-[16px] font-jakrata  font-normal leading-7 text-[#FFFFFF]"
-                        >
-                          <li className="flex justify-center py-[15px] list-items uppercase">
-                          video
-                          </li>
-                        </Link>
-                        <hr className="h-px opacity-[0.4] bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr>
+                  <Link
+                    href="/shop"
+                    className="block  text-[16px] font-jakrata  font-normal leading-7 text-[#FFFFFF]"
+                  >
+                    <li className="flex justify-center py-[15px] list-items uppercase">
+                      shop
+                    </li>
+                  </Link>
+                  <hr className="h-px opacity-[0.4] bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr>
+                  <Link
+                    href="/video"
+                    className="block  text-[16px] font-jakrata  font-normal leading-7 text-[#FFFFFF]"
+                  >
+                    <li className="flex justify-center py-[15px] list-items uppercase">
+                      video
+                    </li>
+                  </Link>
+                  <hr className="h-px opacity-[0.4] bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr>
 
-                        <Link
-                          href="/contact-us"
-                          className="block  text-[16px] font-jakrata  font-normal leading-7 text-[#FFFFFF]"
-                        >
-                          <li className="  flex justify-center py-[15px] list-items">
-                          CONTACT
-                          </li>
-                        </Link>
-                        <hr className="h-px opacity-[0.4] bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr>
-                      </ul>
-                    </div>
-                  </Drawer>
-                </div>
+                  <Link
+                    href="/contact-us"
+                    className="block  text-[16px] font-jakrata  font-normal leading-7 text-[#FFFFFF]"
+                  >
+                    <li className="  flex justify-center py-[15px] list-items">
+                      CONTACT
+                    </li>
+                  </Link>
+                  <hr className="h-px opacity-[0.4] bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr>
+                </ul>
               </div>
+            </Drawer>
+          </div>
+        </div>
 
-        <div className="lg:hidden">
+        {/* <div className="lg:hidden">
           <a
             href="/contact-us"
             className="block  border border-[#FFFFFF33] tracking-[2px]  py-[14px] px-[26px] rounded-[150px] text-[15px] font-jakrata font-normal text-[#FFFFFF]"
           >
             CONTACT
           </a>
-        </div>
+        </div> */}
       </div>
     </nav>
   );
