@@ -351,10 +351,10 @@ const Form = () => {
                 </p>
               </div>
               {/* card detail */}
-<button className="text-white" onClick={handleSubmit}>handleSubmit</button>
-              {/* <Elements stripe={stripePromise}>
+{/* <button className="text-white" onClick={handleSubmit}>handleSubmit</button> */}
+              <Elements stripe={stripePromise}>
                 <StripeForm formData={formData} handleSubmit={handleSubmit} />
-              </Elements> */}
+              </Elements>
 
               {/* card detail */}
               <div className="bg-[#13121180]/50 px-4 py-4">
