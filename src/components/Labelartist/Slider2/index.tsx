@@ -2,7 +2,7 @@
 "use client";
 
 import React from "react";
-import { FaApple  , FaSpotify } from "react-icons/fa";
+import { FaApple, FaSpotify, FaYoutube } from "react-icons/fa";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -111,17 +111,32 @@ const Slider2 = ({heading}: SliderHeading) => {
               width={480}
               height={480}
             />
-            <div onClick={() => handleClick("worthy")} className="flex cursor-pointer justify-between items-center">
+            <div className="flex cursor-pointer justify-between items-center">
               <div className="">
-                <h1 className="text-[#FFFFFF] text-[30px] font-outfit font-medium">
-                  Worthy
+                <h1 onClick={() => handleClick("worthy")}  className="text-[#FFFFFF] text-[30px] font-outfit font-medium cursor-pointer">
+                Worthy
                 </h1>
-                <p className="text-gradient text-[20px] leading-[25.2px] tracking-[3px] font-jakrata font-medium">
+                <div className="flex items-end gap-4 relative z-50 mb-2">
+                  <Link target="_blank" href="https://music.apple.com/us/album/worthy-single/1597273054">
+                  <FaApple className="text-white text-[22px]" />
+                  </Link>
+                  <Link target="_blank" href="https://open.spotify.com/track/65PvHRKkLMdCa6eSluqGcH?si=8fd258d4f5474852&nd=1">
+                  <FaSpotify  className="text-white text-[20px]" />
+                  </Link>
+                  <Link
+                    target="_blank"
+                    href="https://www.youtube.com/channel/UCaGEFlqULu79M5M9PsVGOtw/featured"
+                  >
+                    <FaYoutube  className="text-white text-[25px]" />
+                  </Link>
+                  </div>
+                <p onClick={() => handleClick("worthy")}  className="text-gradient text-[20px] leading-[25.2px] tracking-[3px] font-jakrata font-medium cursor-pointer">
                   2000
                 </p>
+                
               </div>
               {/* img arrow */}
-              <Image className="" src={arrow} alt="" width={40} height={40} />
+              <Image onClick={() => handleClick("worthy")}  className="cursor-pointer" src={arrow} alt="" width={40} height={40} />
             </div>
           </div>
         </SwiperSlide>
@@ -145,17 +160,32 @@ const Slider2 = ({heading}: SliderHeading) => {
               width={480}
               height={480}
             />
-            <div onClick={() => handleClick("made")}  className="flex cursor-pointer justify-between items-center">
-              <div className="">
-                <h1 className="text-[#FFFFFF] text-[30px] font-outfit font-medium">
-                  Made
+            <div className="flex cursor-pointer justify-between items-center">
+            <div className="">
+                <h1 onClick={() => handleClick("made")}  className="text-[#FFFFFF] text-[30px] font-outfit font-medium cursor-pointer">
+                Made
                 </h1>
-                <p className="text-gradient text-[20px] leading-[25.2px] tracking-[3px] font-jakrata font-medium">
+                <div className="flex items-end gap-4 relative z-50 mb-2">
+                  <Link target="_blank" href="https://music.apple.com/us/album/made-single/1597282832">
+                  <FaApple className="text-white text-[22px]" />
+                  </Link>
+                  <Link target="_blank" href="https://open.spotify.com/track/5T2dP5OaGxvNqJN7jmHvkT?si=9d1e5b5bbe8c4794">
+                  <FaSpotify  className="text-white text-[20px]" />
+                  </Link>
+                  <Link
+                    target="_blank"
+                    href="https://www.youtube.com/channel/UCaGEFlqULu79M5M9PsVGOtw/featured"
+                  >
+                    <FaYoutube  className="text-white text-[25px]" />
+                  </Link>
+                  </div>
+                <p onClick={() => handleClick("made")}  className="text-gradient text-[20px] leading-[25.2px] tracking-[3px] font-jakrata font-medium cursor-pointer">
                   2020
                 </p>
+                
               </div>
               {/* img arrow */}
-              <Image className="" src={arrow} alt="" width={40} height={40} />
+              <Image onClick={() => handleClick("made")} className="" src={arrow} alt="" width={40} height={40} />
             </div>
           </div>
         </SwiperSlide>
@@ -179,17 +209,33 @@ const Slider2 = ({heading}: SliderHeading) => {
               width={480}
               height={480}
             />
-            <div onClick={() => handleClick("more")} className="flex cursor-pointer justify-between items-center">
+            <div  className="flex cursor-pointer justify-between items-center">
+            
               <div className="">
-                <h1 className="text-[#FFFFFF] text-[30px] font-outfit font-medium">
-                  More than Enough
+                <h1 onClick={() => handleClick("more")}  className="text-[#FFFFFF] text-[30px] font-outfit font-medium cursor-pointer">
+                More than Enough
                 </h1>
-                <p className="text-gradient text-[20px] leading-[25.2px] tracking-[3px] font-jakrata font-medium">
-                  2021
+                <div className="flex items-end gap-4 relative z-50 mb-2">
+                  <Link target="_blank" href="https://music.apple.com/us/album/more-than-enough-single/1597282939">
+                  <FaApple className="text-white text-[22px]" />
+                  </Link>
+                  <Link target="_blank" href="https://open.spotify.com/track/0uun3QW4v5qLKtfVyfW0D9?si=402c78a4875e42ee">
+                  <FaSpotify  className="text-white text-[20px]" />
+                  </Link>
+                  <Link
+                    target="_blank"
+                    href="https://www.youtube.com/channel/UCaGEFlqULu79M5M9PsVGOtw/featured"
+                  >
+                    <FaYoutube  className="text-white text-[25px]" />
+                  </Link>
+                  </div>
+                <p onClick={() => handleClick("more")}  className="text-gradient text-[20px] leading-[25.2px] tracking-[3px] font-jakrata font-medium cursor-pointer">
+                2021
                 </p>
+                
               </div>
               {/* img arrow */}
-              <Image className="" src={arrow} alt="" width={40} height={40} />
+              <Image onClick={() => handleClick("more")} className="" src={arrow} alt="" width={40} height={40} />
             </div>
           </div>
         </SwiperSlide>
@@ -212,17 +258,34 @@ const Slider2 = ({heading}: SliderHeading) => {
               width={480}
               height={480}
             />
-            <div onClick={() => handleClick("E.S.P")} className="flex cursor-pointer justify-between items-center">
+            <div  className="flex cursor-pointer justify-between items-center">
+             
+              {/*  */}
               <div className="">
-                <h1 className="text-[#FFFFFF] text-[30px] font-outfit font-medium">
-                  E.S.P.
+                <h1 onClick={() => handleClick("E.S.P")}  className="text-[#FFFFFF] text-[30px] font-outfit font-medium cursor-pointer">
+                E.S.P.
                 </h1>
-                <p className="text-gradient text-[20px] leading-[25.2px] tracking-[3px] font-jakrata font-medium">
-                  2022
+                <div className="flex items-end gap-4 relative z-50 mb-2">
+                  <Link target="_blank" href="https://music.apple.com/us/album/e-s-p/1633167575?i=1633167576">
+                  <FaApple className="text-white text-[22px]" />
+                  </Link>
+                  <Link target="_blank" href="https://open.spotify.com/album/0NiCV4qGxVNBxbHa1tj3ir?si=PnwXWl40SMG36GERpG6dgg">
+                  <FaSpotify  className="text-white text-[20px]" />
+                  </Link>
+                  <Link
+                    target="_blank"
+                    href="https://youtube.com/@rinachanel7598"
+                  >
+                    <FaYoutube  className="text-white text-[25px]" />
+                  </Link>
+                  </div>
+                <p onClick={() => handleClick("E.S.P")}  className="text-gradient text-[20px] leading-[25.2px] tracking-[3px] font-jakrata font-medium cursor-pointer">
+                2022
                 </p>
+                
               </div>
               {/* img arrow */}
-              <Image className="" src={arrow} alt="" width={40} height={40} />
+              <Image onClick={() => handleClick("E.S.P")} className="" src={arrow} alt="" width={40} height={40} />
             </div>
           </div>
         </SwiperSlide>
@@ -245,17 +308,35 @@ const Slider2 = ({heading}: SliderHeading) => {
               width={480}
               height={480}
             />
-            <div onClick={() => handleClick("sweetestmelody")} className="flex cursor-pointer justify-between items-center">
-              <div className="">
-                <h1 className="text-[#FFFFFF] text-[30px] font-outfit font-medium">
-                  Sweetest of Melody
+            <div  className="flex cursor-pointer justify-between items-center">
+          
+               {/*  */}
+               <div className="">
+                <h1 onClick={() => handleClick("sweetestmelody")}  className="text-[#FFFFFF] text-[30px] font-outfit font-medium cursor-pointer">
+                Sweetest of Melody
+
                 </h1>
-                <p className="text-gradient text-[20px] leading-[25.2px] tracking-[3px] font-jakrata font-medium">
-                  2023
+                <div className="flex items-end gap-4 relative z-50 mb-2">
+                  <Link target="_blank" href="https://music.apple.com/us/album/sweetest-of-melody-feat-senghor-robinson-single/1588654754">
+                  <FaApple className="text-white text-[22px]" />
+                  </Link>
+                  <Link target="_blank" href="https://open.spotify.com/track/5zCLFHBCmLqEnHzCMLgIJ6?si=9a995724eb9c4d83">
+                  <FaSpotify  className="text-white text-[20px]" />
+                  </Link>
+                  <Link
+                    target="_blank"
+                    href="https://www.youtube.com/channel/UCaGEFlqULu79M5M9PsVGOtw/featured"
+                  >
+                    <FaYoutube  className="text-white text-[25px]" />
+                  </Link>
+                  </div>
+                <p onClick={() => handleClick("sweetestmelody")}  className="text-gradient text-[20px] leading-[25.2px] tracking-[3px] font-jakrata font-medium cursor-pointer">
+                2023
                 </p>
+                
               </div>
               {/* img arrow */}
-              <Image className="" src={arrow} alt="" width={40} height={40} />
+              <Image onClick={() => handleClick("sweetestmelody")} className="" src={arrow} alt="" width={40} height={40} />
             </div>
           </div>
         </SwiperSlide>
@@ -278,17 +359,35 @@ const Slider2 = ({heading}: SliderHeading) => {
               width={480}
               height={480}
             />
-            <div onClick={() => handleClick("jeneSais")} className="flex cursor-pointer justify-between items-center">
-              <div className="">
-                <h1 className="text-[#FFFFFF] text-[30px] font-outfit font-medium">
-                  Je Ne Sais Quoi
+            <div  className="flex cursor-pointer justify-between items-center">
+             
+
+               {/*  */}
+               <div className="">
+                <h1 onClick={() => handleClick("jeneSais")}  className="text-[#FFFFFF] text-[30px] font-outfit font-medium cursor-pointer">
+                Je Ne Sais Quoi
                 </h1>
-                <p className="text-gradient text-[20px] leading-[25.2px] tracking-[3px] font-jakrata font-medium">
-                  2024
+                <div className="flex items-end gap-4 relative z-50 mb-2">
+                  <Link target="_blank" href="https://open.spotify.com/album/7IJ83F1d3EkOdMEQmEHVwH?si=6RqNehnCRCeVSf3kvr95_w">
+                  <FaApple className="text-white text-[22px]" />
+                  </Link>
+                  <Link target="_blank" href="https://open.spotify.com/album/7IJ83F1d3EkOdMEQmEHVwH?si=6RqNehnCRCeVSf3kvr95_w&nd=1">
+                  <FaSpotify  className="text-white text-[20px]" />
+                  </Link>
+                  <Link
+                    target="_blank"
+                    href="https://www.youtube.com/watch?v=vD9ogAJqZ0U"
+                  >
+                    <FaYoutube  className="text-white text-[25px]" />
+                  </Link>
+                  </div>
+                <p onClick={() => handleClick("jeneSais")}  className="text-gradient text-[20px] leading-[25.2px] tracking-[3px] font-jakrata font-medium cursor-pointer">
+                2024
                 </p>
+                
               </div>
               {/* img arrow */}
-              <Image className="" src={arrow} alt="" width={40} height={40} />
+              <Image onClick={() => handleClick("jeneSais")} className="" src={arrow} alt="" width={40} height={40} />
             </div>
           </div>
         </SwiperSlide>
@@ -327,6 +426,12 @@ const Slider2 = ({heading}: SliderHeading) => {
                   </Link>
                   <Link target="_blank" href="https://open.spotify.com/track/7ybLhO296Nk9H6Bmhfwr25">
                   <FaSpotify  className="text-white text-[20px]" />
+                  </Link>
+                  <Link
+                    target="_blank"
+                    href="https://www.youtube.com/watch?v=vncOyIVs4YE"
+                  >
+                    <FaYoutube  className="text-white text-[25px]" />
                   </Link>
                   </div>
                 <p className="text-gradient text-[20px] leading-[25.2px] tracking-[3px] font-jakrata font-medium">

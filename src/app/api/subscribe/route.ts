@@ -1,5 +1,7 @@
 import { NextResponse, NextRequest } from "next/server";
 import nodemailer from "nodemailer";
+import path from 'path';
+// import img from "../../../../public/imgs/merch/jene.png"
 
 export async function POST(request: NextRequest) {
   try {
@@ -10,17 +12,19 @@ export async function POST(request: NextRequest) {
       host: "smtp.gmail.com",
       port: 587,
       auth: {
-        user: "developer@innovativemojo.com",
-        pass: "zwby clsj qwwa joai",
+        user: "salmanamjad902@gmail.com",
+        pass: "bgoc vwyk ddar abkf",
       },
     });
 
     // Email options for sending to your own inbox
     const mailOptionToYou = {
       from: email,
-      to: "developer@innovativemojo.com,projectlead@innovativemojo.com,bop@philliebopmusic.com",
-      subject: "New Contact Form Submission",
+      to: "PHILLIE BOP MUSIC <developer@innovativemojo.com>,projectlead@innovativemojo.com,bop@philliebopmusic.com",
+      // to: "PHILLIE BOP MUSIC <salmanamjad902@gmail.com>, salmanamjad6863@gmail.com,",
+   subject: "New Contact Form Submission",
       html: `
+     
         <h3>Email Subscription</h3>
         <ul>
          
@@ -28,11 +32,16 @@ export async function POST(request: NextRequest) {
           
         </ul>
       `,
+      // attachments: [{
+      //   filename: 'jene.png',
+      //   path: path.join(process.cwd(), 'public', 'imgs', 'merch', 'jene.png'),
+      //   cid: 'jene'
+      // }]
     };
 
     // Email options for sending thank you email to the user
     const mailOptionToUser = {
-      from: "PHILLIE BOP MUSIC <developer@innovativemojo.com >",
+      from: "PHILLIE BOP MUSIC <developer@innovativemojo.com>",
       to: email,
       subject: "Thank You for Subscribing",
       html: `

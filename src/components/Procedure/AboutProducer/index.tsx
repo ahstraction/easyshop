@@ -5,8 +5,8 @@ import Image from "next/image";
 
 import bg from "@/public/imgs/procedure/bgpro.png";
 import bgright from "@/public/imgs/procedure/Mask group (1).png";
-import mob from "@/public/imgs/procedure/mobile.png";
-import buttonimg from "@/public/imgs/procedure/button.png";
+import mob from "@/public/imgs/procedure/mobile-view.png";
+import buttonimg from "@/public/imgs/procedure/box-in-ong.png";
 
 const AboutProducer = () => {
   const [showFullBio, setShowFullBio] = useState(false);

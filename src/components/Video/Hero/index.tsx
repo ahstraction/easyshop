@@ -19,6 +19,7 @@ import imari from "@/public/imgs/labelrelease/imarii.png"
 
 import Navbar from "@/components/navbar/Navbar";
 import Modal from "../Modal";
+import ImariModal from "../Modal/Imari";
 
 const Hero = () => {
 
@@ -42,72 +43,7 @@ const Hero = () => {
         <div className="flex justify-center mob:px-5">
           <div className="max-w-[1140px]">
             {/* main video */}
-            <div className="   flex justify-center overflow-hidden  ">
-              <div className="w-full h-[613px] mob:h-full  bg-[#161616] mt-10  max-w-[1340px] relative ">
-                <Image
-                  onClick={() => handleClick("imari")}
-                  className="absolute z-10 h-full w-full mob:hidden"
-                  src={mainvid}
-                  alt=""
-                  width={1240}
-                  height={760}
-                />
-                <Image
-                  onClick={() => handleClick("imari")}
-                  className="  w-full mob:block hidden"
-                  src={imari}
-                  alt=""
-                  width={1240}
-                  height={760}
-                />
-
-                {/* content */}
-                <div className="flex py-12 px-20 mob:pb-0 mob:px-5 h-full w-full relative z-20 items-end ">
-                  <div className="flex mob:block justify-between items-center w-full">
-                    <div className="">
-                      <h2 className="text-[17px] mob:text-center tracking-[3px] font-bold font-jakrata text-gradient leading-[21.42px] ">
-                        22 March 2024
-                      </h2>
-                      <h1
-                        onClick={() => handleClick("imari")}
-                        className="text-[40px] cursor-pointer mob:text-center mt-2 text-[#fff] tracking-[2px] font-outfit font-medium leading-[50.4px] "
-                      >
-                        Imari
-                      </h1>
-                      <div className="flex items-end gap-4 relative  mt-2">
-                        <Link
-                          target="_blank"
-                          href="https://music.apple.com/album/1734140259?i=1734140260"
-                        >
-                          <FaApple className="text-white text-[25px]" />
-                        </Link>
-                        <Link
-                          target="_blank"
-                          href="https://open.spotify.com/track/7ybLhO296Nk9H6Bmhfwr25"
-                        >
-                          <FaSpotify className="text-white text-[23px]" />
-                        </Link>
-                      </div>
-                      <p className="text-[18px] mob:text-center text-[#FFFFFF] font-jakrata font-bold leading-[22.68px] my-6">
-                        Bennie Pearce for Phillie-BOP Productions
-                      </p>
-                    </div>
-
-                    {/* button */}
-                    <div className="mob:flex cursor-pointer mob:justify-center">
-                      <Image
-                        onClick={() => handleClick("imari")}
-                        className="h-[90px] w-[90px]"
-                        src={playbutton}
-                        alt=""
-                        width={90}
-                        height={90}
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+           <ImariModal/>
 
             {/* hr  */}
             <div className="flex justify-center w-full">

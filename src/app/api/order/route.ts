@@ -1,10 +1,14 @@
 import { NextResponse, NextRequest } from "next/server";
 import nodemailer from "nodemailer";
+import path from 'path';
+
 
 interface Product {
   title: string;
+  img: string;
   price: number;
   quantity: number;
+  slug: string;
 }
 
 export async function POST(request: NextRequest) {
@@ -17,8 +21,8 @@ export async function POST(request: NextRequest) {
       host: "smtp.gmail.com",
       port: 587,
       auth: {
-        user: "developer@innovativemojo.com",
-        pass: "zwby clsj qwwa joai",
+        user: "salmanamjad902@gmail.com",
+        pass: "bgoc vwyk ddar abkf",
       },
     });
 
@@ -27,41 +31,47 @@ export async function POST(request: NextRequest) {
       0
     );
 
-    const productListHTML = `
-    <style>
-  .product-row td {
-    padding-right: 10px;
-  }
-</style>
-<table>
-  <tr>
-    <td>Title</td>
-    <td>Price</td>
-    <td>Quantity</td>
-  </tr>
-  ${formdata.cartValues
-    .map((product: Product) => {
-      const totalPrice = product.price * product.quantity; // Calculate total price for each product
 
-      return `
-    <tr class="product-row">
-        <td>${product.title}:</td>
-        <td>$${totalPrice} |</td>
-        <td>${product.quantity} |</td>
+    const productListHTML = `
+    <table style="width: 100%; border-collapse: collapse;">
+      <tr>
+      <th style="border-bottom: 2px solid #000; text-align: left;">Image</th>
+        <th style="border-bottom: 2px solid #000;  text-align: left;">Title</th>
+        <th style="border-bottom: 2px solid #000;  text-align: left;">Quantity</th>
+        <th style="border-bottom: 2px solid #000;  text-align: left;">Price</th>
       </tr>
+      ${formdata.cartValues
+        .map((product: Product) => {
+          const totalPrice = product.price * product.quantity; 
+    
+          return `
+            <tr class="product-row">
+            <td style="border-bottom: 1px solid #ccc; padding: 8px; text-align: left;">
+            <img src="cid:${product.slug}" alt="Image" style="max-width: 50px;">
+          </td>
+              <td style="border-bottom: 1px solid #ccc; padding: 8px; text-align: left;">${product.title}</td>
+              <td style="border-bottom: 1px solid #ccc; padding: 8px; text-align: left;">${product.quantity}</td>
+              <td style="border-bottom: 1px solid #ccc; padding: 8px; text-align: left;">$${totalPrice}</td>
+            </tr>
+          `;
+        })
+        .join("")}
+      <tr>
+        <td colspan="4" style="text-align: right; padding: 8px; margin-right:15px;"><strong>Grand Total: $${grandTotal}</strong></td>
+      </tr>
+    </table>
     `;
-    })
-    .join("")}
-  <tr>
-  <td colspan="2"><strong>Grand Total:</strong></td>
-  <td><strong>$${grandTotal}</strong></td>
-</tr>
-</table>
-`;
+    
+    
+
+  //   <td style="border-bottom: 1px solid #ccc; padding: 8px; text-align: center;">
+  //   <img src="${product.title}" alt="Image" style="max-width: 50px;">
+  // </td>
 
     const mailOptionToYou = {
       from: formdata.email,
-      to: "developer@innovativemojo.com,projectlead@innovativemojo.com,bop@philliebopmusic.com",
+      // from: formdata.email,
+      to: "PHILLIE BOP MUSIC <developer@innovativemojo.com>,projectlead@innovativemojo.com,bop@philliebopmusic.com",
       // to: "developer@innovativemojo.com",
       subject: " order",
       html: `
@@ -78,13 +88,19 @@ export async function POST(request: NextRequest) {
           <li>zipCode: ${formdata.zipCode}</li>
           <li>phoneNumber: ${formdata.number}</li>
           <li>additionalInfo: ${formdata.additionalInfo}</li>
+          <div style="text-align: center; font-size:25px; padding: 8px;"> Order Details </div>
           ${productListHTML}
     </ul>
       `,
+      attachments: formdata.cartValues.map((product: any) => ({
+        filename: `${product.title}.png`,
+        path: path.join(process.cwd(), 'public', 'imgs', 'merch', product.pathnode),
+        cid: product.slug
+      }))
     };
 
     const mailOptionToUser = {
-      from: "PHILLIE BOP MUSIC <developer@innovativemojo.com>",
+      from: "PHILLIE BOP MUSIC <developer@innovativemojo.com>, ",
 
       to: formdata.email,
       subject: "Your order is placed",

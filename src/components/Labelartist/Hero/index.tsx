@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
-import { FaApple, FaSpotify } from "react-icons/fa";
+import { FaApple, FaSpotify, FaYoutube  } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
 import banner from "@/public/imgs/labelartist/artist-banner.png";
@@ -131,6 +131,12 @@ const Hero = () => {
                     href="https://open.spotify.com/track/7ybLhO296Nk9H6Bmhfwr25"
                   >
                     <FaSpotify className="text-white text-[23px]" />
+                  </Link>
+                  <Link
+                    target="_blank"
+                    href="https://www.youtube.com/watch?v=vncOyIVs4YE&t=2s"
+                  >
+                    <FaYoutube  className="text-white text-[25px]" />
                   </Link>
                 </div>
               </div>

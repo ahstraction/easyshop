@@ -5,7 +5,7 @@ import maskimg from "@/public/imgs/labelartist/mask.png";
 import bgright from "@/public/imgs/labelrelease/imarii.png";
 import bgrightshade from "@/public/imgs/labelrelease/shade.png";
 import bannermob from "@/public/imgs/labelartist/imarimobile.png";
-import { FaApple  , FaSpotify } from "react-icons/fa";
+import { FaApple  , FaSpotify, FaYoutube } from "react-icons/fa";
 
 import arrow from "@/public/imgs/labelartist/arrow-up.png";
 import Navbar from "@/components/navbar/Navbar";
@@ -61,6 +61,12 @@ const Hero = () => {
                   </Link>
                   <Link target="_blank" href="https://open.spotify.com/track/7ybLhO296Nk9H6Bmhfwr25">
                   <FaSpotify  className="text-white text-[23px]" />
+                  </Link>
+                  <Link
+                    target="_blank"
+                    href="https://www.youtube.com/watch?v=vncOyIVs4YE&t=2s"
+                  >
+                    <FaYoutube  className="text-white text-[25px]" />
                   </Link>
                   </div>
             <p className="text-[14px] max-w-[643px] text-[#FFFFFF] font-jakrata font-bold leading-[32px] my-[2px]">

@@ -5,5 +5,9 @@ export type Product = {
   img: any;
   price:number;
   songlink:string;
-  slug:string
+  slug:string;
+  pathnode:string;
+  applelink:string;
+  spotifylink:string;
+  youtubelink:string;
 };

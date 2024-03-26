@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { FaApple  , FaSpotify, FaYoutube } from "react-icons/fa";
 
 import Navbar from "@/components/navbar/Navbar";
 import { products } from "@/constants/products";
@@ -36,7 +37,7 @@ const Hero = () => {
           Our Shop
         </h1>
         <p className="text-[#fff] text-[20px] font-normal font-jakrata text-center mt-5 ">
-          Your one-stop shop for purchasing Phillie-BOP merch
+        Your one-stop shop for purchasing Phillie-BOP music
         </p>
       </div>
       <div className="pt-20  bg-[#121212] pb-[120px] mob:pb-20 mob:mb-20">
@@ -73,6 +74,21 @@ const Hero = () => {
                       ${product.price}0
                     </p>
                   </div>
+
+                  <div className="flex justify-center items-end gap-4 relative z-50 my-2 ">
+                  <Link target="_blank" href={product.applelink}>
+                  <FaApple className="text-white text-[22px]" />
+                  </Link>
+                  <Link target="_blank" href={product.spotifylink}>
+                  <FaSpotify  className="text-white text-[20px]" />
+                  </Link>
+                  <Link
+                    target="_blank"
+                    href={product.youtubelink}
+                  >
+                    <FaYoutube  className="text-white text-[22px]" />
+                  </Link>
+                  </div>
                   {/* text */}
                   {/* <p className="text-[16px] text-[#fff] font-jakrat font-normal leading-[26px]">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -80,7 +96,7 @@ const Hero = () => {
                   {/* button */}
                   {/* <Link href="/cart"> */}
                   <button
-                    className=" py-[20px] w-full uppercase mt-5  rounded-[150px] bg-[#FFFFFF] text-[#121212] tracking-[2px] text-[15px] leading-[18.9px] font-semibold font-jakrata"
+                    className=" py-[15px] w-full uppercase mt-5  rounded-[150px] bg-[#FFFFFF] text-[#121212] tracking-[2px] text-[15px] leading-[18.9px] font-semibold font-jakrata"
                     onClick={() => onAddToCart(product.id)}
                   >
                     Add to Cart
@@ -129,6 +145,22 @@ const Hero = () => {
                       ${product.price}0
                     </p>
                   </div>
+
+                  
+                  <div className="flex items-end justify-center gap-4 relative z-50 my-2">
+                  <Link target="_blank" href={product.applelink}>
+                  <FaApple className="text-white text-[22px]" />
+                  </Link>
+                  <Link target="_blank" href={product.spotifylink}>
+                  <FaSpotify  className="text-white text-[20px]" />
+                  </Link>
+                  <Link
+                    target="_blank"
+                    href={product.youtubelink}
+                  >
+                    <FaYoutube  className="text-white text-[22px]" />
+                  </Link>
+                  </div>
                   {/* text */}
                   {/* <p className="text-[16px] text-[#fff] font-jakrat font-normal leading-[26px]">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -136,7 +168,7 @@ const Hero = () => {
                   {/* button */}
                   {/* <Link href="/cart"> */}
                   <button
-                    className=" py-[20px] w-full uppercase mt-5  rounded-[150px] bg-[#FFFFFF] text-[#121212] tracking-[2px] text-[15px] leading-[18.9px] font-semibold font-jakrata"
+                    className=" py-[15px] w-full uppercase mt-5  rounded-[150px] bg-[#FFFFFF] text-[#121212] tracking-[2px] text-[15px] leading-[18.9px] font-semibold font-jakrata"
                     onClick={() => onAddToCart(product.id)}
                   >
                     Add to Cart
@@ -186,7 +218,7 @@ const Hero = () => {
                   {/* button */}
                   {/* <Link href="/cart"> */}
                   <button
-                    className=" py-[20px] w-full uppercase mt-5  rounded-[150px] bg-[#FFFFFF] text-[#121212] tracking-[2px] text-[15px] leading-[18.9px] font-semibold font-jakrata"
+                    className=" py-[15px] w-full uppercase mt-[60px]  rounded-[150px] bg-[#FFFFFF] text-[#121212] tracking-[2px] text-[15px] leading-[18.9px] font-semibold font-jakrata"
                     onClick={() => onAddToCart(product.id)}
                   >
                     Add to Cart
@@ -224,6 +256,20 @@ const Hero = () => {
                     $1.50
                   </p>
                 </div>
+                <div className="flex items-end gap-4 justify-center relative z-50 my-2">
+                  <Link target="_blank" href="https://music.apple.com/album/1734140259?i=1734140260">
+                  <FaApple className="text-white text-[22px]" />
+                  </Link>
+                  <Link target="_blank" href="https://open.spotify.com/track/7ybLhO296Nk9H6Bmhfwr25">
+                  <FaSpotify  className="text-white text-[20px]" />
+                  </Link>
+                  <Link
+                    target="_blank"
+                    href="https://www.youtube.com/watch?v=vncOyIVs4YE"
+                  >
+                    <FaYoutube  className="text-white text-[22px]" />
+                  </Link>
+                  </div>
                 {/* text */}
                 {/* <p className="text-[16px] text-[#fff] font-jakrat font-normal leading-[26px]">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -231,7 +277,7 @@ const Hero = () => {
                 {/* button */}
                 {/* <Link href="/cart"> */}
                 <button
-                  className=" py-[20px] w-full uppercase mt-5  rounded-[150px] bg-[#FFFFFF] text-[#121212] tracking-[2px] text-[15px] leading-[18.9px] font-semibold font-jakrata"
+                  className=" py-[15px] w-full uppercase mt-5  rounded-[150px] bg-[#FFFFFF] text-[#121212] tracking-[2px] text-[15px] leading-[18.9px] font-semibold font-jakrata"
                   onClick={() => onAddToCart(9)}
                 >
                   Add to Cart
@@ -273,7 +319,7 @@ const Hero = () => {
                 {/* button */}
                 {/* <Link href="/cart"> */}
                 <button
-                  className=" py-[20px] w-full uppercase mt-5  rounded-[150px] bg-[#FFFFFF] text-[#121212] tracking-[2px] text-[15px] leading-[18.9px] font-semibold font-jakrata"
+                  className=" py-[15px] w-full uppercase mt-[60px]  rounded-[150px] bg-[#FFFFFF] text-[#121212] tracking-[2px] text-[15px] leading-[18.9px] font-semibold font-jakrata"
                   onClick={() => onAddToCart(10)}
                 >
                   Add to Cart
@@ -314,7 +360,7 @@ const Hero = () => {
                 {/* button */}
                 {/* <Link href="/cart"> */}
                 <button
-                  className=" py-[20px] w-full uppercase mt-5  rounded-[150px] bg-[#FFFFFF] text-[#121212] tracking-[2px] text-[15px] leading-[18.9px] font-semibold font-jakrata"
+                  className="py-[15px] w-full uppercase mt-[60px] rounded-[150px] bg-[#FFFFFF] text-[#121212] tracking-[2px] text-[15px] leading-[18.9px] font-semibold font-jakrata"
                   onClick={() => onAddToCart(11)}
                 >
                   Add to Cart

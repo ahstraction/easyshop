@@ -3,10 +3,10 @@ import img2 from "@/public/imgs/merch/Rectangle 26 (2).png";
 import img3 from "@/public/imgs/merch/Rectangle 26 (3).png";
 import img4 from "@/public/imgs/merch/Rectangle 26 (4).png";
 import img5 from "@/public/imgs/merch/Rectangle 26 (5).png";
-import img6 from "@/public/capnew.png";
+import img6 from "@/public/imgs/merch/capnew.png";
 import more from "@/public/imgs/merch/more.png";
 import jene from "@/public/imgs/merch/jene.png";
-import imari from "@/public/imgs/labelartist/breatheagain.png";
+import imari from "@/public/imgs/merch/breatheagain.png";
 import sweetcd from "@/public/imgs/merch/cdsweet1.png";
 import worthycd from "@/public/imgs/merch/cdworthy1.png";
 import { Product } from "@/types";
@@ -20,6 +20,11 @@ export const products: Product[] = [
     subHeading: "",
     img: img1,
     songlink: "/videos/ESP (3).mp3",
+    pathnode:"Rectangle 26 (1).png",
+    applelink:"https://music.apple.com/us/album/e-s-p/1633167575?i=1633167576",
+    spotifylink:"https://open.spotify.com/album/0NiCV4qGxVNBxbHa1tj3ir?si=PnwXWl40SMG36GERpG6dgg",
+    youtubelink:"https://youtube.com/@rinachanel7598",
+
   },
   {
     id: 2,
@@ -29,6 +34,11 @@ export const products: Product[] = [
     subHeading: "",
     img: img2,
     songlink: "/videos/Made (1).mp3",
+    pathnode:"Rectangle 26 (2).png",
+    applelink:"https://music.apple.com/us/album/made-single/1597282832",
+    spotifylink:"https://open.spotify.com/track/5T2dP5OaGxvNqJN7jmHvkT?si=9d1e5b5bbe8c4794",
+    youtubelink:"https://www.youtube.com/channel/UCaGEFlqULu79M5M9PsVGOtw/featured",
+
   },
   {
     id: 3,
@@ -38,6 +48,11 @@ export const products: Product[] = [
     subHeading: "",
     img: img3,
     songlink: "/videos/Worthy (2).mp3",
+    pathnode:"Rectangle 26 (3).png",
+    applelink:"https://music.apple.com/us/album/worthy-single/1597273054",
+    spotifylink:"https://open.spotify.com/track/65PvHRKkLMdCa6eSluqGcH?si=8fd258d4f5474852&nd=1",
+    youtubelink:"https://www.youtube.com/channel/UCaGEFlqULu79M5M9PsVGOtw/featured",
+
   },
   {
     id: 4,
@@ -47,6 +62,11 @@ export const products: Product[] = [
     subHeading: "",
     img: more,
     songlink: "/videos/Rina-Chanel-More-Than-Enough (1).mp3",
+    pathnode:"more.png",
+    applelink:"https://music.apple.com/us/album/more-than-enough-single/1597282939",
+    spotifylink:"https://open.spotify.com/track/0uun3QW4v5qLKtfVyfW0D9?si=402c78a4875e42ee",
+    youtubelink:"https://www.youtube.com/channel/UCaGEFlqULu79M5M9PsVGOtw/featured",
+
   },
   {
     id: 5,
@@ -56,6 +76,10 @@ export const products: Product[] = [
     subHeading: "",
     img: img5,
     songlink: "/videos/Sweetest-of-Melody (1).mp3",
+    pathnode:"Rectangle 26 (5).png",
+    applelink:"https://music.apple.com/us/album/sweetest-of-melody-feat-senghor-robinson-single/1588654754",
+    spotifylink:"https://open.spotify.com/track/5zCLFHBCmLqEnHzCMLgIJ6?si=9a995724eb9c4d83",
+    youtubelink:"https://www.youtube.com/channel/UCaGEFlqULu79M5M9PsVGOtw/featured",
   },
   {
     id: 6,
@@ -65,6 +89,11 @@ export const products: Product[] = [
     slug: "jeneSais",
     img: jene,
     songlink: "/videos/Je-Ne-Sais-Quoi (2).mp3",
+    pathnode:"jene.png",
+    applelink:"https://open.spotify.com/album/7IJ83F1d3EkOdMEQmEHVwH?si=6RqNehnCRCeVSf3kvr95_w",
+    spotifylink:"https://open.spotify.com/album/7IJ83F1d3EkOdMEQmEHVwH?si=6RqNehnCRCeVSf3kvr95_w&nd=1",
+    youtubelink:"https://www.youtube.com/watch?v=vD9ogAJqZ0U",
+
   },
   {
     id: 7,
@@ -74,6 +103,10 @@ export const products: Product[] = [
     subHeading: "",
     img: img6,
     songlink: "",
+    pathnode:"capnew.png",
+    applelink:"",
+    spotifylink:"",
+    youtubelink:"",
   },
   {
     id: 8,
@@ -83,6 +116,11 @@ export const products: Product[] = [
     subHeading: "",
     img: img4,
     songlink: "",
+    pathnode:"Rectangle 26 (4).png",
+    applelink:"",
+    youtubelink:"",
+
+    spotifylink:""
   },
   {
     id: 9,
@@ -92,6 +130,10 @@ export const products: Product[] = [
     subHeading: "",
     img: imari,
     songlink: "/videos/Breathe Again - Imari.mp3",
+    pathnode:"breatheagain.png",
+    applelink:"https://music.apple.com/album/1734140259?i=1734140260",
+    youtubelink:"https://www.youtube.com/watch?v=vncOyIVs4YE&t=2s",
+    spotifylink:"https://open.spotify.com/track/7ybLhO296Nk9H6Bmhfwr25"
   },
   {
     id: 10,
@@ -101,6 +143,11 @@ export const products: Product[] = [
     subHeading: "",
     img: worthycd,
     songlink: "",
+    pathnode:"cdworthy1.png",
+    applelink:"",
+    youtubelink:"",
+
+    spotifylink:""
   },
   {
     id: 11,
@@ -110,6 +157,11 @@ export const products: Product[] = [
     subHeading: "",
     img: sweetcd,
     songlink: "",
+    pathnode:"cdsweet1.png",
+    applelink:"",
+    youtubelink:"",
+
+    spotifylink:""
   },
 ];
 
