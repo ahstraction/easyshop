@@ -21,8 +21,8 @@ export async function POST(request: NextRequest) {
       host: "smtp.gmail.com",
       port: 587,
       auth: {
-        user: "salmanamjad902@gmail.com",
-        pass: "bgoc vwyk ddar abkf",
+        user: "developer@innovativemojo.com",
+        pass: "zwby clsj qwwa joai",
       },
     });
 

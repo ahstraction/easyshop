@@ -12,8 +12,8 @@ export async function POST(request: NextRequest) {
       host: "smtp.gmail.com",
       port: 587,
       auth: {
-        user: "salmanamjad902@gmail.com",
-        pass: "bgoc vwyk ddar abkf",
+        user: "developer@innovativemojo.com",
+        pass: "zwby clsj qwwa joai",
       },
     });
 
@@ -21,7 +21,6 @@ export async function POST(request: NextRequest) {
     const mailOptionToYou = {
       from: email,
       to: "PHILLIE BOP MUSIC <developer@innovativemojo.com>,projectlead@innovativemojo.com,bop@philliebopmusic.com",
-      // to: "PHILLIE BOP MUSIC <salmanamjad902@gmail.com>, salmanamjad6863@gmail.com,",
    subject: "New Contact Form Submission",
       html: `
      
