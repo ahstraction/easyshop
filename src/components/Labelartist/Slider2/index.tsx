@@ -131,7 +131,7 @@ const Slider2 = ({heading}: SliderHeading) => {
                   </Link>
                   </div>
                 <p onClick={() => handleClick("worthy")}  className="text-gradient text-[20px] leading-[25.2px] tracking-[3px] font-jakrata font-medium cursor-pointer">
-                  2000
+                  2020
                 </p>
                 
               </div>
@@ -331,7 +331,7 @@ const Slider2 = ({heading}: SliderHeading) => {
                   </Link>
                   </div>
                 <p onClick={() => handleClick("sweetestmelody")}  className="text-gradient text-[20px] leading-[25.2px] tracking-[3px] font-jakrata font-medium cursor-pointer">
-                2023
+                2021
                 </p>
                 
               </div>
@@ -382,7 +382,7 @@ const Slider2 = ({heading}: SliderHeading) => {
                   </Link>
                   </div>
                 <p onClick={() => handleClick("jeneSais")}  className="text-gradient text-[20px] leading-[25.2px] tracking-[3px] font-jakrata font-medium cursor-pointer">
-                2024
+                2023
                 </p>
                 
               </div>
