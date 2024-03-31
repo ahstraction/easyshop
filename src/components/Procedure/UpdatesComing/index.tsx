@@ -46,12 +46,16 @@ const UpdatesComing = () => {
                 <Image  className="mob:w-[70%]" src={newevent} alt="" height={94} width={94} />
                 </div>
                 {/* text */}
-                <p className="text-[22px] mob:text-center mob:mt-6 text-[#FFFFFF] leading-[27.72px] font-medium font-outfit">
-                Indie Artist   Summit <br/>
+             <div className="">
+             <p className="text-[22px] mob:text-center mob:mt-6 text-[#FFFFFF] leading-[27.72px] font-medium font-outfit">
+                Indie Artist   Summit 
+                </p>
+                <p className="text-[22px] mob:text-center mob:mt-6 text-[#FFFFFF] leading-[19.72px] font-medium font-outfit">
+                
                 <span className="text-[#FFFFFF]/60 text-[16px]">Location:</span> <span className="font-normal text-[#FFFFFF]/60 text-[16px] ">Waldorf, MD</span> <br />
                 <span className="text-[#FFFFFF]/60 text-[16px]">Sponsored by:</span>  <span className="font-normal text-[#FFFFFF]/60 text-[16px]">WSLQ I-Radio and WGFM 99.5 </span>
-               
                 </p>
+             </div>
               </div>
               {/* center time */}
               <div className="flex  mob:justify-center items-center gap-[15px]">
@@ -64,7 +68,7 @@ const UpdatesComing = () => {
                 <div className="">
                   {/* month */}
                   <p className="text-[16px] mob:text-center text-[#FFFFFF] leading-[20.16px] font-normal font-jakrata">
-                  April
+                  April, 2024
                   </p>
                   {/* time */}
                   <p className="text-[16px] mob:text-center text-[#FFFFFF] leading-[20.16px] font-normal font-jakrata">
@@ -118,7 +122,7 @@ const UpdatesComing = () => {
               {/* buy ticket */}
               <div className="flex mob:justify-center  mob:mt-4 items-center gap-[10px]">
                 <button className="text-[15px] text-[#FFFFFF] leading-[18.9px] font-semibold font-jakrata tracking-[1px]">
-                  Buy Tickets
+                Event Ended
                 </button>
                 <Image src={arrow} alt="" width={15} height={23} />
               </div>
@@ -163,7 +167,7 @@ const UpdatesComing = () => {
               {/* buy ticket */}
               <div className="flex mob:justify-center  mob:mt-4 items-center gap-[10px]">
                 <button className="text-[15px] text-[#FFFFFF] leading-[18.9px] font-semibold font-jakrata tracking-[1px]">
-                  Buy Tickets
+                Event Ended
                 </button>
                 <Image src={arrow} alt="" width={15} height={23} />
               </div>
