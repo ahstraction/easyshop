@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import img1 from "@/public/imgs/procedure/updates/image 4.png";
 import img2 from "@/public/imgs/procedure/updates/image 4 (1).png";
-import newevent from "@/public/imgs/procedure/updates/newevent.png";
+import newevent from "@/public/imgs/procedure/updates/last-logo.png";
 
 import arrow from "@/public/imgs/icons/bi_arrow-up.svg";
 const UpdatesComing = () => {
