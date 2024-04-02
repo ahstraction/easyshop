@@ -92,7 +92,8 @@ export const products: Product[] = [
     pathnode:"jene.png",
     applelink:"https://open.spotify.com/album/7IJ83F1d3EkOdMEQmEHVwH?si=6RqNehnCRCeVSf3kvr95_w",
     spotifylink:"https://open.spotify.com/album/7IJ83F1d3EkOdMEQmEHVwH?si=6RqNehnCRCeVSf3kvr95_w&nd=1",
-    youtubelink:"https://www.youtube.com/watch?v=vD9ogAJqZ0U",
+    // youtubelink:"https://www.youtube.com/watch?v=vD9ogAJqZ0U",
+    youtubelink:"https://www.youtube.com/watch?v=OkFZKNynU1A",
 
   },
   {

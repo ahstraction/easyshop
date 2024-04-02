@@ -376,7 +376,8 @@ const Slider2 = ({heading}: SliderHeading) => {
                   </Link>
                   <Link
                     target="_blank"
-                    href="https://www.youtube.com/watch?v=vD9ogAJqZ0U"
+                    // href="https://www.youtube.com/watch?v=vD9ogAJqZ0U"
+                    href="https://www.youtube.com/watch?v=OkFZKNynU1A"
                   >
                     <FaYoutube  className="text-white text-[25px]" />
                   </Link>
