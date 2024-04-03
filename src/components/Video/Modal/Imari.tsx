@@ -38,7 +38,7 @@ export default function Imari() {
   };
   return (
     <>
-      <div  className="relative z-50  inset-0 flex items-center justify-center w-full">
+      <div  className="relative z-30  inset-0 flex items-center justify-center w-full">
       <div className="   flex justify-center overflow-hidden w-full ">
               <div className="w-full h-[613px] mob:h-full  bg-[#161616] mt-10  max-w-[1340px] relative ">
                 <Image
