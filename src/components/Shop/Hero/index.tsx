@@ -247,7 +247,7 @@ const Hero = () => {
                     onClick={() => handleClick("imari")}
                     className="text-[#FFFFFF] cursor-pointer text-[21px] leading-[30px] font-outfit font-medium mb-3"
                   >
-                    Imari
+                    Breathe Again
                   </h1>
                   <p
                     onClick={() => handleClick("imari")}

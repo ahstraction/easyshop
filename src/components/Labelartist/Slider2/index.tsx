@@ -419,7 +419,7 @@ const Slider2 = ({heading}: SliderHeading) => {
             <div onClick={() => handleClick("imari")} className="flex cursor-pointer justify-between items-center">
               <div className="">
                 <h1 className="text-[#FFFFFF] text-[30px] font-outfit font-medium">
-                Imari
+                Breathe Again
                 </h1>
                 <div className="flex items-end gap-4 relative z-50 mb-2">
                   <Link target="_blank" href="https://music.apple.com/album/1734140259?i=1734140260">

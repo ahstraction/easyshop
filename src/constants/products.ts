@@ -125,7 +125,7 @@ export const products: Product[] = [
   },
   {
     id: 9,
-    title: "Imari",
+    title: "Breathe Again",
     price: 1.5,
     slug: "imari",
     subHeading: "",

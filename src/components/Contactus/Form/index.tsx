@@ -18,6 +18,7 @@ import Link from "next/link";
 
 const Form = () => {
   const [fname, setFname] = useState("");
+  const [lname, setLname] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
@@ -35,7 +36,7 @@ const Form = () => {
   ) => {
     e.preventDefault();
     console.log("clicked",fname);
-    if (!fname  || !email || !phone || !message) {
+    if (!fname  || !lname  || !email || !phone || !message) {
       alert("Please fill in all fields");
       return;
     }
@@ -55,6 +56,7 @@ const Form = () => {
         },
         body: JSON.stringify({
           fname,
+          lname,
           
           email,
           phone,
@@ -72,6 +74,7 @@ const Form = () => {
 
         // Reset input fields
         setFname("");
+        setLname("");
        
         setEmail("");
         setPhone("");
@@ -231,6 +234,21 @@ const Form = () => {
                     value={fname}
                     onChange={(e) => {
                       setFname(e.target.value);
+                    }}
+                    // placeholder="First Name"
+                  />
+                  <label
+                    htmlFor="Last Name"
+                    className="text-[16px] text-[#FFFFFF] leading-[20.16px] font-normal font-jakrata"
+                  >
+                    Last Name
+                  </label>
+                  <input
+                    className="w-full  h-[25px]  outline-none border-b bg-transparent border-b-[#FFFFFF]/20 text-[16px] text-[#FFFFFF] font-normal mb-6 "
+                    type="text"
+                    value={lname}
+                    onChange={(e) => {
+                      setLname(e.target.value);
                     }}
                     // placeholder="First Name"
                   />

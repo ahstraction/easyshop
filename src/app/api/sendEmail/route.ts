@@ -24,6 +24,7 @@ export async function POST(request: NextRequest) {
         <h3>New Contact Form Submission</h3>
         <ul>
           <li>First Name: ${fname}</li>
+          <li>First Name: ${lname}</li>
           <li>Email: ${email}</li> 
           <li>Number: ${phone}</li> 
           <li>Message: ${message}</li> 
@@ -38,7 +39,7 @@ export async function POST(request: NextRequest) {
       to: email,
       subject: "Thank You for Contacting Us",
       html: `
-        <h3>Dear ${fname} ,</h3>
+        <h3>Dear ${fname} ${lname} ,</h3>
         <p>Thank you for contacting us. We have received your message and will get back to you as soon as possible.</p>
         <p>Best Regards,</p>
         <p>PHILLIE BOP MUSIC</p>
