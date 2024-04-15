@@ -22,7 +22,7 @@ const Jene = () => {
 
   return (
     <>
-      <div className="   flex justify-center overflow-hidden pt-20 mob:pt-0 ">
+      <div className="   flex justify-center overflow-hidden pt-20 mob:pt-0 mb-10 ">
         <div className="w-full h-[664px] mob:h-full bg-[#161616] mt-10  mob:mt-0 max-w-[1340px] relative flex justify-end ">
           <Image
             className="  h-full w-full absolute  z-10 mob:hidden"
@@ -51,8 +51,14 @@ const Jene = () => {
             {/* <h1 className="text-[20px] uppercase mob:text-center text-[#fff] tracking-[3px] font-jakrata font-normal leading-[25.2px] ">
               Label Artists
             </h1> */}
+           <div className="flex justify-end mob:justify-center mob:my-2">
+           <h1 className="text-[20px] w-full max-w-[230px] uppercase mob:text-center text-[#fff] tracking-[3px] font-jakrata font-normal leading-[25.2px] ">
+              Label Artists
+            </h1>
+           </div>
             <div className="flex items-end mob:items-start justify-end h-[560px] pr-5 mob:pr-0 mob:h-full">
               <div className="max-w-[510px]">
+            
                 <h2 className="text-[50px] cursor-pointer mob:text-center font-medium font-outfit imarigradient leading-[60px] ">
                   Rina Chanel
                 </h2>

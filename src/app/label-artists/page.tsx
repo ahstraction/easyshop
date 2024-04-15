@@ -9,6 +9,7 @@ import LabelSlider from "@/components/Labelartist/LabelSlider";
 import Slider2 from "@/components/Labelartist/Slider2";
 import OurClient from "@/components/Labelartist/Mobilesection/OurClient";
 import Jene from "@/components/Labelartist/Jene";
+import Navbar from "@/components/navbar/Navbar";
 
 const labelartist = () => {
   return (
@@ -21,7 +22,9 @@ const labelartist = () => {
           height={813}
           width={1832}
         />
-        <Hero />
+        <Navbar />
+        <Jene />
+
         {/* <Commingsoon /> */}
 
         <div className="mob:hidden">
@@ -31,8 +34,8 @@ const labelartist = () => {
         <div className="hidden mob:block">
           <OurClient />
         </div>
+        <Hero />
 
-        <Jene />
 
         <Slider2 heading="Featured Releases" />
 

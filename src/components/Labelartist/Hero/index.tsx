@@ -27,7 +27,7 @@ const Hero = () => {
 
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
 
       <div className="   flex justify-center overflow-hidden pb-32 mob:pb-0 ">
         <div className="w-full h-[664px] mob:h-full bg-[#161616] mt-10  max-w-[1340px] relative  ">
@@ -56,7 +56,7 @@ const Hero = () => {
               height={686}
             />
             <h1 className="text-[20px] uppercase mob:text-center text-[#fff] tracking-[3px] font-jakrata font-normal leading-[25.2px] ">
-              Label Artists
+              {/* Label Artists */}
             </h1>
             <div className="flex items-end h-[560px] mob:h-full">
               <div className="">
