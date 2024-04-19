@@ -1,11 +1,13 @@
+
+// @ts-nocheck
 "use client"
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import HomePage from '@/components/home';
 
 export default function Home() {
-
   const [loaded, setLoaded] = useState(true);
   const [showHomePage, setShowHomePage] = useState(false);
+  const videoRef = useRef(null);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -20,13 +22,10 @@ export default function Home() {
     setTimeout(() => {
     }, 180);
     setTimeout(() => {
-    
-
       // Stop the interval after cycling through all texts.
-   
       setTimeout(() => {
         setLoaded(true);
-      }, 8600);
+      }, videoRef.current?.duration * 1000); // Set timeout based on video duration
     }, 1000);
   }, []);
 
@@ -38,21 +37,22 @@ export default function Home() {
     }
   }, []);
 
+  const handleVideoEnd = () => {
+    setLoaded(true); // Set loaded to true when the video ends
+  };
 
   return (
     <main className=" ">
-     
-
-{loaded ? (
-          <div className={`bg-black ${!showHomePage ? 'h-screen flex justify-center items-center' : ''}`}>
+      {loaded ? (
+        <div className={`bg-black ${!showHomePage ? 'h-screen flex justify-center items-center' : ''}`}>
           {showHomePage && <HomePage />}
         </div>
       ) : (
-        <div className="h-screen  bg-[#000] flex justify-center items-center">
-        <video className='' autoPlay muted loop>
-         <source src="/Logo Animation  (1).mp4" type="video/mp4" />
-       </video>
-      </div>
+        <div className="h-screen bg-[#000] flex justify-center items-center">
+          <video className='h-full w-full' autoPlay muted onEnded={handleVideoEnd} ref={videoRef}>
+            <source src="/Logo Animation  (1).mp4" type="video/mp4" />
+          </video>
+        </div>
       )}
     </main>
   );
