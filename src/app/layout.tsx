@@ -9,7 +9,7 @@ import {
 } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
-import Navbar from "@/components/navbar/Navbar";
+// import Navbar from "@/components/navbar/Navbar";
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";

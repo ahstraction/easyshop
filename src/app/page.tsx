@@ -1,94 +1,97 @@
-
 // @ts-nocheck
-"use client"
-import { useEffect, useState, useRef } from 'react';
-import HomePage from '@/components/home';
+"use client";
+import { useEffect, useState, useRef } from "react";
+import HomePage from "@/components/home";
+import { cn } from "@/libs/utils/twMerge";
 
 export default function Home() {
-  const [loaded, setLoaded] = useState(true);
+  const [loaded, setLoaded] = useState(false);
   const [showHomePage, setShowHomePage] = useState(false);
   const videoRef = useRef(null);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowHomePage(true);
-    }, 50); // Delay in milliseconds (2 seconds in this case)
+  const [isPageLoaded, setIsPageLoaded] = useState(false);
 
-    return () => clearTimeout(timer); // Clean up the timer on component unmount
+  useEffect(() => {
+    if (!isPageLoaded) setIsPageLoaded(true);
   }, []);
 
   // useEffect(() => {
- 
-  //   setTimeout(() => {
-  
-  //     const videoDuration = videoRef.current?.duration;
-  //     console.log('Video duration:', videoDuration);
+  //   const delay = 50; // Delay in milliseconds
+  //   const timer = setTimeout(() => setShowHomePage(true), delay);
 
-    
+  //   return () => clearTimeout(timer); // Clean up the timer on component unmount
+  // }, []);
+
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     const videoDuration = videoRef.current?.duration;
+  //     console.log("Video duration:", videoDuration);
+
   //     if (videoRef.current?.currentTime >= videoDuration) {
   //       setLoaded(true);
   //     } else {
-     
-  //       const remainingTime = (videoDuration - videoRef.current?.currentTime) * 1000;
+  //       const remainingTime =
+  //         (videoDuration - videoRef.current?.currentTime) * 1000;
   //       setTimeout(() => {
   //         setLoaded(true);
   //       }, remainingTime);
   //     }
   //   }, 1000);
+
+  //   return () => clearTimeout(timer);
   // }, []);
 
-  useEffect(() => {
-    // Start shrinking after a delay.
-    setTimeout(() => {
-      // Get the video duration and log it to the console
-      const videoDuration = videoRef.current?.duration;
-      console.log('Video duration:', videoDuration);
-
-      // Check if the video has been fully played
-      if (videoRef.current?.currentTime >= videoDuration) {
-        setLoaded(true);
-      } else {
-        // If not fully played, set a timeout based on remaining time
-        const remainingTime = (videoDuration - videoRef.current?.currentTime) * 1000;
-        setTimeout(() => {
-          setLoaded(true);
-        }, remainingTime);
-      }
-    }, 1000);
-
-    // Add event listener for time updates
-    videoRef.current?.addEventListener('timeupdate', handleTimeUpdate);
-
-    return () => {
-      // Clean up the event listener on component unmount
-      videoRef.current?.removeEventListener('timeupdate', handleTimeUpdate);
-    };
-  }, []);
-
-  useEffect(() => {
-    
-    if (!sessionStorage.getItem("animationPlayed")) {
-      setLoaded(false);
-      sessionStorage.setItem("animationPlayed", "true");
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (!sessionStorage.getItem("animationPlayed")) {
+  //     setLoaded(false);
+  //     sessionStorage.setItem("animationPlayed", "true");
+  //   }
+  // }, []);
 
   const handleVideoEnd = () => {
-    setLoaded(true); 
+    setLoaded(true);
+    setShowHomePage(true);
+
+    localStorage.setItem("isVideoPlayed",true)
   };
+
+  useEffect(() => {
+    const isVidePlayed = localStorage.getItem("isVideoPlayed")
+
+    if(isVidePlayed){
+      setLoaded(true)
+      setShowHomePage(true)
+    }
+  
+
+  }, [])
+  
+
+  if(!isPageLoaded) return <div className="bg-black h-screen w-screen" />;
+
 
   return (
     <main className=" ">
       {loaded ? (
-        <div className={`bg-black ${!showHomePage ? 'h-screen flex justify-center items-center' : ''}`}>
+        <div
+          className={cn(
+            `bg-black`,
+            !showHomePage && "h-screen flex justify-center items-center"
+          )}
+        >
           {showHomePage && <HomePage />}
         </div>
       ) : (
         <div className="h-screen bg-[#000] flex justify-center items-center">
-          <video className='h-full w-full' autoPlay muted onEnded={handleVideoEnd} ref={videoRef}>
+          <video
+            className="h-full w-full"
+            autoPlay
+            muted
+            onEnded={handleVideoEnd}
+            ref={videoRef}
+          >
             <source src="/LogoAnimation.mp4" type="video/mp4" />
             <source src="/LogoAnimation.mp4" type="video/webm" />
-
           </video>
         </div>
       )}
