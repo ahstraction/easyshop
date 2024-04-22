@@ -51,18 +51,18 @@ export default function Home() {
   const handleVideoEnd = () => {
     setLoaded(true);
     setShowHomePage(true);
-
-    localStorage.setItem("isVideoPlayed",true)
+    sessionStorage.setItem("isVideoPlayed", "true");
+    // localStorage.setItem("isVideoPlayed",true)
   };
 
   useEffect(() => {
-    const isVidePlayed = localStorage.getItem("isVideoPlayed")
+    const isVideoPlayed = sessionStorage.getItem("isVideoPlayed");
 
-    if(isVidePlayed){
+    if(isVideoPlayed){
       setLoaded(true)
       setShowHomePage(true)
     }
-  
+
 
   }, [])
   
@@ -85,8 +85,12 @@ export default function Home() {
         <div className="h-screen bg-[#000] flex justify-center items-center">
           <video
             className="h-full w-full"
-            autoPlay
+            // autoPlay
+            // muted
+            // onEnded={handleVideoEnd}
             muted
+            autoPlay
+            playsInline
             onEnded={handleVideoEnd}
             ref={videoRef}
           >
