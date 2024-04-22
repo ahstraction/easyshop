@@ -17,20 +17,56 @@ export default function Home() {
     return () => clearTimeout(timer); // Clean up the timer on component unmount
   }, []);
 
+  // useEffect(() => {
+ 
+  //   setTimeout(() => {
+  
+  //     const videoDuration = videoRef.current?.duration;
+  //     console.log('Video duration:', videoDuration);
+
+    
+  //     if (videoRef.current?.currentTime >= videoDuration) {
+  //       setLoaded(true);
+  //     } else {
+     
+  //       const remainingTime = (videoDuration - videoRef.current?.currentTime) * 1000;
+  //       setTimeout(() => {
+  //         setLoaded(true);
+  //       }, remainingTime);
+  //     }
+  //   }, 1000);
+  // }, []);
+
   useEffect(() => {
     // Start shrinking after a delay.
     setTimeout(() => {
-    }, 180);
-    setTimeout(() => {
-      // Stop the interval after cycling through all texts.
-      setTimeout(() => {
+      // Get the video duration and log it to the console
+      const videoDuration = videoRef.current?.duration;
+      console.log('Video duration:', videoDuration);
+
+      // Check if the video has been fully played
+      if (videoRef.current?.currentTime >= videoDuration) {
         setLoaded(true);
-      }, videoRef.current?.duration * 1000); // Set timeout based on video duration
+      } else {
+        // If not fully played, set a timeout based on remaining time
+        const remainingTime = (videoDuration - videoRef.current?.currentTime) * 1000;
+        setTimeout(() => {
+          setLoaded(true);
+        }, remainingTime);
+      }
     }, 1000);
+
+    // Add event listener for time updates
+    videoRef.current?.addEventListener('timeupdate', handleTimeUpdate);
+
+    return () => {
+      // Clean up the event listener on component unmount
+      videoRef.current?.removeEventListener('timeupdate', handleTimeUpdate);
+    };
   }, []);
 
   useEffect(() => {
-    // Check if the animation has already been played for this session
+    
     if (!sessionStorage.getItem("animationPlayed")) {
       setLoaded(false);
       sessionStorage.setItem("animationPlayed", "true");
@@ -38,7 +74,7 @@ export default function Home() {
   }, []);
 
   const handleVideoEnd = () => {
-    setLoaded(true); // Set loaded to true when the video ends
+    setLoaded(true); 
   };
 
   return (
