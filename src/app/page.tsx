@@ -50,7 +50,9 @@ export default function Home() {
       ) : (
         <div className="h-screen bg-[#000] flex justify-center items-center">
           <video className='h-full w-full' autoPlay muted onEnded={handleVideoEnd} ref={videoRef}>
-            <source src="/Logo Animation  (1).mp4" type="video/mp4" />
+            <source src="/LogoAnimation.mp4" type="video/mp4" />
+            <source src="/LogoAnimation.mp4" type="video/webm" />
+
           </video>
         </div>
       )}
