@@ -59,7 +59,7 @@ export default function Home() {
       {showHomePage && <HomePage />}
     </div>
   ) : (
-    <div className="h-screen bg-[#000] flex justify-center items-center">
+    <div className="h-screen overflow-hidden bg-[#000] flex justify-center items-center">
       <video
         className=" w-full"
         muted
