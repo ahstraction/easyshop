@@ -61,7 +61,7 @@ export default function Home() {
   ) : (
     <div className="h-screen bg-[#000] flex justify-center items-center">
       <video
-        className="h-full w-full"
+        className=" w-full"
         muted
         autoPlay
         playsInline
