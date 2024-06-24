@@ -10,15 +10,15 @@ export async function POST(request: NextRequest) {
       host: "smtp.gmail.com",
       port: 587,
       auth: {
-        user: "bop@philliebopmusic.com",
-        pass: "ngoz gvad wrix xqry",
+        // user: "bop@philliebopmusic.com",
+        // pass: "ngoz gvad wrix xqry",
       },
     });
 
     // Email options for sending to your own inbox
     const mailOptionToYou = {
       from: email,
-      to: "PHILLIE BOP MUSIC <bop@philliebopmusic.com>,projectlead@innovativemojo.com,developer@innovativemojo.com",
+      to: "PHILLIE BOP MUSIC ",
       subject: " Contact Form Submission",
       html: `
         <h3>New Contact Form Submission</h3>
@@ -34,7 +34,7 @@ export async function POST(request: NextRequest) {
 
     // Email options for sending thank you email to the user
     const mailOptionToUser = {
-      from: "PHILLIE BOP MUSIC <bop@philliebopmusic.com>",
+      from: "PHILLIE BOP MUSIC ",
 
       to: email,
       subject: "Thank You for Contacting Us",

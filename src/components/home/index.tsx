@@ -12,6 +12,7 @@ import Footermain from "../Footermain/Footermain";
 import Image from "next/image";
 import bg from "@/public/Noise-Animation.png";
 
+
 const Home = () => {
   return (
     <>

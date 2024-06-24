@@ -21,8 +21,8 @@ export async function POST(request: NextRequest) {
       host: "smtp.gmail.com",
       port: 587,
       auth: {
-        user: "bop@philliebopmusic.com",
-        pass: "ngoz gvad wrix xqry",
+        // user: "bop@philliebopmusic.com",
+        // pass: "ngoz gvad wrix xqry",
       },
     });
 
@@ -71,7 +71,7 @@ export async function POST(request: NextRequest) {
     const mailOptionToYou = {
       from: formdata.email,
       // from: formdata.email,
-      to: "PHILLIE BOP MUSIC <bop@philliebopmusic.com>,projectlead@innovativemojo.com,developer@innovativemojo.com",
+      to: "PHILLIE BOP MUSIC ",
       // to: "developer@innovativemojo.com",
       subject: " order",
       html: `
@@ -100,7 +100,7 @@ export async function POST(request: NextRequest) {
     };
 
     const mailOptionToUser = {
-      from: "PHILLIE BOP MUSIC <bop@philliebopmusic.com>, ",
+      from: "PHILLIE BOP MUSIC  ",
 
       to: formdata.email,
       subject: "Your order is placed",

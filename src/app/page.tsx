@@ -4,6 +4,7 @@ import { useEffect, useState, useRef } from "react";
 import HomePage from "@/components/home";
 import { cn } from "@/libs/utils/twMerge";
 import { gsap } from "gsap";
+import Navbar from "@/components/navbar/Navbar";
 
 export default function Home() {
   const [loaded, setLoaded] = useState(false);
@@ -49,30 +50,17 @@ export default function Home() {
 
 
   return ( <main className=" ">
-  {loaded ? (
     <div
       className={cn(
         `bg-black`,
-        !showHomePage && "h-screen flex justify-center items-center"
+        !showHomePage && ""
       )}
     >
-      {showHomePage && <HomePage />}
+    {/* <Navbar/> */}
+
+      <HomePage />
     </div>
-  ) : (
-    <div className="h-screen overflow-hidden bg-[#000] flex justify-center items-center">
-      <video
-        className=" w-full"
-        muted
-        autoPlay
-        playsInline
-        onEnded={handleVideoEnd}
-        ref={videoRef}
-      >
-        <source src="/LogoAnimation.mp4" type="video/mp4" />
-        <source src="/LogoAnimation.mp4" type="video/webm" />
-      </video>
-    </div>
-  )}
+    
 </main>
   );
 }

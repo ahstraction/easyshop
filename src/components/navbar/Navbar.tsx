@@ -85,38 +85,31 @@ const Navbar = () => {
                 HOME
               </a>
             </li>
-            <li>
+            {/* <li>
               <Link
                 href="/procedure"
                 className="block uppercase py-2 px-2 text-[15px] font-jakrata tracking-[2px] font-normal text-[#FFFFFF]"
               >
                 Producer
               </Link>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               <a
                 href="/label-artists"
                 className="block uppercase py-2 px-2 text-[15px] font-jakrata tracking-[2px] font-normal text-[#FFFFFF]"
               >
                 label artists
               </a>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               <a
                 href="/label-release"
                 className="block uppercase py-2 px-2 text-[15px] font-jakrata tracking-[2px] font-normal text-[#FFFFFF]"
               >
                 Label Releases
               </a>
-            </li>
-            <li>
-              <a
-                href="/merch"
-                className="block uppercase py-2 px-2 text-[15px] font-jakrata tracking-[2px] font-normal text-[#FFFFFF]"
-              >
-                Merch
-              </a>
-            </li>
+            </li> */}
+           
             <li>
               <a
                 href="/shop"
@@ -134,15 +127,7 @@ const Navbar = () => {
               </a>
             </li> */}
 
-            <li>
-              <a
-                href="/video"
-                className="block uppercase py-2 px-2 text-[15px] font-jakrata tracking-[2px] font-normal text-[#FFFFFF]"
-              >
-                video
-              </a>
-            </li>
-
+          
             <li>
               <a
                 href="/contact-us"
@@ -196,46 +181,8 @@ const Navbar = () => {
                   </Link>
                   <hr className="h-px opacity-[0.4] bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr>
 
-                  <Link
-                    href="/procedure"
-                    className="block uppercase text-[16px] font-jakrata  font-normalleading-7 text-[#FFFFFF]"
-                  >
-                    <li className="flex justify-center py-[15px] list-items">
-                      Producer
-                    </li>
-                  </Link>
-                  <hr className="h-px opacity-[0.4] bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr>
-
-                  <Link
-                    href="/label-artists"
-                    className="block  text-[16px] font-jakrata  font-normal leading-7 text-[#FFFFFF] uppercase"
-                  >
-                    <li className="flex justify-center py-[15px] list-items">
-                      label artists
-                    </li>
-                  </Link>
-                  <hr className="h-px opacity-[0.4] bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr>
-
-                  <Link
-                    href="/label-release"
-                    className="block text-[16px] font-jakrata  font-normalleading-7 text-[#FFFFFF]"
-                  >
-                    <li className="flex justify-center py-[15px] list-items uppercase">
-                      Label Releases
-                    </li>
-                  </Link>
-                  <hr className="h-px opacity-[0.4] bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr>
-
-                  <Link
-                    href="/merch"
-                    className="block  text-[16px] font-jakrata  font-normal leading-7 uppercase text-[#FFFFFF]"
-                  >
-                    <li className="flex justify-center py-[15px] list-items">
-                      merch
-                    </li>
-                  </Link>
-                  <hr className="h-px opacity-[0.4] bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr>
-
+                
+                
                   <Link
                     href="/shop"
                     className="block  text-[16px] font-jakrata  font-normal leading-7 text-[#FFFFFF]"
@@ -245,16 +192,8 @@ const Navbar = () => {
                     </li>
                   </Link>
                   <hr className="h-px opacity-[0.4] bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr>
-                  <Link
-                    href="/video"
-                    className="block  text-[16px] font-jakrata  font-normal leading-7 text-[#FFFFFF]"
-                  >
-                    <li className="flex justify-center py-[15px] list-items uppercase">
-                      video
-                    </li>
-                  </Link>
-                  <hr className="h-px opacity-[0.4] bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr>
-
+                 
+                  
                   <Link
                     href="/contact-us"
                     className="block  text-[16px] font-jakrata  font-normal leading-7 text-[#FFFFFF]"
