@@ -83,33 +83,14 @@ const Product = ({
             <h1 className="text-[#fff] text-[50px] mob:text-[30px] mob:mt-2 font-medium font-outfit">
               {productname}
             </h1>
-            {(applelink || spotifylink || youtubelink) ? (
-              <div className="flex items-end gap-4 relative z-50 mt-2 mb-4">
-                <Link
-                  target="_blank"
-                  href={applelink}
-                >
-                  <FaApple className="text-white text-[28px]" />
-                </Link>
-                <Link
-                  target="_blank"
-                  href={spotifylink}
-                >
-                  <FaSpotify className="text-white text-[26px]" />
-                </Link>
-                <Link
-                  target="_blank"
-                  href={youtubelink}
-                >
-                  <FaYoutube className="text-white text-[26px]" />
-                </Link>
-              </div>
-            ) : null}
+       <h1 className="text-[30px] mob:text-[22px] mt-3 text-[#c8c82d] leading-[28.98px] font-bold font-jakrata">
+        product detail para
+       </h1>
             {/* price */}
-            <h2 className="text-[30px] mob:text-[22px] mt-3 text-gradient leading-[28.98px] font-bold font-jakrata">
+            <h2 className="text-[30px] mob:text-[22px] mt-3 text-[#c8c82d] leading-[28.98px] font-bold font-jakrata">
               {/* ${price}0 */}${productsPriceMap[slug]}
             </h2>
-            <h2 className="text-[23px] text-gradient leading-[28.98px] font-bold font-jakrata">
+            <h2 className="text-[23px] text-[#c8c82d] leading-[28.98px] font-bold font-jakrata">
               {date}
             </h2>
             <p className="text-[14px] text-[#fff] leading-[32px] font-normal font-jakrata max-w-[518px] mt-8 mb-6">
