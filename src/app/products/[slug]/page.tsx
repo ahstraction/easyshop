@@ -56,7 +56,7 @@ interface ProductData {
   return (
     <>
       
-          <ProductDetail  youtubelink={currentProduct?.youtubelink}  spotifylink={currentProduct?.spotifylink}  applelink={currentProduct?.applelink}  productname={currentProduct?.title} price={currentProduct?.price} imagePath={currentProduct?.img} slug={slug} productId={currentProduct?.id}   />
+          <ProductDetail  youtubelink={currentProduct?.youtubelink}  spotifylink={currentProduct?.spotifylink}  applelink={currentProduct?.applelink}  productname={currentProduct?.title} caption={currentProduct?.caption} price={currentProduct?.price} imagePath={currentProduct?.img} slug={slug} productId={currentProduct?.id}   />
           <Latest />
           <Footermain />
     </>

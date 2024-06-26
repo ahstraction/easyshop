@@ -23,6 +23,8 @@ interface ProductData {
   applelink:string;
   spotifylink:string;
   youtubelink:string;
+  caption:string;
+
 }
 
 const Product = ({
@@ -35,7 +37,8 @@ const Product = ({
   slug,
   youtubelink,
   applelink,
-  spotifylink
+  spotifylink,
+  caption
 }: ProductData) => {
   const [showValidationMessage, setShowValidationMessage] = useState(false);
 
@@ -62,6 +65,7 @@ const Product = ({
     }
   };
 
+  console.log(caption,"caption")
   return (
     <>
       <Navbar />
@@ -83,13 +87,14 @@ const Product = ({
             <h1 className="text-[#fff] text-[50px] mob:text-[30px] mob:mt-2 font-medium font-outfit">
               {productname}
             </h1>
-       <h1 className="text-[30px] mob:text-[22px] mt-3 text-[#c8c82d] leading-[28.98px] font-bold font-jakrata">
-        product detail para
-       </h1>
+       
             {/* price */}
             <h2 className="text-[30px] mob:text-[22px] mt-3 text-[#c8c82d] leading-[28.98px] font-bold font-jakrata">
               {/* ${price}0 */}${productsPriceMap[slug]}
             </h2>
+            <h1 className="text-[30px] mob:text-[22px] mt-5 text-[#c8c82d] leading-[28.98px] font-bold font-jakrata">
+       {caption}
+       </h1>
             <h2 className="text-[23px] text-[#c8c82d] leading-[28.98px] font-bold font-jakrata">
               {date}
             </h2>
