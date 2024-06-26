@@ -10,7 +10,7 @@ import Link from "next/link";
 const Hero = () => {
   
   useEffect(() => {
-    const speakText = (text) => {
+    const speakText = (text: any) => {
       if ('speechSynthesis' in window) {
         const utterance = new SpeechSynthesisUtterance(text);
         speechSynthesis.speak(utterance);
