@@ -10,4 +10,5 @@ export type Product = {
   applelink:string;
   spotifylink:string;
   youtubelink:string;
+  caption:string;
 };

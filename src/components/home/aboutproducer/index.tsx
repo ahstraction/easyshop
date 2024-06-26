@@ -14,20 +14,20 @@ const AboutProducer = () => {
     <>
       <div className="pb-20">
         <div className=" 2xl:container-fluid flex items-center justify-center  mx-auto overflow-x-hidden relative">
-          <Image
+          {/* <Image
             src="/imgs/home/about_the_producer_bg (1).png"
             className=" absolute object-cover bg-cover bg-center h-full w-full"
             alt=""
             width={1440}
             height={913}
-          />
-          <Image
+          /> */}
+          {/* <Image
             src="/imgs/home/wavegrad.png"
             className=" absolute top-0 w-full"
             alt=""
             width={1440}
             height={200}
-          />
+          /> */}
 
           <div className=""></div>
           <div className="my-16 relative max-w-[1340px] w-full">
@@ -36,7 +36,7 @@ const AboutProducer = () => {
               <div className="mob:block hidden">
                 <div className="flex justify-center tab:justify-center mob:pb-6  items-center">
                   <Image
-                    src="/imgs/home/logoimg.png"
+                    src="/imgs/home/9177413.jpg"
                     className=" my-4 w-[50%]"
                     alt=""
                     width={483}
@@ -48,75 +48,24 @@ const AboutProducer = () => {
               {/* desktop */}
               <div className="flex  justify-end tab:justify-center items-center">
                 <div className=" relative w-full max-w-[674px] px-[2%]">
-                  <h2 className="text-gradient mob:text-center text-left font-outfit font-bold text-[50px] mob:text-[30px] leading-[64.2px] mob:leading-[40px] mb-8 mob:mb-4">
-                    Phillie-BOP <br /> Productions Vision
+                  <h2 className="text-[#c8c82d] mob:text-center text-left font-outfit font-bold text-[50px] mob:text-[30px] leading-[64.2px] mob:leading-[40px] mb-8 mob:mb-4">
+                    EasyShop Vision
                   </h2>
                   <p className="text-[#FFFFFF] mob:text-center font-bold font-jakrata mob:text-[14px]  text-[16px] leading-[30px]">
                     <span className="mob:hidden">
-                      Welcome to Phillie-BOP Productions! We are committed to
-                      providing a creative home for indie artists, focusing on
-                      songwriting, recording, producing, and distributing
-                      quality music. Phillie-BOP Productions was founded in
-                      2010, the original idea of the label was to build a new
-                      sleek, and sophisticated type of music, providing that
-                      urban adult contemporary, smooth R&amp; B/Soul vibe based
-                      on elements of classic music of the past, able to fit the
-                      elegant adult socials and quiet evenings to unwind. <br />{" "}
-                      <br />
-                      We firmly believe that tracks released on the Phillie-BOP
-                      Productions label will be greatly appreciated by lovers of
-                      classic music, providing lush melodies, elegant lyrics,
-                      and velvet vocals. Listeners will be treated to top-notch
-                      quality tracks, that could be playable in multiple genres.
-                      So, they will always be ready to drop in almost any kind
-                      of set. Phillie-BOP Productions is committed to developing
-                      new music and artists with a reputation for consistent
-                      excellence. <br /> <br />
-                      Phillie-BOP Productions operates from Annandale, Virginia,
-                      located in the Washington, D.C. area.
+                    At EasyShop For All, we believe that shopping should be a delightful experience for everyone. That's why we've designed our website to be fully accessible and user-friendly for visually impaired users. Whether you're looking for the latest gadgets, stylish apparel, or daily essentials, we've got you covered.
                     </span>
 
                     <span className="hidden mob:block">
                       {showFullBio ? (
                         <>
                           <span className="">
-                            Welcome to Phillie-BOP Productions! We are committed
-                            to providing a creative home for indie artists,
-                            focusing on songwriting, recording, producing, and
-                            distributing quality music. Phillie-BOP Productions
-                            was founded in 2010, the original idea of the label
-                            was to build a new sleek, and sophisticated type of
-                            music, providing that urban adult contemporary,
-                            smooth R&amp; B/Soul vibe based on elements of
-                            classic music of the past, able to fit the elegant
-                            adult socials and quiet evenings to unwind. <br />{" "}
-                            <br />
-                            We firmly believe that tracks released on the
-                            Phillie-BOP Productions label will be greatly
-                            appreciated by lovers of classic music, providing
-                            lush melodies, elegant lyrics, and velvet vocals.
-                            Listeners will be treated to top-notch quality
-                            tracks, that could be playable in multiple genres.
-                            So, they will always be ready to drop in almost any
-                            kind of set. Phillie-BOP Productions is committed to
-                            developing new music and artists with a reputation
-                            for consistent excellence. <br /> <br />
-                            Phillie-BOP Productions operates from Annandale,
-                            Virginia, located in the Washington, D.C. area.
+                          At EasyShop For All, we believe that shopping should be a delightful experience for everyone. That's why we've designed our website to be fully accessible and user-friendly for visually impaired users. Whether you're looking for the latest gadgets, stylish apparel, or daily essentials, we've got you covered.
                           </span>
                         </>
                       ) : (
                         <span className="">
-                          Welcome to Phillie-BOP Productions! We are committed
-                          to providing a creative home for indie artists,
-                          focusing on songwriting, recording, producing, and
-                          distributing quality music. Phillie-BOP Productions
-                          was founded in 2010, the original idea of the label
-                          was to build a new sleek, and sophisticated type of
-                          music, providing that urban adult contemporary, smooth
-                          R&amp; B/Soul vibe based on elements of classic music
-                          of the past, able to fit the elegant adult socials and
-                          quiet evenings to unwind.
+                          At EasyShop For All, we believe that shopping should be a delightful experience for everyone. That's why we've designed our website to be fully accessible and user-friendly for visually impaired users. Whether you're looking for the latest gadgets, stylish apparel, or daily essentials, we've got you covered.
                         </span>
                       )}
                     </span>

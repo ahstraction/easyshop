@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import logo from "@/public/imgs/home/logoimg.png";
+import logo from "@/public/imgs/home/logo.png";
 import fb from "@/public/imgs/icons/fbfooter.svg";
 import insta from "@/public/imgs/icons/instafooter.svg";
 import twiter from "@/public/imgs/icons/twiterfooter.svg";
@@ -17,47 +17,13 @@ const Footermain = () => {
           </div>
           <div className="mob:pt-5">
             <div className="flex mob:justify-center gap-[11.94px] mob:my-2 justify-end mb-6">
-              <Link href="https://www.facebook.com/philliebopproductions">
-                <Image
-                  className="cursor-pointer"
-                  src={fb}
-                  alt=""
-                  width={37}
-                  height={37}
-                />
-              </Link>
+             
 
-              <Link href="https://www.instagram.com/philliebopproductions/">
-                <Image
-                  className="cursor-pointer"
-                  src={insta}
-                  alt=""
-                  width={37}
-                  height={37}
-                />
-              </Link>
-
-              <Link href="https://twitter.com/PhillieBOP">
-                <Image
-                  className="cursor-pointer"
-                  src={twiter}
-                  alt=""
-                  width={37}
-                  height={37}
-                />
-              </Link>
-
-              {/* <Image
-                className="cursor-pointer"
-                src={youtube}
-                alt=""
-                width={37}
-                height={37}
-              /> */}
+           
             </div>
 
             <p className="text-[16px] font-jakrata font-normal mob:pt-5 text-[#ACACAC] mob:text-center">
-            ©2024 by Phillie-BOP Productions, LLC.
+            ©2024 by Easy Shop.
 
             </p>
           </div>

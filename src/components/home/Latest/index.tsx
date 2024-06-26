@@ -81,14 +81,14 @@ const Latest = () => {
                 <h2 className="text-[20px] tracking-[3px] mob:text-center mb-4 font-jakrata uppercase font-normal leading-[25.2px] mob:text-[16px] mob:leading-[20px] text-[#FFFFFF]">
                   NewsLetter
                 </h2>
-                <h1 className="text-[40px] mob:text-[30px] font-outfit mob:text-center font-medium leading-[50.4px] text-gradient">
+                <h1 className="text-[40px] mob:text-[30px] font-outfit mob:text-center font-medium leading-[50.4px] text-[#c8c82d]">
                   Be the first to know.
                 </h1>
               </div>
               {/* right text */}
               <div className="">
                 <p className="font-jakrata font-normal mob:text-center tracking-[1px] text-[20px] mob:text-[16px] mob:leading-[20px] leading-[33px] text-[#FFFFFF]">
-                  Latest news about Phillie-BOP
+                  Latest news about EasyShop
                 </p>
               </div>
             </div>
@@ -115,15 +115,14 @@ const Latest = () => {
                 />
               </div>
 
-              {/* <button className="w-[204px] h-[194px] text-gradient">Submit</button> */}
               
            <div className="mob:flex mob:justify-center">
            <button   
-           className="mob:w-[130px]"
+                    className=" py-[20px] px-[40px] mob:px-[30px] mob:py-[15px]  rounded-[150px] bg-[#c8c82d] text-[#121212] tracking-[2px] text-[15px] leading-[18.9px] font-semibold font-jakrata"
                onClick={sendMail}
             disabled={loading} 
             >
-                <Image src={buttonimg} alt="" height={196} width={204} />
+               Submit
               
               </button>
            </div>

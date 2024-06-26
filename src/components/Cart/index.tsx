@@ -30,7 +30,7 @@ const Cart = () => {
       <div className="relative flex justify-center  items-center py-20 mob:px-5">
         <div className="max-w-[1340px] w-full ">
           <div className="flex w-full justify-end mb-8">
-            <h1 className="text-gradient w-[1260px]  text-[60px] font-outfit font-medium leading-[80px]">
+            <h1 className="text-[#c8c82d] w-[1260px]  text-[60px] font-outfit font-medium leading-[80px]">
               Your Cart
             </h1>
           </div>
@@ -49,7 +49,7 @@ const Cart = () => {
                           {product.title}
                         </h1>
                         {/* price */}
-                        <p className="text-[16px] text-gradient font-jakrata font-semibold leading-[20.16px]">
+                        <p className="text-[16px] text-[#c8c82d] font-jakrata font-semibold leading-[20.16px]">
                           ${product.price}
                         </p>
                       </div>
@@ -142,7 +142,7 @@ const Cart = () => {
                 <h1 className="uppercase text-[17px] text-[#fff] font-jakrata font-bold leading-[21.42px] tracking-[3px]">
                   Total Price
                 </h1>
-                <h2 className="uppercase text-[23px] text-gradient font-jakrata font-bold leading-[21.42px] tracking-[3px]">
+                <h2 className="uppercase text-[23px] text-[#c8c82d] font-jakrata font-bold leading-[21.42px] tracking-[3px]">
                   ${cartProductsTotalPrice || 0}
                 </h2>
               </div>

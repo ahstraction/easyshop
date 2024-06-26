@@ -108,55 +108,35 @@ const Form = () => {
               height={953.65}
             /> */}
 
-            <div className="flex xl:block justify-center items-end  gap-[100px] px-[5%] relative z-20 ">
+            <div className="flex xl:block justify-center items-center  gap-[100px] px-[5%] relative z-20 ">
               {/* left */}
               <div className="xl:flex xl:justify-center">
                 <div className="  w-full max-w-[453px]">
-                  <h1 className="text-[60px] mob:text-center mob:text-[30px]  font-outfit  text-gradient leading-[62px] font-medium mb-7 mt-3 ">
+                  <h1 className="text-[60px] mob:text-center mob:text-[30px]  font-outfit  text-[#c8c82d] leading-[62px] font-medium mb-7 mt-3 ">
                     Get In Touch
                   </h1>
-                  {/* <p className="text-[18px] mob:text-[14px] mob:leading-[24px] text-[#FFFFFF]/70  leading-[33px] font-jakrata font-normal ">
-                    Donec faucibus semper massa, quis congue dolor et. 
-                  </p> */}
+                
                   {/* locations London*/}
                   <div className="flex mob:justify-center gap-3 mt-16">
-                    {/* <div className="img">
-                      <Image src={location} alt="" width={80} height={80} />
-                    </div> */}
-
+                  
                     <div className="">
-                      <h1 className="text-[18px] mob:text-center mob:text-[q6px] text-gradient leading-[26px] font-semibold font-jakrata mb-2 ">
+                      <h1 className="text-[18px] mob:text-center mob:text-[q6px] text-[#c8c82d] leading-[26px] font-semibold font-jakrata mb-2 ">
                         Location
                       </h1>
 
                       <h1 className="text-[16px] mob:text-center mob:text-[14px] mob:leading-[24px] text-[#fff] font-jakrata leading-[33px] font-normal ">
                       P.O. Box 317, Annandale, VA 22003
                       </h1>
-                      {/* <h1
-                        
-                        className="text-[16px] items-center flex gap-[8px] text-[#fff] leading-[26px] font-normal my-1 cursor-pointer "
-                        onClick={(
-                          event: React.MouseEvent<HTMLButtonElement>
-                        ) => {
-                          window.location.href = "tel: +44 (20) 3666 5000";
-                        }}
-                      >
-                        <span className="text-[#00297A]">
-                          <FaPhoneAlt />
-                        </span>
-                        +44 (20) 3666 5000
-                      </h1> */}
+                    
                     </div>
                   </div>
 
                   {/* number*/}
                   <div className="flex mob:justify-center gap-3 mt-9">
-                    {/* <div className="img">
-                      <Image src={location} alt="" width={80} height={80} />
-                    </div> */}
+                  
 
                     <div className="">
-                      <h1 className="text-[18px] mob:text-center mob:text-[q6px] text-gradient leading-[26px] font-semibold font-jakrata mb-2 ">
+                      <h1 className="text-[18px] mob:text-center mob:text-[q6px] text-[#c8c82d] leading-[26px] font-semibold font-jakrata mb-2 ">
                         Phone Number
                       </h1>
 
@@ -164,22 +144,20 @@ const Form = () => {
                         onClick={(
                           event: React.MouseEvent<HTMLButtonElement>
                         ) => {
-                          window.location.href = "tel: +703.618.8777";
+                          window.location.href = "tel: +68768";
                         }}
                       className="text-[16px] mob:text-center mob:text-[14px] cursor-pointer mob:leading-[24px] text-[#fff] font-jakrata leading-[33px] font-normal ">
-                      703.618.8777
+                      779889
                       </h1>
                     </div>
                   </div>
 
                   {/* locations usa*/}
                   <div className="flex mob:justify-center gap-3 mt-8">
-                    {/* <div className="img">
-                      <Image src={location} alt="" width={80} height={80} />
-                    </div> */}
+                    
 
                     <div className="">
-                      <h1 className="text-[18px] mob:text-center mob:text-[q6px] text-gradient leading-[26px] font-semibold font-jakrata mb-2 ">
+                      <h1 className="text-[18px] mob:text-center mob:text-[q6px] text-[#c8c82d] leading-[26px] font-semibold font-jakrata mb-2 ">
                         Email Address
                       </h1>
 
@@ -188,33 +166,15 @@ const Form = () => {
                       onClick={(
                         event: React.MouseEvent<HTMLAnchorElement>
                       ) => {
-                        window.location.href = "mailto:bop@philliebopmusic.com";
+                        window.location.href = "mailto:ahsan.com";
                       }}
                       className="text-[16px] mob:text-center mob:text-[14px] cursor-pointer mob:leading-[24px] text-[#fff] font-jakrata leading-[33px] font-normal ">
-                       bop@philliebopmusic.com
+                       ahsan.com
                       </h1>
                     </div>
                   </div>
 
-                  {/* social icons */}
-                  <div className="flex w-full xl:justify-center gap-[20px] mt-16 ">
-                    {/* facebook */}
-
-                    <Link href="https://www.facebook.com/philliebopproductions">
-                    <Image src={fb} alt="" width={43} height={43} />
-
-              </Link>
-
-              <Link href="https://www.instagram.com/philliebopproductions/">
-              <Image src={insta} alt="" width={43} height={43} />
-              </Link>
-                    
-
-              <Link href="https://twitter.com/PhillieBOP">
-              <Image src={twiter} alt="" width={43} height={43} />
-              </Link>
-                   
-                  </div>
+                 
                 </div>
               </div>
 

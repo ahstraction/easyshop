@@ -38,7 +38,7 @@ const Navbar = () => {
           className="flex items-center space-x-3 rtl:space-x-reverse"
         >
           <Image
-            src="/imgs/home/phillibop-logo-new (1) (1).png"
+            src="/imgs/home/logo.png"
             alt="Flowbite Logo"
             width={136}
             height={115}
@@ -85,30 +85,7 @@ const Navbar = () => {
                 HOME
               </a>
             </li>
-            {/* <li>
-              <Link
-                href="/procedure"
-                className="block uppercase py-2 px-2 text-[15px] font-jakrata tracking-[2px] font-normal text-[#FFFFFF]"
-              >
-                Producer
-              </Link>
-            </li> */}
-            {/* <li>
-              <a
-                href="/label-artists"
-                className="block uppercase py-2 px-2 text-[15px] font-jakrata tracking-[2px] font-normal text-[#FFFFFF]"
-              >
-                label artists
-              </a>
-            </li> */}
-            {/* <li>
-              <a
-                href="/label-release"
-                className="block uppercase py-2 px-2 text-[15px] font-jakrata tracking-[2px] font-normal text-[#FFFFFF]"
-              >
-                Label Releases
-              </a>
-            </li> */}
+           
            
             <li>
               <a

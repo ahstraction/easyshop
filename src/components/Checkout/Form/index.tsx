@@ -131,7 +131,7 @@ const Form = () => {
     <>
       <Navbar />
 
-      <div className="relative flex justify-center  items-center py-20 bg-[#21201E]  z-10 mob:px-5">
+      <div className="relative flex justify-center  items-center py-20  z-10 mob:px-5">
         <div className="max-w-[1340px] w-full ">
           <div className="flex w-full justify-end mb-8">
             <h1 className="text-gradient w-[1290px]  text-[60px] mob:text-[40px] font-outfit font-medium leading-[80px]">
@@ -183,19 +183,7 @@ const Form = () => {
               </div>
 
  {/* company name */}
- <label
-                htmlFor="Email Address"
-                className="text-[16px] text-[#FFFFFF] leading-[20.16px] font-normal font-jakrata"
-              >
-              Company Name (Opional)
-              </label>
-              <input
-               name="companyName"
-               value={formData.companyName}
-               onChange={handleInputChange}
-                className="w-full  h-[29px]  outline-none border-b bg-transparent border-b-[#FFFFFF]/20 text-[16px] text-[#FFFFFF] font-normal mb-6 "
-                type="text"
-              />
+
 
 
               {/* inputes */}
@@ -321,23 +309,7 @@ const Form = () => {
               />
 
 
-              {/* Shipping method */}
-              <h1 className="text-[#FFFFFF] uppercase text-[17px] font-bold font-jakrata tracking-[3px] mt-12 mb-8">
-             Additional Information
-              </h1>
-              <label
-                className="text-[16px] text-[#FFFFFF] leading-[20.16px] font-normal font-jakrata"
-                htmlFor="shipping address"
-              >
-                Enter your shipping address to view available shipping methods
-              </label>
-              <input
-                name="additionalInfo"
-                value={formData.additionalInfo}
-                onChange={handleInputChange}
-                className="w-full  h-[29px]  outline-none border-b bg-transparent border-b-[#FFFFFF]/20 text-[16px] text-[#FFFFFF] font-normal mb-6 "
-                type="text"
-              />
+              
 
               {/* Payment */}
               <h1 className="text-[#FFFFFF] uppercase text-[17px] font-bold font-jakrata tracking-[3px] mt-12 mb-8">
@@ -442,8 +414,8 @@ const Form = () => {
                         </button>
                   </div>
                   </div>
-                  <div onClick={() => removeFromCart(product.id)} className="flex justify-end cursor-pointer">
-                    <Image src={remove} alt="" width={63} height={24} />
+                  <div onClick={() => removeFromCart(product.id)} className="flex justify-end cursor-pointer text-[#c8c82d]">
+                   Remove
                   </div>{" "}
                 </div>
               </div>

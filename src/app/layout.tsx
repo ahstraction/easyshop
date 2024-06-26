@@ -69,7 +69,7 @@ export default function RootLayout({
         className={` ${inter.variable} ${outfit.variable} ${jakrata.variable} ${tinos.variable} ${pacifico.variable} ${opensans.variable} ${monts.variable}`}
       >
         <Providers>
-          <div className=" bg-[#21201E]">
+          <div className=" bg-[#000000]">
             {children}
             <ToastContainer position="top-center" />
           </div>
