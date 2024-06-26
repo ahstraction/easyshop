@@ -38,7 +38,7 @@ const Navbar = () => {
           className="flex items-center space-x-3 rtl:space-x-reverse"
         >
           <Image
-            src="/imgs/home/phillibop-logo-new (1) (1).png"
+            src="/imgs/home/logo.png"
             alt="Flowbite Logo"
             width={136}
             height={115}

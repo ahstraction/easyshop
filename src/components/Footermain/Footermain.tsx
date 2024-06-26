@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import logo from "@/public/imgs/home/logoimg.png";
+import logo from "@/public/imgs/home/logo.png";
 import fb from "@/public/imgs/icons/fbfooter.svg";
 import insta from "@/public/imgs/icons/instafooter.svg";
 import twiter from "@/public/imgs/icons/twiterfooter.svg";

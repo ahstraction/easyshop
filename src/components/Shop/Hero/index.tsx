@@ -37,7 +37,7 @@ const Hero = () => {
           Our Shop
         </h1>
         <p className="text-[#fff] text-[20px] font-normal font-jakrata text-center mt-5 ">
-        Your one-stop shop for purchasing Phillie-BOP music
+        Your one-stop shop for purchasing EasyShop For All
         </p>
       </div>
       <div className="pt-20  pb-[120px] mob:pb-20 mob:mb-20">

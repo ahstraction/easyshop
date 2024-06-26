@@ -18,16 +18,16 @@ const Hero = () => {
             Welcome to
           </h1>
           <h1 className="text-[#c8c82d]  mob:py-4 text-[70px] mob:text-[40px] mob:leading-[44px] text-center font-semibold font-outfit leading-[112px]">
-            Phillie-BOP Productions
+            EasyShop For All
           </h1>
           <h1 className="text-[#FFFFFF]/80 uppercase tracking-[3px] text-center font-jakrata font-normal text-[20px] leading-[44px] mob:leading-[30px] ">
-            The Future Home Of Classic Music
+            The Future Home Of Shopping
           </h1>
 
           <div className="mt-9 flex justify-center">
             <Link href="/shop">
               <button className=" py-[20px] px-[40px] mob:px-[30px] mob:py-[15px] rounded-[150px] bg-[#FFFFFF] text-[#121212] tracking-[2px] text-[15px] leading-[18.9px] font-semibold font-jakrata">
-                EXPLORE MUSIC
+                EXPLORE EASYSHOP
               </button>
             </Link>
           </div>

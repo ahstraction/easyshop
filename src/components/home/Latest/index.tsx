@@ -88,7 +88,7 @@ const Latest = () => {
               {/* right text */}
               <div className="">
                 <p className="font-jakrata font-normal mob:text-center tracking-[1px] text-[20px] mob:text-[16px] mob:leading-[20px] leading-[33px] text-[#FFFFFF]">
-                  Latest news about Phillie-BOP
+                  Latest news about EasyShop
                 </p>
               </div>
             </div>
