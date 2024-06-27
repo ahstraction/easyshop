@@ -87,7 +87,7 @@ const AboutProducer = () => {
               </div>
               <div className="flex justify-center tab:justify-center mob:pt-6 mob:hidden items-center">
                 <Image
-                  src="/imgs/home/logoimg.png"
+                  src="/imgs/home/imgnew.jpg"
                   className=" my-4"
                   alt=""
                   width={483}

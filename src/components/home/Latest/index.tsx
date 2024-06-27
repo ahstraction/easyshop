@@ -48,20 +48,14 @@ const Latest = () => {
       const data = await response.json();
 
       if (response.ok) {
-        // If response is successful
         setSuccessMessage(" Subscribed  Successfully!");
-        // alert("Email sent successfully!");
-        console.log(data); // You can log data if needed
-
-        // Reset input fields
+        console.log(data); 
 
         setEmail("");
       } else {
-        // If response is not successful
         throw new Error(data.message || "Failed to send email");
       }
     } catch (error) {
-      // If there's an error during the fetch
       console.error("Error sending email:", error);
       alert("Failed to send email. Please try again later.");
     } finally {
