@@ -1,11 +1,11 @@
-import img1 from "@/public/imgs/merch/Rectangle 26 (1).png";
-import img2 from "@/public/imgs/merch/Rectangle 26 (2).png";
-import img3 from "@/public/imgs/merch/Rectangle 26 (3).png";
-import img4 from "@/public/imgs/merch/Rectangle 26 (4).png";
-import img5 from "@/public/imgs/merch/Rectangle 26 (5).png";
-import img6 from "@/public/imgs/merch/capnew.png";
-import more from "@/public/imgs/merch/more.png";
-import jene from "@/public/imgs/merch/jene.png";
+import img1 from "@/public/imgs/merch/product1.jpg";
+import img2 from "@/public/imgs/merch/product2.jpg";
+import img3 from "@/public/imgs/merch/product3.jpg";
+import img4 from "@/public/imgs/merch/product4.jpg";
+import img5 from "@/public/imgs/merch/product5.png";
+import img6 from "@/public/imgs/merch/product6.jpg";
+import img7 from "@/public/imgs/merch/product7.png";
+import img8 from "@/public/imgs/merch/product8.jpg";
 import imari from "@/public/imgs/merch/breatheagain.png";
 import sweetcd from "@/public/imgs/merch/cdsweet1.png";
 import worthycd from "@/public/imgs/merch/cdworthy1.png";
@@ -14,11 +14,11 @@ import { Product } from "@/types";
 export const products: Product[] = [
   {
     id: 1,
-    title: "Blue and Beige T-Shirt",
+    title: "Blue Checkered Casual Shirt",
     slug: "E.S.P",
     price: 15,
     subHeading: "",
-    caption:"detail para ",    
+    caption:"A Casual Double Pocket Checkered Shirt color of navy and sky blue colors.",    
     img: img1,
     songlink: "/videos/ESP (3).mp3",
     pathnode:"Rectangle 26 (1).png",
@@ -29,10 +29,10 @@ export const products: Product[] = [
   },
   {
     id: 2,
-    title: "Blue Checkered Casual Shirt",
+    title: "Blue and Beige T-Shirt",
     slug: "made",
     price: 1.5,
-    caption:"detail para shirt shirt",
+    caption:"A Beige Colored T-Shirt in which Blue is slogan.",
     subHeading: "",
     img: img2,
     songlink: "/videos/Made (1).mp3",
@@ -44,11 +44,11 @@ export const products: Product[] = [
   },
   {
     id: 3,
-    title: "Plain Black T-Shirt",
+    title: "Graphic White T-Shirt",
     slug: "worthy",
     price: 1.5,
     subHeading: "",
-    caption:"detail para ",
+    caption:"Black Colored T-Shirt in which there a Graphic",
     img: img3,
     songlink: "/videos/Worthy (2).mp3",
     pathnode:"Rectangle 26 (3).png",
@@ -59,11 +59,11 @@ export const products: Product[] = [
   },
   {
     id: 4,
-    title: "Plan White T-Shirt",
+    title: "Slogan Black T-Shirt",
     slug: "more",
     price: 1.5,
-    subHeading: "",
-    img: more,
+    subHeading: "A Black T-Shirt",
+    img: img4,
     caption:"detail para ",
     songlink: "/videos/Rina-Chanel-More-Than-Enough (1).mp3",
     pathnode:"more.png",
@@ -74,11 +74,11 @@ export const products: Product[] = [
   },
   {
     id: 5,
-    title: "White and Black Checkered Casual Shirt",
+    title: "Blue and White Sleeveless Top",
     slug: "sweetestmelody",
     price: 1.5,
     subHeading: "",
-    caption:"detail para ",
+    caption:"Blue and White Sleeveless Top Embroidered",
     img: img5,
     songlink: "/videos/Sweetest-of-Melody (1).mp3",
     pathnode:"Rectangle 26 (5).png",
@@ -88,14 +88,14 @@ export const products: Product[] = [
   },
   {
     id: 6,
-    title: "Black Jeans",
+    title: "Sky Blue Jeans",
     price: 1.5,
     subHeading: "",
     slug: "jeneSais",
-    img: jene,
-    caption:"detail para ",
+    img: img6,
+    caption:"Sky Blue Denim Jeans",
     songlink: "/videos/Je-Ne-Sais-Quoi (2).mp3",
-    pathnode:"jene.png",
+    pathnode:"product6.jpg",
     applelink:"https://open.spotify.com/album/7IJ83F1d3EkOdMEQmEHVwH?si=6RqNehnCRCeVSf3kvr95_w",
     spotifylink:"https://open.spotify.com/album/7IJ83F1d3EkOdMEQmEHVwH?si=6RqNehnCRCeVSf3kvr95_w&nd=1",
     // youtubelink:"https://www.youtube.com/watch?v=vD9ogAJqZ0U",
@@ -104,12 +104,12 @@ export const products: Product[] = [
   },
   {
     id: 7,
-    title: "Camel Chino Pants",
+    title: "Pink Long Sleeve Shirt",
     price: 20.0,
     slug: "cap",
     subHeading: "",
-    caption:"detail para ",
-    img: img6,
+    caption:"Pink ColoredLong Sleeve Shirt ",
+    img: img7,
     songlink: "",
     pathnode:"capnew.png",
     applelink:"",
@@ -118,12 +118,12 @@ export const products: Product[] = [
   },
   {
     id: 8,
-    title: "Charcoal Grey Jeans",
+    title: "Gray and Black Striped Crew-neck Top",
     slug: "mask",
     price: 8.0,
     subHeading: "",
-    caption:"detail para ",
-    img: img4,
+    caption:"Gray and Black Striped Crew-neck Top Sweater",
+    img: img8,
     songlink: "",
     pathnode:"Rectangle 26 (4).png",
     applelink:"",
