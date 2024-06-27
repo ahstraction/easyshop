@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../navbar/Navbar";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -64,8 +64,19 @@ const Product = ({
       router.push(`/cart`);
     }
   };
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "2") {
+        onAddToCart(Number(productId));
+      }
+    };
 
-  console.log(caption,"caption")
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [onAddToCart, productId]);
+
   return (
     <>
       <Navbar />
