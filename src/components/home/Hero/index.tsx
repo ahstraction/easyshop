@@ -1,6 +1,7 @@
 "use client"
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 
 import Button from "@/components/ui/Button";
@@ -9,9 +10,12 @@ import Link from "next/link";
 
 const Hero = () => {
   
+  const router = useRouter();
+
   useEffect(() => {
-    const speakText = (text: any) => {
+    const speakText = (text: string) => {
       if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel(); // Clear any existing speech
         const utterance = new SpeechSynthesisUtterance(text);
         speechSynthesis.speak(utterance);
       } else {
@@ -21,12 +25,24 @@ const Hero = () => {
 
     // Text to be spoken
     const textContent = `
-      Welcome to EasyShop For All. The Future Home Of Shopping. Explore EasyShop.
+      Welcome to EasyShop For All. The Future Home Of Shopping. Explore EasyShop. Press one to visit shop
     `;
 
     // Trigger the speech synthesis
     speakText(textContent);
-  }, []);
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "1") {
+        router.push("/shop");
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+      window.speechSynthesis.cancel(); // Clear any existing speech on unmount
+    };
+  }, [router]);
   return (
     <div className="relative z-30">
       <Navbar />
